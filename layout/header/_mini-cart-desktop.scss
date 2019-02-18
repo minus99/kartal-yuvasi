@@ -1,0 +1,16 @@
+.mini-cart {
+    position: relative;
+    background: $color4;
+    &-info {
+        > span {
+            @extend %header-mods-title;
+        }
+        #lblUrunAdet {
+            margin-right: 4px;
+        }
+    }
+    &-sub {
+        display: none;
+        position: absolute;
+    }
+}

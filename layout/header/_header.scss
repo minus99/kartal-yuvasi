@@ -1,0 +1,25 @@
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: $color1;
+}
+
+.header-mobile {
+    display: flex;
+    align-items: center;
+    padding: 9px 15px;
+    > div:nth-child(3) {
+        margin-left: auto;
+    }
+    .ga2 {
+        margin-left: 15px;
+    }
+    .ga4 {
+        margin-left: 15px;
+    }
+}
+.go-cart {
+    display: flex;
+    align-items: center;
+}

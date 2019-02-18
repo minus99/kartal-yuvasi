@@ -1,0 +1,31 @@
+//GLOBAL
+$baseHref: '';
+
+//COLORS
+$color1: #000;
+$color2: #fff;
+$color3: #eee;
+$color4: #c5242b;
+$color5: #c9c9c9;
+$color6: #515151;
+$color7: #999;
+$color8: #666;
+$color9: #ccc;
+$test: #878787;
+
+//FONTS
+$font1: din;
+$font2: fira;
+$font3: dinc;
+
+//CONTAINER
+$container-padding: 20px;
+$container-large: 1200px;
+$container-medium: 1040px;
+$container-small: 700px;
+
+//BREAKPOINTS
+$breakpoint-small: 640px !default;  // Phone landscape
+$breakpoint-medium: 960px !default;  // Tablet Landscape
+$breakpoint-large: 1200px !default; // Desktop
+$breakpoint-xlarge: 1600px !default; // Large Screens

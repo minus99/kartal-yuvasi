@@ -1,0 +1,32 @@
+.mini-lang {
+    position: relative;
+    &-append {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 20px;
+        .mini-lang {
+            display: block !important;
+        }
+    }
+
+    &-sub {
+        > a {
+            display: inline-block;
+            width: 50%;
+            padding: 12px 25px;
+            border: 1px solid transparent;
+            text-align: center;
+            &.selected {
+                border-color: $color5;
+            }
+            b {
+                display: block;
+            }
+            img {
+                display: none;
+            }
+        }
+    }
+}

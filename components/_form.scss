@@ -1,0 +1,147 @@
+input:not([type=checkbox]):not([type=radio]) {
+    font-family: $font2;
+    font-size: 15px;
+    color: $color1;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: .7px;
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid $color5;
+    outline: none;
+}
+
+input:disabled,
+input:read-only {
+    background: $color7;
+}
+
+[id$="CEPTELEFONALAN"] {
+    width: 65px !important;
+    margin-right: 5px;
+    text-align: center;
+}
+[id$="CEPTELEFON"] {
+    width: calc(100% - 70px) !important;
+}
+
+span.checkbox,
+span.data-Privacy,
+span.sStylerWrp_checkbox,
+span.sStylerWrp_radio {
+    display: inline-flex;
+    vertical-align: middle;
+    + span {
+        vertical-align: middle;
+    }
+}
+
+.ems-form {
+    position: relative;
+    .ems-field {
+        margin-top: 20px;
+        &.submit {
+            a.btnDefault {
+                width: 100%;
+            }
+        }
+        &-small {
+            margin-top: 10px;
+        }
+    }
+    &-label {
+        position: relative;
+        font-family: $font2;
+        font-size: 13px;
+        color: $color6;
+        font-weight: 500;
+        margin-bottom: 5px;
+        &:empty {
+            display: none;
+        }
+    }
+    &-obj {
+        position: relative;
+        &:empty {
+            display: none;
+        }
+        span {
+            font-family: $font2;
+            font-size: 15px;
+        }
+        &.chk-padding {
+            padding-left: 20px;
+            > .checkbox {
+                margin-left: -20px;
+            }
+        }
+    }
+}
+
+.sStylerMainWrp {
+    position: relative;
+}
+.sStylerWrp_checkbox,
+.sStylerWrp_radio {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 7px;
+    > span {
+        display: block;
+        svg {
+            display: block;
+            font-size: 13px;
+            &[class*="active"] {
+                display: none;
+            }
+        }
+        &.checked {
+            svg {
+                display: none;
+                &[class*="active"] {
+                    display: block;
+                }
+            }
+        }
+    }
+    input {
+        display: none !important;
+    }
+}
+.sStylerWrp_select {
+
+}
+
+//captcha
+[id$="divCaptcha"] {
+    position: relative;
+    br {
+        display: none;
+    }
+    [id$="lbfUYE_KONTROLKODU"] {
+        display: block;
+        @extend .ems-form-label;
+    }
+    #imgCaptcha {
+        position: absolute;
+        left: 1px;
+        top: 23px;
+        height: 44px;
+        border-right: 1px solid $color5;
+        border-radius: 0 5px 5px 0;
+    }
+    input[id$="txtUYE_KONTROLKODU"] {
+        padding-left: 190px;
+        text-align: center;
+        letter-spacing: 2.5px;
+    }
+    .captchaYenile {
+        display: inline-flex;
+        position: absolute;
+        right: 0;
+        top: 5px;
+        > span {
+            font-size: 11px;
+        }
+    }
+}

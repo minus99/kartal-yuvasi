@@ -1,0 +1,19 @@
+.mini-search {
+    position: relative;
+    background: $color2;
+    color: $color1;
+    &-info {
+        > span {
+            @extend %header-mods-title;
+            justify-content: flex-end;
+            padding: 0 30px;
+        }
+        .icon-search {
+            margin-left: 10px;
+        }
+    }
+    &-sub {
+        display: none;
+        position: absolute;
+    }
+}

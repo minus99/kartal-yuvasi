@@ -1,0 +1,20 @@
+.site-footer {
+    background-image: url(/images/frontend/footer-bg.png);
+    background-position: center 25px;
+    background-size: 100%;
+    padding-bottom: 30px;
+}
+.site-footer-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    grid-template-areas:
+    "ga1 ga1 ga1"
+    ". ga2 ."
+    "ga3 ga3 ga3"
+    ". ga4 ."
+    "ga6 . ga5";
+
+    @include setGridArea(1,6);
+}

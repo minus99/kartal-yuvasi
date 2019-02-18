@@ -1,0 +1,33 @@
+.mini-bulletin {
+    width: calc(100% - 40px);
+    max-width: 700px;
+    margin: 0 auto;    
+    &-info {
+        font-family: $font2;
+        font-weight: 400;
+        font-size: 20px;
+        padding: 30px 0 10px;
+        text-align: center;
+    }
+    input[id$="txtUYE_EMAIL"] {
+        background: $color3;
+        border: none;
+        padding-right: 60px;
+    }
+    a.btnBultenGonder {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        color: $color1;
+        transform: translateY(-50%);
+    }
+    &-message {
+        > span {
+            &:not(:empty) {
+                display: block;
+                margin-top: 20px;
+                text-align: center;
+            }
+        }
+    }
+}

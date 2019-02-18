@@ -1,0 +1,16 @@
+.box {
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(52deg, rgba(197,36,43,1) 0%,rgba(197,36,43,0) 100%);
+        transition: all .32s ease;
+    }
+
+    + .box {
+        margin-left: 30px;
+    }
+}

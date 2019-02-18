@@ -1,0 +1,111 @@
+.menu {
+    $menubg: #eee;
+    display: block;
+    position: relative;
+    background: $menubg;
+    max-width: none;
+    width: 100%;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 20px;
+        height: 100%;
+        background: inherit;
+    }
+    &::before {
+        left: 0;
+        @include setCurveL(15, -10);
+    }
+    &::after {
+        right: 0;
+        @include setCurveR(15, 10);
+    }
+    .lvl-1 {
+        display: flex;
+        > li {
+            > a {
+                display: block;
+                padding: 20px;
+            }
+            &:hover {
+                .sub {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    .sub {
+        $iw: 200px;
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        z-index: 2;
+        width: 100%;
+        height: 300px;
+        background: #eee;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+        }
+        &::before {
+            left: -100%;
+        }
+        &::after {
+            right: -100%;
+        }
+        .r1,
+        .r2 {
+            position: relative;
+            overflow: hidden;
+        }
+        .r1 {
+            flex-basis: 200px;
+        }
+        .r2 {
+            flex: 1;
+            padding: 30px 30px 30px 150px;
+            display: flex;
+        }
+    
+        .skew-object {
+            position: absolute;
+            left: -200px;
+            top: 0;
+            z-index: 1;
+            width: 360px;
+            height: 100%;
+            background: rgba(146, 3, 3, 0.8);
+            @include setCurveL(15, 0);
+        }
+        .img1, .img2 {
+            position: absolute;
+            top: 0;
+            width: $iw;
+            height: 100%;
+        }
+        .img1 {
+            right: -$iw/2;
+        }
+        .img2 {
+            left: -$iw/2;
+        }
+    
+        .lvl-2 {
+            column-count: 2;
+            margin-left: 100px;   
+        }
+        .lvl-3 {
+            background: red;
+            break-inside: avoid;
+        }
+    }
+}

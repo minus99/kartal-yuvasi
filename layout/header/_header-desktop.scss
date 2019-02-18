@@ -1,0 +1,41 @@
+.site-header-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 300px 1fr auto auto 150px 150px;
+    
+    grid-template-areas:
+    "ga1 . ga2 ga3 ga4 ga5"
+    "ga6 ga7 ga7 ga7 ga8 ga8";
+
+    @include setGridArea(1,8);
+    
+    > .ga1,
+    > .ga2,
+    > .ga3,
+    > .ga4,
+    > .ga5 {
+        line-height: 40px;
+    }
+    > .ga6,
+    > .ga7,
+    > .ga8 {
+        line-height: 70px;
+    }
+}
+
+.slogan {
+    font-family: helvetica, arial;
+    font-size: 13px;
+    color: $color9;
+    font-weight: normal;
+    margin: 0;
+    padding: 0 40px;
+}
+
+%header-mods-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    padding: 0 10px;
+}

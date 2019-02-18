@@ -1,0 +1,13 @@
+.top-menu-append {
+    margin-top: -1px;
+    background: $color3;
+    .top-menu {
+        display: block !important;
+    }
+    .m-dealer {
+        > a {
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+    }
+}

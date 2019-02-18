@@ -1,0 +1,20 @@
+.ems-page-member-login {}
+
+.ems-tab-login {
+    width: calc(100% - 20px);
+    max-width: 410px;
+    margin: 0 auto;
+    padding: 30px 15px;
+}
+
+.lnkSifremiUnuttum {
+    color: $color7;
+}
+
+.kutuUyeGirisFacebookConnect {
+    max-width: 214px;
+    margin: 0 auto;
+}
+a.btnDefault.btnFacebookLogin {
+    @extend %btn-transparent;
+}

@@ -1,0 +1,11 @@
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    > a + a {
+        margin-left: 20px;   
+    }
+    .icon {
+        font-size: 50px;
+    }
+}

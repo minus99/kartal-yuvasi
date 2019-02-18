@@ -1,0 +1,32 @@
+.ems-tab {
+    background: $color2;
+    color: $color1;
+    &-header {
+        display: flex;
+        justify-content: center;
+        vertical-align: middle;
+        margin-bottom: 30px;
+        > * {
+            font-family: $font3;
+            font-weight: 700;
+            letter-spacing: .9px;
+            cursor: pointer;
+            padding: 10px 30px;
+            border: 1px solid transparent;
+            &.selected,
+            &:first-child {
+                border-color: $color5;
+            }
+        }
+    }
+    &-content {
+        > * {
+            display: none;
+            &.selected,
+            &:nth-child(1),
+            &:nth-child(2) {
+                display: block;
+            }
+        }
+    }
+}

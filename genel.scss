@@ -1,0 +1,67 @@
+//ABSTRACTS
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+//BASE
+@import 'base/typography';
+@import 'base/icons';
+@import 'base/global';
+@import 'base/utilities';
+@import 'vendors/animate';
+
+//COMPONENTS
+@import 'components/button';
+@import 'components/form';
+@import 'components/tab';
+
+//HEADER
+@import 'layout/header/header';
+@import 'layout/header/top-menu';
+@import 'layout/header/mini-lang';
+@import 'layout/header/menu';
+
+//FOOTER
+@import 'layout/footer/footer';
+@import 'layout/footer/bulletin';
+@import 'layout/footer/social';
+@import 'layout/footer/other-platforms';
+@import 'layout/footer/bottom-links';
+@import 'layout/footer/copyright';
+
+//PAGE COMPONENTS
+@import 'components/box';
+
+//PAGES
+@import 'layout/pages/login';
+
+
+//DESKTOP
+@supports(grid-area: auto) {
+    @include setMinMedia($breakpoint-medium) {
+        //GENERAL
+        @import 'layout/general-desktop';
+
+        //HEADER
+        @import 'layout/header/header-desktop';
+        @import 'layout/header/mini-lang-desktop';
+        @import 'layout/header/top-menu-desktop';
+        @import 'layout/header/mini-user-desktop';
+        @import 'layout/header/mini-cart-desktop';
+        @import 'layout/header/mini-search-desktop';
+        @import 'layout/header/logo-desktop';
+        @import 'layout/header/menu-desktop';
+
+        //FOOTER
+        @import 'layout/footer/footer-desktop';
+        @import 'layout/footer/footer-menu-desktop';
+        @import 'layout/footer/other-platform-desktop';
+        @import 'layout/footer/bottom-links-desktop';
+        @import 'layout/footer/copyright-desktop';
+
+        //PAGE COMPONENTS
+        @import 'components/box-desktop';
+
+        //PAGES
+        @import 'layout/pages/home-desktop';
+    }
+}

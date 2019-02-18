@@ -1,0 +1,14 @@
+.other-platforms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 80px;
+    .ga1 {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .ga2 {
+        margin-right: 20px;
+    }
+}
