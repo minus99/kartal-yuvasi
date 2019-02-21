@@ -1,0 +1,130 @@
+@mixin banner-body-bottom {
+    top: auto;
+    bottom: 0;
+    transform: none;
+}
+@mixin banner-body-static {
+    position: static;
+    transform: none;
+}
+.banner {
+    position: relative;
+    overflow: hidden;
+    .prm-image {
+        display: block;
+        img {
+            width: 100%;
+        }
+    }
+    .prm-title {
+        font-size: 24px;
+        b {
+            font-weight: 700;
+        }
+    }
+    .prm-marker {
+        position: absolute;
+        right: 26px;
+        top: 100%;
+        transform: translateY(0) scale(.5);
+        opacity: 0;
+        transition: all .32s ease;
+        background: transparent;
+        border-color: transparent;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .btn-transparent {
+        border-color: transparent;
+    }
+    .btn + .btn {
+        margin-left: 20px;
+    }
+    .prm-desc {
+        font-family: $font2;
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        a {
+            color: $color7;
+        }
+    }
+
+    &-body {
+        padding: 25px 20px 40px;
+        text-align: center;
+    }
+
+    &:hover {
+        .prm-marker {
+            top: 50%;
+            transform: translateY(-50%) scale(1);
+            opacity: 1;
+        }
+    }
+
+    //banner type01
+    &01 {
+        .prm-url {
+            display: block;
+            border-color: $color5;
+        }
+
+        + .banner01 {
+            margin-left: 15px;
+        }
+    }
+
+    //banner type02
+    &02 {
+        .btn {
+            margin-top: 20px;
+        }
+    }
+
+    //banner type3
+    &03 {
+        .btn {
+            margin-top: 10px;
+        }
+    }
+
+    //banner type4
+    &04 {
+        margin: 0 30px;
+        .banner-body {
+            text-align: unset;
+            padding: 20px 0;
+        }
+        .prm-title {
+            font-size: 16px;
+        }
+        .prm-desc {
+            font-size: 16px;
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+        .btn {
+            @include full-url;
+        }
+    }
+
+    //banner type5
+    &05 {}
+
+    //banner type6
+    &06 {
+        height: 100%;
+        .banner-body {
+            @include banner-body-static;
+            height: 100%;
+            padding: 30px 20px 40px;
+        }
+        .prm-title {
+            font-size: 30px;
+        }
+        .prm-desc {
+            font-size: 15px;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.obj-mobile {
+    display: none !important;
+}
+
+//EMOS FRAMEWORK
+.d-ems {
+    //FLEX
+    &-flex {
+        display: flex;
+
+        //horizontal align
+        &-left {
+            justify-content: flex-start;
+        }
+        &-center {
+            justify-content: center;
+        }
+        &-right {
+            justify-content: flex-end;
+        }
+        &-between {
+            justify-content: space-between;
+        }
+
+        //vertical align
+        &-middle {
+            align-items: center;
+        }
+
+        //direction
+        &-column {
+            flex-direction: column;
+        }
+
+        //wrap
+        &-wrap {
+            flex-wrap: wrap;
+        }
+
+        //item size
+        &-auto {
+            flex: auto;
+        }
+        &-1 {
+            flex: 1;
+        }
+    }
+}

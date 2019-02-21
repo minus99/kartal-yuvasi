@@ -1,0 +1,95 @@
+.banner {
+    .prm-title {
+        font-size: 40px;
+    }
+    .prm-sub-title {
+        font-size: 40px;
+    }
+    
+    &-body {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 50px;
+        text-align: unset;
+    }
+
+    //banner type01
+    &01 {
+        .banner-body {
+            @include banner-body-bottom;
+            padding: 30px;
+        }
+        .prm-title {
+            font-size: 30px;
+            padding-right: 160px;
+        }
+        .prm-url {
+            @include full-url;
+        }
+
+        + .banner01 {
+            margin-left: 30px;
+        }
+    }
+
+    //banner type02
+    &02 {
+        .banner-body {
+            padding: 20px 75px;
+        }
+        .btn {
+            background: $color2;
+            color: $color1;
+            &:hover {
+                background: $color3;
+            }
+        }
+    }
+
+    //banner type03
+    &03 {
+        .banner-body {
+            @include banner-body-bottom;
+            padding: 40px 50px;
+        }
+        .btn {
+            padding-left: 0;
+            padding-right: 0;
+            margin-top: 0;
+        }
+
+        + .banner03 {
+            margin-left: 40px;
+        }
+    }
+
+    //banner type4
+    &04 {
+        margin: 0;
+        .banner-body {
+            @include banner-body-static;
+        }
+        .btn {
+            position: static;
+            margin-top: 5px;
+            padding-left: 0;
+            padding-right: 0;
+            width: auto;
+            height: auto;
+            font-size: 16px;
+            > span {
+                display: flex;
+            }
+        }
+    }
+
+    //banner type5
+    &05 {}
+
+    //banner type6
+    &06 {}
+}

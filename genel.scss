@@ -9,11 +9,6 @@
 @import 'base/utilities';
 @import 'vendors/animate';
 
-//COMPONENTS
-@import 'components/button';
-@import 'components/form';
-@import 'components/tab';
-
 //HEADER
 @import 'layout/header/header';
 @import 'layout/header/top-menu';
@@ -28,16 +23,25 @@
 @import 'layout/footer/bottom-links';
 @import 'layout/footer/copyright';
 
-//PAGE COMPONENTS
-@import 'components/box';
+//COMPONENTS
+@import 'components/button';
+@import 'components/form';
+@import 'components/tab';
+@import 'components/banner';
+@import 'components/instagram-feed';
+@import 'components/design-uniform';
 
 //PAGES
+@import 'layout/pages/home';
 @import 'layout/pages/login';
 
 
 //DESKTOP
 @supports(grid-area: auto) {
     @include setMinMedia($breakpoint-medium) {
+        //BASE
+        @import 'base/utilities-desktop';
+
         //GENERAL
         @import 'layout/general-desktop';
 
@@ -58,8 +62,9 @@
         @import 'layout/footer/bottom-links-desktop';
         @import 'layout/footer/copyright-desktop';
 
-        //PAGE COMPONENTS
-        @import 'components/box-desktop';
+        //COMPONENTS
+        @import 'components/banner-desktop';
+        @import 'components/design-uniform-desktop';
 
         //PAGES
         @import 'layout/pages/home-desktop';

@@ -28,27 +28,22 @@
             background: $color3;
         }
     }
+
     &-transparent {
         background: transparent;
-        color: $color1;
-        border-color: inherit;
+        color: inherit;
+        border-color: $color5;
         &:hover {
             background: transparent;
         }
-
-        &-light {
-            color: #fff;
-            &:hover {
-                background: transparent;
-            }
-        }
     }
+
     &-full {
         position: absolute;
-        width: 100%;
-        height: 100%;
         left: 0;
         top: 0;
+        width: 100%;
+        height: 100%;
         font-size: 0;
     }
 }
@@ -61,11 +56,12 @@ a.btnDefault:not(.btnBultenGonder) {
     }
 }
 
+.btn-primary {
+    @extend %btn-primary;
+}
+
 .btn-transparent {
     @extend %btn-transparent;
-    &.light {
-        @extend %btn-transparent-light;
-    }
 }
 
 .btn-full {

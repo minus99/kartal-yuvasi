@@ -1,0 +1,98 @@
+.design-uniform {
+    position: relative;
+
+    .ga2 {
+        display: none;
+    }
+
+    .icon-radio-active {
+        font-size: 18px;
+        --check: hidden;
+    }
+    .selected {
+        .icon-radio-active {
+            --check: visible;
+        }
+    }
+}
+.uniform {
+    &-preview {
+        position: relative;
+        background: url(/images/frontend/design-uniform-bg.png) center bottom / 100% no-repeat;
+        min-height: 411px;
+    }
+    &-image {
+        position: absolute;
+        max-width: 200px;
+        left: 50%;
+        bottom: 15px;
+        transform: translateX(-50%);
+    }
+
+    &-start {
+        text-align: center;
+        .btn {
+            margin-top: -10px;
+            border-color: transparent;
+        }
+    }
+
+    &-options {
+        padding: 50px 150px 50px 50px;
+       background: $color3;
+       color: $color1;
+    }
+    
+    &-gender {
+        a {
+            font-family: $font2;
+            font-size: 15px;
+            + a {
+                margin-left: 40px;
+            }
+        }
+    }
+
+    &-color {
+        margin-top: 30px;
+        a {
+            padding: 10px;
+            background: transparent;
+            border: 1px solid $color9;
+            border-radius: 2px;
+            text-align: center;
+            font-weight: 700;
+            img {
+                display: block;
+                margin: 0 auto 10px;
+            }
+            &.selected {
+                background: $color5;
+            }
+
+            + a {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    &-tab {
+        margin-top: 30px;
+        .ems-tab-header {
+            > * {
+                border-width: 0 0 5px 0;
+                &.selected {
+                    border-color: inherit;
+                }
+            }
+        }
+    }
+
+    &-add-to-cart {
+        margin-top: 30px;
+    }
+    &-price {
+        font-size: 26px;
+        font-weight: 700;
+    }
+}
