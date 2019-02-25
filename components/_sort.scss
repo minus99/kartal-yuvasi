@@ -1,0 +1,33 @@
+.ems-sort {
+    display: none;
+    .urunKiyaslamaOzellik_ozellikAd {
+        background-image: none;
+    }
+
+    #dvUrunKiyaslamaOzellik.sorts {
+        margin-top: 15px;
+        .urunKiyaslamaOzellik {
+            padding-left: 30px;
+            @extend .base64-icon-radio;
+            &.link_selected {
+                @extend .base64-icon-radio-active;
+            }
+        }
+    }
+
+    #dvUrunKiyaslamaOzellik.views {
+        .urunKiyaslamaOzellik {
+            background: none;
+            padding: 0;
+            color: $color7;
+            display: flex;
+            align-items: center;
+            &.link_selected {
+                color: $color1;
+            }
+            svg {
+                margin-right: 5px;
+            }
+        }
+    }
+}

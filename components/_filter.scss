@@ -1,0 +1,82 @@
+.kutuOzellikFiltre {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: $color3;
+    color: $color1;
+
+    .btn-close {
+        display: inline-flex;
+    }
+}
+.kutuHeaderOzellikFiltre {
+    background: $color2;
+    padding: 21px 20px;
+    font-size: 22px;
+    font-weight: 700;
+}
+.kutuBodyOzellikFiltre {
+    font-family: $font2;
+    font-size: 15px;
+    height: calc(100% - 144px);
+    overflow-x: auto;
+}
+#dvUrunKiyaslamaOzellik  {
+    border-bottom: 1px solid $color5;
+    margin: 0 20px;
+    padding: 0 10px;
+}
+.urunKiyaslamaOzellik_ozellikAd {
+    position: sticky;
+    top: 0;
+    background-color: $color3;
+    font-weight: 700;
+    padding: 18px 0;
+    @extend .base64-icon-minus;
+    background-position: right center;
+    background-repeat: no-repeat;
+    transition: background .25s ease;
+    &.kapali {
+        @extend .base64-icon-plus;
+    }
+}
+.urunKiyaslamaOzellik_temizle {
+    display: none;
+}
+.urunKiyaslamaOzellik_ozellikIcerik {
+    padding: 0 0 15px;
+}
+.urunKiyaslamaOzellik {
+    display: block;
+    padding: 11px 10px 10px 24px;
+    @extend .base64-icon-check;
+    background-position: left center;
+    background-repeat: no-repeat;
+    &.link_selected {
+        @extend .base64-icon-check-active;
+    }
+}
+.kutuFooterOzellikFiltre {
+    position: fixed;
+    left: 0;
+    bottom: 20px;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    > div {
+        flex: 1;
+    }
+    a {
+        display: block;
+        line-height: 48px;
+    }
+}
+.urunKiyaslamaOzellik_tumunuTemizle:not(:empty) {
+    display: block !important;
+    margin-right: 10px;
+}

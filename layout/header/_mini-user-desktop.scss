@@ -1,7 +1,10 @@
 .mini-user {
     position: relative;
     background: $color4;
-    @include setCurveR(15, 23);
+    @include setCurve(-15, 25);
+    > * {
+        @include setCurve(15, 0);
+    }
     &-info {
         > span {
             @extend %header-mods-title;

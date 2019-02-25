@@ -8,6 +8,8 @@
 @import 'base/global';
 @import 'base/utilities';
 @import 'vendors/animate';
+@import 'components/button';
+@import 'components/form';
 
 //HEADER
 @import 'layout/header/header';
@@ -19,31 +21,32 @@
 @import 'layout/footer/footer';
 @import 'layout/footer/bulletin';
 @import 'layout/footer/social';
+@import 'layout/footer/footer-menu';
 @import 'layout/footer/other-platforms';
 @import 'layout/footer/bottom-links';
 @import 'layout/footer/copyright';
 
 //COMPONENTS
-@import 'components/button';
-@import 'components/form';
 @import 'components/tab';
 @import 'components/banner';
 @import 'components/instagram-feed';
 @import 'components/design-uniform';
+@import 'components/product';
+@import 'components/breadcrumb';
+@import 'components/category';
+@import 'components/filter';
+@import 'components/sort';
 
 //PAGES
 @import 'layout/pages/home';
 @import 'layout/pages/login';
-
+@import 'layout/pages/product-list';
 
 //DESKTOP
 @supports(grid-area: auto) {
     @include setMinMedia($breakpoint-medium) {
         //BASE
         @import 'base/utilities-desktop';
-
-        //GENERAL
-        @import 'layout/general-desktop';
 
         //HEADER
         @import 'layout/header/header-desktop';
@@ -57,16 +60,19 @@
 
         //FOOTER
         @import 'layout/footer/footer-desktop';
-        @import 'layout/footer/footer-menu-desktop';
-        @import 'layout/footer/other-platform-desktop';
+        @import 'layout/footer/bulletin-desktop';
         @import 'layout/footer/bottom-links-desktop';
         @import 'layout/footer/copyright-desktop';
 
         //COMPONENTS
         @import 'components/banner-desktop';
         @import 'components/design-uniform-desktop';
+        @import 'components/product-desktop';
+        @import 'components/filter-desktop';
+        @import 'components/sort-desktop';
 
         //PAGES
         @import 'layout/pages/home-desktop';
+        @import 'layout/pages/product-list-desktop';
     }
 }

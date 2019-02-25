@@ -28,6 +28,9 @@
         }
 
         //direction
+        &-row {
+            flex-direction: row;
+        }
         &-column {
             flex-direction: column;
         }
@@ -44,5 +47,10 @@
         &-1 {
             flex: 1;
         }
+    }
+
+    //GRID
+    &-grid {
+        display: grid;
     }
 }

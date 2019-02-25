@@ -2,3 +2,13 @@
     background: url(/images/frontend/footer-bg-mobile.png) center 60% / 100% no-repeat;
     padding: 50px 0;
 }
+
+.footer-content {
+    margin-top: 80px;
+    color: $color7;
+    .banner04 {
+        .banner-body {
+            padding: 0;
+        }
+    }
+}

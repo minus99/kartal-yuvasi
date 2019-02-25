@@ -1,0 +1,16 @@
+//page
+.ems-page-product-list-grid {
+    position: relative;
+
+    grid-template-columns: 1fr 180px 60px minmax(900px, 1fr) 1fr;
+    grid-template-areas:
+    "ga1 ga1 ga1 ga1 ga1"
+    ". ga2 . ga3 .";
+
+    @include setGridArea(1,3);
+}
+
+//product list
+.product-list-grid {
+    grid-gap: 40px;
+}

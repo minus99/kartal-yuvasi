@@ -73,6 +73,9 @@
         .banner-body {
             @include banner-body-static;
         }
+        .prm-title {
+            font-size: 30px;
+        }
         .btn {
             position: static;
             margin-top: 5px;

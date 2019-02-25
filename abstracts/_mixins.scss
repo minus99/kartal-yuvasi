@@ -32,19 +32,10 @@
     }
 }
 
-//curve right
-@mixin setCurveR($x, $x2) {
-    transform: skewX(-#{$x}deg) translateX(#{$x2}px);
-    > * {
-        transform: skewX(#{$x}deg);
-    }
-}
-//curve left
-@mixin setCurveL($x, $x2) {
-    transform: skewX(#{$x}deg) translateX(#{$x2}px);
-    > * {
-        transform: skewX(-#{$x}deg);
-    }
+
+//curve
+@mixin setCurve($skewX, $translateX) {
+    transform: skewX(#{$skewX}deg) translateX(#{$translateX}px);
 }
 
 //full url
@@ -56,7 +47,7 @@
     height: 100%;
     background: none;
     border: none;
-    > span {
+    > * {
         display: none;
     }
 }

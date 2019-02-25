@@ -45,3 +45,24 @@
         height: 10px;
     }
 }
+
+.base64-icon {
+    &-minus {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4gICAgPHBhdGggZmlsbD0iIzAwMCIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTEgMTZoMTB2MUgxMXoiLz48L3N2Zz4=);
+    }
+    &-plus {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4gICAgPHBhdGggZmlsbD0iIzAwMCIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTUuNSAxNnYtNC41aDFWMTZIMjF2MWgtNC41djQuNWgtMVYxN0gxMXYtMWg0LjV6Ii8+PC9zdmc+);
+    }
+    &-check {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDE0IDE0Ij4gICAgPHJlY3Qgd2lkdGg9IjEzIiBoZWlnaHQ9IjEzIiB4PSIuNSIgeT0iLjUiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjODc4Nzg3IiByeD0iMSIvPjwvc3ZnPg==);
+    }
+    &-check-active {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDE0IDE0Ij4gICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9IiMwMDAiPiAgICAgICAgPHJlY3Qgd2lkdGg9IjEzIiBoZWlnaHQ9IjEzIiB4PSIuNSIgeT0iLjUiIHJ4PSIxIi8+ICAgICAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjIiIGQ9Ik0zIDYuNjgxbDIuNTUgMi41NUwxMC43ODIgNCIvPiAgICA8L2c+PC9zdmc+);
+    }
+    &-radio {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4gICAgPHJlY3Qgd2lkdGg9IjE3IiBoZWlnaHQ9IjE3IiB4PSIuNSIgeT0iLjUiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjODc4Nzg3IiByeD0iOC41Ii8+PC9zdmc+);
+    }
+    &-radio-active {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4gICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9IiMwMDAiPiAgICAgICAgPHJlY3Qgd2lkdGg9IjE3IiBoZWlnaHQ9IjE3IiB4PSIuNSIgeT0iLjUiIHJ4PSI4LjUiLz4gICAgICAgIDxwYXRoIHN0cm9rZS13aWR0aD0iMiIgZD0iTTUgOC42ODFsMi41NSAyLjU1TDEyLjc4MiA2Ii8+ICAgIDwvZz48L3N2Zz4=);
+    }
+}

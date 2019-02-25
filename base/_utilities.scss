@@ -6,6 +6,30 @@
 }
 
 //EMOS FRAMEWORK
+//table fixer
+table {
+    display: table !important;
+    width: 100%;
+}
+
+//price fixer
+.urunListe_brutFiyat,
+.urunListe_satisFiyat {
+    display: flex;
+    .d {
+        display: none;
+    }
+    [class^="pb"] {
+        order: -1;
+    }
+}
+
+//unneeded objects
+.ayiracDefault,
+.kutuBosluk {
+    display: none !important;
+}
+
 .ems {
     //HIDDEN
     &-none,
@@ -87,6 +111,9 @@
         }
 
         //direction
+        &-row {
+            flex-direction: row;
+        }
         &-column {
             flex-direction: column;
         }
@@ -103,6 +130,11 @@
         &-1 {
             flex: 1;
         }
+    }
+
+    //GRID
+    &-grid {
+        display: grid;
     }
 
     //TEXT
@@ -122,4 +154,9 @@
         text-align: center;
         margin-bottom: 20px;
     }
+}
+
+//MAIN
+.site-main {
+    min-height: 500px;
 }

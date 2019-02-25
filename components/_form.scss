@@ -6,10 +6,10 @@ textarea,
     background: $color2;
     color: $color1;
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 2.8;
     letter-spacing: .7px;
     width: 100%;
-    padding: 10px 15px;
+    padding: 0 15px;
     border: 1px solid $color5;
     outline: none;
 }
@@ -17,6 +17,12 @@ textarea,
 input:disabled,
 input:read-only {
     background: $color7;
+}
+
+textarea {
+    line-height: 1.5;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 [id$="CEPTELEFONALAN"] {

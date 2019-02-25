@@ -1,0 +1,32 @@
+.kutuKategori {
+    position: relative;
+    background: #2a7da5;
+
+    ul {
+        padding-left: 15px;
+    }
+}
+.kutuHeaderKategori,
+.kutuFooterKategori {
+    display: none;
+}
+
+ul.menuKategori {
+    a {
+        position: relative;
+        display: block;
+        font-family: $font2;
+        font-size: 13px;
+        padding: 12px 20px;
+    }
+    b {
+        display: none;
+    }
+    li {
+        display: none;
+        &.sel,
+        &.act > ul > li {
+            display: block;
+        }
+    }
+}
