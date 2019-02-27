@@ -1,4 +1,16 @@
 .navigasyon {
     background: red;
     padding: 20px;
+    font-size: 22px;
+    ol {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+            line-height: 34px;
+        }
+        .icon-breadcrump {
+            float: left;
+        }
+    }
 }

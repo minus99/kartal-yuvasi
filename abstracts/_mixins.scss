@@ -32,14 +32,13 @@
     }
 }
 
-
 //curve
 @mixin setCurve($skewX, $translateX) {
     transform: skewX(#{$skewX}deg) translateX(#{$translateX}px);
 }
 
-//full url
-@mixin full-url {
+//cover object
+@mixin ems-cover {
 	position: absolute;
 	left: 0;
     top: 0;
@@ -50,4 +49,12 @@
     > * {
         display: none;
     }
+}
+
+//rotate
+@mixin rotate-x {
+    transform: rotate(180deg)
+}
+@mixin rotate-y {
+    transform: rotate(90deg);
 }

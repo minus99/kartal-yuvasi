@@ -1,3 +1,33 @@
 .ems-sort {
     display: block;
+    #dvUrunKiyaslamaOzellik{
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        &.sorts {
+            .urunKiyaslamaOzellik {
+                background-image: none;
+                padding: 0 20px;
+                font-size: 14px;
+                line-height: 38px;
+                border: 1px solid transparent;
+                &.link_selected {
+                    border-color: $color5;
+                }
+            }
+        }
+        
+        &.views {
+            $marginl: 15px;
+            .urunKiyaslamaOzellik_ozellikIcerik {
+                margin-left: -$marginl;
+            }
+            .urunKiyaslamaOzellik {
+                margin-left: $marginl;
+            }
+        }
+    }
+    .urunKiyaslamaOzellik_ozellikIcerik {
+        padding: 0;
+    }
 }

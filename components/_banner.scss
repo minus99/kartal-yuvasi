@@ -10,6 +10,7 @@
 .banner {
     position: relative;
     overflow: hidden;
+    color: $color2;
     .prm-image {
         display: block;
         img {
@@ -105,7 +106,7 @@
             margin-bottom: 0;
         }
         .btn {
-            @include full-url;
+            @include ems-cover;
         }
     }
 

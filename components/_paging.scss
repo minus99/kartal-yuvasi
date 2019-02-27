@@ -1,0 +1,67 @@
+.urunPaging {
+    margin-top: 20px;
+    @extend .ems-container;
+
+    td[align="left"],
+    td[align="right"] {
+        display: none;
+    }
+    td[align="center"] {
+        width: 100% !important;
+    }
+}
+
+.urunPaging_pageNavigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $color1;
+    [id$="lblPaging"] {
+        margin-left: auto;
+        margin-right: auto;
+        a.paging {
+            &:not(:last-child) {
+                display: none;
+            }
+            &:last-child {
+                &::before {
+                    content: "/";
+                    margin-right: 5px;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+    .paging {
+        display: inline-block;
+        line-height: 48px;
+        &[id$="lnkPrev"] {
+            border-right: 1px solid $color5;
+            min-width: 48px;
+        }
+        &[id$="lnkNext"] {
+            border-left: 1px solid $color5;
+            min-width: 48px;
+        }
+    }
+    .tumunuGoster {
+        font-family: $font3;
+        font-size: 16px;
+        color: $color1;
+        font-weight: 700;
+        text-decoration: underline;
+        margin-left: auto;
+    }
+}
+
+#lbfPagingPrev,
+#lbfPagingNext {
+    display: block;
+    @extend .base64;
+    @extend .base64-arrow-r;
+    background-position: center center;
+    font-size: 0;
+}
+#lbfPagingPrev {
+    @include rotate-x;
+}

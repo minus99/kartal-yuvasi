@@ -28,7 +28,7 @@
             padding-right: 160px;
         }
         .prm-url {
-            @include full-url;
+            @include ems-cover;
         }
 
         + .banner01 {

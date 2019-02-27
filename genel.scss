@@ -36,6 +36,7 @@
 @import 'components/category';
 @import 'components/filter';
 @import 'components/sort';
+@import 'components/paging';
 
 //PAGES
 @import 'layout/pages/home';
@@ -68,8 +69,11 @@
         @import 'components/banner-desktop';
         @import 'components/design-uniform-desktop';
         @import 'components/product-desktop';
+        @import 'components/breadcrumb-desktop';
+        @import 'components/category-desktop';
         @import 'components/filter-desktop';
         @import 'components/sort-desktop';
+        @import 'components/paging-desktop';
 
         //PAGES
         @import 'layout/pages/home-desktop';

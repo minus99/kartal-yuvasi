@@ -47,17 +47,6 @@
   font-style: normal;
 }
 
-[class*="icon-"] {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
-  vertical-align: middle;
-  font-size: 32px;
-}
-
 .menu li > a::after {
   content: "";
   border-width: 4px;
@@ -70,6 +59,17 @@
 
 .menu li:hover > a::after {
   border-color: transparent currentColor transparent transparent;
+}
+
+[class*="icon-"], .icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  vertical-align: middle;
+  font-size: 32px;
 }
 
 .icon-logo-dark {
@@ -92,28 +92,46 @@
   height: 10px;
 }
 
-.base64-icon-minus, .urunKiyaslamaOzellik_ozellikAd {
+[class*="base64-"], .base64, .urunKiyaslamaOzellik_ozellikAd, .urunKiyaslamaOzellik, .ozellikFiltreSecim > a, #lbfPagingPrev,
+#lbfPagingNext {
+  background-repeat: no-repeat;
+}
+
+.base64-minus, .urunKiyaslamaOzellik_ozellikAd {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4gICAgPHBhdGggZmlsbD0iIzAwMCIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTEgMTZoMTB2MUgxMXoiLz48L3N2Zz4=);
 }
 
-.base64-icon-plus, .urunKiyaslamaOzellik_ozellikAd.kapali {
+.base64-plus, .urunKiyaslamaOzellik_ozellikAd.kapali {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4gICAgPHBhdGggZmlsbD0iIzAwMCIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTUuNSAxNnYtNC41aDFWMTZIMjF2MWgtNC41djQuNWgtMVYxN0gxMXYtMWg0LjV6Ii8+PC9zdmc+);
 }
 
-.base64-icon-check, .urunKiyaslamaOzellik {
+.base64-check, .urunKiyaslamaOzellik {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDE0IDE0Ij4gICAgPHJlY3Qgd2lkdGg9IjEzIiBoZWlnaHQ9IjEzIiB4PSIuNSIgeT0iLjUiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjODc4Nzg3IiByeD0iMSIvPjwvc3ZnPg==);
 }
 
-.base64-icon-check-active, .urunKiyaslamaOzellik.link_selected {
+.base64-check-active, .urunKiyaslamaOzellik.link_selected {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDE0IDE0Ij4gICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9IiMwMDAiPiAgICAgICAgPHJlY3Qgd2lkdGg9IjEzIiBoZWlnaHQ9IjEzIiB4PSIuNSIgeT0iLjUiIHJ4PSIxIi8+ICAgICAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjIiIGQ9Ik0zIDYuNjgxbDIuNTUgMi41NUwxMC43ODIgNCIvPiAgICA8L2c+PC9zdmc+);
 }
 
-.base64-icon-radio, .ems-sort #dvUrunKiyaslamaOzellik.sorts .urunKiyaslamaOzellik {
+.base64-radio, .ems-sort #dvUrunKiyaslamaOzellik.sorts .urunKiyaslamaOzellik {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4gICAgPHJlY3Qgd2lkdGg9IjE3IiBoZWlnaHQ9IjE3IiB4PSIuNSIgeT0iLjUiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjODc4Nzg3IiByeD0iOC41Ii8+PC9zdmc+);
 }
 
-.base64-icon-radio-active, .ems-sort #dvUrunKiyaslamaOzellik.sorts .urunKiyaslamaOzellik.link_selected {
+.base64-radio-active, .ems-sort #dvUrunKiyaslamaOzellik.sorts .urunKiyaslamaOzellik.link_selected {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4gICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9IiMwMDAiPiAgICAgICAgPHJlY3Qgd2lkdGg9IjE3IiBoZWlnaHQ9IjE3IiB4PSIuNSIgeT0iLjUiIHJ4PSI4LjUiLz4gICAgICAgIDxwYXRoIHN0cm9rZS13aWR0aD0iMiIgZD0iTTUgOC42ODFsMi41NSAyLjU1TDEyLjc4MiA2Ii8+ICAgIDwvZz48L3N2Zz4=);
+}
+
+.base64-remove, .ozellikFiltreSecim > a {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4gICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4gICAgICAgIDxyZWN0IHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgeD0iOSIgeT0iOSIgZmlsbD0iI0Q4RDhEOCIgcng9IjEiLz4gICAgICAgIDxwYXRoIGZpbGw9IiM4Nzg3ODciIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTE2IDE1LjI5M2wzLjE4Mi0zLjE4Mi43MDcuNzA3TDE2LjcwNyAxNmwzLjE4MiAzLjE4Mi0uNzA3LjcwN0wxNiAxNi43MDdsLTMuMTgyIDMuMTgyLS43MDctLjcwN0wxNS4yOTMgMTZsLTMuMTgyLTMuMTgyLjcwNy0uNzA3TDE2IDE1LjI5M3oiLz4gICAgPC9nPjwvc3ZnPg==);
+}
+
+.base64-arrow-r, #lbfPagingPrev,
+#lbfPagingNext {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4gICAgPHBhdGggZmlsbD0iIzAwMCIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNNiAxNWgxNHYtM2w2IDQtNiA0di0zSDZ6Ii8+PC9zdmc+);
+}
+
+.base64-close {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4gICAgPHBhdGggZmlsbD0iIzAwMCIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTUuMjkzIDE2TDguNTc1IDkuMjgybC43MDctLjcwN0wxNiAxNS4yOTNsNi43MTgtNi43MTguNzA3LjcwN0wxNi43MDcgMTZsNi43MTggNi43MTgtLjcwNy43MDdMMTYgMTYuNzA3bC02LjcxOCA2LjcxOC0uNzA3LS43MDdMMTUuMjkzIDE2eiIvPjwvc3ZnPg==);
 }
 
 .anaBody > div[ondblclick][style] {
@@ -161,13 +179,12 @@ html::before {
 }
 
 body {
-  background: #000;
   margin: 0;
   overflow-y: scroll;
   font-family: din, arial;
   font-size: 14px;
-  color: #fff;
-  font-weight: 300;
+  color: #000;
+  font-weight: 400;
   line-height: 1.3;
 }
 
@@ -250,7 +267,7 @@ table {
   display: block;
 }
 
-.ems-container {
+.ems-container, .urunPaging {
   width: calc(100% - 40px);
   margin-left: auto;
   margin-right: auto;
@@ -300,8 +317,16 @@ table {
   flex-direction: row;
 }
 
+.ems-flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
 .ems-flex-column {
   flex-direction: column;
+}
+
+.ems-flex-column-reverse {
+  flex-direction: column-reverse;
 }
 
 .ems-flex-wrap {
@@ -3893,6 +3918,7 @@ textarea {
   top: 0;
   z-index: 2;
   background: #000;
+  color: #fff;
 }
 
 .header-mobile {
@@ -4050,8 +4076,9 @@ textarea {
 }
 
 .site-footer {
-  background: url(/images/frontend/footer-bg-mobile.png) center 60%/100% no-repeat;
+  background: #000 url(/images/frontend/footer-bg-mobile.png) center 60%/100% no-repeat;
   padding: 50px 0;
+  color: #fff;
 }
 
 .footer-content {
@@ -4214,6 +4241,7 @@ textarea {
 .banner {
   position: relative;
   overflow: hidden;
+  color: #fff;
 }
 
 .banner .prm-image {
@@ -4354,6 +4382,8 @@ textarea {
 
 .design-uniform {
   position: relative;
+  background: #000;
+  color: #fff;
 }
 
 .design-uniform .ga2 {
@@ -4384,6 +4414,7 @@ textarea {
 }
 
 .uniform-start {
+  padding-bottom: 50px;
   text-align: center;
 }
 
@@ -4488,7 +4519,7 @@ textarea {
 }
 
 .ems-prd-price {
-  margin-top: 3px;
+  margin-top: 4px;
   font-size: 18px;
   font-weight: 700;
 }
@@ -4536,41 +4567,30 @@ textarea {
 .navigasyon {
   background: red;
   padding: 20px;
+  font-size: 22px;
+}
+
+.navigasyon ol {
+  margin: 0;
+  padding: 0;
+}
+
+.navigasyon ol li {
+  list-style: none;
+  line-height: 34px;
+}
+
+.navigasyon ol .icon-breadcrump {
+  float: left;
 }
 
 .kutuKategori {
-  position: relative;
-  background: #2a7da5;
-}
-
-.kutuKategori ul {
-  padding-left: 15px;
-}
-
-.kutuHeaderKategori,
-.kutuFooterKategori {
   display: none;
 }
 
-ul.menuKategori a {
-  position: relative;
-  display: block;
-  font-family: fira;
-  font-size: 13px;
-  padding: 12px 20px;
-}
-
-ul.menuKategori b {
-  display: none;
-}
-
-ul.menuKategori li {
-  display: none;
-}
-
-ul.menuKategori li.sel,
-ul.menuKategori li.act > ul > li {
-  display: block;
+.categories-append {
+  background: green;
+  padding: 20px;
 }
 
 .kutuOzellikFiltre {
@@ -4616,8 +4636,9 @@ ul.menuKategori li.act > ul > li {
   font-weight: 700;
   padding: 18px 0;
   background-position: right center;
-  background-repeat: no-repeat;
-  transition: background .25s ease;
+  transition: background-image .25s ease;
+  user-select: none;
+  cursor: pointer;
 }
 
 .urunKiyaslamaOzellik_temizle {
@@ -4632,7 +4653,6 @@ ul.menuKategori li.act > ul > li {
   display: block;
   padding: 11px 10px 10px 24px;
   background-position: left center;
-  background-repeat: no-repeat;
 }
 
 .kutuFooterOzellikFiltre {
@@ -4659,12 +4679,60 @@ ul.menuKategori li.act > ul > li {
   margin-right: 10px;
 }
 
+.pnlUrunKiyasSecim {
+  display: none;
+  margin-top: 20px;
+}
+
+.urunKiyaslamaOzellik_secimbaslik,
+.urunKiyaslamaOzellik_UrunSayi {
+  display: none;
+}
+
+.urunKiyaslamaOzellik_secimler {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  font-family: fira;
+}
+
+.urunKiyaslamaOzellik_secimler > div {
+  background: #f5f5f5;
+  color: #000;
+  padding: 11px 12px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.ozellikFiltreBaslik {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.ozellikFiltreSecim {
+  font-size: 13px;
+}
+
+.ozellikFiltreSecim > a {
+  background-position: left center;
+  padding: 0 10px 0 30px;
+  line-height: 32px;
+}
+
 .ems-sort {
   display: none;
 }
 
 .ems-sort .urunKiyaslamaOzellik_ozellikAd {
   background-image: none;
+}
+
+.ems-sort #dvUrunKiyaslamaOzellik.counts .urunKiyaslamaOzellik {
+  background: none;
+  padding: 0;
+  font-size: 14px;
+  color: #999;
 }
 
 .ems-sort #dvUrunKiyaslamaOzellik.sorts {
@@ -4691,20 +4759,93 @@ ul.menuKategori li.act > ul > li {
   margin-right: 5px;
 }
 
-.primary-categories {
-  margin-top: 40px;
+.urunPaging {
+  margin-top: 20px;
 }
 
-.design-uniform {
-  margin-top: 40px;
+.urunPaging td[align="left"],
+.urunPaging td[align="right"] {
+  display: none;
+}
+
+.urunPaging td[align="center"] {
+  width: 100% !important;
+}
+
+.urunPaging_pageNavigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+}
+
+.urunPaging_pageNavigation [id$="lblPaging"] {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.urunPaging_pageNavigation [id$="lblPaging"] a.paging:not(:last-child) {
+  display: none;
+}
+
+.urunPaging_pageNavigation [id$="lblPaging"] a.paging:last-child::before {
+  content: "/";
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.urunPaging_pageNavigation .paging {
+  display: inline-block;
+  line-height: 48px;
+}
+
+.urunPaging_pageNavigation .paging[id$="lnkPrev"] {
+  border-right: 1px solid #c9c9c9;
+  min-width: 48px;
+}
+
+.urunPaging_pageNavigation .paging[id$="lnkNext"] {
+  border-left: 1px solid #c9c9c9;
+  min-width: 48px;
+}
+
+.urunPaging_pageNavigation .tumunuGoster {
+  font-family: dinc;
+  font-size: 16px;
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+  margin-left: auto;
+}
+
+#lbfPagingPrev,
+#lbfPagingNext {
+  display: block;
+  background-position: center center;
+  font-size: 0;
+}
+
+#lbfPagingPrev {
+  transform: rotate(180deg);
+}
+
+.primary-categories {
+  padding-top: 40px;
+  background: #000;
+  color: #fff;
 }
 
 .new-season {
-  margin-top: 50px;
+  background: #000;
+}
+
+.collections {
+  background: #000;
+  padding-top: 40px;
 }
 
 .campaigns {
-  margin-top: -5px;
+  background: #000;
 }
 
 .ems-tab-login {
@@ -4725,12 +4866,19 @@ ul.menuKategori li.act > ul > li {
   margin: 0 auto;
 }
 
-.product-list-grid {
+.ems-prd-list-count,
+.ems-prd-list-sort,
+.urunPaging_btnKiyaslama,
+.urunPaging_paging {
+  display: none;
+}
+
+ul.product-list-grid {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1px;
 }
 
-.product-list-grid > li {
+ul.product-list-grid > li {
   overflow: hidden;
 }
 
@@ -4760,8 +4908,14 @@ ul.menuKategori li.act > ul > li {
     .d-ems-flex-row {
       flex-direction: row;
     }
+    .d-ems-flex-row-reverse {
+      flex-direction: row-reverse;
+    }
     .d-ems-flex-column {
       flex-direction: column;
+    }
+    .d-ems-flex-column-reverse {
+      flex-direction: column-reverse;
     }
     .d-ems-flex-wrap {
       flex-wrap: wrap;
@@ -5218,30 +5372,161 @@ ul.menuKategori li.act > ul > li {
       max-width: 285px;
       bottom: 50px;
     }
+    .navigasyon {
+      font-family: fira;
+      font-size: 13px;
+    }
+    .navigasyon ol li {
+      display: inline-block;
+      line-height: 24px;
+    }
+    .navigasyon ol li:not(.navigasyonSeviye1) {
+      margin-left: 5px;
+    }
+    .navigasyon ol li:not(.navigasyonSeviye1)::before {
+      content: "/";
+      margin-right: 5px;
+    }
+    .navigasyon ol .icon-breadcrump {
+      display: none;
+    }
+    .kutuKategori {
+      position: relative;
+      display: block;
+    }
+    .kutuHeaderKategori,
+    .kutuFooterKategori {
+      display: none;
+    }
+    ul.menuKategori a {
+      position: relative;
+      display: inline-block;
+      font-family: fira;
+      font-size: 13px;
+      padding: 7px 10px;
+      letter-spacing: .3px;
+    }
+    ul.menuKategori li {
+      display: none;
+    }
+    ul.menuKategori li.sel,
+    ul.menuKategori li.act > ul > li {
+      display: block;
+    }
+    ul.menuKategori li.sel > a {
+      font-weight: 700;
+    }
+    ul.menuKategori li.act > ul {
+      padding-left: 15px;
+    }
+    ul.menuKategori li.s2.sel > ul {
+      padding-left: 15px;
+    }
+    ul.menuKategori li.s2.sel .s3 {
+      display: block;
+    }
+    ul.menuKategori b {
+      display: none;
+    }
     .kutuOzellikFiltre {
       display: block;
       position: static;
+      background-color: transparent;
+      color: inherit;
+    }
+    .kutuHeaderOzellikFiltre {
+      background-color: inherit;
+      padding: 15px 10px;
+      border-bottom: 1px solid #f5f5f5;
+    }
+    #dvUrunKiyaslamaOzellik {
+      margin: 0;
+      border-color: #f5f5f5;
+    }
+    .urunKiyaslamaOzellik_ozellikAd {
+      background-color: inherit;
+      padding: 22px 0;
     }
     .kutuFooterOzellikFiltre {
-      position: static;
+      display: none;
+    }
+    .pnlUrunKiyasSecim {
+      display: block;
     }
     .ems-sort {
       display: block;
     }
-    .primary-categories {
-      margin-top: 45px;
+    .ems-sort #dvUrunKiyaslamaOzellik {
+      margin: 0 !important;
+      padding: 0 !important;
+      border: none !important;
     }
-    .design-uniform {
-      margin-top: 96px;
+    .ems-sort #dvUrunKiyaslamaOzellik.sorts .urunKiyaslamaOzellik {
+      background-image: none;
+      padding: 0 20px;
+      font-size: 14px;
+      line-height: 38px;
+      border: 1px solid transparent;
+    }
+    .ems-sort #dvUrunKiyaslamaOzellik.sorts .urunKiyaslamaOzellik.link_selected {
+      border-color: #c9c9c9;
+    }
+    .ems-sort #dvUrunKiyaslamaOzellik.views .urunKiyaslamaOzellik_ozellikIcerik {
+      margin-left: -15px;
+    }
+    .ems-sort #dvUrunKiyaslamaOzellik.views .urunKiyaslamaOzellik {
+      margin-left: 15px;
+    }
+    .ems-sort .urunKiyaslamaOzellik_ozellikIcerik {
+      padding: 0;
+    }
+    .urunPaging {
+      margin-top: 50px;
+      width: auto;
+    }
+    .urunPaging_pageNavigation {
+      border: none;
+    }
+    .urunPaging_pageNavigation [id$="lblPaging"] {
+      margin-left: auto;
+      margin-right: 0;
+    }
+    .urunPaging_pageNavigation [id$="lblPaging"] a.paging:not(:last-child) {
+      display: inline-block;
+    }
+    .urunPaging_pageNavigation [id$="lblPaging"] a.paging:last-child::before {
+      display: none;
+    }
+    .urunPaging_pageNavigation .paging {
+      border: 1px solid #c9c9c9;
+      min-width: 48px;
+      margin: 0 5px;
+    }
+    .urunPaging_pageNavigation .paging[id$="lnkPrev"] {
+      margin-left: auto;
+    }
+    .urunPaging_pageNavigation .paging[id$="lnkPrev"] + [id$="lblPaging"] {
+      margin-left: 0;
+    }
+    .urunPaging_pageNavigation span.paging {
+      background: #000;
+      color: #fff;
+      border-color: transparent;
+    }
+    .urunPaging_pageNavigation .tumunuGoster {
+      display: block !important;
+    }
+    .primary-categories {
+      padding-top: 45px;
+      padding-bottom: 95px;
     }
     .new-season {
-      margin-top: 120px;
+      padding-top: 120px;
+      padding-bottom: 100px;
     }
     .collections {
-      margin-top: 120px;
-    }
-    .campaigns {
-      margin-top: 40px;
+      padding-top: 120px;
+      padding-bottom: 40px;
     }
     .best-sellers {
       position: relative;
@@ -5265,10 +5550,24 @@ ul.menuKategori li.act > ul > li {
     .best-sellers .ems-tab {
       z-index: 1;
     }
+    .instagram-feed {
+      background: #000;
+      padding-top: 60px;
+    }
+    .ems-page-product-list {
+      padding-bottom: 80px;
+    }
+    .primary-sub-categories {
+      background: #000;
+      color: #fff;
+      padding-top: 40px;
+      padding-bottom: 50px;
+    }
     .ems-page-product-list-grid {
       position: relative;
       grid-template-columns: 1fr 180px 60px minmax(900px, 1fr) 1fr;
       grid-template-areas: "ga1 ga1 ga1 ga1 ga1" ". ga2 . ga3 .";
+      grid-row-gap: 40px;
     }
     .ems-page-product-list-grid > .ga1 {
       grid-area: ga1;
@@ -5279,7 +5578,8 @@ ul.menuKategori li.act > ul > li {
     .ems-page-product-list-grid > .ga3 {
       grid-area: ga3;
     }
-    .product-list-grid {
+    ul.product-list-grid {
+      margin-top: 30px;
       grid-gap: 40px;
     }
   }

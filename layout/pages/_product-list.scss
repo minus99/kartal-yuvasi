@@ -1,4 +1,12 @@
-.product-list-grid {
+.ems-prd-list-count,
+.ems-prd-list-sort,
+.urunPaging_btnKiyaslama,
+.urunPaging_paging {
+    display: none;
+}
+
+//product list
+ul.product-list-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1px;
     > li {

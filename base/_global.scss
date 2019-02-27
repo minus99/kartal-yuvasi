@@ -41,12 +41,11 @@ html {
 }
 
 body {
-    background: $color1;
     margin: 0;
     overflow-y: scroll;
     font-family: $font1, arial;
     font-size: $font-size;
-    color: $color2;
+    color: $color1;
     font-weight: $font-weight;
     line-height: $line-height;
 }

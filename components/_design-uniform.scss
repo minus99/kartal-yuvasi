@@ -1,5 +1,7 @@
 .design-uniform {
     position: relative;
+    background: $color1;
+    color: $color2;
 
     .ga2 {
         display: none;
@@ -30,6 +32,7 @@
     }
 
     &-start {
+        padding-bottom: 50px;
         text-align: center;
         .btn {
             margin-top: -10px;

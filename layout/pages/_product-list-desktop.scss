@@ -1,4 +1,14 @@
-//page
+.ems-page-product-list {
+    padding-bottom: 80px;
+}
+
+.primary-sub-categories {
+    background: $color1;
+    color: $color2;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
 .ems-page-product-list-grid {
     position: relative;
 
@@ -6,11 +16,13 @@
     grid-template-areas:
     "ga1 ga1 ga1 ga1 ga1"
     ". ga2 . ga3 .";
+    grid-row-gap: 40px;
 
     @include setGridArea(1,3);
 }
 
 //product list
-.product-list-grid {
+ul.product-list-grid {
+    margin-top: 30px;
     grid-gap: 40px;
 }
