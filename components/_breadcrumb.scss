@@ -1,5 +1,4 @@
 .navigasyon {
-    background: red;
     padding: 20px;
     font-size: 22px;
     ol {
@@ -9,8 +8,15 @@
             list-style: none;
             line-height: 34px;
         }
-        .icon-breadcrump {
+        .icon-breadcrumb {
             float: left;
         }
     }
+}
+
+.navigation-full-path {
+    font-size: 22px;
+    color: $color5;
+    font-weight: 700;
+    margin-top: 10px;
 }

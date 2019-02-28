@@ -1,0 +1,141 @@
+.ems-prdd {
+    &-name {
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: .5px;
+    }
+    &-block1 {
+        margin-top: 7px;
+    }
+    &-price {
+        font-size: 16px;
+        font-weight: 700;
+        [id*="KDVDAHILSATIS"] {
+            display: none;
+        }
+    }
+    &-badge {
+        margin-left: auto;
+    }
+    &-gallery {
+        display: none;
+        margin-top: 20px;
+    }
+    &-size {
+        margin-top: 20px;
+        font-family: $font2;
+        font-size: 13px;
+    }
+    &-add-to-cart {
+        margin-top: 20px;
+    }
+    &-block2 {
+        margin-top: 10px;
+        > * {
+            width: calc(50% - 5px);
+        }
+        a.btnDefault {
+            width: 100%;
+            @extend .btn-transparent;
+        }
+    }
+}
+
+.urunDetay_brutFiyat:not(:empty) {
+    text-decoration: line-through;
+    color: $color7;
+    + .urunDetay_satisFiyat {
+        margin-left: 10px;
+        color: $color4;
+    }
+}
+
+.UrunListeGrup_listeUrunDetayGrup {
+    margin-top: 20px;
+    .listeUrunDetayGrup_listeBaslik,
+    .URN_AD {
+        display: none;
+    }
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        > li {
+            width: 70px;
+            height: 70px;
+            overflow: hidden;
+            cursor: pointer;
+            + li {
+                margin-left: 10px;
+            }
+        }
+    }
+    .URN_RESIM {
+        margin-top: -7px;
+    }
+}
+
+.urunDetay_urunSecenek {
+    $marginl: 5px;
+    .dropdown-options {
+        margin-left: -$marginl;
+        > a {
+            min-width: 76px;
+            line-height: 44px;
+            border: 1px solid $color5;
+            text-align: center;
+            margin: $marginl;
+            &.selectedOption {
+                background: $color1;
+                color: $color2;
+            }
+        }
+    }
+}
+
+.open-size-guide {
+    margin-top: 10px;
+}
+
+.urunDetay_urunAdet {
+    position: relative;
+    > input[type="text"] {
+        padding-right: calc(100% - 60px);
+        text-align: center;
+        background: $color3;
+    }
+    > span {
+        position: absolute;
+        left: 60px;
+        top: 0;
+        line-height: 44px;
+        font-family: $font2;
+        font-size: 15px;
+    }
+}
+.urunDetay_btnSepeteAt {
+    margin-top: 20px;
+}
+a.btnsepeteAt {
+    width: 100%;
+}
+
+//primary properties
+.prop-container {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $color10;    
+}
+.prop {
+    font-family: $font2;
+    font-size: 15px;
+    color: $color7;
+    &-title {
+        margin-top: 3px;
+    }
+}
+
+//mini desc
+.mini-desc {
+    background: red;
+}

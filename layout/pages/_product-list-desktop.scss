@@ -1,12 +1,10 @@
 .ems-page-product-list {
     padding-bottom: 80px;
-}
-
-.primary-sub-categories {
-    background: $color1;
-    color: $color2;
-    padding-top: 40px;
-    padding-bottom: 50px;
+    .navigasyon {
+        position: absolute;
+        padding: 40px;
+        color: $color2;
+    }
 }
 
 .ems-page-product-list-grid {
@@ -21,8 +19,9 @@
     @include setGridArea(1,3);
 }
 
-//product list
-ul.product-list-grid {
-    margin-top: 30px;
-    grid-gap: 40px;
+.primary-sub-categories {
+    background: $color1;
+    color: $color2;
+    padding-top: 40px;
+    padding-bottom: 50px;
 }

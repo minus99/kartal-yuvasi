@@ -1,0 +1,11 @@
+ul.product-list-grid {
+    margin-top: 30px;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px 45px;
+
+    .view-2 & {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+    }
+}

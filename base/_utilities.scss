@@ -14,7 +14,9 @@ table {
 
 //price fixer
 .urunListe_brutFiyat,
-.urunListe_satisFiyat {
+.urunListe_satisFiyat,
+.urunDetay_brutFiyat,
+.urunDetay_satisFiyat {
     display: flex;
     .d {
         display: none;

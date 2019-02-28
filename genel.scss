@@ -37,11 +37,13 @@
 @import 'components/filter';
 @import 'components/sort';
 @import 'components/paging';
+@import 'components/productd';
 
 //PAGES
 @import 'layout/pages/home';
 @import 'layout/pages/login';
 @import 'layout/pages/product-list';
+@import 'layout/pages/product-detail';
 
 //DESKTOP
 @supports(grid-area: auto) {
@@ -74,9 +76,11 @@
         @import 'components/filter-desktop';
         @import 'components/sort-desktop';
         @import 'components/paging-desktop';
+        @import 'components/productd-desktop';
 
         //PAGES
         @import 'layout/pages/home-desktop';
         @import 'layout/pages/product-list-desktop';
+        @import 'layout/pages/product-detail-desktop';
     }
 }

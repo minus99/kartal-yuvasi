@@ -34,6 +34,7 @@
     }
     .paging {
         display: inline-block;
+        font-weight: 700;
         line-height: 48px;
         &[id$="lnkPrev"] {
             border-right: 1px solid $color5;

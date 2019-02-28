@@ -1,3 +1,17 @@
+ul.product-list-grid {
+    margin-top: 20px;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1px;
+    > li {
+        overflow: hidden;
+    }
+    .view-1 & {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+}
+
 $prd-bg: $color10;
 $prd-pd-t: 13px;
 $prd-pd-r: 20px;

@@ -17,11 +17,12 @@
                 }
             }
         }
-    }    
+    }
     .paging {
         border: 1px solid $color5;
         min-width: 48px;
         margin: 0 5px;
+        font-size: 16px;
         &[id$="lnkPrev"] {
             margin-left: auto;
             + [id$="lblPaging"] {
