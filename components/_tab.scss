@@ -27,4 +27,35 @@
             }
         }
     }
+
+    //vertical
+    &-vertical {
+        .ems-tab-content {
+            > * {
+                border-bottom: 1px solid $color10;
+                &.selected {
+                    .ems-tab-inner-header {
+                        @extend .base64-minus;
+                    }
+                    .ems-tab-inner-content {
+                        display: block;
+                    }
+                }
+            }
+        }
+        $p: 25px;
+        .ems-tab-inner-header {
+            padding: $p 0;
+            @extend .base64;
+            @extend .base64-plus;
+            background-position: right center;
+            transition: background-image .25s ease;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .ems-tab-inner-content {
+            display: none;
+            margin-top: -$p;
+        }
+    }
 }

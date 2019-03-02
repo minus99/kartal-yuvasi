@@ -1,0 +1,12 @@
+.ems-prdd-grid {
+    position: relative;
+
+    grid-template-columns: 1fr 770px 20px 370px 1fr;
+    grid-template-areas:
+    ". ga2 . ga1 ."
+    ". ga2 . ga3 ."
+    ". ga4 ga4 ga4 .";
+    grid-template-rows: max-content 1fr;
+
+    @include setGridArea(1,4);
+}

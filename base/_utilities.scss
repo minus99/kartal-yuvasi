@@ -88,6 +88,10 @@ table {
             width: 100%;
         }
     }
+
+    &-overflow-hidden {
+        overflow: hidden;
+    }
     
     //FLEX
     &-flex {

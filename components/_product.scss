@@ -12,7 +12,7 @@ ul.product-list-grid {
     }
 }
 
-$prd-bg: $color10;
+$prd-body-bg: $color10;
 $prd-pd-t: 13px;
 $prd-pd-r: 20px;
 $prd-pd-b: 15px;
@@ -22,7 +22,7 @@ $prd-pd-l: 20px;
         position: relative;
     }
     &-body {
-        background: $prd-bg;
+        background: $prd-body-bg;
         color: $color1;
         padding: $prd-pd-t $prd-pd-r $prd-pd-b $prd-pd-l;
     }
@@ -41,6 +41,24 @@ $prd-pd-l: 20px;
         font-size: 18px;
         font-weight: 700;
     }
+    &-badge {
+        font-family: $font2;
+        font-size: 13px;
+        margin-top: 10px;
+        min-height: 19px;
+        > div {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: auto;
+            width: 100%;
+            background: $prd-body-bg;
+            padding: 0 $prd-pd-r;
+            > span {
+                display: block;
+            }
+        }
+    }
 }
 
 .urunListe_brutFiyat {
@@ -51,24 +69,7 @@ $prd-pd-l: 20px;
     }
 }
 
-.ems-prd-badge {
-    font-family: $font2;
-    font-size: 13px;
-    margin-top: 10px;
-    min-height: 19px;
-    > div {
-        display: none;
-        position: absolute;
-        left: 0;
-        top: auto;
-        width: 100%;
-        background: $prd-bg;
-        padding: 0 $prd-pd-r;
-        > span {
-            display: block;
-        }
-    }
-}
+//badges
 .indirimli {
     .urunListe_pnlIndirimOran {
         display: block !important;

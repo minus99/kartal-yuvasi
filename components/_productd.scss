@@ -1,5 +1,22 @@
+@mixin padding-h {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+@mixin padding-h-remove {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+.ems-prdd-grid {
+    > .ga1 {
+        @include padding-h();
+    }
+    > .ga3 {
+        @include padding-h();
+    }
+}
 .ems-prdd {
     &-name {
+        margin-top: 20px;
         font-size: 16px;
         font-weight: 700;
         letter-spacing: .5px;
@@ -15,14 +32,29 @@
         }
     }
     &-badge {
+        position: relative;
+        width: 50%;
         margin-left: auto;
+
+        font-family: $font2;
+        font-size: 16px;
+        > div {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 1px;
+    
+            background: $color2;
+            > span {
+                display: block;
+            }
+        }
     }
     &-gallery {
-        display: none;
         margin-top: 20px;
     }
     &-size {
-        margin-top: 20px;
+        margin-top: 15px;
         font-family: $font2;
         font-size: 13px;
     }
@@ -36,6 +68,8 @@
         }
         a.btnDefault {
             width: 100%;
+            padding-left: 3px;
+            padding-right: 3px;
             @extend .btn-transparent;
         }
     }
@@ -50,6 +84,21 @@
     }
 }
 
+//badges
+.indirimli {
+    #plhKazancOran {
+        display: block !important;
+        color: $color4;
+    }
+}
+.yeniUrun {
+    #plhYeniUrunBtn {
+        display: block !important;
+        color: $color11;
+    }
+}
+
+//other colors
 .UrunListeGrup_listeUrunDetayGrup {
     margin-top: 20px;
     .listeUrunDetayGrup_listeBaslik,
@@ -75,11 +124,13 @@
     }
 }
 
+//sizes
 .urunDetay_urunSecenek {
     $marginl: 5px;
     .dropdown-options {
         margin-left: -$marginl;
         > a {
+            display: inline-block;
             min-width: 76px;
             line-height: 44px;
             border: 1px solid $color5;
@@ -91,12 +142,16 @@
             }
         }
     }
+    .dropdown-trigger {
+        display: noneeeeeeeee;
+    }
 }
-
 .open-size-guide {
+    display: inline-block;
     margin-top: 10px;
 }
 
+//add to cart
 .urunDetay_urunAdet {
     position: relative;
     > input[type="text"] {
@@ -137,5 +192,45 @@ a.btnsepeteAt {
 
 //mini desc
 .mini-desc {
-    background: red;
+    font-family: $font2;
+    font-size: 15px;
+    img {
+        width: 30px;
+    }
+}
+
+//full desc
+.fd {
+    background: $color1;
+    color: $color2;
+    text-align: center;
+    @include padding-h;
+    padding-top: .1px;
+    margin-top: 40px;
+    &-title {
+        margin-top: 40px;
+        font-size: 24px;
+        b {
+            font-weight: 700;
+        }
+    }
+    &-text {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    &-image-gallery {
+        margin-top: 40px;
+    }
+    &-image {
+        margin-top: 40px;
+        @include padding-h-remove;
+        + .fd-image {
+            margin-top: 20px;
+        }
+    }
+    &-bg-stadium {
+        background: url(/UPLOAD/banner/urun-aciklama/static/stadium.png) center top / 150% no-repeat;
+        padding-top: 40%;
+        margin-top: 0;
+    }
 }
