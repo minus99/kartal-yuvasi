@@ -42,15 +42,17 @@ table {
         display: none;
     }
 
-    //VAIL
-    &-vail {
+    //OVERLAY
+    &-overlay {
+        display: none;
         content: "";
         position: fixed;
         left: 0;
         top: 0;
+        z-index: 9;
         width: 100%;
         height: 100%;
-        background: rgba($color: $color1, $alpha: .8);
+        background: rgba($color: $color1, $alpha: .4);
     }
     
     //LOGON & LOGOFF

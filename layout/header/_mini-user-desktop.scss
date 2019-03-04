@@ -1,17 +1,33 @@
 .mini-user {
     position: relative;
-    background: $color4;
-    @include setCurve(-15, 25);
-    > * {
-        @include setCurve(15, 0);
-    }
     &-info {
+        background: $color4;
+        @include setCurve(-15, 25);
+        > * {
+            @include setCurve(15, 0);
+        }
         > span {
             @extend %header-mods-title;
         }
     }
     &-sub {
         display: none;
-        position: absolute;
+        @extend %header-mods-sub;
+        max-width: 410px;
+        padding: 30px 40px;
+        .sub-close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+    }
+
+    &-ready {
+        .mini-user-overlay {
+            display: block;
+        }
+        .mini-user-sub {
+            display: block;
+        }
     }
 }

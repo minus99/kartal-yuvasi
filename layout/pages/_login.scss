@@ -15,8 +15,8 @@
 
 .kutuUyeGirisFacebookConnect {
     max-width: 214px;
-    margin: 0 auto;
+    margin: 20px auto 0;
 }
-a.btnDefault.btnFacebookLogin {
+a.btnFacebookLogin:not(.index) {
     @extend %btn-transparent;
 }

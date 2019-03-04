@@ -8,8 +8,7 @@
             cursor: pointer;
             padding: 10px 20px;
             border: 1px solid transparent;
-            &.selected,
-            &:first-child { // << sil
+            &.selected {
                 border-color: $color5;
             }
         }
@@ -17,12 +16,7 @@
     &-content {
         > * {
             display: none;
-            &.selected,
-            &:nth-child(1), //<<< sil
-            &:nth-child(2), //<<< sil
-            &:nth-child(3), //<<< sil
-            &:nth-child(4), //<<< sil
-            &:nth-child(5) { //<<< sil
+            &.selected {
                 display: block;
             }
         }

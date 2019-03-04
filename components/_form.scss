@@ -63,7 +63,8 @@ textarea {
         &:empty {
             display: none;
         }
-        > span {
+        > span,
+        > label {
             font-family: $font2;
             font-size: 15px;
         }

@@ -10,3 +10,76 @@
 
     @include setGridArea(1,4);
 }
+.ems-prdd {
+    &-gallery {
+        margin-top: 0;
+        .swiper-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
+    }
+}
+
+//sizes
+.urunDetay_urunSecenek {
+    .dropdown-options {
+        > a {
+            min-width: 46px;
+            line-height: 32px;
+        }
+    }
+}
+
+//full desc
+.fd {
+    > .fd-title,
+    > .fd-text {
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+
+    &-title {
+        margin-top: 80px;
+        font-size: 40px;
+    }
+    &-text {
+        margin-top: 30px;
+    }
+    &-image {
+        margin-top: 80px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &-bg-stadium {
+        background-size: 75%;
+        padding-top: 12%;
+    }
+    &-wing {
+        &-l,
+        &-r {
+            max-width: none;
+        }
+        &-c {
+            max-width: 300px;
+            margin-top: 84px;
+        }
+    }
+
+    &-block {
+        //image block
+        &-image {
+            .fd-image + .fd-image {
+                margin-top: auto;
+                margin-left: 40px;
+            }
+        }
+        //image + content
+        &-image-content {
+            .fd-image + .fd-content {
+                padding-left: 40px;
+                text-align: left;
+            }
+        }
+    }
+}

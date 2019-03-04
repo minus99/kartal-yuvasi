@@ -250,14 +250,16 @@ table {
   display: none;
 }
 
-.ems-vail, .menu-ready .site-header::before {
+.ems-overlay {
+  display: none;
   content: "";
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 9;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .ems-obj-logon, .ems-obj-logoff {
@@ -4370,13 +4372,13 @@ a.btnDefault:hover:not(.btnBultenGonder) {
   background: #eee;
 }
 
-.btn-transparent, .ems-prdd-block2 a.btnDefault, a.btnDefault.btnFacebookLogin {
+.btn-transparent, .ems-prdd-block2 a.btnDefault, a.btnFacebookLogin:not(.index), a.btnFacebookLoginKutu:not(.index) {
   background: transparent;
   color: inherit;
   border-color: #c9c9c9;
 }
 
-.btn-transparent:hover, .ems-prdd-block2 a.btnDefault:hover, a.btnDefault.btnFacebookLogin:hover {
+.btn-transparent:hover, .ems-prdd-block2 a.btnDefault:hover, a.btnFacebookLogin:hover:not(.index), a.btnFacebookLoginKutu:hover:not(.index) {
   background: transparent;
 }
 
@@ -4468,7 +4470,8 @@ textarea {
   display: none;
 }
 
-.ems-form-obj > span {
+.ems-form-obj > span,
+.ems-form-obj > label {
   font-family: fira;
   font-size: 15px;
 }
@@ -4671,9 +4674,8 @@ textarea {
 .menu {
   display: none;
   position: fixed;
-  top: 0;
   left: 0;
-  z-index: 1;
+  top: 0;
   width: 80%;
   height: 100%;
   max-width: 300px;
@@ -4745,8 +4747,13 @@ textarea {
   color: #c5242b;
 }
 
+.menu-ready .menu-overlay {
+  display: block;
+}
+
 .menu-ready .menu {
   display: block;
+  z-index: 10;
 }
 
 .site-footer {
@@ -4903,7 +4910,7 @@ textarea {
   border: 1px solid transparent;
 }
 
-.ems-tab-header > *.selected, .ems-tab-header > *:first-child {
+.ems-tab-header > *.selected {
   border-color: #c9c9c9;
 }
 
@@ -4911,7 +4918,7 @@ textarea {
   display: none;
 }
 
-.ems-tab-content > *.selected, .ems-tab-content > *:nth-child(1), .ems-tab-content > *:nth-child(2), .ems-tab-content > *:nth-child(3), .ems-tab-content > *:nth-child(4), .ems-tab-content > *:nth-child(5) {
+.ems-tab-content > *.selected {
   display: block;
 }
 
@@ -5559,6 +5566,11 @@ ul.product-list-grid > li {
   padding-right: 20px;
 }
 
+.ems-prdd-brand {
+  font-family: fira;
+  font-size: 16px;
+}
+
 .ems-prdd-name {
   margin-top: 20px;
   font-size: 16px;
@@ -5684,6 +5696,8 @@ ul.product-list-grid > li {
 .urunDetay_urunSecenek .dropdown-options > a {
   display: inline-block;
   min-width: 76px;
+  padding-left: 5px;
+  padding-right: 5px;
   line-height: 44px;
   border: 1px solid #c9c9c9;
   text-align: center;
@@ -5763,7 +5777,14 @@ a.btnsepeteAt {
   padding-left: 20px;
   padding-right: 20px;
   padding-top: .1px;
+  padding-bottom: 40px;
   margin-top: 40px;
+}
+
+.fd > * {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .fd-title {
@@ -5780,24 +5801,50 @@ a.btnsepeteAt {
   font-size: 16px;
 }
 
-.fd-image-gallery {
-  margin-top: 40px;
-}
-
 .fd-image {
   margin-top: 40px;
   margin-left: -20px;
   margin-right: -20px;
 }
 
-.fd-image + .fd-image {
-  margin-top: 20px;
-}
-
 .fd-bg-stadium {
   background: url(/UPLOAD/banner/urun-aciklama/static/stadium.png) center top/150% no-repeat;
   padding-top: 40%;
-  margin-top: 0;
+  margin-top: 0 !important;
+}
+
+.fd-wing {
+  position: relative;
+  overflow: hidden;
+}
+
+.fd-wing-l, .fd-wing-r {
+  position: absolute;
+  top: 0;
+  transition: transform .32s ease;
+  max-width: 50vw;
+}
+
+.fd-wing-l {
+  left: 0;
+  transform: rotate(-20deg);
+  transform-origin: right center;
+}
+
+.fd-wing-r {
+  right: 0;
+  transform: rotate(20deg);
+  transform-origin: left center;
+}
+
+.fd-wing-c {
+  position: relative;
+  max-width: 46vw;
+  margin-top: 12vw;
+}
+
+.fd-block-image .fd-image + .fd-image {
+  margin-top: 20px;
 }
 
 .primary-categories {
@@ -5832,9 +5879,9 @@ a.btnsepeteAt {
   color: #999;
 }
 
-.kutuUyeGirisFacebookConnect {
+.kutuUyeGirisFacebookConnect, .uyeGirisFacebookConnectKutu {
   max-width: 214px;
-  margin: 0 auto;
+  margin: 20px auto 0;
 }
 
 .ems-page-product-list {
@@ -5966,6 +6013,17 @@ a.btnsepeteAt {
       font-weight: 700;
       padding: 0 10px;
     }
+    .mini-user-sub {
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: 10;
+      margin: 10px;
+      width: calc(100% - 20px);
+      background: #fff;
+      color: #000;
+      line-height: normal;
+    }
     .mini-lang-sub {
       display: none;
       position: absolute;
@@ -5997,15 +6055,29 @@ a.btnsepeteAt {
     }
     .mini-user {
       position: relative;
+    }
+    .mini-user-info {
       background: #c5242b;
       transform: skewX(-15deg) translateX(25px);
     }
-    .mini-user > * {
+    .mini-user-info > * {
       transform: skewX(15deg) translateX(0px);
     }
     .mini-user-sub {
       display: none;
+      max-width: 410px;
+      padding: 30px 40px;
+    }
+    .mini-user-sub .sub-close {
       position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+    .mini-user-ready .mini-user-overlay {
+      display: block;
+    }
+    .mini-user-ready .mini-user-sub {
+      display: block;
     }
     .mini-cart {
       position: relative;
@@ -6367,6 +6439,8 @@ a.btnsepeteAt {
     .navigasyon {
       font-family: fira;
       font-size: 13px;
+      padding-left: 40px;
+      padding-right: 40px;
     }
     .navigasyon ol li {
       display: inline-block;
@@ -6538,6 +6612,54 @@ a.btnsepeteAt {
     }
     .ems-prdd-grid > .ga4 {
       grid-area: ga4;
+    }
+    .ems-prdd-gallery {
+      margin-top: 0;
+    }
+    .ems-prdd-gallery .swiper-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+    }
+    .urunDetay_urunSecenek .dropdown-options > a {
+      min-width: 46px;
+      line-height: 32px;
+    }
+    .fd > .fd-title,
+    .fd > .fd-text {
+      padding-left: 75px;
+      padding-right: 75px;
+    }
+    .fd-title {
+      margin-top: 80px;
+      font-size: 40px;
+    }
+    .fd-text {
+      margin-top: 30px;
+    }
+    .fd-image {
+      margin-top: 80px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .fd-bg-stadium {
+      background-size: 75%;
+      padding-top: 12%;
+    }
+    .fd-wing-l, .fd-wing-r {
+      max-width: none;
+    }
+    .fd-wing-c {
+      max-width: 300px;
+      margin-top: 84px;
+    }
+    .fd-block-image .fd-image + .fd-image {
+      margin-top: auto;
+      margin-left: 40px;
+    }
+    .fd-block-image-content .fd-image + .fd-content {
+      padding-left: 40px;
+      text-align: left;
     }
     .primary-categories {
       padding-top: 45px;

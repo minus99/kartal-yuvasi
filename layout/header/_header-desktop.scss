@@ -30,10 +30,23 @@
     padding: 0 40px;
 }
 
+//header mods extend obj
 %header-mods-title {
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
     padding: 0 10px;
+}
+
+%header-mods-sub {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    margin: 10px;
+    width: calc(100% - 20px);
+    background: $color2;
+    color: $color1;
+    line-height: normal;
 }
