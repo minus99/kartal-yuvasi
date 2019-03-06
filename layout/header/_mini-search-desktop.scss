@@ -14,6 +14,41 @@
     }
     &-sub {
         display: none;
-        position: absolute;
+        @extend %header-mods-sub;
+        max-width: 910px;
+        padding: 30px;
+        .mcq {
+            margin-left: 5px;
+            font-size: 16px;
+            font-weight: 300;
+            vertical-align: 1px;
+            > i {
+                font-style: normal;
+            }
+        }
+    }
+
+    &-ready {
+        .mini-search-overlay {
+            display: block;
+        }
+        .mini-search-sub {
+            display: block;
+        }
+    }
+}
+
+.popular-search-words {
+    font-family: $font2;
+    font-size: 15px;
+    .ems-section-title {
+        font-size: inherit;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+    .ems-section-wrapper {
+        > li {
+            margin-left: 30px;
+        }
     }
 }

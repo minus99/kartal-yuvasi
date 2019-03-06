@@ -13,16 +13,30 @@ table {
 }
 
 //price fixer
+.ems-price,
 .urunListe_brutFiyat,
 .urunListe_satisFiyat,
 .urunDetay_brutFiyat,
-.urunDetay_satisFiyat {
+.urunDetay_satisFiyat,
+#lblUrunTutari {
     display: flex;
     .d {
         display: none;
     }
     [class^="pb"] {
         order: -1;
+    }
+}
+.ems-price.first,
+.urunListe_brutFiyat,
+.urunDetay_brutFiyat {
+    &:not(:empty) {
+        text-decoration: line-through;
+        color: $color7;
+        + * {
+            color: $color4;
+            margin-left: 10px;
+        }
     }
 }
 
@@ -162,11 +176,18 @@ table {
     }
 
     //SECTION
-    &-section-title {
-        font-size: 24px;
-        font-weight: 700;
-        text-align: center;
-        margin-bottom: 20px;
+    &-section {
+        &-title {
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        &-wrapper {
+            &:empty {
+                display: none !important;
+            }
+        }
     }
 }
 

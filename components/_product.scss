@@ -61,14 +61,6 @@ $prd-pd-l: 20px;
     }
 }
 
-.urunListe_brutFiyat {
-    text-decoration: line-through;
-    + .urunListe_satisFiyat {
-        margin-left: 10px;
-        color: $color4;
-    }
-}
-
 //badges
 .indirimli {
     .urunListe_pnlIndirimOran {

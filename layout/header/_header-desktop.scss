@@ -50,3 +50,23 @@
     color: $color1;
     line-height: normal;
 }
+
+.sub-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.sub-header {
+    position: relative;
+    background: $color3;
+    padding: 18px 20px 19px;
+    margin-left: -20px;
+    margin-right: -20px;
+    font-size: 18px;
+    font-weight: 700;
+    .sub-close {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

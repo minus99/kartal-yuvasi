@@ -15,11 +15,6 @@
         @extend %header-mods-sub;
         max-width: 410px;
         padding: 30px 40px;
-        .sub-close {
-            position: absolute;
-            right: 10px;
-            top: 10px;
-        }
     }
 
     &-ready {

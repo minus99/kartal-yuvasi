@@ -79,15 +79,6 @@
     }
 }
 
-.urunDetay_brutFiyat:not(:empty) {
-    text-decoration: line-through;
-    color: $color7;
-    + .urunDetay_satisFiyat {
-        margin-left: 10px;
-        color: $color4;
-    }
-}
-
 //badges
 .indirimli {
     #plhKazancOran {

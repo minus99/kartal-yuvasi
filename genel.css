@@ -216,25 +216,45 @@ table {
   width: 100%;
 }
 
+.ems-price,
 .urunListe_brutFiyat,
 .urunListe_satisFiyat,
 .urunDetay_brutFiyat,
-.urunDetay_satisFiyat {
+.urunDetay_satisFiyat,
+#lblUrunTutari {
   display: flex;
 }
 
+.ems-price .d,
 .urunListe_brutFiyat .d,
 .urunListe_satisFiyat .d,
 .urunDetay_brutFiyat .d,
-.urunDetay_satisFiyat .d {
+.urunDetay_satisFiyat .d,
+#lblUrunTutari .d {
   display: none;
 }
 
+.ems-price [class^="pb"],
 .urunListe_brutFiyat [class^="pb"],
 .urunListe_satisFiyat [class^="pb"],
 .urunDetay_brutFiyat [class^="pb"],
-.urunDetay_satisFiyat [class^="pb"] {
+.urunDetay_satisFiyat [class^="pb"],
+#lblUrunTutari [class^="pb"] {
   order: -1;
+}
+
+.ems-price.first:not(:empty),
+.urunListe_brutFiyat:not(:empty),
+.urunDetay_brutFiyat:not(:empty) {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.ems-price.first:not(:empty) + *,
+.urunListe_brutFiyat:not(:empty) + *,
+.urunDetay_brutFiyat:not(:empty) + * {
+  color: #c5242b;
+  margin-left: 10px;
 }
 
 .ayiracDefault,
@@ -369,6 +389,10 @@ table {
   font-weight: 700;
   text-align: center;
   margin-bottom: 20px;
+}
+
+.ems-section-wrapper:empty {
+  display: none !important;
 }
 
 .site-main {
@@ -4336,7 +4360,7 @@ button.swiper-pagination-bullet {
 }
 
 .btn,
-a.btnDefault:not(.btnBultenGonder) {
+a.btnDefault:not(.btnBultenGonder), .lnkSepet {
   position: relative;
   display: inline-block;
   padding: 0 10px;
@@ -4352,11 +4376,11 @@ a.btnDefault:not(.btnBultenGonder) {
 }
 
 .btn:hover,
-a.btnDefault:hover:not(.btnBultenGonder) {
+a.btnDefault:hover:not(.btnBultenGonder), .lnkSepet:hover {
   background: #515151;
 }
 
-.btn > span, a.btnDefault:not(.btnBultenGonder) > span {
+.btn > span, a.btnDefault:not(.btnBultenGonder) > span, .lnkSepet > span {
   position: relative;
   display: flex;
   align-items: center;
@@ -5265,15 +5289,6 @@ ul.product-list-grid > li {
   display: block;
 }
 
-.urunListe_brutFiyat {
-  text-decoration: line-through;
-}
-
-.urunListe_brutFiyat + .urunListe_satisFiyat {
-  margin-left: 10px;
-  color: #c5242b;
-}
-
 .indirimli .urunListe_pnlIndirimOran {
   display: block !important;
   color: #c5242b;
@@ -5637,16 +5652,6 @@ ul.product-list-grid > li {
   width: 100%;
   padding-left: 3px;
   padding-right: 3px;
-}
-
-.urunDetay_brutFiyat:not(:empty) {
-  text-decoration: line-through;
-  color: #999;
-}
-
-.urunDetay_brutFiyat:not(:empty) + .urunDetay_satisFiyat {
-  margin-left: 10px;
-  color: #c5242b;
 }
 
 .indirimli #plhKazancOran {
@@ -6013,7 +6018,7 @@ a.btnsepeteAt {
       font-weight: 700;
       padding: 0 10px;
     }
-    .mini-user-sub {
+    .mini-user-sub, .mini-cart-sub, .mini-search-sub {
       position: fixed;
       right: 0;
       top: 0;
@@ -6023,6 +6028,24 @@ a.btnsepeteAt {
       background: #fff;
       color: #000;
       line-height: normal;
+    }
+    .sub-close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+    .sub-header {
+      position: relative;
+      background: #eee;
+      padding: 18px 20px 19px;
+      margin-left: -20px;
+      margin-right: -20px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .sub-header .sub-close {
+      top: 50%;
+      transform: translateY(-50%);
     }
     .mini-lang-sub {
       display: none;
@@ -6068,11 +6091,6 @@ a.btnsepeteAt {
       max-width: 410px;
       padding: 30px 40px;
     }
-    .mini-user-sub .sub-close {
-      position: absolute;
-      right: 10px;
-      top: 10px;
-    }
     .mini-user-ready .mini-user-overlay {
       display: block;
     }
@@ -6081,14 +6099,110 @@ a.btnsepeteAt {
     }
     .mini-cart {
       position: relative;
+    }
+    .mini-cart-info {
       background: #c5242b;
     }
     .mini-cart-info #lblUrunAdet {
       margin-right: 4px;
     }
+    .mini-cart-info [id$="lbfKUTU_URUN"] {
+      display: flex;
+      align-items: center;
+    }
     .mini-cart-sub {
       display: none;
+      max-width: 410px;
+      padding: 0 20px 20px;
+    }
+    .mini-cart-sub .mcq {
+      margin-left: 5px;
+      font-size: 16px;
+      font-weight: 300;
+      vertical-align: 1px;
+    }
+    .mini-cart-sub .mcq > i {
+      font-style: normal;
+    }
+    .mini-cart-ready .mini-cart-overlay {
+      display: block;
+    }
+    .mini-cart-ready .mini-cart-sub {
+      display: block;
+    }
+    .kutuSepet_icerik {
+      font-family: fira;
+      font-size: 16px;
+    }
+    .kutuSepet_icerik > .ems-row {
+      position: relative;
+      margin-top: 20px;
+    }
+    .kutuSepet_icerik > .ems-row > .r1 {
+      flex-basis: 100px;
+      margin-right: 15px;
+    }
+    .kutuSepet_icerik > .ems-row > .r2 {
+      flex: 1;
+    }
+    .kutuSepet_icerik > .ems-row > .r3 {
+      flex-basis: 50px;
+    }
+    .cart-prd-name {
+      color: #000;
+      margin-bottom: 3px;
+    }
+    .cart-prd-size {
+      color: #999;
+    }
+    .cart-prd-quantity {
+      color: #999;
+    }
+    .cart-prd-price {
+      margin-top: 5px;
+      font-family: din;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .cart-prd-discount {
+      color: #c5242b;
+      margin-top: 5px;
+    }
+    .cart-prd-proname:not(:empty) {
+      margin-top: 5px;
+      font-size: 12px;
+      color: #2e9a32;
+    }
+    .cart-prd-remove {
+      text-align: right;
+    }
+    .cart-prd-remove svg {
+      font-size: 20px;
+    }
+    .cart-prd-url {
       position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: none;
+      border: none;
+    }
+    .cart-prd-url > * {
+      display: none;
+    }
+    .cart-prd-total {
+      border-top: 1px solid #eee;
+      margin-top: 15px;
+      padding-top: 20px;
+      font-family: fira;
+      font-size: 18px;
+    }
+    .cart-prd-page-url {
+      margin-top: 20px;
+    }
+    .cart-prd-page-url .lnkSepet {
+      display: block;
     }
     .mini-search {
       position: relative;
@@ -6104,7 +6218,35 @@ a.btnsepeteAt {
     }
     .mini-search-sub {
       display: none;
-      position: absolute;
+      max-width: 910px;
+      padding: 30px;
+    }
+    .mini-search-sub .mcq {
+      margin-left: 5px;
+      font-size: 16px;
+      font-weight: 300;
+      vertical-align: 1px;
+    }
+    .mini-search-sub .mcq > i {
+      font-style: normal;
+    }
+    .mini-search-ready .mini-search-overlay {
+      display: block;
+    }
+    .mini-search-ready .mini-search-sub {
+      display: block;
+    }
+    .popular-search-words {
+      font-family: fira;
+      font-size: 15px;
+    }
+    .popular-search-words .ems-section-title {
+      font-size: inherit;
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+    .popular-search-words .ems-section-wrapper > li {
+      margin-left: 30px;
     }
     .logo {
       background: #fff;
@@ -6122,6 +6264,7 @@ a.btnsepeteAt {
       content: "";
       position: absolute;
       top: 0;
+      z-index: 1;
       width: 20px;
       height: 100%;
       background: inherit;
