@@ -1,24 +1,37 @@
 .mini-lang {
     &-info {
+        position: relative;
+        .icon-triangle-b {
+            transition: transform .32s ease;
+        }
         > span {
             @extend %header-mods-title;
         }
     }
     &-sub {
-        display: none;
-        position: absolute;
-        left: 50%;
-        top: 100%;
-        z-index: 2;
-        transform: translateX(-50%);
-        background: $color2;
-        padding: 13px 20px;
-        line-height: normal;
+        @extend %header-mods-sub;
+        width: auto;
+        right: auto;
+        margin: 40px 0 0 -55px;
+        padding: 18px 30px;
         > a {
             display: block;
-            color: $color1;
             width: auto;
-            padding: 7px 15px;
+        }
+    }
+
+    &-ready {
+        .mini-lang-overlay {
+            display: block;
+        }
+        .mini-lang-info {
+            z-index: 10;
+            .icon-triangle-b {
+                @include rotate-x;
+            }
+        }
+        .mini-lang-sub {
+            display: block;
         }
     }
 }

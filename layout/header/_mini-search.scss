@@ -1,0 +1,38 @@
+.popular-search-words {
+    display: none;
+    font-family: $font2;
+    font-size: 15px;
+    .ems-section-title {
+        font-size: inherit;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+    li {
+        margin-left: 30px;
+        > a {
+            &::before {
+                display: inline-block;
+                @extend %triangle;
+                @extend %triangle-r;
+                vertical-align: 1px;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    &-append {
+        .popular-search-words {
+            display: flex;
+        }
+    }
+}
+
+//suggestion
+.suggest_link {
+    > span {
+        &::before {
+            @extend %triangle;
+            @extend %triangle-r;
+        }
+    }
+}

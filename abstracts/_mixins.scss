@@ -58,3 +58,10 @@
 @mixin rotate-y {
     transform: rotate(90deg);
 }
+
+//triangle icon
+@mixin setTriangle($width, $t-clr, $r-clr, $b-clr, $l-clr) {
+    border-width: $width;
+    border-style: solid;
+    border-color: $t-clr $r-clr $b-clr $l-clr;
+}

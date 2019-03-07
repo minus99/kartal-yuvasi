@@ -49,7 +49,7 @@
 }
 
 .btn,
-a.btnDefault:not(.btnBultenGonder) {
+a.btnDefault:not(.btnBultenGonder):not([id$="btnArama"]) {
     @extend %btn;
     .icon-arrow-r {
         margin-left: 10px;
