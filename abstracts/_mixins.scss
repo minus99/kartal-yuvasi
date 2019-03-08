@@ -12,13 +12,13 @@
 
 //media max-width<
 @mixin setMaxMedia($width) {
-    @media screen and (max-width: $width) {
+    @media screen and (max-width: #{$width}) {
         @content;
     }
 }
 //media min-width>
 @mixin setMinMedia($width) {
-    @media screen and (min-width: $width) {
+    @media screen and (min-width: #{$width}) {
         @content;
     }
 }
@@ -30,11 +30,6 @@
             grid-area: ga#{$i};
         }
     }
-}
-
-//curve
-@mixin setCurve($skewX, $translateX) {
-    transform: skewX(#{$skewX}deg) translateX(#{$translateX}px);
 }
 
 //cover object
@@ -51,17 +46,17 @@
     }
 }
 
-//rotate
-@mixin rotate-x {
-    transform: rotate(180deg)
-}
-@mixin rotate-y {
-    transform: rotate(90deg);
+//curve
+@mixin setCurve($skewX, $translateX) {
+    transform: skewX(#{$skewX}deg) translateX(#{$translateX}px);
 }
 
-//triangle icon
-@mixin setTriangle($width, $t-clr, $r-clr, $b-clr, $l-clr) {
-    border-width: $width;
-    border-style: solid;
-    border-color: $t-clr $r-clr $b-clr $l-clr;
+//rotate
+@mixin setTurn($rotate) {
+    transform: rotate(#{$rotate}deg)
+}
+
+//mirror
+@mixin turn-mirror {
+    transform: scale(-1);
 }

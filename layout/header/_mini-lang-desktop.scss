@@ -27,7 +27,7 @@
         .mini-lang-info {
             z-index: 10;
             .icon-triangle-b {
-                @include rotate-x;
+                @include turn-mirror;
             }
         }
         .mini-lang-sub {

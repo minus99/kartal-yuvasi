@@ -128,4 +128,37 @@
             font-size: 15px;
         }
     }
+
+    //banner type7
+    &07 {
+        .prm-image {
+            text-align: center;
+            img {
+                width: auto;
+            }
+        }
+        .banner-body {
+            text-align: center;
+            max-width: $container-large;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .prm-title {
+            font-size: 30px;
+            > * {
+                display: block;
+            }
+            i {
+                font-style: normal;
+                letter-spacing: 1em;
+                margin-bottom: 1em;
+            }
+            b {
+                letter-spacing: 3px;
+            }
+        }
+        .btn {
+            margin-top: 50px;
+        }
+    }
 }
