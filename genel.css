@@ -92,7 +92,7 @@
   height: 10px;
 }
 
-[class*="base64-"], .base64, .ems-tab-vertical .ems-tab-inner-header, .urunKiyaslamaOzellik_ozellikAd, .urunKiyaslamaOzellik, .ozellikFiltreSecim > a, #lbfPagingPrev,
+[class*="base64-"], .base64, .ems-tab-vertical .ems-tab-inner-header, .urunKiyaslamaOzellik_ozellikAd, .urunKiyaslamaOzellik, .ozellikFiltreSecim > a, .filter-type2 .urunKiyaslamaOzellik.link_selected::before, #lbfPagingPrev,
 #lbfPagingNext {
   background-repeat: no-repeat;
 }
@@ -111,6 +111,10 @@
 
 .base64-check-active, .urunKiyaslamaOzellik.link_selected {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDE0IDE0Ij4gICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9IiMwMDAiPiAgICAgICAgPHJlY3Qgd2lkdGg9IjEzIiBoZWlnaHQ9IjEzIiB4PSIuNSIgeT0iLjUiIHJ4PSIxIi8+ICAgICAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjIiIGQ9Ik0zIDYuNjgxbDIuNTUgMi41NUwxMC43ODIgNCIvPiAgICA8L2c+PC9zdmc+);
+}
+
+.base64-checked, .filter-type2 .urunKiyaslamaOzellik.link_selected::before {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgMTAgOCI+ICAgIDxwYXRoIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjRkZGIiBzdHJva2Utd2lkdGg9IjIiIGQ9Ik0xIDMuNTYyTDMuNjIyIDYgOSAxIi8+PC9zdmc+);
 }
 
 .base64-radio, .ems-sort #dvUrunKiyaslamaOzellik.sorts .urunKiyaslamaOzellik {
@@ -4419,7 +4423,7 @@ button.swiper-pagination-bullet {
 }
 
 .btn,
-a.btnDefault:not(.btnBultenGonder):not([id$="btnArama"]), .lnkSepet {
+a.btnDefault:not(.btnBultenGonder):not([id$="btnArama"]):not(.btnKutuLogout), .lnkSepet {
   position: relative;
   display: inline-block;
   padding: 0 10px;
@@ -4435,11 +4439,11 @@ a.btnDefault:not(.btnBultenGonder):not([id$="btnArama"]), .lnkSepet {
 }
 
 .btn:hover,
-a.btnDefault:hover:not(.btnBultenGonder):not([id$="btnArama"]), .lnkSepet:hover {
+a.btnDefault:hover:not(.btnBultenGonder):not([id$="btnArama"]):not(.btnKutuLogout), .lnkSepet:hover {
   background: #515151;
 }
 
-.btn > span, a.btnDefault:not(.btnBultenGonder):not([id$="btnArama"]) > span, .lnkSepet > span {
+.btn > span, a.btnDefault:not(.btnBultenGonder):not([id$="btnArama"]):not(.btnKutuLogout) > span, .lnkSepet > span {
   position: relative;
   display: flex;
   align-items: center;
@@ -4475,7 +4479,7 @@ a.btnDefault:hover:not(.btnBultenGonder):not([id$="btnArama"]), .lnkSepet:hover 
 }
 
 .btn .icon-arrow-r,
-a.btnDefault:not(.btnBultenGonder):not([id$="btnArama"]) .icon-arrow-r {
+a.btnDefault:not(.btnBultenGonder):not([id$="btnArama"]):not(.btnKutuLogout) .icon-arrow-r {
   margin-left: 10px;
 }
 
@@ -4927,7 +4931,7 @@ textarea {
   margin-left: 20px;
 }
 
-.social-links .icon {
+.social-links svg {
   font-size: 50px;
 }
 
@@ -5553,8 +5557,10 @@ ul.product-list-grid > li {
 }
 
 .urunKiyaslamaOzellik {
+  position: relative;
   display: block;
   padding: 11px 10px 10px 24px;
+  font-size: 13px;
   background-position: left center;
 }
 
@@ -5623,12 +5629,63 @@ ul.product-list-grid > li {
   line-height: 32px;
 }
 
-.filter-type2 {
-  background: #ebe;
+.filter-type2 .urunKiyaslamaOzellik_ozellikIcerik table > tbody {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 25px);
+  grid-gap: 15px;
 }
 
-.filter-type3 {
-  background: #eba;
+.filter-type2 .urunKiyaslamaOzellik {
+  background-image: none;
+  padding: 0;
+  border: 1px solid #f5f5f5;
+}
+
+.filter-type2 .urunKiyaslamaOzellik.link_selected::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-size: auto 8px;
+  background-position: center;
+}
+
+.filter-type2 .light-color .urunKiyaslamaOzellik.link_selected::before {
+  filter: invert(1);
+}
+
+.filter-type2 .urunKiyaslamaOzellik_ozellikImgAd {
+  display: none;
+}
+
+.filter-type3 .urunKiyaslamaOzellik_ozellikIcerik table > tbody {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32px, max-content));
+}
+
+.filter-type3 .urunKiyaslamaOzellik_ozellikIcerik table > tbody > tr {
+  margin-left: -1px;
+  margin-top: -1px;
+}
+
+.filter-type3 .urunKiyaslamaOzellik_ozellikIcerik table > tbody > tr > td {
+  display: block;
+}
+
+.filter-type3 .urunKiyaslamaOzellik {
+  background-image: none;
+  border: 1px solid #f5f5f5;
+  padding: 0 5px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.filter-type3 .urunKiyaslamaOzellik.link_selected {
+  background: #000;
+  color: #fff;
 }
 
 .ems-sort {
@@ -6200,24 +6257,19 @@ a.btnsepeteAt {
       background: #fff;
       color: #000;
       line-height: normal;
+      user-select: none;
     }
     .sub-close {
       position: absolute;
-      right: 10px;
-      top: 10px;
+      right: 14px;
+      top: 14px;
     }
     .sub-header {
       position: relative;
       background: #eee;
       padding: 18px 20px 19px;
-      margin-left: -20px;
-      margin-right: -20px;
       font-size: 18px;
       font-weight: 700;
-    }
-    .sub-header .sub-close {
-      top: 50%;
-      transform: translateY(-50%);
     }
     .mini-lang-info {
       position: relative;
@@ -6273,6 +6325,40 @@ a.btnsepeteAt {
       max-width: 410px;
       padding: 30px 40px;
     }
+    .mini-user .kutuUyeGiris_profilFoto {
+      display: inline-block !important;
+      margin-right: 15px;
+    }
+    .mini-user .kutuUyeGiris_profilFoto img {
+      border-radius: 100%;
+      max-width: 60px;
+    }
+    .mini-user .btnKutuLogout {
+      font-size: 14px;
+      font-weight: 300;
+      display: table;
+      margin-top: 5px;
+    }
+    .mini-user .mini-user-links {
+      margin-top: 20px;
+      font-family: fira;
+      font-size: 18px;
+    }
+    .mini-user .mini-user-links a {
+      line-height: 35px;
+    }
+    .mini-user .ems-obj-logon .mini-user-sub {
+      padding-top: 0;
+    }
+    .mini-user .ems-obj-logon .sub-header {
+      margin-left: -40px;
+      margin-right: -40px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    .mini-user .ems-obj-logon .sub-header > .ga2 {
+      padding-right: 20px;
+    }
     .mini-user-ready .mini-user-overlay {
       display: block;
     }
@@ -6304,6 +6390,10 @@ a.btnsepeteAt {
     }
     .mini-cart-sub .mcq > i {
       font-style: normal;
+    }
+    .mini-cart-sub .sub-header {
+      margin-left: -20px;
+      margin-right: -20px;
     }
     .mini-cart-ready .mini-cart-overlay {
       display: block;
@@ -6995,6 +7085,7 @@ a.btnsepeteAt {
       border-color: #f5f5f5;
     }
     .urunKiyaslamaOzellik_ozellikAd {
+      position: static;
       background-color: inherit;
       padding: 22px 0;
     }

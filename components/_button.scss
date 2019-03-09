@@ -49,7 +49,7 @@
 }
 
 .btn,
-a.btnDefault:not(.btnBultenGonder):not([id$="btnArama"]) {
+a.btnDefault:not(.btnBultenGonder):not([id$="btnArama"]):not(.btnKutuLogout) {
     @extend %btn;
     .icon-arrow-r {
         margin-left: 10px;

@@ -13,10 +13,12 @@
             align-items: center;
         }
     }
+
+    $ph: 20px;
     &-sub {
         @extend %header-mods-sub;
         max-width: 410px;
-        padding: 0 20px 20px;
+        padding: 0 $ph 20px;
         .mcq {
             margin-left: 5px;
             font-size: 16px;
@@ -25,6 +27,10 @@
             > i {
                 font-style: normal;
             }
+        }
+        .sub-header {
+            margin-left: -$ph;
+            margin-right: -$ph;
         }
     }
 
