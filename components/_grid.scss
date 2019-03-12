@@ -1,0 +1,45 @@
+.ems-grid-default {
+    > .ems-grid-header {
+        display: none;
+        + .ems-grid-row {
+            border-top: 1px solid $color5;
+        }
+    }
+    > .ems-grid-row {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+        padding: 20px;
+        border-bottom: 1px solid $color5;
+        font-family: $font2;
+        font-size: 16px;
+    }
+}
+.ems-grid {
+    &-name {
+        grid-column: span 2;
+        padding: 0 20px 0 10px;
+        .prdItem {
+            display: block;
+            height: 39px;
+            overflow: hidden;
+        }
+        .urnKisaAd,
+        > a + span {
+            display: block;
+            color: $color7;
+            margin-top: 3px;
+        }
+    }
+    &-delete {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        svg {
+            font-size: 20px;
+        }
+    }
+    &-piece {
+        grid-column: span 2;
+    }
+}

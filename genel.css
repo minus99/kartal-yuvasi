@@ -47,14 +47,24 @@
   font-style: normal;
 }
 
-.popular-search-words li > a::before, .suggest_link > span::before, .menu li > a::after {
+.qty-wrapper a[onclick*="ekle"]::before,
+.qty-wrapper a[onclick*="cikar"]::before, .popular-search-words li > a::before, .suggest_link > span::before, .menu li > a::after {
   content: "";
   border-width: 4px;
   border-style: solid;
 }
 
+.qty-wrapper a[onclick*="ekle"]::before {
+  border-color: transparent transparent currentColor transparent;
+}
+
 .popular-search-words li > a::before, .suggest_link > span::before, .menu li > a::after {
   border-color: transparent transparent transparent currentColor;
+}
+
+
+.qty-wrapper a[onclick*="cikar"]::before {
+  border-color: currentColor transparent transparent transparent;
 }
 
 .menu li:hover > a::after {
@@ -226,8 +236,10 @@ table {
 .urunDetay_brutFiyat,
 .urunDetay_satisFiyat,
 #lblUrunTutari,
-.suggest_urnprice {
-  display: flex;
+.suggest_urnprice,
+.satBrFiyatVrg,
+.brFiyatVrg {
+  display: flex !important;
 }
 
 .ems-price .d,
@@ -236,7 +248,9 @@ table {
 .urunDetay_brutFiyat .d,
 .urunDetay_satisFiyat .d,
 #lblUrunTutari .d,
-.suggest_urnprice .d {
+.suggest_urnprice .d,
+.satBrFiyatVrg .d,
+.brFiyatVrg .d {
   display: none;
 }
 
@@ -246,26 +260,75 @@ table {
 .urunDetay_brutFiyat [class^="pb"],
 .urunDetay_satisFiyat [class^="pb"],
 #lblUrunTutari [class^="pb"],
-.suggest_urnprice [class^="pb"] {
+.suggest_urnprice [class^="pb"],
+.satBrFiyatVrg [class^="pb"],
+.brFiyatVrg [class^="pb"] {
   order: -1;
 }
 
 .ems-price.first:not(:empty),
 .urunListe_brutFiyat:not(:empty),
-.urunDetay_brutFiyat:not(:empty) {
+.urunDetay_brutFiyat:not(:empty),
+.gridSepetListe_gercekFiyat:not(:empty) {
   text-decoration: line-through;
   color: #999;
 }
 
 .ems-price.first:not(:empty) + *,
 .urunListe_brutFiyat:not(:empty) + *,
-.urunDetay_brutFiyat:not(:empty) + * {
+.urunDetay_brutFiyat:not(:empty) + *,
+.gridSepetListe_gercekFiyat:not(:empty) + * {
   color: #c5242b;
   margin-left: 10px;
 }
 
+.brFiyat,
+.satBrFiyat {
+  display: none !important;
+}
+
+.qty-wrapper {
+  position: relative;
+  display: block;
+  max-width: 113px;
+}
+
+.qty-wrapper input[id$="txtURN_ADET"] {
+  width: 100% !important;
+  background: #eee !important;
+}
+
+.qty-wrapper a[onclick*="ekle"],
+.qty-wrapper a[onclick*="cikar"] {
+  position: absolute;
+  right: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.qty-wrapper a[onclick*="ekle"]::before,
+.qty-wrapper a[onclick*="cikar"]::before {
+  display: block;
+}
+
+.qty-wrapper a[onclick*="ekle"] > span,
+.qty-wrapper a[onclick*="cikar"] > span {
+  display: none;
+}
+
+.qty-wrapper a[onclick*="ekle"] {
+  top: 0;
+  padding-top: 12px;
+}
+
+.qty-wrapper a[onclick*="cikar"] {
+  bottom: 0;
+  padding-bottom: 12px;
+}
+
 .ayiracDefault,
-.kutuBosluk {
+.kutuBosluk,
+.floatFixer {
   display: none !important;
 }
 
@@ -4423,7 +4486,7 @@ button.swiper-pagination-bullet {
 }
 
 .btn,
-a.btnDefault:not(.btnBultenGonder):not([id$="btnArama"]):not(.btnKutuLogout), .lnkSepet {
+a.btnDefault, .lnkSepet {
   position: relative;
   display: inline-block;
   padding: 0 10px;
@@ -4439,15 +4502,19 @@ a.btnDefault:not(.btnBultenGonder):not([id$="btnArama"]):not(.btnKutuLogout), .l
 }
 
 .btn:hover,
-a.btnDefault:hover:not(.btnBultenGonder):not([id$="btnArama"]):not(.btnKutuLogout), .lnkSepet:hover {
+a.btnDefault:hover, .lnkSepet:hover {
   background: #515151;
 }
 
-.btn > span, a.btnDefault:not(.btnBultenGonder):not([id$="btnArama"]):not(.btnKutuLogout) > span, .lnkSepet > span {
+.btn > span, a.btnDefault > span, .lnkSepet > span {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.btn > span .icon-arrow-r, a.btnDefault > span .icon-arrow-r, .lnkSepet > span .icon-arrow-r {
+  margin-left: 10px;
 }
 
 .btn-primary, .swiper-container-dark .btn {
@@ -4459,13 +4526,13 @@ a.btnDefault:hover:not(.btnBultenGonder):not([id$="btnArama"]):not(.btnKutuLogou
   background: #eee;
 }
 
-.btn-transparent, .ems-prdd-block2 a.btnDefault, a.btnFacebookLogin:not(.index), a.btnFacebookLoginKutu:not(.index) {
+.btn-transparent, .ems-prdd-block2 a.btnDefault, a.btnFacebookLogin, .mini-user a.btnFacebookLoginKutu {
   background: transparent;
   color: inherit;
   border-color: #c9c9c9;
 }
 
-.btn-transparent:hover, .ems-prdd-block2 a.btnDefault:hover, a.btnFacebookLogin:hover:not(.index), a.btnFacebookLoginKutu:hover:not(.index) {
+.btn-transparent:hover, .ems-prdd-block2 a.btnDefault:hover, a.btnFacebookLogin:hover, .mini-user a.btnFacebookLoginKutu:hover {
   background: transparent;
 }
 
@@ -4478,9 +4545,34 @@ a.btnDefault:hover:not(.btnBultenGonder):not([id$="btnArama"]):not(.btnKutuLogou
   font-size: 0;
 }
 
-.btn .icon-arrow-r,
-a.btnDefault:not(.btnBultenGonder):not([id$="btnArama"]):not(.btnKutuLogout) .icon-arrow-r {
-  margin-left: 10px;
+.mini-user a.btnKutuLogout, .mini-search a[id$="btnArama"], .mini-bulletin a.btnBultenGonder {
+  position: unset;
+  display: unset;
+  padding: unset;
+  background: unset;
+  border: unset;
+  font-family: unset;
+  font-size: unset;
+  color: unset;
+  font-weight: unset;
+  line-height: unset;
+  letter-spacing: unset;
+  transition: unset;
+}
+
+.mini-user a.btnKutuLogout:hover, .mini-search a:hover[id$="btnArama"], .mini-bulletin a.btnBultenGonder:hover {
+  background: unset;
+}
+
+.mini-user a.btnKutuLogout > span, .mini-search a[id$="btnArama"] > span, .mini-bulletin a.btnBultenGonder > span {
+  position: unset;
+  display: unset;
+  align-items: unset;
+  justify-content: unset;
+}
+
+.mini-user a.btnKutuLogout > span .icon-arrow-r, .mini-search a[id$="btnArama"] > span .icon-arrow-r, .mini-bulletin a.btnBultenGonder > span .icon-arrow-r {
+  margin-left: unset;
 }
 
 input:not([type=checkbox]):not([type=radio]),
@@ -4756,6 +4848,74 @@ textarea {
 
 .mini-lang-sub > a img {
   display: none;
+}
+
+.mini-user {
+  position: relative;
+}
+
+.mini-user-info {
+  background: #c5242b;
+  transform: skewX(-15deg) translateX(25px);
+}
+
+.mini-user-info > * {
+  transform: skewX(15deg) translateX(0px);
+}
+
+.mini-user-sub {
+  max-width: 410px;
+  padding: 30px 40px;
+}
+
+.mini-user .ems-obj-logon .mini-user-sub {
+  padding-top: 0;
+}
+
+.mini-user .ems-obj-logon .sub-header {
+  margin-left: -40px;
+  margin-right: -40px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.mini-user .ems-obj-logon .sub-header > .ga2 {
+  padding-right: 20px;
+}
+
+.mini-user .kutuUyeGiris_profilFoto {
+  display: inline-block !important;
+  margin-right: 15px;
+}
+
+.mini-user .kutuUyeGiris_profilFoto img {
+  border-radius: 100%;
+  max-width: 60px;
+}
+
+.mini-user a.btnKutuLogout {
+  font-size: 14px;
+  font-weight: 300;
+  display: table;
+  margin-top: 5px;
+}
+
+.mini-user .mini-user-links {
+  margin-top: 20px;
+  font-family: fira;
+  font-size: 18px;
+}
+
+.mini-user .mini-user-links a {
+  line-height: 35px;
+}
+
+.mini-user-ready .mini-user-overlay {
+  display: block;
+}
+
+.mini-user-ready .mini-user-sub {
+  display: block;
 }
 
 .popular-search-words {
@@ -6079,6 +6239,90 @@ a.btnsepeteAt {
   margin-top: 20px;
 }
 
+.tabloTabBtnAdim {
+  background: #eee;
+}
+
+.tabloTabBtnAdim .icon-cart {
+  --color1: #000000;
+  --color2: #ffffff;
+}
+
+.tabloTabBtnAdim td {
+  display: flex;
+}
+
+.tabloTabBtnAdim td > span {
+  flex: 1;
+}
+
+.tabloTabBtnAdim td > span a {
+  display: inline-block;
+  line-height: 50px;
+  font-weight: 700;
+  padding-right: 10px;
+  border-bottom: 3px solid transparent;
+}
+
+.tabloTabBtnAdim td > span a > span {
+  display: flex;
+  align-items: center;
+}
+
+.tabloTabBtnAdim td > span.tabBtnSelectedDefault a {
+  border-color: #000;
+}
+
+.ems-grid-default > .ems-grid-header {
+  display: none;
+}
+
+.ems-grid-default > .ems-grid-header + .ems-grid-row {
+  border-top: 1px solid #c9c9c9;
+}
+
+.ems-grid-default > .ems-grid-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+  padding: 20px;
+  border-bottom: 1px solid #c9c9c9;
+  font-family: fira;
+  font-size: 16px;
+}
+
+.ems-grid-name {
+  grid-column: span 2;
+  padding: 0 20px 0 10px;
+}
+
+.ems-grid-name .prdItem {
+  display: block;
+  height: 39px;
+  overflow: hidden;
+}
+
+.ems-grid-name .urnKisaAd,
+.ems-grid-name > a + span {
+  display: block;
+  color: #999;
+  margin-top: 3px;
+}
+
+.ems-grid-delete {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.ems-grid-delete svg {
+  font-size: 20px;
+}
+
+.ems-grid-piece {
+  grid-column: span 2;
+}
+
 .primary-categories {
   padding-top: 40px;
   background: #000;
@@ -6111,7 +6355,7 @@ a.btnsepeteAt {
   color: #999;
 }
 
-.kutuUyeGirisFacebookConnect, .uyeGirisFacebookConnectKutu {
+.kutuUyeGirisFacebookConnect, .mini-user .uyeGirisFacebookConnectKutu {
   max-width: 214px;
   margin: 20px auto 0;
 }
@@ -6140,6 +6384,21 @@ a.btnsepeteAt {
 
 .ems-page-product-detail {
   padding-bottom: 40px;
+}
+
+.cart-promotion-info {
+  display: none;
+}
+
+/*sepet grid*/
+.ems-grid-cart > .ems-grid-row {
+  grid-template-columns: 75px 1fr 1fr;
+}
+
+.pnlDipToplamTable {
+  background: #eee;
+  padding: 10px 20px;
+  font-family: fira;
 }
 
 @supports (grid-area: auto) {
@@ -6238,7 +6497,7 @@ a.btnsepeteAt {
       margin: 0;
       padding: 0 40px;
     }
-    .mini-lang-info > span, .mini-user-info > span, .mini-cart-info > span, .mini-search-info > span {
+    .mini-user-info > span, .mini-lang-info > span, .mini-cart-info > span, .mini-search-info > span {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -6246,7 +6505,7 @@ a.btnsepeteAt {
       padding: 0 10px;
       cursor: pointer;
     }
-    .mini-lang-sub, .mini-user-sub, .mini-cart-sub, .mini-search-sub {
+    .mini-user-sub, .mini-lang-sub, .mini-cart-sub, .mini-search-sub {
       display: none;
       position: fixed;
       right: 0;
@@ -6310,60 +6569,6 @@ a.btnsepeteAt {
     }
     ul.top-menu li + li {
       margin-left: 5px;
-    }
-    .mini-user {
-      position: relative;
-    }
-    .mini-user-info {
-      background: #c5242b;
-      transform: skewX(-15deg) translateX(25px);
-    }
-    .mini-user-info > * {
-      transform: skewX(15deg) translateX(0px);
-    }
-    .mini-user-sub {
-      max-width: 410px;
-      padding: 30px 40px;
-    }
-    .mini-user .kutuUyeGiris_profilFoto {
-      display: inline-block !important;
-      margin-right: 15px;
-    }
-    .mini-user .kutuUyeGiris_profilFoto img {
-      border-radius: 100%;
-      max-width: 60px;
-    }
-    .mini-user .btnKutuLogout {
-      font-size: 14px;
-      font-weight: 300;
-      display: table;
-      margin-top: 5px;
-    }
-    .mini-user .mini-user-links {
-      margin-top: 20px;
-      font-family: fira;
-      font-size: 18px;
-    }
-    .mini-user .mini-user-links a {
-      line-height: 35px;
-    }
-    .mini-user .ems-obj-logon .mini-user-sub {
-      padding-top: 0;
-    }
-    .mini-user .ems-obj-logon .sub-header {
-      margin-left: -40px;
-      margin-right: -40px;
-      padding-left: 40px;
-      padding-right: 40px;
-    }
-    .mini-user .ems-obj-logon .sub-header > .ga2 {
-      padding-right: 20px;
-    }
-    .mini-user-ready .mini-user-overlay {
-      display: block;
-    }
-    .mini-user-ready .mini-user-sub {
-      display: block;
     }
     .mini-cart {
       position: relative;
@@ -6533,6 +6738,7 @@ a.btnsepeteAt {
     }
     .searchSuggestDiv {
       position: relative !important;
+      width: 100% !important;
       display: none;
     }
     .searchSuggestDivHolder {
@@ -6661,8 +6867,7 @@ a.btnsepeteAt {
       text-align: center;
     }
     .searchSuggestDivHolder .brand,
-    .searchSuggestDivHolder .wordSearch,
-    .searchSuggestDivHolder .floatFixer {
+    .searchSuggestDivHolder .wordSearch {
       display: none;
     }
     .logo {

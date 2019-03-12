@@ -1,6 +1,6 @@
 .urunPaging {
-    margin-top: 20px;
     @extend .ems-container;
+    margin-top: 20px;
 
     td[align="left"],
     td[align="right"] {
@@ -57,9 +57,9 @@
 
 #lbfPagingPrev,
 #lbfPagingNext {
-    display: block;
     @extend .base64;
     @extend .base64-arrow-r;
+    display: block;
     background-position: center center;
     font-size: 0;
 }

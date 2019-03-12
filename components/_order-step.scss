@@ -1,0 +1,29 @@
+.tabloTabBtnAdim {
+    background: $color3;
+    .icon-cart {
+        --color1: #000000;
+        --color2: #ffffff;
+    }
+    td {
+        display: flex;
+        > span {
+            flex: 1;
+            a {
+                display: inline-block;
+                line-height: 50px;
+                font-weight: 700;
+                padding-right: 10px;
+                border-bottom: 3px solid transparent;
+                > span {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            &.tabBtnSelectedDefault {
+                a {
+                    border-color: $color1;
+                }
+            }
+        }
+    }
+}

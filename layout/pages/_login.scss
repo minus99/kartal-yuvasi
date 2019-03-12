@@ -17,6 +17,6 @@
     max-width: 214px;
     margin: 20px auto 0;
 }
-a.btnFacebookLogin:not(.index) {
+a.btnFacebookLogin {
     @extend %btn-transparent;
 }

@@ -74,6 +74,7 @@
 
 .searchSuggestDiv {
     position: relative !important;
+    width: 100% !important;
     display: none;
     
     &Holder {
@@ -214,8 +215,7 @@
             }
         }
         .brand,
-        .wordSearch,
-        .floatFixer {
+        .wordSearch {
             display: none;
         }
     }

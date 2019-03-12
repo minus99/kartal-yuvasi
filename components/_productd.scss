@@ -71,10 +71,10 @@
             width: calc(50% - 5px);
         }
         a.btnDefault {
+            @extend .btn-transparent;
             width: 100%;
             padding-left: 3px;
             padding-right: 3px;
-            @extend .btn-transparent;
         }
     }
 }

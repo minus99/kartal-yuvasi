@@ -19,6 +19,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        .icon-arrow-r {
+            margin-left: 10px;
+        }
     }
 
     &-primary {
@@ -46,14 +49,38 @@
         height: 100%;
         font-size: 0;
     }
+
+    &-reset {
+            position: unset;
+            display: unset;
+            padding: unset;
+            background: unset;
+            border: unset;
+            font-family: unset;
+            font-size: unset;
+            color: unset;
+            font-weight: unset;
+            line-height: unset;
+            letter-spacing: unset;
+            transition: unset;
+            &:hover {
+                background: unset;
+            }
+            > span {
+                position: unset;
+                display: unset;
+                align-items: unset;
+                justify-content: unset;
+                .icon-arrow-r {
+                    margin-left: unset;
+                }
+            }
+    }
 }
 
 .btn,
-a.btnDefault:not(.btnBultenGonder):not([id$="btnArama"]):not(.btnKutuLogout) {
+a.btnDefault {
     @extend %btn;
-    .icon-arrow-r {
-        margin-left: 10px;
-    }
 }
 
 .btn-primary {

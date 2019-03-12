@@ -43,12 +43,15 @@
 @import 'components/sort';
 @import 'components/paging';
 @import 'components/productd';
+@import 'components/order-step';
+@import 'components/grid';
 
 //PAGES
 @import 'layout/pages/home';
 @import 'layout/pages/login';
 @import 'layout/pages/product-list';
 @import 'layout/pages/product-detail';
+@import 'layout/pages/cart';
 
 //DESKTOP
 @supports(grid-area: auto) {
@@ -87,5 +90,6 @@
         @import 'layout/pages/home-desktop';
         @import 'layout/pages/product-list-desktop';
         @import 'layout/pages/product-detail-desktop';
+        @import 'layout/pages/cart-desktop';
     }
 }

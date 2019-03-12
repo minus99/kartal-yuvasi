@@ -1,0 +1,17 @@
+.cart-promotion-info {
+    display: none;
+}
+
+/*sepet grid*/
+.ems-grid-cart {
+    > .ems-grid-row {
+        grid-template-columns: 75px 1fr 1fr;
+    }
+}
+
+//dip toplam
+.pnlDipToplamTable {
+    background: $color3;
+    padding: 10px 20px;
+    font-family: $font2;
+}

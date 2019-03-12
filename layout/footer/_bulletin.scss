@@ -15,6 +15,7 @@
         padding-right: 60px;
     }
     a.btnBultenGonder {
+        @extend %btn-reset;
         position: absolute;
         right: 20px;
         top: 50%;

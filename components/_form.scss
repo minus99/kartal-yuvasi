@@ -138,8 +138,8 @@ textarea {
         display: none;
     }
     [id$="lbfUYE_KONTROLKODU"] {
-        display: block;
         @extend .ems-form-label;
+        display: block;
     }
     #imgCaptcha {
         position: absolute;

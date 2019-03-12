@@ -17,8 +17,8 @@
         &.sorts {
             margin-top: 15px;
             .urunKiyaslamaOzellik {
-                padding-left: 30px;
                 @extend .base64-radio;
+                padding-left: 30px;
                 &.link_selected {
                     @extend .base64-radio-active;
                 }

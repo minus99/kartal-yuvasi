@@ -19,8 +19,10 @@ table {
 .urunDetay_brutFiyat,
 .urunDetay_satisFiyat,
 #lblUrunTutari,
-.suggest_urnprice {
-    display: flex;
+.suggest_urnprice,
+.satBrFiyatVrg,
+.brFiyatVrg {
+    display: flex !important;
     .d {
         display: none;
     }
@@ -30,7 +32,8 @@ table {
 }
 .ems-price.first,
 .urunListe_brutFiyat,
-.urunDetay_brutFiyat {
+.urunDetay_brutFiyat,
+.gridSepetListe_gercekFiyat {
     &:not(:empty) {
         text-decoration: line-through;
         color: $color7;
@@ -40,10 +43,54 @@ table {
         }
     }
 }
+.brFiyat,
+.satBrFiyat {
+    display: none !important;
+}
+
+//quantity
+.qty-wrapper {
+    position: relative;
+    display: block;
+    max-width: 113px;
+    input[id$="txtURN_ADET"] {
+        width: 100% !important;
+        background: $color3 !important;
+    }
+    a[onclick*="ekle"],
+    a[onclick*="cikar"] {
+        position: absolute;
+        right: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        &::before {
+            @extend %triangle;
+            display: block;
+        }
+        > span {
+            display: none;
+        }
+    }
+    a[onclick*="ekle"] {
+        top: 0;
+        padding-top: 12px;
+        &::before {
+            @extend %triangle-t;
+        }
+    }
+    a[onclick*="cikar"] {
+        bottom: 0;
+        padding-bottom: 12px;
+        &::before {
+            @extend %triangle-b;
+        }
+    }
+}
 
 //unneeded objects
 .ayiracDefault,
-.kutuBosluk {
+.kutuBosluk,
+.floatFixer {
     display: none !important;
 }
 
