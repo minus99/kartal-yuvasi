@@ -1,17 +1,108 @@
-.cart-promotion-info {
-    display: none;
+//order pages
+.ems-page-order {
+    .block2 {
+        background: $color3;
+        padding: 10px;
+        margin-top: 60px;
+    }
+}
+.bottom-step {
+    a {
+        display: block;
+        margin-top: 5px;
+    }
 }
 
-/*sepet grid*/
-.ems-grid-cart {
+//cart page
+.cart-promotion-info {
+    display: none;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.ems-grid-table-cart {
     > .ems-grid-row {
         grid-template-columns: 75px 1fr 1fr;
     }
 }
 
-//dip toplam
+.ems-cart-button {
+    margin-top: 10px;
+}
+
 .pnlDipToplamTable {
-    background: $color3;
-    padding: 10px 20px;
     font-family: $font2;
+    color: $color6;
+    th, td {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    th {
+        font-weight: normal;
+        text-align: right;
+    }
+    td {
+        width: 80px;
+        font-weight: 700;
+        > span {
+            justify-content: flex-end;
+            .d {
+                display: block;
+            }
+        }
+    }
+    .pnlDipToplam_sipToplam {
+        th, td {
+            color: $color1;
+            font-weight: 700;
+        }
+    }
+}
+
+.ems-cart-coupon {
+    margin-top: -48px;
+    .ems-form-label-custom {
+        display: inline-block;
+        margin-bottom: 15px;
+        font-family: $font2;
+        font-size: 14px;
+        color: inherit;
+    }
+    .input-btn {
+        input + table {
+            right: 8px;
+            font-size: 0;
+        }
+    }
+    .btnHediyeCekiKullan {
+        padding-left: 0;
+        padding-right: 0;
+        .icon-arrow-r {
+            margin-left: 0;
+        }
+    }
+    [id$="lblHCK_HATA"]:not(:empty) {
+        display: block;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    .coupon-info {
+        position: relative;
+        > span:not(:empty) {
+            display: block;
+            padding: 10px;
+            background-color: $color2;
+        }
+        [id$="lblKuponKodBilgi"]:not(:empty) {
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .btnHediyeCekiIptal {
+            @extend %btn-reset;
+            position: absolute;
+            right: 4px;
+            top: 4px;
+        }
+    }
 }

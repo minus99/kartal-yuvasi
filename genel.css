@@ -208,7 +208,8 @@ a {
   outline: none;
 }
 
-img {
+img,
+canvas {
   max-width: 100%;
   vertical-align: middle;
 }
@@ -219,10 +220,23 @@ ul:not(.ul-list) {
   list-style: none;
 }
 
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
 @media screen and (max-width: 960px) {
   .obj-desktop {
     display: none !important;
   }
+}
+
+.lazy-load {
+  opacity: 0;
+}
+
+.image-loaded {
+  opacity: 1;
 }
 
 table {
@@ -238,7 +252,10 @@ table {
 #lblUrunTutari,
 .suggest_urnprice,
 .satBrFiyatVrg,
-.brFiyatVrg {
+.brFiyatVrg,
+.pageSepetToplam_lblSip_AraToplam,
+.pageSepetToplam_lblIndirimToplam,
+.pageSepetToplam_lblSip_NetToplam {
   display: flex !important;
 }
 
@@ -250,7 +267,10 @@ table {
 #lblUrunTutari .d,
 .suggest_urnprice .d,
 .satBrFiyatVrg .d,
-.brFiyatVrg .d {
+.brFiyatVrg .d,
+.pageSepetToplam_lblSip_AraToplam .d,
+.pageSepetToplam_lblIndirimToplam .d,
+.pageSepetToplam_lblSip_NetToplam .d {
   display: none;
 }
 
@@ -262,7 +282,10 @@ table {
 #lblUrunTutari [class^="pb"],
 .suggest_urnprice [class^="pb"],
 .satBrFiyatVrg [class^="pb"],
-.brFiyatVrg [class^="pb"] {
+.brFiyatVrg [class^="pb"],
+.pageSepetToplam_lblSip_AraToplam [class^="pb"],
+.pageSepetToplam_lblIndirimToplam [class^="pb"],
+.pageSepetToplam_lblSip_NetToplam [class^="pb"] {
   order: -1;
 }
 
@@ -410,8 +433,16 @@ table {
   justify-content: space-between;
 }
 
+.ems-flex-top {
+  align-items: flex-start;
+}
+
 .ems-flex-middle {
   align-items: center;
+}
+
+.ems-flex-bottom {
+  align-items: flex-end;
 }
 
 .ems-flex-row {
@@ -4545,7 +4576,7 @@ a.btnDefault:hover, .lnkSepet:hover {
   font-size: 0;
 }
 
-.mini-user a.btnKutuLogout, .mini-search a[id$="btnArama"], .mini-bulletin a.btnBultenGonder {
+.mini-user a.btnKutuLogout, .mini-search a[id$="btnArama"], .mini-bulletin a.btnBultenGonder, .ems-cart-coupon .coupon-info .btnHediyeCekiIptal {
   position: unset;
   display: unset;
   padding: unset;
@@ -4560,18 +4591,18 @@ a.btnDefault:hover, .lnkSepet:hover {
   transition: unset;
 }
 
-.mini-user a.btnKutuLogout:hover, .mini-search a:hover[id$="btnArama"], .mini-bulletin a.btnBultenGonder:hover {
+.mini-user a.btnKutuLogout:hover, .mini-search a:hover[id$="btnArama"], .mini-bulletin a.btnBultenGonder:hover, .ems-cart-coupon .coupon-info .btnHediyeCekiIptal:hover {
   background: unset;
 }
 
-.mini-user a.btnKutuLogout > span, .mini-search a[id$="btnArama"] > span, .mini-bulletin a.btnBultenGonder > span {
+.mini-user a.btnKutuLogout > span, .mini-search a[id$="btnArama"] > span, .mini-bulletin a.btnBultenGonder > span, .ems-cart-coupon .coupon-info .btnHediyeCekiIptal > span {
   position: unset;
   display: unset;
   align-items: unset;
   justify-content: unset;
 }
 
-.mini-user a.btnKutuLogout > span .icon-arrow-r, .mini-search a[id$="btnArama"] > span .icon-arrow-r, .mini-bulletin a.btnBultenGonder > span .icon-arrow-r {
+.mini-user a.btnKutuLogout > span .icon-arrow-r, .mini-search a[id$="btnArama"] > span .icon-arrow-r, .mini-bulletin a.btnBultenGonder > span .icon-arrow-r, .ems-cart-coupon .coupon-info .btnHediyeCekiIptal > span .icon-arrow-r {
   margin-left: unset;
 }
 
@@ -4662,6 +4693,20 @@ textarea {
 .ems-form-obj.chk-padding > .checkbox {
   position: absolute;
   left: 0;
+}
+
+.ems-form-obj.input-btn input {
+  width: 100% !important;
+  padding-right: 60px;
+}
+
+.ems-form-obj.input-btn input + * {
+  width: auto;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  color: #000;
+  transform: translateY(-50%);
 }
 
 .sStylerMainWrp {
@@ -5064,15 +5109,6 @@ textarea {
   background: #eee;
   border: none;
   padding-left: 30px;
-  padding-right: 60px;
-}
-
-.mini-bulletin a.btnBultenGonder {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  color: #000;
-  transform: translateY(-50%);
 }
 
 .mini-bulletin-message > span:not(:empty) {
@@ -5396,6 +5432,9 @@ textarea {
 
 .banner07 .prm-image img {
   width: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .banner07 .banner-body {
@@ -5995,8 +6034,8 @@ ul.product-list-grid > li {
 
 .ems-prdd-badge {
   position: relative;
-  width: 50%;
-  margin-left: auto;
+  padding-left: 40px;
+  overflow: hidden;
   font-family: fira;
   font-size: 16px;
 }
@@ -6007,6 +6046,8 @@ ul.product-list-grid > li {
   right: 0;
   top: 1px;
   background: #fff;
+  width: 100%;
+  text-align: right;
 }
 
 .ems-prdd-badge > div > span {
@@ -6250,17 +6291,20 @@ a.btnsepeteAt {
 
 .tabloTabBtnAdim td {
   display: flex;
+  justify-content: center;
 }
 
 .tabloTabBtnAdim td > span {
   flex: 1;
+  text-align: center;
 }
 
 .tabloTabBtnAdim td > span a {
   display: inline-block;
+  background: #fff;
+  padding-right: 10px;
   line-height: 50px;
   font-weight: 700;
-  padding-right: 10px;
   border-bottom: 3px solid transparent;
 }
 
@@ -6270,18 +6314,23 @@ a.btnsepeteAt {
 }
 
 .tabloTabBtnAdim td > span.tabBtnSelectedDefault a {
+  background: #eee;
   border-color: #000;
 }
 
-.ems-grid-default > .ems-grid-header {
+.tabloTabBtnAdim td > span.btnDisable a {
+  background: #eee;
+}
+
+.ems-grid-table-default > .ems-grid-header {
   display: none;
 }
 
-.ems-grid-default > .ems-grid-header + .ems-grid-row {
+.ems-grid-table-default > .ems-grid-header + .ems-grid-row {
   border-top: 1px solid #c9c9c9;
 }
 
-.ems-grid-default > .ems-grid-row {
+.ems-grid-table-default > .ems-grid-row {
   position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
@@ -6321,6 +6370,21 @@ a.btnsepeteAt {
 
 .ems-grid-piece {
   grid-column: span 2;
+}
+
+.ems-grid-price > span {
+  margin-top: -5px;
+  font-family: din;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.ems-grid-price .dvSepetKazancOran:not(:empty) {
+  display: block;
+  flex-basis: 100%;
+  color: #c5242b;
+  text-align: right;
+  margin-top: 2px;
 }
 
 .primary-categories {
@@ -6386,19 +6450,115 @@ a.btnsepeteAt {
   padding-bottom: 40px;
 }
 
-.cart-promotion-info {
-  display: none;
+.ems-page-order .block2 {
+  background: #eee;
+  padding: 10px;
+  margin-top: 60px;
 }
 
-/*sepet grid*/
-.ems-grid-cart > .ems-grid-row {
+.bottom-step a {
+  display: block;
+  margin-top: 5px;
+}
+
+.cart-promotion-info {
+  display: none;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.ems-grid-table-cart > .ems-grid-row {
   grid-template-columns: 75px 1fr 1fr;
 }
 
+.ems-cart-button {
+  margin-top: 10px;
+}
+
 .pnlDipToplamTable {
-  background: #eee;
-  padding: 10px 20px;
   font-family: fira;
+  color: #515151;
+}
+
+.pnlDipToplamTable th, .pnlDipToplamTable td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.pnlDipToplamTable th {
+  font-weight: normal;
+  text-align: right;
+}
+
+.pnlDipToplamTable td {
+  width: 80px;
+  font-weight: 700;
+}
+
+.pnlDipToplamTable td > span {
+  justify-content: flex-end;
+}
+
+.pnlDipToplamTable td > span .d {
+  display: block;
+}
+
+.pnlDipToplamTable .pnlDipToplam_sipToplam th, .pnlDipToplamTable .pnlDipToplam_sipToplam td {
+  color: #000;
+  font-weight: 700;
+}
+
+.ems-cart-coupon {
+  margin-top: -48px;
+}
+
+.ems-cart-coupon .ems-form-label-custom {
+  display: inline-block;
+  margin-bottom: 15px;
+  font-family: fira;
+  font-size: 14px;
+  color: inherit;
+}
+
+.ems-cart-coupon .input-btn input + table {
+  right: 8px;
+  font-size: 0;
+}
+
+.ems-cart-coupon .btnHediyeCekiKullan {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.ems-cart-coupon .btnHediyeCekiKullan .icon-arrow-r {
+  margin-left: 0;
+}
+
+.ems-cart-coupon [id$="lblHCK_HATA"]:not(:empty) {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.ems-cart-coupon .coupon-info {
+  position: relative;
+}
+
+.ems-cart-coupon .coupon-info > span:not(:empty) {
+  display: block;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.ems-cart-coupon .coupon-info [id$="lblKuponKodBilgi"]:not(:empty) {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.ems-cart-coupon .coupon-info .btnHediyeCekiIptal {
+  position: absolute;
+  right: 4px;
+  top: 4px;
 }
 
 @supports (grid-area: auto) {
@@ -6421,8 +6581,14 @@ a.btnsepeteAt {
     .d-ems-flex-between {
       justify-content: space-between;
     }
+    .d-ems-flex-top {
+      align-items: flex-start;
+    }
     .d-ems-flex-middle {
       align-items: center;
+    }
+    .d-ems-flex-bottom {
+      align-items: flex-end;
     }
     .d-ems-flex-row {
       flex-direction: row;

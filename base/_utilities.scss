@@ -6,6 +6,14 @@
 }
 
 //EMOS FRAMEWORK
+//lazyload
+.lazy-load {
+    opacity: 0;
+}
+.image-loaded {
+    opacity: 1;
+}
+
 //table fixer
 table {
     display: table !important;
@@ -21,7 +29,10 @@ table {
 #lblUrunTutari,
 .suggest_urnprice,
 .satBrFiyatVrg,
-.brFiyatVrg {
+.brFiyatVrg,
+.pageSepetToplam_lblSip_AraToplam,
+.pageSepetToplam_lblIndirimToplam,
+.pageSepetToplam_lblSip_NetToplam {
     display: flex !important;
     .d {
         display: none;
@@ -176,8 +187,14 @@ table {
         }
 
         //vertical align
+        &-top {
+            align-items: flex-start;
+        }
         &-middle {
             align-items: center;
+        }
+        &-bottom {
+            align-items: flex-end;
         }
 
         //direction

@@ -56,7 +56,8 @@ a {
     outline: none;
 }
 
-img {
+img,
+canvas {
     max-width: 100%;
     vertical-align: middle;
 }
@@ -65,4 +66,9 @@ ul:not(.ul-list) {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
 }

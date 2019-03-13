@@ -37,9 +37,8 @@
     }
     &-badge {
         position: relative;
-        width: 50%;
-        margin-left: auto;
-
+        padding-left: 40px;
+        overflow: hidden;
         font-family: $font2;
         font-size: 16px;
         > div {
@@ -47,8 +46,9 @@
             position: absolute;
             right: 0;
             top: 1px;
-    
             background: $color2;
+            width: 100%;
+            text-align: right;
             > span {
                 display: block;
             }

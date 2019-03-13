@@ -1,4 +1,4 @@
-.ems-grid-default {
+.ems-grid-table-default {
     > .ems-grid-header {
         display: none;
         + .ems-grid-row {
@@ -41,5 +41,20 @@
     }
     &-piece {
         grid-column: span 2;
+    }
+    &-price {
+        > span {
+            margin-top: -5px;
+            font-family: $font1;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .dvSepetKazancOran:not(:empty) {
+            display: block;
+            flex-basis: 100%;
+            color: $color4;
+            text-align: right;
+            margin-top: 2px;
+        }
     }
 }

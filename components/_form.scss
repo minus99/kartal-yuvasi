@@ -75,6 +75,20 @@ textarea {
                 left: 0;
             }
         }
+        &.input-btn {
+            input {
+                width: 100% !important;
+                padding-right: 60px;
+                + * {
+                    width: auto;
+                    position: absolute;
+                    right: 20px;
+                    top: 50%;
+                    color: #000;
+                    transform: translateY(-50%);
+                }
+            }
+        }
     }
 }
 
