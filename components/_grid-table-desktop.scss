@@ -1,0 +1,21 @@
+.ems-grid-table-default {
+    > .ems-grid-row {
+        grid-gap: 0 20px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.ems-grid {
+    &-name {
+        padding-right: 0;
+    }
+    &-price {
+        .dvSepetKazancOran:not(:empty) {
+            text-align: center;
+        }
+    }
+    &-delete {
+        position: static;
+    }
+}

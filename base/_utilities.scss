@@ -6,7 +6,7 @@
 }
 
 //EMOS FRAMEWORK
-//lazyload
+//lazy load
 .lazy-load {
     opacity: 0;
 }
@@ -63,7 +63,7 @@ table {
 .qty-wrapper {
     position: relative;
     display: block;
-    max-width: 113px;
+    width: 113px;
     input[id$="txtURN_ADET"] {
         width: 100% !important;
         background: $color3 !important;
@@ -101,7 +101,8 @@ table {
 //unneeded objects
 .ayiracDefault,
 .kutuBosluk,
-.floatFixer {
+.floatFixer,
+.step1 .obj-step0 {
     display: none !important;
 }
 

@@ -51,7 +51,10 @@
 @import 'layout/pages/login';
 @import 'layout/pages/product-list';
 @import 'layout/pages/product-detail';
-@import 'layout/pages/cart';
+@import 'layout/pages/order';
+@import 'layout/pages/order-cart';
+@import 'layout/pages/order-delivery';
+@import 'layout/pages/order-payment';
 
 //DESKTOP
 @supports(grid-area: auto) {
@@ -85,11 +88,15 @@
         @import 'components/sort-desktop';
         @import 'components/paging-desktop';
         @import 'components/productd-desktop';
+        @import 'components/grid-table-desktop';
 
         //PAGES
         @import 'layout/pages/home-desktop';
         @import 'layout/pages/product-list-desktop';
         @import 'layout/pages/product-detail-desktop';
-        @import 'layout/pages/cart-desktop';
+        @import 'layout/pages/order-desktop';
+        @import 'layout/pages/order-cart-desktop';
+        @import 'layout/pages/order-delivery-desktop';
+        @import 'layout/pages/order-payment-desktop';
     }
 }
