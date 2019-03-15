@@ -1,6 +1,98 @@
+.ems-delivery {
+    .ems-cart-grid {
+        > .ga1 {
+            display: none;
+        }
+    }
+}
+
 .ems-grid-table-address {
     .ems-grid-row {
         grid-template-columns: 1fr;
         font-size: 15px;
+    }
+}
+
+a.btnAdresEkle,
+.dvFarkliFatAdrSec,
+.delivery-gift-select {
+    padding: 20px;
+    font-family: $font2;
+    font-size: 15px;
+}
+
+a.btnAdresEkle {
+    @extend %btn-reset;
+}
+
+.ems-delivery-tab {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+}
+.ems-gift-tab {
+    background: $color3 url(/images/frontend/gift-packet.png) right 20px top 10px / 67px no-repeat;
+    .ems-delivery-tab-wrp {
+        padding: 20px;
+        ////display: none;
+    }
+    [id$="txtSIP_HEDIYENOTU"] {
+        width: 100% !important;
+        height: 100px;
+    }
+    .opened {
+        .ems-delivery-tab-wrp {
+            display: block;
+        }
+    }
+}
+.ems-cargo-tab {
+
+}
+.divTeslimatKargo {
+    font-family: $font2;
+    font-size: 15px;
+    li {
+        position: relative;
+        padding: 20px 20px 20px 85px;
+        border: 1px solid $color5;
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    img {
+        order: 1;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 44px;
+    }
+    .kargoAdi {
+        order: 2;
+    }
+    .fiyat {
+        order: 3;
+        &::before {
+            content: "-";
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    }
+    .kargoBilgi {
+        order: 4;
+        margin-top: 5px;
+    }
+
+    .kargoAdi,
+    .fiyat {
+        font-weight: 700;
+    }
+
+    .radioButton {
+        @include ems-cover;
+        z-index: 1;
+        margin: 0;
+        opacity: 0;
+        cursor: pointer;
     }
 }

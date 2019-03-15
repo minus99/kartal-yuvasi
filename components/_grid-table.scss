@@ -70,7 +70,13 @@
             margin-top: 2px;
         }
     }
-
+    &-address-name {
+        font-weight: 700;
+        padding-right: 120px;
+        > span {
+            display: none;
+        }
+    }
     &-address-buttons {
         position: absolute;
         right: 20px;
@@ -79,6 +85,25 @@
             @extend %btn-reset;
             color: $color7;
             text-decoration: underline;
+            + a {
+                margin-left: 30px;
+            }
+        }
+    }
+    &-address-select {
+        a {
+            @extend %btn-reset;
+            svg {
+                font-size: 18px;
+                --check: hidden;
+                margin-right: 10px;
+            }
+            &.emos_selected {
+                font-weight: 500;
+                svg {
+                    --check: visible;
+                }
+            }
             + a {
                 margin-left: 30px;
             }

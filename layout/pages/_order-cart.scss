@@ -71,22 +71,14 @@
         margin-bottom: 1em;
     }
 }
-.coupon-info {
+.ems-cart-coupon-info {
     position: relative;
-    > span:not(:empty) {
-        display: block;
-        padding: 10px;
-        background-color: $color2;
-    }
     [id$="lblKuponKodBilgi"]:not(:empty) {
         font-size: 16px;
         font-weight: 700;
     }
-    .btnHediyeCekiIptal {
+    a.btnHediyeCekiIptal {
         @extend %btn-reset;
-        position: absolute;
-        right: 4px;
-        top: 4px;
     }
 }
 

@@ -14,6 +14,12 @@
     opacity: 1;
 }
 
+//a fixer
+.emos_selected,
+.emos_selected:hover {
+    color: inherit !important;
+}
+
 //table fixer
 table {
     display: table !important;
@@ -102,7 +108,9 @@ table {
 .ayiracDefault,
 .kutuBosluk,
 .floatFixer,
-.step1 .obj-step0 {
+.ems-logon-body .ems-obj-logoff,
+.ems-logoff-body .ems-obj-logon,
+.ems-step1 .ems-obj-step0 {
     display: none !important;
 }
 
@@ -129,22 +137,6 @@ table {
         background: rgba($color: $color1, $alpha: .4);
     }
     
-    //LOGON & LOGOFF
-    &-obj-logon,
-    &-obj-logoff {
-        display: none;
-    }
-    &-logon-body {
-        .ems-obj-logon {
-            display: block;
-        }
-    }
-    &-logoff-body {
-        .ems-obj-logoff {
-            display: block;
-        }
-    }
-
     //CONTAINER
     &-container {
         width: calc(100% - #{$container-padding * 2});
@@ -167,6 +159,21 @@ table {
 
     &-overflow-hidden {
         overflow: hidden;
+    }
+
+    //SECTION
+    &-section {
+        &-title {
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        &-wrapper {
+            &:empty {
+                display: none !important;
+            }
+        }
     }
     
     //FLEX
@@ -233,26 +240,14 @@ table {
 
     //TEXT
     &-text {
+        &-left {
+            text-align: left;
+        }
         &-center {
             text-align: center;
         }
         &-right {
             text-align: right;
-        }
-    }
-
-    //SECTION
-    &-section {
-        &-title {
-            font-size: 24px;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        &-wrapper {
-            &:empty {
-                display: none !important;
-            }
         }
     }
 }

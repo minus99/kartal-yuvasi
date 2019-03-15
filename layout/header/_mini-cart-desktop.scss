@@ -46,18 +46,15 @@
 .kutuSepet_icerik {
     font-family: $font2;
     font-size: 16px;
+    max-height: calc(100vh - 250px);
+    overflow: auto;
     > .ems-row {
         position: relative;
         margin-top: 20px;
-        > .r1 {
-            flex-basis: 100px;
-            margin-right: 15px;
-        }
-        > .r2 {
-            flex: 1;
-        }
-        > .r3 {
-            flex-basis: 50px;
+        grid-template-columns: 100px 1fr 32px;
+        grid-gap: 0 15px;
+        > .ga3 {
+            z-index: 1;
         }
     }
 }
@@ -88,7 +85,10 @@
         color: $color12;
     }
     &-remove {
-        text-align: right;
+        text-align: center;
+        a {
+            display: block;
+        }
         svg {
             font-size: 20px;
         }

@@ -239,6 +239,11 @@ table {
   opacity: 1;
 }
 
+.emos_selected,
+.emos_selected:hover {
+  color: inherit !important;
+}
+
 table {
   display: table !important;
   width: 100%;
@@ -352,7 +357,9 @@ table {
 .ayiracDefault,
 .kutuBosluk,
 .floatFixer,
-.step1 .obj-step0 {
+.ems-logon-body .ems-obj-logoff,
+.ems-logoff-body .ems-obj-logon,
+.ems-step1 .ems-obj-step0 {
   display: none !important;
 }
 
@@ -374,18 +381,6 @@ table {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
-}
-
-.ems-obj-logon, .ems-obj-logoff {
-  display: none;
-}
-
-.ems-logon-body .ems-obj-logon {
-  display: block;
-}
-
-.ems-logoff-body .ems-obj-logoff {
-  display: block;
 }
 
 .ems-container, .urunPaging {
@@ -412,6 +407,17 @@ table {
 
 .ems-overflow-hidden {
   overflow: hidden;
+}
+
+.ems-section-title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ems-section-wrapper:empty {
+  display: none !important;
 }
 
 .ems-flex {
@@ -478,23 +484,16 @@ table {
   display: grid;
 }
 
+.ems-text-left {
+  text-align: left;
+}
+
 .ems-text-center {
   text-align: center;
 }
 
 .ems-text-right {
   text-align: right;
-}
-
-.ems-section-title {
-  font-size: 24px;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.ems-section-wrapper:empty {
-  display: none !important;
 }
 
 .site-main {
@@ -4545,10 +4544,6 @@ a.btnDefault:hover, .lnkSepet:hover {
   justify-content: center;
 }
 
-.btn > span .icon-arrow-r, a.btnDefault > span .icon-arrow-r, .lnkSepet > span .icon-arrow-r {
-  margin-left: 10px;
-}
-
 .btn-primary, .swiper-container-dark .btn {
   background: #fff;
   color: #000;
@@ -4577,9 +4572,7 @@ a.btnDefault:hover, .lnkSepet:hover {
   font-size: 0;
 }
 
-.mini-user a.btnKutuLogout, .mini-search a[id$="btnArama"], .mini-bulletin a.btnBultenGonder, .ems-grid-address-buttons > a, .coupon-info .btnHediyeCekiIptal {
-  position: unset;
-  display: unset;
+.mini-user a.btnKutuLogout, .mini-search a[id$="btnArama"], .mini-bulletin a.btnBultenGonder, .ems-grid-address-buttons > a, .ems-grid-address-select a, .ems-cart-coupon-info a.btnHediyeCekiIptal, a.btnAdresEkle {
   padding: unset;
   background: unset;
   border: unset;
@@ -4589,27 +4582,20 @@ a.btnDefault:hover, .lnkSepet:hover {
   font-weight: unset;
   line-height: unset;
   letter-spacing: unset;
-  transition: unset;
 }
 
-.mini-user a.btnKutuLogout:hover, .mini-search a:hover[id$="btnArama"], .mini-bulletin a.btnBultenGonder:hover, .ems-grid-address-buttons > a:hover, .coupon-info .btnHediyeCekiIptal:hover {
+.mini-user a.btnKutuLogout:hover, .mini-search a:hover[id$="btnArama"], .mini-bulletin a.btnBultenGonder:hover, .ems-grid-address-buttons > a:hover, .ems-grid-address-select a:hover, .ems-cart-coupon-info a.btnHediyeCekiIptal:hover, a.btnAdresEkle:hover {
   background: unset;
 }
 
-.mini-user a.btnKutuLogout > span, .mini-search a[id$="btnArama"] > span, .mini-bulletin a.btnBultenGonder > span, .ems-grid-address-buttons > a > span, .coupon-info .btnHediyeCekiIptal > span {
-  position: unset;
-  display: unset;
-  align-items: unset;
-  justify-content: unset;
-}
-
-.mini-user a.btnKutuLogout > span .icon-arrow-r, .mini-search a[id$="btnArama"] > span .icon-arrow-r, .mini-bulletin a.btnBultenGonder > span .icon-arrow-r, .ems-grid-address-buttons > a > span .icon-arrow-r, .coupon-info .btnHediyeCekiIptal > span .icon-arrow-r {
-  margin-left: unset;
+.btn .icon-arrow-r,
+a.btnDefault .icon-arrow-r {
+  margin-left: 10px;
 }
 
 input:not([type=checkbox]):not([type=radio]),
-textarea,
-.sStylerWrp_select {
+select, .sStylerWrp_select,
+textarea {
   font-family: fira;
   font-size: 15px;
   background: #fff;
@@ -4628,10 +4614,16 @@ input:read-only {
   background: #999;
 }
 
+select {
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
 textarea {
   line-height: 1.5;
   padding-top: 10px;
   padding-bottom: 10px;
+  resize: none;
 }
 
 [id$="CEPTELEFONALAN"] {
@@ -4954,6 +4946,10 @@ textarea {
 
 .mini-user .mini-user-links a {
   line-height: 35px;
+}
+
+.mini-user .mini-user-links .kutuUyeGiris_lbfUyeMesajSayi {
+  margin-left: 5px;
 }
 
 .mini-user-ready .mini-user-overlay {
@@ -6405,6 +6401,15 @@ a.btnsepeteAt {
   margin-top: 2px;
 }
 
+.ems-grid-address-name {
+  font-weight: 700;
+  padding-right: 120px;
+}
+
+.ems-grid-address-name > span {
+  display: none;
+}
+
 .ems-grid-address-buttons {
   position: absolute;
   right: 20px;
@@ -6417,6 +6422,24 @@ a.btnsepeteAt {
 }
 
 .ems-grid-address-buttons > a + a {
+  margin-left: 30px;
+}
+
+.ems-grid-address-select a svg {
+  font-size: 18px;
+  --check: hidden;
+  margin-right: 10px;
+}
+
+.ems-grid-address-select a.emos_selected {
+  font-weight: 500;
+}
+
+.ems-grid-address-select a.emos_selected svg {
+  --check: visible;
+}
+
+.ems-grid-address-select a + a {
   margin-left: 30px;
 }
 
@@ -6583,25 +6606,13 @@ a.btnsepeteAt {
   margin-bottom: 1em;
 }
 
-.coupon-info {
+.ems-cart-coupon-info {
   position: relative;
 }
 
-.coupon-info > span:not(:empty) {
-  display: block;
-  padding: 10px;
-  background-color: #fff;
-}
-
-.coupon-info [id$="lblKuponKodBilgi"]:not(:empty) {
+.ems-cart-coupon-info [id$="lblKuponKodBilgi"]:not(:empty) {
   font-size: 16px;
   font-weight: 700;
-}
-
-.coupon-info .btnHediyeCekiIptal {
-  position: absolute;
-  right: 4px;
-  top: 4px;
 }
 
 .customer-support {
@@ -6625,9 +6636,108 @@ a.btnsepeteAt {
   display: block;
 }
 
+.ems-delivery .ems-cart-grid > .ga1 {
+  display: none;
+}
+
 .ems-grid-table-address .ems-grid-row {
   grid-template-columns: 1fr;
   font-size: 15px;
+}
+
+a.btnAdresEkle,
+.dvFarkliFatAdrSec,
+.delivery-gift-select {
+  padding: 20px;
+  font-family: fira;
+  font-size: 15px;
+}
+
+.ems-delivery-tab {
+  width: calc(100% - 40px);
+  margin: 0 auto;
+}
+
+.ems-gift-tab {
+  background: #eee url(/images/frontend/gift-packet.png) right 20px top 10px/67px no-repeat;
+}
+
+.ems-gift-tab .ems-delivery-tab-wrp {
+  padding: 20px;
+}
+
+.ems-gift-tab [id$="txtSIP_HEDIYENOTU"] {
+  width: 100% !important;
+  height: 100px;
+}
+
+.ems-gift-tab .opened .ems-delivery-tab-wrp {
+  display: block;
+}
+
+.divTeslimatKargo {
+  font-family: fira;
+  font-size: 15px;
+}
+
+.divTeslimatKargo li {
+  position: relative;
+  padding: 20px 20px 20px 85px;
+  border: 1px solid #c9c9c9;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.divTeslimatKargo img {
+  order: 1;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 44px;
+}
+
+.divTeslimatKargo .kargoAdi {
+  order: 2;
+}
+
+.divTeslimatKargo .fiyat {
+  order: 3;
+}
+
+.divTeslimatKargo .fiyat::before {
+  content: "-";
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.divTeslimatKargo .kargoBilgi {
+  order: 4;
+  margin-top: 5px;
+}
+
+.divTeslimatKargo .kargoAdi,
+.divTeslimatKargo .fiyat {
+  font-weight: 700;
+}
+
+.divTeslimatKargo .radioButton {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  z-index: 1;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.divTeslimatKargo .radioButton > * {
+  display: none;
 }
 
 @supports (grid-area: auto) {
@@ -6682,6 +6792,15 @@ a.btnsepeteAt {
     }
     .d-ems-grid {
       display: grid;
+    }
+    .d-ems-text-left {
+      text-align: left;
+    }
+    .d-ems-text-center {
+      text-align: center;
+    }
+    .d-ems-text-right {
+      text-align: right;
     }
     .site-header-grid {
       position: relative;
@@ -6844,20 +6963,17 @@ a.btnsepeteAt {
     .kutuSepet_icerik {
       font-family: fira;
       font-size: 16px;
+      max-height: calc(100vh - 250px);
+      overflow: auto;
     }
     .kutuSepet_icerik > .ems-row {
       position: relative;
       margin-top: 20px;
+      grid-template-columns: 100px 1fr 32px;
+      grid-gap: 0 15px;
     }
-    .kutuSepet_icerik > .ems-row > .r1 {
-      flex-basis: 100px;
-      margin-right: 15px;
-    }
-    .kutuSepet_icerik > .ems-row > .r2 {
-      flex: 1;
-    }
-    .kutuSepet_icerik > .ems-row > .r3 {
-      flex-basis: 50px;
+    .kutuSepet_icerik > .ems-row > .ga3 {
+      z-index: 1;
     }
     .cart-prd-name {
       color: #000;
@@ -6885,7 +7001,10 @@ a.btnsepeteAt {
       color: #2e9a32;
     }
     .cart-prd-remove {
-      text-align: right;
+      text-align: center;
+    }
+    .cart-prd-remove a {
+      display: block;
     }
     .cart-prd-remove svg {
       font-size: 20px;
@@ -7666,7 +7785,7 @@ a.btnsepeteAt {
       text-align: left;
     }
     .ems-grid-table-default > .ems-grid-row {
-      grid-gap: 0 20px;
+      grid-gap: 10px 20px;
       padding-left: 0;
       padding-right: 0;
     }
@@ -7677,6 +7796,13 @@ a.btnsepeteAt {
       text-align: center;
     }
     .ems-grid-delete {
+      position: static;
+    }
+    .ems-grid-address-name {
+      grid-column: span 2;
+      padding-right: 0;
+    }
+    .ems-grid-address-buttons {
       position: static;
     }
     .primary-categories {
@@ -7764,14 +7890,14 @@ a.btnsepeteAt {
     .bottom-step {
       margin-top: 20px;
     }
-    .ems-cart-grid {
+    .ems-step0 .ems-cart-grid {
       grid-template-columns: 1fr 780px 20px 380px 1fr;
       grid-template-areas: ". ga1 . ga2 .";
     }
-    .ems-cart-grid > .ga1 {
+    .ems-step0 .ems-cart-grid > .ga1 {
       grid-area: ga1;
     }
-    .ems-cart-grid > .ga2 {
+    .ems-step0 .ems-cart-grid > .ga2 {
       grid-area: ga2;
     }
     .ems-grid-table-cart > .ems-grid-row {
@@ -7788,6 +7914,25 @@ a.btnsepeteAt {
     }
     .ems-cart-coupon {
       margin-top: 0;
+    }
+    .ems-delivery-grid {
+      grid-template-columns: 1fr 780px 20px 380px 1fr;
+      grid-template-areas: ". ga1 . ga2 .";
+    }
+    .ems-delivery-grid > .ga1 {
+      grid-area: ga1;
+    }
+    .ems-delivery-grid > .ga2 {
+      grid-area: ga2;
+    }
+    .ems-grid-table-address .ems-grid-row {
+      grid-template-columns: 1fr 1fr;
+    }
+    a.btnAdresEkle {
+      padding: 10px 0;
+    }
+    .ems-delivery-tab {
+      width: 100%;
     }
   }
 }
