@@ -2,14 +2,8 @@
     .block2 {
         background: none;
         margin-top: 0;
-        border-top: 1px solid $color5;
         padding: 20px 30px;
-        .block2 {
-            background: unset;
-            margin-top: unset;
-            border-top: unset;
-            padding: unset;
-        }
+        border-top: 1px solid $color5;
     }
 }
 

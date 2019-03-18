@@ -1,13 +1,17 @@
-.ems-step0 .ems-cart-grid {
-    grid-template-columns: 1fr 780px 20px 380px 1fr;
-    grid-template-areas: ". ga1 . ga2 .";
-
-    @include setGridArea(1,2)
-}
-
-.ems-grid-table-cart {
-    > .ems-grid-row {
-        grid-template-columns: 90px 1fr 113px 1fr 20px;
+.ems-step0 {
+    .ems-cart {
+        &-grid {
+            grid-template-columns: 1fr 780px 20px 380px 1fr;
+            grid-template-areas: ". ga1 . ga2 .";
+        
+            @include setGridArea(1,2);
+        }
+    }
+    
+    .ems-grid-table-cart {
+        > .ems-grid-row {
+            grid-template-columns: 90px 1fr 113px 1fr 20px;
+        }
     }
 }
 

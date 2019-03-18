@@ -1,8 +1,10 @@
-.ems-delivery-grid {
-    grid-template-columns: 1fr 780px 20px 380px 1fr;
-    grid-template-areas: ". ga1 . ga2 .";
+.ems-delivery {
+    &-grid {
+        grid-template-columns: 1fr 780px 20px 380px 1fr;
+        grid-template-areas: ". ga1 . ga2 .";
 
-    @include setGridArea(1,2)
+        @include setGridArea(1,2);
+    }
 }
 
 .ems-grid-table-address {

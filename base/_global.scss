@@ -34,7 +34,7 @@
 }
 
 html {
-    position: initial;
+    position: relative;
     &::before {
         display: none;
     }

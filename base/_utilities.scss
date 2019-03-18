@@ -15,9 +15,9 @@
 }
 
 //a fixer
-.emos_selected,
-.emos_selected:hover {
-    color: inherit !important;
+a.emos_selected,
+a.emos_selected:hover {
+    color: inherit;
 }
 
 //table fixer
@@ -36,9 +36,7 @@ table {
 .suggest_urnprice,
 .satBrFiyatVrg,
 .brFiyatVrg,
-.pageSepetToplam_lblSip_AraToplam,
-.pageSepetToplam_lblIndirimToplam,
-.pageSepetToplam_lblSip_NetToplam {
+.pnlDipToplamTable td > span {
     display: flex !important;
     .d {
         display: none;
@@ -47,6 +45,12 @@ table {
         order: -1;
     }
 }
+.pnlDipToplamTable td > span {
+    .d {
+        display: inline;
+    }
+}
+
 .ems-price.first,
 .urunListe_brutFiyat,
 .urunDetay_brutFiyat,
@@ -59,10 +63,6 @@ table {
             margin-left: 10px;
         }
     }
-}
-.brFiyat,
-.satBrFiyat {
-    display: none !important;
 }
 
 //quantity
@@ -108,18 +108,18 @@ table {
 .ayiracDefault,
 .kutuBosluk,
 .floatFixer,
+.ems-none,
+.ems-obj-required,
 .ems-logon-body .ems-obj-logoff,
 .ems-logoff-body .ems-obj-logon,
-.ems-step1 .ems-obj-step0 {
+.ems-step1 .ems-obj-step0,
+.brFiyat,
+.satBrFiyat {
     display: none !important;
 }
 
 .ems {
     //HIDDEN
-    &-none,
-    &-obj-required {
-        display: none !important;
-    }
     &-hidden {
         display: none;
     }

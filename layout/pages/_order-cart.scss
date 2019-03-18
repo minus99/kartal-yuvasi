@@ -1,13 +1,15 @@
+.ems-step0 {
+    .ems-grid-table-cart {
+        > .ems-grid-row {
+            grid-template-columns: 75px 1fr;
+        }
+    }
+}
+
 .cart-promotion-info {
     display: none;
     margin-top: 20px;
     margin-bottom: 30px;
-}
-
-.ems-grid-table-cart {
-    > .ems-grid-row {
-        grid-template-columns: 75px 1fr;
-    }
 }
 
 .ems-cart-button {
@@ -31,7 +33,7 @@
         > span {
             justify-content: flex-end;
             .d {
-                display: block;
+                display: inline;
             }
         }
     }

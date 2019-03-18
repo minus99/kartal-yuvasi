@@ -1,12 +1,13 @@
 .ems-page-order {
     .block2 {
         background: $color3;
-        padding: 10px;
+        padding: 10px 20px;
         margin-top: 60px;
         .block2 {
             background: unset;
             padding: unset;
             margin-top: unset;
+            border-top: unset;
         }
     }
 }
