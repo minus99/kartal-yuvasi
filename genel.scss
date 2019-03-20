@@ -55,6 +55,7 @@
 @import 'layout/pages/order-cart';
 @import 'layout/pages/order-delivery';
 @import 'layout/pages/order-payment';
+@import 'layout/pages/order-result';
 
 //DESKTOP
 @supports(grid-area: auto) {
@@ -88,6 +89,7 @@
         @import 'components/sort-desktop';
         @import 'components/paging-desktop';
         @import 'components/productd-desktop';
+        @import 'components/order-step-desktop';
         @import 'components/grid-table-desktop';
 
         //PAGES
@@ -98,5 +100,6 @@
         @import 'layout/pages/order-cart-desktop';
         @import 'layout/pages/order-delivery-desktop';
         @import 'layout/pages/order-payment-desktop';
+        @import 'layout/pages/order-result-desktop';
     }
 }

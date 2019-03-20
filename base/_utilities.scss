@@ -142,7 +142,11 @@ table {
         width: calc(100% - #{$container-padding * 2});
         margin-left: auto;
         margin-right: auto;
-
+        
+        &-full {
+            width: 100%;
+        }
+        
         &-large {
             max-width: $container-large;
         }
@@ -151,9 +155,6 @@ table {
         }
         &-small {
             max-width: $container-small;
-        }
-        &-full {
-            width: 100%;
         }
     }
 

@@ -10,13 +10,13 @@
     display: flex;
     align-items: center;
     padding: 9px 15px;
-    > div:nth-child(3) {
-        margin-left: auto;
-    }
-    .ga2 {
+    > .ga1 + .ga2 {
         margin-left: 15px;
     }
-    .ga4 {
+    > .ga3 {
+        margin-left: auto;
+    }
+    > .ga3 + .ga4 {
         margin-left: 15px;
     }
 }
