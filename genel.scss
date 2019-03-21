@@ -56,6 +56,8 @@
 @import 'layout/pages/order-delivery';
 @import 'layout/pages/order-payment';
 @import 'layout/pages/order-result';
+@import 'layout/pages/member';
+@import 'layout/pages/member-order';
 
 //DESKTOP
 @supports(grid-area: auto) {
@@ -101,5 +103,7 @@
         @import 'layout/pages/order-delivery-desktop';
         @import 'layout/pages/order-payment-desktop';
         @import 'layout/pages/order-result-desktop';
+        @import 'layout/pages/member-desktop';
+        @import 'layout/pages/member-order-desktop';
     }
 }

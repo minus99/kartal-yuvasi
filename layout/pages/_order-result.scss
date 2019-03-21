@@ -1,3 +1,51 @@
 .ems-result {
-    background: red;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    padding: 30px 30px 20px;
+    background: $color1 url(/images/frontend/order-result-mobile.jpg) center top / cover no-repeat;
+    color: $color2;
+
+    br {
+        display: none;
+    }
+}
+
+.result-content {
+    .rlogo {
+        width: 50px;
+    }
+    [class*="icon-"] {
+        margin-top: 80px;
+        background: $color2;
+        font-size: 70px;
+    }
+    .rtitle {
+        font-size: 22px;
+        font-weight: 700;
+        margin-top: 20px;
+    }
+    .rdesc {
+        font-family: $font2;
+        font-size: 16px;
+        color: $color7;
+        margin-top: 10px;
+    }
+    .rbtns {
+        position: fixed;
+        bottom: 20px;
+        width: calc(100% - 40px);
+        > a {
+            display: block;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    }
+}
+
+.pageSiparisSonuc_lbfOdemeAlinamadi {
+    display: none;
 }

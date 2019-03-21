@@ -1,0 +1,22 @@
+.ems-page-member {
+
+}
+
+.member-menu {
+    background: $color1;
+    color: $color2;
+    a {
+        display: flex;
+        align-items: center;
+        padding: 9px 20px;
+        font-weight: 700;
+        letter-spacing: .93px;
+    }
+    svg {
+        margin-right: 13px;
+    }
+    &-dropdown { ////
+        border-top: 1px solid $color6;
+        border-bottom: $color6;
+    }
+}

@@ -1,0 +1,8 @@
+.ems-order {}
+
+.ems-grid-table-order {
+    > .ems-grid-row {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+}

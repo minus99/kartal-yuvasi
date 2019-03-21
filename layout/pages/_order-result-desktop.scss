@@ -1,0 +1,21 @@
+.ems-result {
+    padding: 100px 30px;
+    background-image: url(/images/frontend/order-result.jpg);
+}
+
+.result-content {
+    .rlogo {
+        width: 100px;
+    }
+    [class*="icon-"] {
+        margin-top: 70px;
+    }
+    .rtitle {
+        margin-top: 30px;
+    }
+    .rbtns {
+        position: static;
+        margin-top: 35px;
+        max-width: 330px;
+    }
+}

@@ -6273,8 +6273,7 @@ a.btnsepeteAt {
   background: #eee;
 }
 
-.tabloTabBtnAdim .icon-cart {
-  --color1: #000;
+.tabloTabBtnAdim svg {
   --color2: #fff;
 }
 
@@ -6983,7 +6982,85 @@ a.btnAdresEkle,
 }
 
 .ems-result {
-  background: red;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  padding: 30px 30px 20px;
+  background: #000 url(/images/frontend/order-result-mobile.jpg) center top/cover no-repeat;
+  color: #fff;
+}
+
+.ems-result br {
+  display: none;
+}
+
+.result-content .rlogo {
+  width: 50px;
+}
+
+.result-content [class*="icon-"], .result-content .icon {
+  margin-top: 80px;
+  background: #fff;
+  font-size: 70px;
+}
+
+.result-content .rtitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.result-content .rdesc {
+  font-family: fira;
+  font-size: 16px;
+  color: #999;
+  margin-top: 10px;
+}
+
+.result-content .rbtns {
+  position: fixed;
+  bottom: 20px;
+  width: calc(100% - 40px);
+}
+
+.result-content .rbtns > a {
+  display: block;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.pageSiparisSonuc_lbfOdemeAlinamadi {
+  display: none;
+}
+
+.member-menu {
+  background: #000;
+  color: #fff;
+}
+
+.member-menu a {
+  display: flex;
+  align-items: center;
+  padding: 9px 20px;
+  font-weight: 700;
+  letter-spacing: .93px;
+}
+
+.member-menu svg {
+  margin-right: 13px;
+}
+
+.member-menu-dropdown {
+  border-top: 1px solid #515151;
+  border-bottom: #515151;
+}
+
+.ems-grid-table-order > .ems-grid-row {
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
 }
 
 @supports (grid-area: auto) {
@@ -8137,7 +8214,6 @@ a.btnAdresEkle,
       cursor: default;
     }
     .ems-page-order .mini-search-info .icon-user {
-      --color1: #000;
       --color2: #fff;
     }
     .ems-page-order .site-footer {
@@ -8149,7 +8225,6 @@ a.btnAdresEkle,
       text-align: center;
     }
     .ems-page-order .footer-menu li svg {
-      margin: auto;
       font-size: 70px;
     }
     .ems-page-order-grid {
@@ -8269,6 +8344,24 @@ a.btnAdresEkle,
     .siparisOnaySozlesmeHolder {
       margin-top: 0;
       margin-left: 40px;
+    }
+    .ems-result {
+      padding: 100px 30px;
+      background-image: url(/images/frontend/order-result.jpg);
+    }
+    .result-content .rlogo {
+      width: 100px;
+    }
+    .result-content [class*="icon-"], .result-content .icon {
+      margin-top: 70px;
+    }
+    .result-content .rtitle {
+      margin-top: 30px;
+    }
+    .result-content .rbtns {
+      position: static;
+      margin-top: 35px;
+      max-width: 330px;
     }
   }
 }

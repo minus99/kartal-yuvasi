@@ -8,7 +8,6 @@
             cursor: default;
         }
         .icon-user {
-            --color1: #000;
             --color2: #fff;
         }
     }
@@ -21,7 +20,6 @@
         text-align: center;
         li {
             svg {
-                margin: auto;
                 font-size: 70px;
             }
         }
