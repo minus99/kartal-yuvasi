@@ -1,0 +1,9 @@
+.ems-member-order {
+    padding-top: 40px;
+}
+
+.ems-grid-table-order {
+    > .ems-grid-row {
+        grid-template-columns: 130px 80px 80px 1fr 1fr max-content;
+    }
+}

@@ -349,19 +349,19 @@ table {
 
 .ayiracDefault,
 .kutuBosluk,
+.brFiyat,
+.satBrFiyat,
 .floatFixer,
 .ems-none,
 .ems-obj-required,
 .ems-logon-body .ems-obj-logoff,
 .ems-logoff-body .ems-obj-logon,
-.ems-step1 .ems-obj-step0,
-.brFiyat,
-.satBrFiyat {
+.ems-step1 .ems-obj-step0 {
   display: none !important;
 }
 
 .ems-hidden {
-  display: none;
+  visibility: hidden;
 }
 
 .ems-overlay {
@@ -4606,7 +4606,7 @@ textarea {
 
 input:disabled,
 input:read-only {
-  background: #999;
+  background: #eee !important;
 }
 
 select {
@@ -4660,36 +4660,35 @@ textarea {
   display: none;
 }
 
-.ems-form-obj, .tableOdemeBilgiKrediKarti td {
+.ems-form-obj {
   position: relative;
 }
 
-.ems-form-obj:empty, .tableOdemeBilgiKrediKarti td:empty {
+.ems-form-obj:empty {
   display: none;
 }
 
-.ems-form-obj > span, .tableOdemeBilgiKrediKarti td > span,
-.ems-form-obj > label,
-.tableOdemeBilgiKrediKarti td > label {
+.ems-form-obj > span,
+.ems-form-obj > label {
   font-family: fira;
   font-size: 15px;
 }
 
-.ems-form-obj.chk-padding, .tableOdemeBilgiKrediKarti td.chk-padding {
+.ems-form-obj.chk-padding {
   padding-left: 20px;
 }
 
-.ems-form-obj.chk-padding > .checkbox, .tableOdemeBilgiKrediKarti td.chk-padding > .checkbox {
+.ems-form-obj.chk-padding > .checkbox {
   position: absolute;
   left: 0;
 }
 
-.ems-form-obj.input-btn input, .tableOdemeBilgiKrediKarti td.input-btn input {
+.ems-form-obj.input-btn input {
   width: 100% !important;
   padding-right: 60px;
 }
 
-.ems-form-obj.input-btn input + *, .tableOdemeBilgiKrediKarti td.input-btn input + * {
+.ems-form-obj.input-btn input + * {
   width: auto;
   position: absolute;
   right: 20px;
@@ -5704,6 +5703,10 @@ ul.product-list-grid > li {
   display: inline-flex;
 }
 
+.ems-filter-ready #pnlSecimiDarat {
+  display: block;
+}
+
 .kutuHeaderOzellikFiltre {
   background: #fff;
   padding: 21px 20px;
@@ -5913,6 +5916,10 @@ ul.product-list-grid > li {
 
 .ems-sort #dvUrunKiyaslamaOzellik.views .urunKiyaslamaOzellik svg {
   margin-right: 5px;
+}
+
+.ems-sort-ready .ems-sort {
+  display: block;
 }
 
 .urunPaging {
@@ -6330,6 +6337,20 @@ a.btnsepeteAt {
   border-bottom: 1px solid #c9c9c9;
 }
 
+.ems-grid-table-default > .ems-grid-row.ems-grid-header {
+  display: none;
+  font-size: 13px;
+  color: #515151;
+  font-weight: 500;
+  border-top: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.ems-grid-label {
+  font-weight: inherit;
+}
+
 .ems-grid-img {
   align-self: flex-start;
 }
@@ -6432,6 +6453,23 @@ a.btnsepeteAt {
 
 .ems-grid-address-select a + a {
   margin-left: 30px;
+}
+
+.ems-grid-order-no a {
+  text-decoration: underline;
+}
+
+.ems-grid-add-to-cart a {
+  font-size: 15px;
+  color: #999;
+  text-decoration: underline;
+}
+
+.ems-grid-detail {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .primary-categories {
@@ -6640,7 +6678,7 @@ a.btnsepeteAt {
   display: block;
 }
 
-.ems-delivery .ems-cart-grid > .ga1 {
+.ems-order-delivery .ems-order-cart-grid > .ga1 {
   display: none;
 }
 
@@ -6744,14 +6782,14 @@ a.btnAdresEkle,
   display: none;
 }
 
-.ems-payment-grid > .ga1 > div {
+.ems-order-payment-grid > .ga1 > div {
   padding-left: 20px;
   padding-right: 20px;
   font-family: fira;
   font-size: 15px;
 }
 
-.ems-payment .ems-cart-grid > .ga1 {
+.ems-order-payment .ems-order-cart-grid > .ga1 {
   display: none;
 }
 
@@ -6981,7 +7019,7 @@ a.btnAdresEkle,
   font-size: 16px;
 }
 
-.ems-result {
+.ems-order-result {
   position: fixed;
   left: 0;
   top: 0;
@@ -6993,7 +7031,7 @@ a.btnAdresEkle,
   color: #fff;
 }
 
-.ems-result br {
+.ems-order-result br {
   display: none;
 }
 
@@ -7036,6 +7074,10 @@ a.btnAdresEkle,
   display: none;
 }
 
+.ems-page-member-grid {
+  padding-bottom: 100px;
+}
+
 .member-menu {
   background: #000;
   color: #fff;
@@ -7061,6 +7103,16 @@ a.btnAdresEkle,
 .ems-grid-table-order > .ems-grid-row {
   grid-template-columns: 1fr;
   grid-gap: 10px;
+  padding-right: 80px;
+}
+
+.ems-member-info {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+a.btnUyeBilgi, a.btnSifreGuncelle {
+  max-width: 178px;
 }
 
 @supports (grid-area: auto) {
@@ -7124,6 +7176,22 @@ a.btnAdresEkle,
     }
     .d-ems-text-right {
       text-align: right;
+    }
+    .ems-form-horizontal {
+      margin-left: -10px;
+    }
+    .ems-form-horizontal .ems-field {
+      display: inline-block;
+      vertical-align: top;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 50%;
+    }
+    .ems-form-horizontal .ems-field-single {
+      width: 100%;
+    }
+    .ems-form-horizontal .ems-field-push {
+      margin-right: calc(100% - 50%);
     }
     .site-header-grid {
       position: relative;
@@ -8120,6 +8188,9 @@ a.btnAdresEkle,
       padding-left: 0;
       padding-right: 0;
     }
+    .ems-grid-table-default > .ems-grid-row.ems-grid-header {
+      display: grid;
+    }
     .ems-grid-name {
       padding-right: 0;
     }
@@ -8240,14 +8311,14 @@ a.btnAdresEkle,
     .bottom-step {
       margin: 20px -20px 0 -20px;
     }
-    .ems-step0 .ems-cart-grid {
+    .ems-step0 .ems-order-cart-grid {
       grid-template-columns: 1fr 780px 20px 380px 1fr;
       grid-template-areas: ". ga1 . ga2 .";
     }
-    .ems-step0 .ems-cart-grid > .ga1 {
+    .ems-step0 .ems-order-cart-grid > .ga1 {
       grid-area: ga1;
     }
-    .ems-step0 .ems-cart-grid > .ga2 {
+    .ems-step0 .ems-order-cart-grid > .ga2 {
       grid-area: ga2;
     }
     .ems-step0 .ems-grid-table-cart > .ems-grid-row {
@@ -8265,14 +8336,14 @@ a.btnAdresEkle,
     .ems-cart-coupon {
       margin-top: 0;
     }
-    .ems-delivery-grid {
+    .ems-order-delivery-grid {
       grid-template-columns: 1fr 780px 20px 380px 1fr;
       grid-template-areas: ". ga1 . ga2 .";
     }
-    .ems-delivery-grid > .ga1 {
+    .ems-order-delivery-grid > .ga1 {
       grid-area: ga1;
     }
-    .ems-delivery-grid > .ga2 {
+    .ems-order-delivery-grid > .ga2 {
       grid-area: ga2;
     }
     .ems-grid-table-address .ems-grid-row {
@@ -8284,25 +8355,25 @@ a.btnAdresEkle,
     .ems-delivery-tab {
       width: 100%;
     }
-    .ems-payment-grid {
+    .ems-order-payment-grid {
       grid-template-columns: 1fr 780px 20px 380px 1fr;
       grid-template-areas: ". ga1 . ga2 .";
     }
-    .ems-payment-grid > .ga1 {
+    .ems-order-payment-grid > .ga1 {
       grid-area: ga1;
     }
-    .ems-payment-grid > .ga2 {
+    .ems-order-payment-grid > .ga2 {
       grid-area: ga2;
     }
-    .ems-payment-grid > .ga1 > .ems-pay-type {
+    .ems-order-payment-grid > .ga1 > .ems-pay-type {
       padding-left: 0;
       padding-right: 0;
     }
-    .ems-payment .ems-cart-grid > .ga1 {
+    .ems-order-payment .ems-order-cart-grid > .ga1 {
       position: relative;
       display: block;
     }
-    .ems-payment .ems-cart-grid > .ga1::after {
+    .ems-order-payment .ems-order-cart-grid > .ga1::after {
       content: "";
       background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
       position: absolute;
@@ -8311,27 +8382,27 @@ a.btnAdresEkle,
       height: 100px;
       z-index: 1;
     }
-    .ems-payment .ems-grid-table-cart {
+    .ems-order-payment .ems-grid-table-cart {
       max-height: 235px;
       overflow-y: scroll;
     }
-    .ems-payment .ems-grid-table-cart > .ems-grid-row {
+    .ems-order-payment .ems-grid-table-cart > .ems-grid-row {
       grid-template-columns: 75px 1fr;
       border-color: transparent;
       padding: 10px 10px 10px 0;
       grid-row-gap: 0;
     }
-    .ems-payment .ems-grid-table-cart .ems-grid-name [id$="lblProm"] {
+    .ems-order-payment .ems-grid-table-cart .ems-grid-name [id$="lblProm"] {
       display: none;
     }
-    .ems-payment .ems-grid-table-cart .qty-wrapper {
+    .ems-order-payment .ems-grid-table-cart .qty-wrapper {
       width: auto;
       text-align: center;
     }
-    .ems-payment .ems-grid-table-cart .ems-grid-price .price-wrapper {
+    .ems-order-payment .ems-grid-table-cart .ems-grid-price .price-wrapper {
       justify-content: flex-end;
     }
-    .ems-payment .ems-grid-table-cart .ems-grid-price .dvSepetKazancOran:not(:empty) {
+    .ems-order-payment .ems-grid-table-cart .ems-grid-price .dvSepetKazancOran:not(:empty) {
       text-align: right;
     }
     .ems-card-wrapper {
@@ -8345,7 +8416,7 @@ a.btnAdresEkle,
       margin-top: 0;
       margin-left: 40px;
     }
-    .ems-result {
+    .ems-order-result {
       padding: 100px 30px;
       background-image: url(/images/frontend/order-result.jpg);
     }
@@ -8362,6 +8433,29 @@ a.btnAdresEkle,
       position: static;
       margin-top: 35px;
       max-width: 330px;
+    }
+    .ems-page-member-grid {
+      padding-bottom: 0;
+      grid-template-areas: "ga1 . ga2 .";
+      grid-template-columns: 300px 40px minmax(auto, 850px) 1fr;
+    }
+    .ems-page-member-grid > .ga1 {
+      grid-area: ga1;
+    }
+    .ems-page-member-grid > .ga2 {
+      grid-area: ga2;
+    }
+    .ems-member-order {
+      padding-top: 40px;
+    }
+    .ems-grid-table-order > .ems-grid-row {
+      grid-template-columns: 130px 80px 80px 1fr 1fr max-content;
+    }
+    .ems-member-info {
+      padding: 20px 0;
+    }
+    .ems-member-info .ems-form {
+      max-width: 660px;
     }
   }
 }

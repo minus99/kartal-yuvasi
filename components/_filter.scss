@@ -13,6 +13,11 @@
         display: inline-flex;
     }
 }
+.ems-filter-ready {
+    #pnlSecimiDarat {
+        display: block;
+    }
+}
 .kutuHeaderOzellikFiltre {
     background: $color2;
     padding: 21px 20px;

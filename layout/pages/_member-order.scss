@@ -1,8 +1,9 @@
-.ems-order {}
+.ems-member-order {}
 
 .ems-grid-table-order {
     > .ems-grid-row {
         grid-template-columns: 1fr;
         grid-gap: 10px;
+        padding-right: 80px;
     }
 }

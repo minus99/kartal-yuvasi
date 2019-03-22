@@ -107,21 +107,21 @@ table {
 //unneeded objects
 .ayiracDefault,
 .kutuBosluk,
+.brFiyat,
+.satBrFiyat,
 .floatFixer,
 .ems-none,
 .ems-obj-required,
 .ems-logon-body .ems-obj-logoff,
 .ems-logoff-body .ems-obj-logon,
-.ems-step1 .ems-obj-step0,
-.brFiyat,
-.satBrFiyat {
+.ems-step1 .ems-obj-step0 {
     display: none !important;
 }
 
 .ems {
     //HIDDEN
     &-hidden {
-        display: none;
+        visibility: hidden;
     }
 
     //OVERLAY

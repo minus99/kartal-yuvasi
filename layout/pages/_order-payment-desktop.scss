@@ -1,4 +1,4 @@
-.ems-payment {
+.ems-order-payment {
     &-grid {
         grid-template-columns: 1fr 780px 20px 380px 1fr;
         grid-template-areas: ". ga1 . ga2 .";
@@ -12,7 +12,7 @@
         }
     }
     
-    .ems-cart-grid {
+    .ems-order-cart-grid {
         > .ga1 {
             position: relative;
             display: block;

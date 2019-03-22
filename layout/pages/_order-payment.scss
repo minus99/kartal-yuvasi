@@ -1,4 +1,4 @@
-.ems-payment {
+.ems-order-payment {
     &-grid {
         > .ga1 {
             > div {
@@ -10,7 +10,7 @@
         }
     }
 
-    .ems-cart-grid {
+    .ems-order-cart-grid {
         > .ga1 {
             display: none;
         }
@@ -91,7 +91,6 @@
         @extend .ems-form-label;
     }
     td {
-        @extend .ems-form-obj;
         &.tableOdemeBilgiKrediKarti_tddrpKSA_SPR_ID {
             > span {
                 text-align: center;

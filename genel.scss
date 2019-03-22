@@ -58,12 +58,17 @@
 @import 'layout/pages/order-result';
 @import 'layout/pages/member';
 @import 'layout/pages/member-order';
+@import 'layout/pages/member-info';
+@import 'layout/pages/member-address';
+@import 'layout/pages/member-password';
+
 
 //DESKTOP
 @supports(grid-area: auto) {
     @include setMinMedia($breakpoint-medium) {
         //BASE
         @import 'base/utilities-desktop';
+        @import 'components/form-desktop';
 
         //HEADER
         @import 'layout/header/header-desktop';
@@ -105,5 +110,8 @@
         @import 'layout/pages/order-result-desktop';
         @import 'layout/pages/member-desktop';
         @import 'layout/pages/member-order-desktop';
+        @import 'layout/pages/member-info-desktop';
+        @import 'layout/pages/member-address-desktop';
+        @import 'layout/pages/member-password-desktop';
     }
 }
