@@ -1,7 +1,5 @@
 .ems-page-member {
     &-grid {
-        padding-bottom: 0;
-        
         grid-template-areas: "ga1 . ga2 .";
         grid-template-columns: 300px 40px minmax(auto, 850px) 1fr;
         

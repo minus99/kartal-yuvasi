@@ -51,16 +51,18 @@
 @import 'layout/pages/login';
 @import 'layout/pages/product-list';
 @import 'layout/pages/product-detail';
-@import 'layout/pages/order';
+@import 'layout/pages/order-main';
 @import 'layout/pages/order-cart';
 @import 'layout/pages/order-delivery';
 @import 'layout/pages/order-payment';
 @import 'layout/pages/order-result';
-@import 'layout/pages/member';
+@import 'layout/pages/member-main';
 @import 'layout/pages/member-order';
 @import 'layout/pages/member-info';
 @import 'layout/pages/member-address';
 @import 'layout/pages/member-password';
+@import 'layout/pages/member-coupon';
+@import 'layout/pages/member-favorite';
 
 
 //DESKTOP
@@ -103,15 +105,17 @@
         @import 'layout/pages/home-desktop';
         @import 'layout/pages/product-list-desktop';
         @import 'layout/pages/product-detail-desktop';
-        @import 'layout/pages/order-desktop';
+        @import 'layout/pages/order-main-desktop';
         @import 'layout/pages/order-cart-desktop';
         @import 'layout/pages/order-delivery-desktop';
         @import 'layout/pages/order-payment-desktop';
         @import 'layout/pages/order-result-desktop';
-        @import 'layout/pages/member-desktop';
+        @import 'layout/pages/member-main-desktop';
         @import 'layout/pages/member-order-desktop';
         @import 'layout/pages/member-info-desktop';
         @import 'layout/pages/member-address-desktop';
         @import 'layout/pages/member-password-desktop';
+        @import 'layout/pages/member-coupon-desktop';
+        @import 'layout/pages/member-favorite-desktop';
     }
 }

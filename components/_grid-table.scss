@@ -60,12 +60,16 @@
             display: none;
         }
     }
-    &-delete {
+    &-remove {
         position: absolute;
         right: 20px;
         top: 20px;
-        svg {
+        .icon-close {
             font-size: 20px;
+        }
+        .sStylerWrp_checkbox,
+        .sStylerWrp_radio {
+            margin-right: 0;
         }
     }
     &-price {
@@ -80,6 +84,9 @@
             color: $color4;
             text-align: right;
             margin-top: 2px;
+        }
+        [id*="KDV"] {
+            display: none;
         }
     }
     &-address-name {
@@ -138,5 +145,12 @@
         right: 30px;
         top: 50%;
         transform: translateY(-50%);
+    }
+    &-coupon-no {
+        font-weight: 500;
+        word-break: break-all;
+    }
+    &-option1 {
+        grid-column: span 2;
     }
 }

@@ -42,15 +42,17 @@ textarea {
 
 .ems-form {
     position: relative;
-    .ems-field {
-        margin-top: 20px;
-        &.submit {
-            a.btnDefault {
-                width: 100%;
+    @at-root {
+        .ems-field {
+            margin-top: 20px;
+            &.submit {
+                a.btnDefault {
+                    width: 100%;
+                }
             }
-        }
-        &-small {
-            margin-top: 10px;
+            &-small {
+                margin-top: 10px;
+            }
         }
     }
     &-label {

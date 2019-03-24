@@ -82,16 +82,6 @@
   font-size: 32px;
 }
 
-.icon-logo-dark {
-  width: 186px;
-  height: 36px;
-}
-
-.icon-logo-light {
-  width: 120px;
-  height: 23px;
-}
-
 .icon-proj-e {
   width: 57px;
   height: 10px;
@@ -148,31 +138,6 @@
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4gICAgPHBhdGggZmlsbD0iIzAwMCIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTUuMjkzIDE2TDguNTc1IDkuMjgybC43MDctLjcwN0wxNiAxNS4yOTNsNi43MTgtNi43MTguNzA3LjcwN0wxNi43MDcgMTZsNi43MTggNi43MTgtLjcwNy43MDdMMTYgMTYuNzA3bC02LjcxOCA2LjcxOC0uNzA3LS43MDdMMTUuMjkzIDE2eiIvPjwvc3ZnPg==);
 }
 
-.anaBody > div[ondblclick][style] {
-  position: relative;
-  z-index: 9999;
-}
-
-.anaBody > div[ondblclick][style] * {
-  font-family: arial;
-  font-size: 13px;
-  color: #000;
-}
-
-.anaBody > div[ondblclick][style] h3 {
-  line-height: 1.5;
-  padding: 10px;
-  margin: 0;
-  border-bottom: 1px solid #000;
-  user-select: none;
-  cursor: pointer;
-}
-
-.anaBody > div[ondblclick][style] div {
-  padding: 10px 15px;
-  border-bottom: 1px solid #7b7b7b;
-}
-
 *,
 *::after,
 *::before {
@@ -220,23 +185,48 @@ ul:not(.ul-list) {
   list-style: none;
 }
 
-table {
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-
 @media screen and (max-width: 960px) {
   .obj-desktop {
     display: none !important;
   }
 }
 
-.lazy-load {
-  opacity: 0;
+.anaBody > div[ondblclick][style] {
+  position: relative;
+  z-index: 9999;
 }
 
-.image-loaded {
-  opacity: 1;
+.anaBody > div[ondblclick][style] * {
+  font-family: arial;
+  font-size: 13px;
+  color: #000;
+}
+
+.anaBody > div[ondblclick][style] h3 {
+  line-height: 1.5;
+  padding: 10px;
+  margin: 0;
+  border-bottom: 1px solid #000;
+  user-select: none;
+  cursor: pointer;
+}
+
+.anaBody > div[ondblclick][style] div {
+  padding: 10px 15px;
+  border-bottom: 1px solid #7b7b7b;
+}
+
+.ayiracDefault,
+.kutuBosluk,
+.brFiyat,
+.satBrFiyat,
+.floatFixer,
+.ems-none,
+.ems-obj-required,
+.ems-logon-body .ems-obj-logoff,
+.ems-logoff-body .ems-obj-logon,
+.ems-step1 .ems-obj-step0 {
+  display: none !important;
 }
 
 a.emos_selected,
@@ -246,7 +236,12 @@ a.emos_selected:hover {
 
 table {
   display: table !important;
+  border-collapse: collapse;
   width: 100%;
+}
+
+#ui-datepicker-div {
+  display: none;
 }
 
 .ems-price,
@@ -347,17 +342,25 @@ table {
   padding-bottom: 12px;
 }
 
-.ayiracDefault,
-.kutuBosluk,
-.brFiyat,
-.satBrFiyat,
-.floatFixer,
-.ems-none,
-.ems-obj-required,
-.ems-logon-body .ems-obj-logoff,
-.ems-logoff-body .ems-obj-logon,
-.ems-step1 .ems-obj-step0 {
-  display: none !important;
+.lazy-load {
+  opacity: 0;
+}
+
+.image-loaded {
+  opacity: 1;
+}
+
+[id$="lbfGNL_KAYITYOK"] {
+  display: none;
+}
+
+[id$="lbfGNL_KAYITYOK"]:not(:empty) {
+  display: block;
+  margin-top: 20px;
+}
+
+.site-main {
+  min-height: 500px;
 }
 
 .ems-hidden {
@@ -487,10 +490,6 @@ table {
 
 .ems-text-right {
   text-align: right;
-}
-
-.site-main {
-  min-height: 500px;
 }
 
 /*!
@@ -4513,7 +4512,7 @@ button.swiper-pagination-bullet {
 a.btnDefault, .lnkSepet {
   position: relative;
   display: inline-block;
-  padding: 0 10px;
+  padding: 0 20px;
   background: #000;
   border: 1px solid transparent;
   font-family: dinc;
@@ -4566,7 +4565,7 @@ a.btnDefault:hover, .lnkSepet:hover {
 }
 
 .mini-user a.btnKutuLogout, .mini-search a[id$="btnArama"], .mini-bulletin a.btnBultenGonder, .ems-grid-address-buttons > a, .ems-grid-address-select a, .ems-cart-button a.btnDefault, .ems-cart-coupon-info a.btnHediyeCekiIptal, a.btnAdresEkle, .siparisOnaySozlesmeMetin > span a.btnDefault,
-.onBilgilendirmeFormMetin > span a.btnDefault {
+.onBilgilendirmeFormMetin > span a.btnDefault, .coupon-tab > a {
   padding: unset;
   background: unset;
   border: unset;
@@ -4579,7 +4578,7 @@ a.btnDefault:hover, .lnkSepet:hover {
 }
 
 .mini-user a.btnKutuLogout:hover, .mini-search a:hover[id$="btnArama"], .mini-bulletin a.btnBultenGonder:hover, .ems-grid-address-buttons > a:hover, .ems-grid-address-select a:hover, .ems-cart-button a.btnDefault:hover, .ems-cart-coupon-info a.btnHediyeCekiIptal:hover, a.btnAdresEkle:hover, .siparisOnaySozlesmeMetin > span a.btnDefault:hover,
-.onBilgilendirmeFormMetin > span a.btnDefault:hover {
+.onBilgilendirmeFormMetin > span a.btnDefault:hover, .coupon-tab > a:hover {
   background: unset;
 }
 
@@ -4635,15 +4634,15 @@ textarea {
   position: relative;
 }
 
-.ems-form .ems-field {
+.ems-field {
   margin-top: 20px;
 }
 
-.ems-form .ems-field.submit a.btnDefault {
+.ems-field.submit a.btnDefault {
   width: 100%;
 }
 
-.ems-form .ems-field-small {
+.ems-field-small {
   margin-top: 10px;
 }
 
@@ -6389,14 +6388,19 @@ a.btnsepeteAt {
   display: none;
 }
 
-.ems-grid-delete {
+.ems-grid-remove {
   position: absolute;
   right: 20px;
   top: 20px;
 }
 
-.ems-grid-delete svg {
+.ems-grid-remove .icon-close {
   font-size: 20px;
+}
+
+.ems-grid-remove .sStylerWrp_checkbox,
+.ems-grid-remove .sStylerWrp_radio {
+  margin-right: 0;
 }
 
 .ems-grid-price .price-wrapper {
@@ -6411,6 +6415,10 @@ a.btnsepeteAt {
   color: #c5242b;
   text-align: right;
   margin-top: 2px;
+}
+
+.ems-grid-price [id*="KDV"] {
+  display: none;
 }
 
 .ems-grid-address-name {
@@ -6470,6 +6478,15 @@ a.btnsepeteAt {
   right: 30px;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.ems-grid-coupon-no {
+  font-weight: 500;
+  word-break: break-all;
+}
+
+.ems-grid-option1 {
+  grid-column: span 2;
 }
 
 .primary-categories {
@@ -7074,7 +7091,7 @@ a.btnAdresEkle,
   display: none;
 }
 
-.ems-page-member-grid {
+.ems-page-member-grid > .ga2 {
   padding-bottom: 100px;
 }
 
@@ -7113,6 +7130,59 @@ a.btnAdresEkle,
 
 a.btnUyeBilgi, a.btnSifreGuncelle {
   max-width: 178px;
+}
+
+.coupon-tab {
+  margin: 15px 10px 0;
+}
+
+.coupon-tab > a {
+  font-family: dinc;
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid #c9c9c9;
+  padding: 10px 20px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.ems-grid-table-coupon {
+  margin-top: 25px;
+}
+
+.ems-grid-table-coupon > .ems-grid-row {
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+
+.ems-grid-table-coupon .ems-grid-label {
+  display: block;
+  font-weight: 700;
+}
+
+.ems-grid-table-favorite > .ems-grid-row {
+  grid-template-columns: 100px 1fr;
+}
+
+.selected-action {
+  margin-top: 20px;
+}
+
+.selected-action a {
+  min-width: 200px;
+}
+
+.selected-action a > span.emos_invisible {
+  display: none;
+}
+
+.selected-action .remove-selected {
+  margin-top: 20px;
+}
+
+.selected-action .remove-selected > a {
+  background: #eee;
+  color: #000;
 }
 
 @supports (grid-area: auto) {
@@ -7460,6 +7530,7 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
       top: 6px;
     }
     .mini-search .no-result {
+      display: none;
       font-family: fira;
       font-size: 15px;
     }
@@ -7582,6 +7653,9 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
       left: 0;
       top: 50%;
       transform: translateY(-50%);
+    }
+    .searchSuggestDivHolder .cat .suggest_link > span a {
+      display: inline-block;
     }
     .searchSuggestDivHolder .cat .suggest_link > span a:not(:first-child) {
       color: #000;
@@ -8197,7 +8271,7 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     .ems-grid-price .dvSepetKazancOran:not(:empty) {
       text-align: center;
     }
-    .ems-grid-delete {
+    .ems-grid-remove {
       position: static;
     }
     .ems-grid-address-name {
@@ -8206,6 +8280,9 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     }
     .ems-grid-address-buttons {
       position: static;
+    }
+    .ems-grid-option1 {
+      grid-column: span 1;
     }
     .primary-categories {
       padding-top: 45px;
@@ -8435,7 +8512,6 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
       max-width: 330px;
     }
     .ems-page-member-grid {
-      padding-bottom: 0;
       grid-template-areas: "ga1 . ga2 .";
       grid-template-columns: 300px 40px minmax(auto, 850px) 1fr;
     }
@@ -8456,6 +8532,25 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     }
     .ems-member-info .ems-form {
       max-width: 660px;
+    }
+    .coupon-tab {
+      margin: 30px 0 0 -10px;
+    }
+    .ems-grid-table-coupon > .ems-grid-row {
+      grid-template-columns: 1fr 2fr 150px 150px 1fr;
+    }
+    .ems-member-favorite {
+      padding-top: 50px;
+    }
+    .ems-grid-table-favorite > .ems-grid-row {
+      grid-template-columns: 20px 100px 1fr 1fr 1fr 1fr;
+    }
+    .selected-action a {
+      min-width: auto;
+    }
+    .selected-action .remove-selected {
+      margin-top: 0;
+      margin-left: 20px;
     }
   }
 }

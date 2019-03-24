@@ -1,0 +1,24 @@
+.ems-member-favorite {}
+
+.ems-grid-table-favorite {
+    > .ems-grid-row {
+        grid-template-columns: 100px 1fr;
+    }
+}
+
+.selected-action {
+    margin-top: 20px;
+    a {
+        min-width: 200px;
+        > span.emos_invisible {
+            display: none;
+        }
+    }
+    .remove-selected {
+        margin-top: 20px;
+        > a {
+            background: $color3;
+            color: $color1;
+        }
+    }
+}

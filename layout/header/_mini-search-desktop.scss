@@ -37,6 +37,7 @@
         top: 6px;
     }
     .no-result {
+        display: none;
         font-family: $font2;
         font-size: 15px;
     }
@@ -183,12 +184,15 @@
                         top: 50%;
                         transform: translateY(-50%);
                     }
-                    a:not(:first-child) {
-                        color: $color1;
-                        margin-left: 5px;
-                        &::before {
-                            content: "/";
-                            margin-right: 5px;
+                    a {
+                        display: inline-block;
+                        &:not(:first-child) {
+                            color: $color1;
+                            margin-left: 5px;
+                            &::before {
+                                content: "/";
+                                margin-right: 5px;
+                            }
                         }
                     }
                 }
