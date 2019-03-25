@@ -96,3 +96,25 @@ a.btnAdresEkle {
         cursor: pointer;
     }
 }
+
+.ems-new-address {
+    padding: 20px;
+    .page-top-title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 15px;
+    }
+    .ems-form {
+        margin-top: 30px;
+    }
+    [id$="CEPTELEFON"] {
+        width: 100% !important;
+    }
+    #plhTcDegilLabel {
+        margin-bottom: -1px;
+    }
+    .btnAdresIptal {
+        margin-top: 20px;
+        @extend %btn-transparent;
+    }
+}

@@ -4545,13 +4545,13 @@ a.btnDefault:hover, .lnkSepet:hover {
   background: #eee;
 }
 
-.btn-transparent, .ems-prdd-block2 a.btnDefault, a.btnFacebookLogin, .mini-user a.btnFacebookLoginKutu {
+.btn-transparent, .ems-prdd-block2 a.btnDefault, a.btnFacebookLogin, .mini-user a.btnFacebookLoginKutu, .ems-new-address .btnAdresIptal {
   background: transparent;
   color: inherit;
   border-color: #c9c9c9;
 }
 
-.btn-transparent:hover, .ems-prdd-block2 a.btnDefault:hover, a.btnFacebookLogin:hover, .mini-user a.btnFacebookLoginKutu:hover {
+.btn-transparent:hover, .ems-prdd-block2 a.btnDefault:hover, a.btnFacebookLogin:hover, .mini-user a.btnFacebookLoginKutu:hover, .ems-new-address .btnAdresIptal:hover {
   background: transparent;
 }
 
@@ -4614,6 +4614,7 @@ select {
 }
 
 textarea {
+  height: 100px;
   line-height: 1.5;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -4636,6 +4637,10 @@ textarea {
 
 .ems-field {
   margin-top: 20px;
+}
+
+.ems-field.submit {
+  margin-top: 30px;
 }
 
 .ems-field.submit a.btnDefault {
@@ -5235,6 +5240,7 @@ textarea {
 }
 
 .ems-tab-header {
+  display: flex;
   margin-bottom: 30px;
 }
 
@@ -5246,7 +5252,7 @@ textarea {
   border: 1px solid transparent;
 }
 
-.ems-tab-header > *.selected {
+.ems-tab-header > *.selected, .ems-tab-header > *.emos_selected {
   border-color: #c9c9c9;
 }
 
@@ -6799,6 +6805,32 @@ a.btnAdresEkle,
   display: none;
 }
 
+.ems-new-address {
+  padding: 20px;
+}
+
+.ems-new-address .page-top-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.ems-new-address .ems-form {
+  margin-top: 30px;
+}
+
+.ems-new-address [id$="CEPTELEFON"] {
+  width: 100% !important;
+}
+
+.ems-new-address #plhTcDegilLabel {
+  margin-bottom: -1px;
+}
+
+.ems-new-address .btnAdresIptal {
+  margin-top: 20px;
+}
+
 .ems-order-payment-grid > .ga1 > div {
   padding-left: 20px;
   padding-right: 20px;
@@ -7093,6 +7125,14 @@ a.btnAdresEkle,
 
 .ems-page-member-grid > .ga2 {
   padding-bottom: 100px;
+}
+
+.ems-page-member .ems-new-address {
+  padding-top: 0;
+}
+
+.ems-page-member .ems-new-address .page-top-title {
+  display: none;
 }
 
 .member-menu {
@@ -8432,6 +8472,17 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     .ems-delivery-tab {
       width: 100%;
     }
+    .ems-new-address {
+      padding: 0;
+      max-width: 330px;
+      margin: 0 auto;
+    }
+    .ems-new-address .page-top-title {
+      font-size: 40px;
+      margin-top: 15px;
+      margin-left: -50px;
+      margin-right: -50px;
+    }
     .ems-order-payment-grid {
       grid-template-columns: 1fr 780px 20px 380px 1fr;
       grid-template-areas: ". ga1 . ga2 .";
@@ -8520,6 +8571,9 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     }
     .ems-page-member-grid > .ga2 {
       grid-area: ga2;
+    }
+    .ems-page-member .ems-new-address {
+      margin: 0;
     }
     .ems-member-order {
       padding-top: 40px;
