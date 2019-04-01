@@ -82,3 +82,7 @@ a.btnDefault {
 .btn-full {
     @extend %btn-full;
 }
+
+.btn-reset {
+    @extend %btn-reset;
+}

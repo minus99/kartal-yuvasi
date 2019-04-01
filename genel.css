@@ -174,7 +174,8 @@ a {
 }
 
 img,
-canvas {
+canvas,
+video {
   max-width: 100%;
   vertical-align: middle;
 }
@@ -4564,7 +4565,7 @@ a.btnDefault:hover, .lnkSepet:hover {
   font-size: 0;
 }
 
-.mini-user a.btnKutuLogout, .mini-search a[id$="btnArama"], .mini-bulletin a.btnBultenGonder, .ems-grid-address-buttons > a, .ems-grid-address-select a, .ems-cart-button a.btnDefault, .ems-cart-coupon-info a.btnHediyeCekiIptal, a.btnAdresEkle, .siparisOnaySozlesmeMetin > span a.btnDefault,
+.btn-reset, .mini-user a.btnKutuLogout, .mini-search a[id$="btnArama"], .mini-bulletin a.btnBultenGonder, .ems-grid-address-buttons > a, .ems-grid-address-select a, .ems-cart-button a.btnDefault, .ems-cart-coupon-info a.btnHediyeCekiIptal, a.btnAdresEkle, .siparisOnaySozlesmeMetin > span a.btnDefault,
 .onBilgilendirmeFormMetin > span a.btnDefault, .coupon-tab > a {
   padding: unset;
   background: unset;
@@ -4577,7 +4578,7 @@ a.btnDefault:hover, .lnkSepet:hover {
   letter-spacing: unset;
 }
 
-.mini-user a.btnKutuLogout:hover, .mini-search a:hover[id$="btnArama"], .mini-bulletin a.btnBultenGonder:hover, .ems-grid-address-buttons > a:hover, .ems-grid-address-select a:hover, .ems-cart-button a.btnDefault:hover, .ems-cart-coupon-info a.btnHediyeCekiIptal:hover, a.btnAdresEkle:hover, .siparisOnaySozlesmeMetin > span a.btnDefault:hover,
+.btn-reset:hover, .mini-user a.btnKutuLogout:hover, .mini-search a:hover[id$="btnArama"], .mini-bulletin a.btnBultenGonder:hover, .ems-grid-address-buttons > a:hover, .ems-grid-address-select a:hover, .ems-cart-button a.btnDefault:hover, .ems-cart-coupon-info a.btnHediyeCekiIptal:hover, a.btnAdresEkle:hover, .siparisOnaySozlesmeMetin > span a.btnDefault:hover,
 .onBilgilendirmeFormMetin > span a.btnDefault:hover, .coupon-tab > a:hover {
   background: unset;
 }
@@ -5241,15 +5242,17 @@ textarea {
 
 .ems-tab-header {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
 .ems-tab-header > * {
   font-weight: 700;
   letter-spacing: .9px;
-  cursor: pointer;
   padding: 10px 20px;
   border: 1px solid transparent;
+  cursor: pointer;
 }
 
 .ems-tab-header > *.selected, .ems-tab-header > *.emos_selected {
@@ -5293,10 +5296,25 @@ textarea {
 
 .banner .prm-image {
   display: block;
+  filter: brightness(4) blur(4px);
 }
 
 .banner .prm-image img {
   width: 100%;
+}
+
+.banner .prm-media {
+  display: block;
+}
+
+.banner .prm-media img,
+.banner .prm-media video {
+  width: 100%;
+}
+
+.banner .prm-media video[poster] {
+  object-fit: cover;
+  object-position: center top;
 }
 
 .banner .prm-title {
@@ -6514,13 +6532,24 @@ a.btnsepeteAt {
   background: #000;
 }
 
-.ems-tab-login {
+.ems-page-login {
+  overflow: hidden;
+}
+
+.ems-page-login-grid {
+  position: relative;
+  background: #c5242b;
+  color: #fff;
+}
+
+.ems-member-login {
+  position: relative;
   width: calc(100% - 20px);
   max-width: 410px;
-  margin: 0 auto;
-  padding: 30px 15px;
   background: #fff;
   color: #000;
+  margin: 10px auto;
+  padding: 30px 15px;
 }
 
 .lnkSifremiUnuttum {
@@ -7123,6 +7152,11 @@ a.btnAdresEkle,
   display: none;
 }
 
+.ems-page-member-grid > .ga1 {
+  background: #000;
+  color: #fff;
+}
+
 .ems-page-member-grid > .ga2 {
   padding-bottom: 100px;
 }
@@ -7135,9 +7169,36 @@ a.btnAdresEkle,
   display: none;
 }
 
-.member-menu {
-  background: #000;
-  color: #fff;
+.member-top-info {
+  background: url(/images/frontend/member-top-info-bg.jpg) center top/contain no-repeat;
+  text-align: center;
+  padding: 40px 18px 18px;
+}
+
+.member-top-info-media img {
+  width: 80px;
+  border-radius: 100%;
+}
+
+.member-top-info-title {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.member-top-info-logout {
+  color: #999;
+  margin-top: 5px;
+}
+
+.member-menu li a {
+  background: none right 70px center / 32px no-repeat;
+  transition: all .2s ease-in-out;
+}
+
+.member-menu li:hover a, .member-menu li.selected a {
+  padding-left: 30px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23FFFFFF' d='M6 15h14v-3l6 4-6 4v-3H6z'/%3E%3C/svg%3E");
+  background-position: right 30px center;
 }
 
 .member-menu a {
@@ -8032,6 +8093,14 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     .banner07 .prm-title {
       font-size: 50px;
     }
+    .banner08 {
+      position: static;
+    }
+    .banner08 .prm-media video {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
     .design-uniform .ga2 {
       display: block;
     }
@@ -8361,6 +8430,14 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     .instagram-feed {
       background: #000;
       padding-top: 60px;
+    }
+    .ems-page-login-grid > .ga2 {
+      min-height: 1145px;
+    }
+    .ems-member-login {
+      padding: 40px;
+      margin: 70px;
+      background: rgba(255, 255, 255, 0.95);
     }
     .ems-page-product-list {
       padding-bottom: 80px;

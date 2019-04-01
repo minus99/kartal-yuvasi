@@ -11,10 +11,24 @@
     position: relative;
     overflow: hidden;
     color: $color2;
-    .prm-image {
+    .prm-image { ////sil prm-media kullan
         display: block;
+        filter: brightness(4) blur(4px);
         img {
             width: 100%;
+        }
+    }
+    .prm-media {
+        display: block;
+        img,
+        video {
+            width: 100%;
+        }
+        video {
+            &[poster] {
+                object-fit: cover;
+                object-position: center top;
+            }
         }
     }
     .prm-title {
@@ -164,4 +178,7 @@
             margin-top: 50px;
         }
     }
+
+    //banner type8
+    &08 {}
 }

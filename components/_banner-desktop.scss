@@ -102,4 +102,16 @@
             font-size: 50px;
         }
     }
+
+    //banner type8
+    &08 {
+        position: static;
+        .prm-media {
+            video {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
 }
