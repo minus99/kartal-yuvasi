@@ -2,6 +2,15 @@
     padding-bottom: 40px;
 }
 
+.primary-sub-categories {
+    background: $color1;
+    color: $color2;
+    padding: 40px 30px 50px 30px;
+    .banner {
+        max-width: 216px;
+    }
+}
+
 .top-buttons {
     padding: 20px;
     margin-bottom: -20px;
@@ -9,6 +18,20 @@
         border: none;
         line-height: normal;
         padding: 0;
+    }
+}
+
+ul.product-list-grid {
+    margin-top: 20px;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1px;
+    > li {
+        overflow: hidden;
+    }
+    .view-1 & {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
     }
 }
 

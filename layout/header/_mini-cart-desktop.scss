@@ -35,11 +35,17 @@
     }
 
     &-ready {
+        .mini-cart-sub {
+            @extend %header-mods-sub-ready;
+        }
+    }
+    
+    &-animate {
         .mini-cart-overlay {
-            display: block;
+            @extend %header-mods-sub-overlay;
         }
         .mini-cart-sub {
-            display: block;
+            @extend %header-mods-sub-animate;
         }
     }
 }

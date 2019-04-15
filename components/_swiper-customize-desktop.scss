@@ -1,0 +1,13 @@
+.swiper-button-prev,
+.swiper-button-next {
+    display: block;
+}
+
+//product widget
+.swiper-product {
+    max-width: 930px;
+
+    .ems-prd-inner {
+        margin: 0 15px;
+    }
+}

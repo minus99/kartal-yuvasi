@@ -46,7 +46,7 @@
     &-text {
         margin-top: 30px;
     }
-    &-image {
+    &-media {
         margin-top: 80px;
         margin-left: auto;
         margin-right: auto;
@@ -67,16 +67,16 @@
     }
 
     &-block {
-        //image block
-        &-image {
-            .fd-image + .fd-image {
+        //media block
+        &-media {
+            .fd-media + .fd-media {
                 margin-top: auto;
                 margin-left: 40px;
             }
         }
-        //image + content
-        &-image-content {
-            .fd-image + .fd-content {
+        //media + content
+        &-media-content {
+            .fd-media + .fd-content {
                 padding-left: 40px;
                 text-align: left;
             }

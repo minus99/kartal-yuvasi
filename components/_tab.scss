@@ -23,6 +23,9 @@
             &.selected {
                 display: block;
             }
+            &:not(.ajx-loaded) {
+                background: url(/images/ajaxtabs/loading.gif) center center no-repeat;
+            }
         }
     }
 

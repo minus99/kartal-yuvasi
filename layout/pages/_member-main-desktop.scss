@@ -4,6 +4,10 @@
         grid-template-columns: 300px 40px minmax(auto, 850px) 1fr;
         
         @include setGridArea(1,2);
+        
+        > .ga1 {
+            min-height: 710px;
+        }
     }
 
     .ems-new-address {

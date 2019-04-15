@@ -11,11 +11,12 @@
         }
     }
 
+    $pv: 30px;
     $ph: 40px;
     &-sub {
         @extend %header-mods-sub;
         max-width: 410px;
-        padding: 30px $ph;
+        padding: $pv $ph;
     }
 
     .uyeGirisFacebookConnectKutu {
@@ -25,12 +26,9 @@
         @extend .btnFacebookLogin;
     }
     
-
     .ems-obj-logon {
-        .mini-user-sub {
-            padding-top: 0;
-        }
         .sub-header {
+            margin-top: -$pv;
             margin-left: -$ph;
             margin-right: -$ph;
             padding-left: 40px;
@@ -69,11 +67,17 @@
     }
 
     &-ready {
+        .mini-user-sub {
+            @extend %header-mods-sub-ready;
+        }
+    }
+
+    &-animate {
         .mini-user-overlay {
-            display: block;
+            @extend %header-mods-sub-overlay;
         }
         .mini-user-sub {
-            display: block;
+            @extend %header-mods-sub-animate;
         }
     }
 }

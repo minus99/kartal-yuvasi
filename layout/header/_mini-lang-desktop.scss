@@ -21,17 +21,24 @@
     }
 
     &-ready {
-        .mini-lang-overlay {
-            display: block;
+        .mini-lang-sub {
+            @extend %header-mods-sub-ready;
         }
+    }
+
+    &-animate {
         .mini-lang-info {
             z-index: 10;
             .icon-triangle-b {
                 @include turn-mirror;
             }
         }
+        
+        .mini-lang-overlay {
+            @extend %header-mods-sub-overlay;
+        }
         .mini-lang-sub {
-            display: block;
+            @extend %header-mods-sub-animate;
         }
     }
 }

@@ -147,13 +147,18 @@ table {
     opacity: 1;
 }
 
-//no result
+//no result fixer
 [id$="lbfGNL_KAYITYOK"] {
     display: none;
     &:not(:empty) {
         display: block;
         margin-top: 20px;
     }
+}
+
+//banner align fixer
+[id^="lblBanner"][align] {
+    text-align: inherit;
 }
 
 //<main>

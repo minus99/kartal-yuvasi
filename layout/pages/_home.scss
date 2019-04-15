@@ -1,5 +1,5 @@
 .primary-categories {
-    padding-top: 40px;
+    padding-top: 20px;
     background: $color1;
     color: $color2;
 }
@@ -10,6 +10,33 @@
     background: $color1;
     padding-top: 40px;
 }
+.best-sellers {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 75px;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -4vw;
+        transform: translateX(-50%);
+        background: url(/images/frontend/eagle.png) center top / cover no-repeat;
+        width: 100%;
+        max-width: 980px;
+        height: 40vw;
+    }
+    .ems-tab-content {
+        > div {
+            min-height: 400px;
+        }
+    }
+}
 .campaigns {
     background: $color1;
+    .swiper-slide {
+        width: 335px;
+    }
+    .swiper-pagination {
+        margin-top: -20px;
+    }
 }

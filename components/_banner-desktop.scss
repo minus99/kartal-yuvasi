@@ -67,7 +67,7 @@
         }
     }
 
-    //banner type4
+    //banner type04
     &04 {
         margin: 0;
         .banner-body {
@@ -90,20 +90,28 @@
         }
     }
 
-    //banner type5
-    &05 {}
+    //banner type05
+    &05 {
+        .banner-body {
+            @include banner-body-bottom;
+            padding: 20px;
+        }
+        .prm-title {
+            font-size: 14px;
+        }
+    }
 
-    //banner type6
+    //banner type06
     &06 {}
 
-    //banner type7
+    //banner type07
     &07 {
         .prm-title {
             font-size: 50px;
         }
     }
 
-    //banner type8
+    //banner type08
     &08 {
         position: static;
         .prm-media {
@@ -112,6 +120,22 @@
                 left: 0;
                 top: 0;
             }
+        }
+    }
+
+    //banner type09
+    &09 {
+        .banner-body {
+            @include banner-body-bottom;
+            padding: 24px;
+        }
+        .prm-title {
+            font-size: 22px;
+            text-shadow: 0 0 35px #000;
+        }
+
+        + .banner09 {
+            margin-left: 34px;
         }
     }
 }

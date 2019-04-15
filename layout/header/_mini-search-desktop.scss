@@ -43,11 +43,17 @@
     }
 
     &-ready {
+        .mini-search-sub {
+            @extend %header-mods-sub-ready;
+        }
+    }
+
+    &-animate {
         .mini-search-overlay {
-            display: block;
+            @extend %header-mods-sub-overlay;
         }
         .mini-search-sub {
-            display: block;
+            @extend %header-mods-sub-animate;
         }
     }
 

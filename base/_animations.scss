@@ -1,0 +1,28 @@
+//https://matthewlein.com/tools/ceaser -- cubic-bezier(0.215, 0.610, 0.355, 1.000); //easeOutCubic
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes animation-01 {
+    0% {
+        transform: skewX(-15deg) translateX(50px);
+    }
+    100% {
+        transform: skewX(-15deg) translateX(0);
+    }
+}
+
+@keyframes animation-02 {
+    0% {
+        transform: translateX(-30px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

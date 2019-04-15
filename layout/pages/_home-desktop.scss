@@ -1,5 +1,5 @@
 .primary-categories {
-    padding-top: 45px;
+    padding-top: 25px;
     padding-bottom: 95px;
 }
 .new-season {
@@ -11,25 +11,19 @@
     padding-bottom: 40px;
 }
 .best-sellers {
-    position: relative;
-    margin-top: 120px;
-    background: $color2;
-    color: $color1;
     padding-top: 60px;
     padding-bottom: 100px;
     &::after {
-        content: "";
-        position: absolute;
-        left: 50%;
         bottom: -20px;
-        transform: translateX(-50%);
-        background: url(/images/frontend/eagle.png) center top / 100% no-repeat;
-        width: 100%;
-        max-width: 980px;
         height: 240px;
     }
-    .ems-tab {
-        z-index: 1;
+}
+.campaigns {
+    .swiper-slide {
+        width: calc((100% / 3));
+        + .swiper-slide {
+            margin-left: 40px;
+        }
     }
 }
 .instagram-feed {

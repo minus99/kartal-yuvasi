@@ -3,12 +3,12 @@
 @import 'abstracts/mixins';
 
 //BASE
+@import 'base/global';
 @import 'base/typography';
 @import 'base/icons';
-@import 'base/global';
 @import 'base/utilities';
-@import 'vendors/animate';
-@import 'vendors/swiper';
+@import 'base/animations';
+//@import 'vendors/animate';
 @import 'components/button';
 @import 'components/form';
 
@@ -31,6 +31,7 @@
 @import 'layout/footer/copyright';
 
 //COMPONENTS
+@import 'vendors/swiper';
 @import 'components/swiper-customize';
 @import 'components/tab';
 @import 'components/banner';
@@ -51,6 +52,7 @@
 @import 'layout/pages/login';
 @import 'layout/pages/product-list';
 @import 'layout/pages/product-detail';
+@import 'layout/pages/search';
 @import 'layout/pages/order-main';
 @import 'layout/pages/order-cart';
 @import 'layout/pages/order-delivery';
@@ -89,6 +91,7 @@
         @import 'layout/footer/copyright-desktop';
 
         //COMPONENTS
+        @import 'components/swiper-customize-desktop';
         @import 'components/banner-desktop';
         @import 'components/design-uniform-desktop';
         @import 'components/product-desktop';
@@ -106,6 +109,7 @@
         @import 'layout/pages/login-desktop';
         @import 'layout/pages/product-list-desktop';
         @import 'layout/pages/product-detail-desktop';
+        @import 'layout/pages/search-desktop';
         @import 'layout/pages/order-main-desktop';
         @import 'layout/pages/order-cart-desktop';
         @import 'layout/pages/order-delivery-desktop';

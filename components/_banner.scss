@@ -40,8 +40,8 @@
     .prm-marker {
         position: absolute;
         right: 26px;
-        top: 100%;
-        transform: translateY(0) scale(.5);
+        top: 70%;
+        transform: translateY(0) scale(.8);
         opacity: 0;
         transition: all .32s ease;
         background: transparent;
@@ -64,8 +64,12 @@
             color: $color7;
         }
     }
+    .prm-url-full {
+        @include ems-cover;
+    }
 
     &-body {
+        position: relative;
         padding: 25px 20px 40px;
         text-align: center;
     }
@@ -97,16 +101,16 @@
         }
     }
 
-    //banner type3
+    //banner type03
     &03 {
         .btn {
             margin-top: 10px;
         }
     }
 
-    //banner type4
+    //banner type04
     &04 {
-        margin: 0 30px;
+        margin: 0 10px;
         .banner-body {
             text-align: unset;
             padding: 20px 0;
@@ -124,10 +128,10 @@
         }
     }
 
-    //banner type5
+    //banner type05
     &05 {}
 
-    //banner type6
+    //banner type06
     &06 {
         height: 100%;
         .banner-body {
@@ -143,12 +147,11 @@
         }
     }
 
-    //banner type7
+    //banner type07
     &07 {
-        .prm-image {
+        .prm-media {
             text-align: center;
             img {
-                width: auto;
                 position: absolute;
                 left: 0;
                 top: 0;
@@ -179,6 +182,9 @@
         }
     }
 
-    //banner type8
+    //banner type08
     &08 {}
+
+    //banner type09
+    &09 {}
 }

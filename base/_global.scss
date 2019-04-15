@@ -39,6 +39,10 @@ video {
     vertical-align: middle;
 }
 
+picture {
+    display: block;
+}
+
 ul:not(.ul-list) {
     margin: 0;
     padding: 0;
