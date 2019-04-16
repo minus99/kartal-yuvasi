@@ -1,16 +1,19 @@
 .menu {
     display: block;
     position: relative;
+    z-index: 1;
     background: $color3;
     max-width: none;
     width: 100%;
     padding: 0 50px;
+    opacity: 1;
+    transform: translateX(0);
+    transition: none;
     &::before,
     &::after {
         content: "";
         position: absolute;
         top: 0;
-        z-index: 1;
         width: 20px;
         height: 100%;
         background: inherit;
@@ -54,6 +57,7 @@
     .lvl-1 {
         display: flex;
         justify-content: center;
+        overflow: initial;
         > li {
             > a {
                 margin: 0 5px;
@@ -143,11 +147,11 @@
     }
     .img1 {
         right: -$iw/2;
-        animation: animation-01 .5s cubic-bezier(0.215, 0.610, 0.355, 1.000); //easeOutCubic
+        animation: animation-01 .5s cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
     }
     .img2 {
         left: -75px;
-        animation: animation-02 .32s cubic-bezier(0.215, 0.610, 0.355, 1.000); //easeOutCubic
+        animation: animation-02 .32s cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
         + .lvl-2 {
             padding-left: $iw/2 + 150px;
             max-width: 1000px;
@@ -159,7 +163,7 @@
         column-count: 4;
         column-gap: 20px;
         padding: 30px;
-        animation: animation-02 .5s cubic-bezier(0.215, 0.610, 0.355, 1.000); //easeOutCubic
+        animation: animation-02 .5s cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
         li {
             break-inside: avoid;
             &.single {

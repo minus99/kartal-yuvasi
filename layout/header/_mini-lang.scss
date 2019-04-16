@@ -1,16 +1,5 @@
 .mini-lang {
     position: relative;
-    &-append {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        padding: 20px;
-        .mini-lang {
-            display: block !important;
-        }
-    }
-
     &-sub {
         > a {
             display: inline-block;
@@ -27,6 +16,17 @@
             img {
                 display: none;
             }
+        }
+    }
+
+    &-append {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 20px;
+        .mini-lang {
+            display: block !important;
         }
     }
 }

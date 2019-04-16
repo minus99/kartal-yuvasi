@@ -57,7 +57,7 @@
     transform: scale(.8, .4);
     transform-origin: right top;
     opacity: 0;
-    transition: all .12s cubic-bezier(0.550, 0.055, 0.675, 0.190); //easeInCubic
+    transition: all .12s cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */
 }
 %header-mods-sub-ready {
     display: block;
@@ -66,7 +66,7 @@
     pointer-events: auto;
     transform: scale(1,1);
     opacity: 1;
-    transition: all .3s cubic-bezier(0.215, 0.610, 0.355, 1.000); //easeOutCubic;
+    transition: all .3s cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
 }
 %header-mods-sub-overlay {
     display: block;

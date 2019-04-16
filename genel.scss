@@ -14,12 +14,12 @@
 
 //HEADER
 @import 'layout/header/header';
+@import 'layout/header/menu';
 @import 'layout/header/top-menu';
 @import 'layout/header/mini-lang';
 @import 'layout/header/mini-user';
 @import 'layout/header/mini-cart';
 @import 'layout/header/mini-search';
-@import 'layout/header/menu';
 
 //FOOTER
 @import 'layout/footer/footer';
@@ -76,13 +76,13 @@
 
         //HEADER
         @import 'layout/header/header-desktop';
-        @import 'layout/header/mini-lang-desktop';
+        @import 'layout/header/menu-desktop';
         @import 'layout/header/top-menu-desktop';
+        @import 'layout/header/mini-lang-desktop';
         @import 'layout/header/mini-user-desktop';
         @import 'layout/header/mini-cart-desktop';
         @import 'layout/header/mini-search-desktop';
         @import 'layout/header/logo-desktop';
-        @import 'layout/header/menu-desktop';
 
         //FOOTER
         @import 'layout/footer/footer-desktop';
