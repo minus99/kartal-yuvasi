@@ -23,8 +23,13 @@
             &.selected {
                 display: block;
             }
-            &:not(.ajx-loaded) {
-                background: url(/images/ajaxtabs/loading.gif) center center no-repeat;
+        }
+    }
+
+    &.ajx-loading {
+        > .ems-tab-content {
+            > *:not(.ajx-loaded) {
+                background: url(/images/ajaxtabs/loading.gif) center center / 32px no-repeat;
             }
         }
     }
@@ -33,6 +38,7 @@
     &-vertical {
         .ems-tab-content {
             > * {
+                display: block;
                 border-bottom: 1px solid $color10;
                 &.selected {
                     .ems-tab-inner-header {

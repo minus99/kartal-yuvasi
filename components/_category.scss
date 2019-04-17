@@ -3,6 +3,30 @@
 }
 
 .categories-append {
-    background: green;
-    padding: 20px;
+    .swiper-slide {
+        width: auto;
+        + .swiper-slide {
+            margin-left: -1px;
+        }
+        > ul {
+            display: none;
+        }
+    }
+    a {
+        display: block;
+        padding: 0 20px;
+        line-height: 38px;
+        border: 1px solid $color10;
+        font-family: $font2;
+        font-size: 13px;
+        &.active {
+            background: $color1;
+            font-weight: 700;
+            color: $color2;
+        }
+    }
+
+    b {
+        display: none;
+    }
 }

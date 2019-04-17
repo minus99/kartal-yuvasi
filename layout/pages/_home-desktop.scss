@@ -19,11 +19,13 @@
     }
 }
 .campaigns {
+    .swiper-wrapper {
+        width: auto;
+        margin-left: -40px;
+    }
     .swiper-slide {
-        width: calc((100% / 3));
-        + .swiper-slide {
-            margin-left: 40px;
-        }
+        width: calc((100% / 3) - 40px);
+        margin-left: 40px;
     }
 }
 .instagram-feed {

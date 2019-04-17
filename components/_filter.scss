@@ -13,11 +13,6 @@
         display: inline-flex;
     }
 }
-.ems-filter-ready {
-    #pnlSecimiDarat {
-        display: block;
-    }
-}
 .kutuHeaderOzellikFiltre {
     background: $color2;
     padding: 21px 20px;
@@ -44,6 +39,7 @@
     font-weight: 700;
     padding: 18px 0;
     background-position: right center;
+    background-size: 32px;
     transition: background-image .25s ease;
     user-select: none;
     cursor: pointer;
@@ -200,5 +196,14 @@
                 color: $color2;
             }
         }
+    }
+}
+
+.ems-filter-ready {
+    
+}
+.ems-filter-animate {
+    #pnlSecimiDarat {
+        display: block;
     }
 }

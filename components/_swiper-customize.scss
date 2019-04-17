@@ -1,6 +1,6 @@
-$swiper-overflow-fix: 100vw;
 .swiper-container {
     overflow: initial;
+    width: 100vw;
 }
 
 .swiper-inner {
@@ -79,8 +79,6 @@ $swiper-overflow-fix: 100vw;
 
 //product widget
 .swiper-product {
-    max-width: $swiper-overflow-fix;
-
     .swiper-slide {
         width: 275px;
     }

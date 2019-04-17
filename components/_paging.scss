@@ -38,11 +38,11 @@
         line-height: 48px;
         &[id$="lnkPrev"] {
             border-right: 1px solid $color5;
-            min-width: 48px;
+            width: 48px;
         }
         &[id$="lnkNext"] {
             border-left: 1px solid $color5;
-            min-width: 48px;
+            width: 48px;
         }
     }
     .tumunuGoster {
@@ -52,6 +52,7 @@
         font-weight: 700;
         text-decoration: underline;
         margin-left: auto;
+        margin-right: 10px;
     }
 }
 
@@ -65,4 +66,10 @@
 }
 #lbfPagingPrev {
     @include turn-mirror;
+}
+
+.ems-pagination-hide {
+    .urunPaging {
+        display: none;
+    }
 }
