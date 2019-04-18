@@ -136,6 +136,9 @@
                 padding-left: 0;
                 padding-right: 0;
                 background: none;
+                > img {
+                    min-height: 218px;
+                }
             }
             .suggest_urnsname_con {
                 grid-row: 2;

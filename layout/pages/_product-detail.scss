@@ -1,3 +1,103 @@
 .ems-page-product-detail {
     padding-bottom: 40px;
 }
+
+//primary properties
+.prop-container {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $color10;    
+}
+.prop {
+    font-family: $font2;
+    font-size: 15px;
+    color: $color7;
+    &-title {
+        margin-top: 3px;
+    }
+}
+
+//mini desc
+.mini-desc {
+    font-family: $font2;
+    font-size: 15px;
+    img {
+        width: 30px;
+    }
+}
+
+//full desc
+.fd {
+    background: $color1;
+    color: $color2;
+    text-align: center;
+    @include padding-h;
+    padding-top: .1px;
+    padding-bottom: 40px;
+    margin-top: 40px;
+    > * {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &-title {
+        margin-top: 40px;
+        font-size: 24px;
+        b {
+            font-weight: 700;
+        }
+    }
+    &-text {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    &-media {
+        margin-top: 40px;
+        @include padding-h-remove;
+    }
+    &-bg-stadium {
+        background: url(/UPLOAD/banner/urun-aciklama/static/stadium.png) center top / 150% no-repeat;
+        padding-top: 40%;
+        margin-top: 0 !important;
+    }
+    &-wing {
+        position: relative;
+        overflow: hidden;
+        &-l,
+        &-r {
+            position: absolute;
+            top: 0;
+            transition: transform .32s ease;
+            max-width: 50vw;
+        }
+        &-l {
+            left: 0;
+            transform: rotate(-20deg);
+            transform-origin: right center;
+        }
+        &-r {
+            right: 0;
+            transform: rotate(20deg);
+            transform-origin: left center;
+        }
+        &-c {
+            position: relative;
+            max-width: 46vw;
+            margin-top: 12vw;
+        }
+    }
+
+    &-block {
+        //media block
+        &-media {
+            .fd-media + .fd-media {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+//featured prds
+.featured-prds {
+    padding-top: 40px;
+}

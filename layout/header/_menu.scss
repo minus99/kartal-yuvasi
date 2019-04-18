@@ -32,6 +32,8 @@
                 @extend %triangle-r;
                 position: absolute;
                 right: 15px;
+                top: 50%;
+                transform: translateY(-50%);
             }
         }
         &.selected {
@@ -67,7 +69,7 @@
     }
 
     .lvl-1 {
-        max-height: calc(100vh - 250px);
+        max-height: calc(100% - 250px);
         overflow: auto;
     }
 
@@ -121,6 +123,8 @@
     }
 
     &-animate {
+        position: fixed;
+
         .menu-overlay {
             display: block;
         }

@@ -1,0 +1,10 @@
+.mobi-dropdown {
+    > ul {
+        display: block;
+        > li {
+            &.selected {
+                display: block;
+            }
+        }
+    }
+}

@@ -20,6 +20,7 @@
     &-content {
         > * {
             display: none;
+            animation: show 0.5s;
             &.selected {
                 display: block;
             }
@@ -56,6 +57,7 @@
             @extend .base64-plus;
             padding: $p 0;
             background-position: right center;
+            background-size: 32px;
             transition: background-image .25s ease;
             font-weight: 700;
             cursor: pointer;
@@ -63,6 +65,7 @@
         .ems-tab-inner-content {
             display: none;
             margin-top: -$p;
+            animation: show 0.5s;
         }
     }
 }

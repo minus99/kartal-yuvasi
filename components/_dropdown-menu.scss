@@ -1,0 +1,41 @@
+.mobi-dropdown {
+    position: relative;
+    &-header {
+        position: relative;
+        border-top: 1px solid $color6;
+        padding: 8px 10px;
+        font-weight: 700;
+        margin-left: 10px;
+        margin-right: 10px;
+        &::after {
+            @extend %triangle;
+            @extend %triangle-b;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            margin-top: -4px;
+            transition: transform .32s ease;
+        }
+    }
+    > ul {
+        display: none;
+        animation: show 0.5s;
+        > li {
+            &.selected {
+                display: none;
+            }
+        }
+    }
+
+    &.opened {
+        .mobi-dropdown-header {
+            border-bottom: 1px solid $color6;
+            &::after {
+                @include turn-mirror;
+            }
+        }
+        > ul {
+            display: block;
+        }
+    }
+}

@@ -8,7 +8,7 @@
     padding: 0 50px;
     opacity: 1;
     transform: translateX(0);
-    transition: none;
+    transition: none !important;
     &::before,
     &::after {
         content: "";
@@ -198,6 +198,7 @@
 
 
     &-animate {
+        position: initial;
         .menu-overlay {
             top: 110px;
         }

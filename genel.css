@@ -100,7 +100,7 @@ ul:not(.ul-list) {
 }
 
 .qty-wrapper a[onclick*="ekle"]::before,
-.qty-wrapper a[onclick*="cikar"]::before, .menu li > a::after, .popular-search-words li > a::before, .suggest_link > span::before {
+.qty-wrapper a[onclick*="cikar"]::before, .menu li > a::after, .popular-search-words li > a::before, .suggest_link > span::before, .mobi-dropdown-header::after {
   content: "";
   border-width: 4px;
   border-style: solid;
@@ -115,7 +115,7 @@ ul:not(.ul-list) {
 }
 
 
-.qty-wrapper a[onclick*="cikar"]::before {
+.qty-wrapper a[onclick*="cikar"]::before, .mobi-dropdown-header::after {
   border-color: currentColor transparent transparent transparent;
 }
 
@@ -893,6 +893,8 @@ textarea {
 .menu li > a::after {
   position: absolute;
   right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .menu li.selected {
@@ -931,7 +933,7 @@ textarea {
 }
 
 .menu .lvl-1 {
-  max-height: calc(100vh - 250px);
+  max-height: calc(100% - 250px);
   overflow: auto;
 }
 
@@ -974,6 +976,10 @@ textarea {
 
 .menu-ready .menu {
   display: block;
+}
+
+.menu-animate {
+  position: fixed;
 }
 
 .menu-animate .menu-overlay {
@@ -1168,10 +1174,19 @@ textarea {
   padding-left: 20px;
 }
 
+.mini-bulletin #plhPrivacyNotice {
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
 .mini-bulletin-message > span:not(:empty) {
   display: block;
   margin-top: 20px;
   text-align: center;
+}
+
+.ems-bulletin-focused #plhPrivacyNotice {
+  opacity: 1;
 }
 
 .social-links {
@@ -2113,6 +2128,7 @@ button.swiper-pagination-bullet {
 
 .ems-tab-content > * {
   display: none;
+  animation: show 0.5s;
 }
 
 .ems-tab-content > *.selected {
@@ -2135,6 +2151,7 @@ button.swiper-pagination-bullet {
 .ems-tab-vertical .ems-tab-inner-header {
   padding: 25px 0;
   background-position: right center;
+  background-size: 32px;
   transition: background-image .25s ease;
   font-weight: 700;
   cursor: pointer;
@@ -2143,21 +2160,13 @@ button.swiper-pagination-bullet {
 .ems-tab-vertical .ems-tab-inner-content {
   display: none;
   margin-top: -25px;
+  animation: show 0.5s;
 }
 
 .banner {
   position: relative;
   overflow: hidden;
   color: #fff;
-}
-
-.banner .prm-image {
-  display: block;
-  filter: brightness(4) blur(4px);
-}
-
-.banner .prm-image img {
-  width: 100%;
 }
 
 .banner .prm-media {
@@ -3076,7 +3085,10 @@ button.swiper-pagination-bullet {
 }
 
 .urunDetay_urunSecenek .dropdown-options {
+  display: block !important;
   margin-left: -5px;
+  margin-right: -5px;
+  font-size: 0;
 }
 
 .urunDetay_urunSecenek .dropdown-options > a {
@@ -3086,6 +3098,7 @@ button.swiper-pagination-bullet {
   padding-right: 5px;
   line-height: 44px;
   border: 1px solid #c9c9c9;
+  font-size: 13px;
   text-align: center;
   margin: 5px;
 }
@@ -3096,7 +3109,7 @@ button.swiper-pagination-bullet {
 }
 
 .urunDetay_urunSecenek .dropdown-trigger {
-  display: noneeeeeeeee;
+  display: none;
 }
 
 .open-size-guide {
@@ -3129,108 +3142,6 @@ button.swiper-pagination-bullet {
 
 a.btnsepeteAt {
   width: 100%;
-}
-
-.prop-container {
-  margin-top: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #f5f5f5;
-}
-
-.prop {
-  font-family: fira;
-  font-size: 15px;
-  color: #999;
-}
-
-.prop-title {
-  margin-top: 3px;
-}
-
-.mini-desc {
-  font-family: fira;
-  font-size: 15px;
-}
-
-.mini-desc img {
-  width: 30px;
-}
-
-.fd {
-  background: #000;
-  color: #fff;
-  text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: .1px;
-  padding-bottom: 40px;
-  margin-top: 40px;
-}
-
-.fd > * {
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.fd-title {
-  margin-top: 40px;
-  font-size: 24px;
-}
-
-.fd-title b {
-  font-weight: 700;
-}
-
-.fd-text {
-  margin-top: 20px;
-  font-size: 16px;
-}
-
-.fd-media {
-  margin-top: 40px;
-  margin-left: -20px;
-  margin-right: -20px;
-}
-
-.fd-bg-stadium {
-  background: url(/UPLOAD/banner/urun-aciklama/static/stadium.png) center top/150% no-repeat;
-  padding-top: 40%;
-  margin-top: 0 !important;
-}
-
-.fd-wing {
-  position: relative;
-  overflow: hidden;
-}
-
-.fd-wing-l, .fd-wing-r {
-  position: absolute;
-  top: 0;
-  transition: transform .32s ease;
-  max-width: 50vw;
-}
-
-.fd-wing-l {
-  left: 0;
-  transform: rotate(-20deg);
-  transform-origin: right center;
-}
-
-.fd-wing-r {
-  right: 0;
-  transform: rotate(20deg);
-  transform-origin: left center;
-}
-
-.fd-wing-c {
-  position: relative;
-  max-width: 46vw;
-  margin-top: 12vw;
-}
-
-.fd-block-media .fd-media + .fd-media {
-  margin-top: 20px;
 }
 
 .tabloTabBtnAdim {
@@ -3447,6 +3358,48 @@ a.btnsepeteAt {
   grid-column: span 2;
 }
 
+.mobi-dropdown {
+  position: relative;
+}
+
+.mobi-dropdown-header {
+  position: relative;
+  border-top: 1px solid #515151;
+  padding: 8px 10px;
+  font-weight: 700;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.mobi-dropdown-header::after {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -4px;
+  transition: transform .32s ease;
+}
+
+.mobi-dropdown > ul {
+  display: none;
+  animation: show 0.5s;
+}
+
+.mobi-dropdown > ul > li.selected {
+  display: none;
+}
+
+.mobi-dropdown.opened .mobi-dropdown-header {
+  border-bottom: 1px solid #515151;
+}
+
+.mobi-dropdown.opened .mobi-dropdown-header::after {
+  transform: scale(-1);
+}
+
+.mobi-dropdown.opened > ul {
+  display: block;
+}
+
 .primary-categories {
   padding-top: 20px;
   background: #000;
@@ -3532,7 +3485,12 @@ a.btnsepeteAt {
 .primary-sub-categories {
   background: #000;
   color: #fff;
-  padding: 40px 30px 50px 30px;
+  padding: 40px 30px 50px;
+}
+
+.primary-sub-categories .ems-section-title {
+  font-size: 30px;
+  margin-bottom: 30px;
 }
 
 .primary-sub-categories .banner {
@@ -3574,6 +3532,112 @@ ul.product-list-grid > li {
 
 .ems-page-product-detail {
   padding-bottom: 40px;
+}
+
+.prop-container {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.prop {
+  font-family: fira;
+  font-size: 15px;
+  color: #999;
+}
+
+.prop-title {
+  margin-top: 3px;
+}
+
+.mini-desc {
+  font-family: fira;
+  font-size: 15px;
+}
+
+.mini-desc img {
+  width: 30px;
+}
+
+.fd {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: .1px;
+  padding-bottom: 40px;
+  margin-top: 40px;
+}
+
+.fd > * {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fd-title {
+  margin-top: 40px;
+  font-size: 24px;
+}
+
+.fd-title b {
+  font-weight: 700;
+}
+
+.fd-text {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.fd-media {
+  margin-top: 40px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.fd-bg-stadium {
+  background: url(/UPLOAD/banner/urun-aciklama/static/stadium.png) center top/150% no-repeat;
+  padding-top: 40%;
+  margin-top: 0 !important;
+}
+
+.fd-wing {
+  position: relative;
+  overflow: hidden;
+}
+
+.fd-wing-l, .fd-wing-r {
+  position: absolute;
+  top: 0;
+  transition: transform .32s ease;
+  max-width: 50vw;
+}
+
+.fd-wing-l {
+  left: 0;
+  transform: rotate(-20deg);
+  transform-origin: right center;
+}
+
+.fd-wing-r {
+  right: 0;
+  transform: rotate(20deg);
+  transform-origin: left center;
+}
+
+.fd-wing-c {
+  position: relative;
+  max-width: 46vw;
+  margin-top: 12vw;
+}
+
+.fd-block-media .fd-media + .fd-media {
+  margin-top: 20px;
+}
+
+.featured-prds {
+  padding-top: 40px;
 }
 
 .ems-page-order .block2 {
@@ -3633,7 +3697,7 @@ ul.product-list-grid > li {
 }
 
 .pnlDipToplamTable th {
-  font-weight: normal;
+  font-weight: 400;
   text-align: right;
 }
 
@@ -3747,6 +3811,7 @@ a.btnAdresEkle,
 
 .ems-gift-tab .ems-delivery-tab-wrp {
   padding: 20px;
+  display: none;
 }
 
 .ems-gift-tab [id$="txtSIP_HEDIYENOTU"] {
@@ -3754,7 +3819,7 @@ a.btnAdresEkle,
   height: 100px;
 }
 
-.ems-gift-tab .opened .ems-delivery-tab-wrp {
+.ems-gift-tab-opened .ems-delivery-tab-wrp {
   display: block;
 }
 
@@ -4086,6 +4151,14 @@ a.btnAdresEkle,
   font-size: 16px;
 }
 
+.ems-form1-animate .onBilgilendirmeFormMetin {
+  display: block;
+}
+
+.ems-form2-animate .siparisOnaySozlesmeMetin {
+  display: block;
+}
+
 .ems-order-result {
   position: fixed;
   left: 0;
@@ -4200,11 +4273,6 @@ a.btnAdresEkle,
 
 .member-menu svg {
   margin-right: 13px;
-}
-
-.member-menu-dropdown {
-  border-top: 1px solid #515151;
-  border-bottom: #515151;
 }
 
 .ems-grid-table-order > .ems-grid-row {
@@ -4398,7 +4466,7 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
       font-family: helvetica, arial;
       font-size: 13px;
       color: #ccc;
-      font-weight: normal;
+      font-weight: 400;
       margin: 0;
       padding: 0 40px;
     }
@@ -4464,7 +4532,7 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
       padding: 0 50px;
       opacity: 1;
       transform: translateX(0);
-      transition: none;
+      transition: none !important;
     }
     .menu::before, .menu::after {
       content: "";
@@ -4630,6 +4698,9 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     }
     .menu .collection .banner {
       max-width: 190px;
+    }
+    .menu-animate {
+      position: initial;
     }
     .menu-animate .menu-overlay {
       top: 110px;
@@ -4871,6 +4942,9 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
       padding-left: 0;
       padding-right: 0;
       background: none;
+    }
+    .searchSuggestDivHolder .prd .suggest_urnsmallimg_con > img {
+      min-height: 218px;
     }
     .searchSuggestDivHolder .prd .suggest_urnsname_con {
       grid-row: 2;
@@ -5174,8 +5248,16 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     .navigasyon {
       font-family: fira;
       font-size: 13px;
+      font-weight: 400;
       padding-left: 40px;
       padding-right: 40px;
+    }
+    .navigasyon ol {
+      color: #fff;
+      position: static;
+      opacity: 1;
+      pointer-events: auto;
+      transition: none;
     }
     .navigasyon ol li {
       display: inline-block;
@@ -5363,42 +5445,6 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
       min-width: 46px;
       line-height: 32px;
     }
-    .fd > .fd-title,
-    .fd > .fd-text {
-      padding-left: 75px;
-      padding-right: 75px;
-    }
-    .fd-title {
-      margin-top: 80px;
-      font-size: 40px;
-    }
-    .fd-text {
-      margin-top: 30px;
-    }
-    .fd-media {
-      margin-top: 80px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .fd-bg-stadium {
-      background-size: 75%;
-      padding-top: 12%;
-    }
-    .fd-wing-l, .fd-wing-r {
-      max-width: none;
-    }
-    .fd-wing-c {
-      max-width: 300px;
-      margin-top: 84px;
-    }
-    .fd-block-media .fd-media + .fd-media {
-      margin-top: auto;
-      margin-left: 40px;
-    }
-    .fd-block-media-content .fd-media + .fd-content {
-      padding-left: 40px;
-      text-align: left;
-    }
     .tabloTabBtnAdim {
       position: relative;
       z-index: 2;
@@ -5434,6 +5480,12 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     }
     .ems-grid-option1 {
       grid-column: span 1;
+    }
+    .mobi-dropdown > ul {
+      display: block;
+    }
+    .mobi-dropdown > ul > li.selected {
+      display: block;
     }
     .primary-categories {
       padding-top: 25px;
@@ -5496,7 +5548,6 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     .ems-page-product-list .navigasyon {
       position: absolute;
       padding: 40px;
-      color: #fff;
     }
     ul.product-list-grid {
       margin-top: 30px;
@@ -5509,6 +5560,45 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     }
     .ems-page-product-detail {
       padding-bottom: 80px;
+    }
+    .fd > .fd-title,
+    .fd > .fd-text {
+      padding-left: 75px;
+      padding-right: 75px;
+    }
+    .fd-title {
+      margin-top: 80px;
+      font-size: 40px;
+    }
+    .fd-text {
+      margin-top: 30px;
+    }
+    .fd-media {
+      margin-top: 80px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .fd-bg-stadium {
+      background-size: 75%;
+      padding-top: 12%;
+    }
+    .fd-wing-l, .fd-wing-r {
+      max-width: none;
+    }
+    .fd-wing-c {
+      max-width: 300px;
+      margin-top: 84px;
+    }
+    .fd-block-media .fd-media + .fd-media {
+      margin-top: auto;
+      margin-left: 40px;
+    }
+    .fd-block-media-content .fd-media + .fd-content {
+      padding-left: 40px;
+      text-align: left;
+    }
+    .featured-prds {
+      padding-top: 60px;
     }
     .ems-page-order .site-header {
       position: relative;
@@ -5523,6 +5613,7 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     .ems-page-order .site-footer {
       padding-bottom: 200px;
       background-position-y: top;
+      background-size: 100% !important;
     }
     .ems-page-order .footer-menu {
       margin: 0;

@@ -1,9 +1,15 @@
 .navigasyon {
     font-family: $font2;
     font-size: 13px;
+    font-weight: 400;
     padding-left: 40px;
     padding-right: 40px;
     ol {
+        color: $color2;
+        position: static;
+        opacity: 1;
+        pointer-events: auto;
+        transition: none;
         li {
             display: inline-block;
             line-height: 24px;

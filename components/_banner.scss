@@ -11,13 +11,6 @@
     position: relative;
     overflow: hidden;
     color: $color2;
-    .prm-image { ////sil prm-media kullan
-        display: block;
-        filter: brightness(4) blur(4px);
-        img {
-            width: 100%;
-        }
-    }
     .prm-media {
         display: block;
         img,

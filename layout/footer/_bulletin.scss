@@ -16,6 +16,10 @@
     a.btnBultenGonder {
         @extend %btn-reset;
     }
+    #plhPrivacyNotice {
+        opacity: 0;
+        transition: opacity .2s ease;
+    }
     &-message {
         > span {
             &:not(:empty) {
@@ -24,5 +28,11 @@
                 text-align: center;
             }
         }
+    }
+}
+
+.ems-bulletin-focused {
+    #plhPrivacyNotice {
+        opacity: 1;
     }
 }
