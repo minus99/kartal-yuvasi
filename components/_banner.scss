@@ -3,6 +3,11 @@
     bottom: 0;
     transform: none;
 }
+@mixin banner-body-bottom-revert {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+}
 @mixin banner-body-static {
     position: static;
     transform: none;
@@ -63,6 +68,7 @@
 
     &-body {
         position: relative;
+        width: 100%;
         padding: 25px 20px 40px;
         text-align: center;
     }
@@ -80,10 +86,6 @@
         .prm-url {
             display: block;
             border-color: $color5;
-        }
-
-        + .banner01 {
-            margin-left: 15px;
         }
     }
 
@@ -103,9 +105,8 @@
 
     //banner type04
     &04 {
-        margin: 0 10px;
         .banner-body {
-            text-align: unset;
+            text-align: left;
             padding: 20px 0;
         }
         .prm-title {
@@ -144,17 +145,11 @@
     &07 {
         .prm-media {
             text-align: center;
-            img {
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
         }
         .banner-body {
+            position: absolute;
+            @include banner-body-bottom;
             text-align: center;
-            max-width: $container-large;
-            left: 50%;
-            transform: translate(-50%, -50%);
         }
         .prm-title {
             font-size: 30px;
@@ -163,7 +158,7 @@
             }
             i {
                 font-style: normal;
-                letter-spacing: 1em;
+                letter-spacing: .75em;
                 margin-bottom: 1em;
             }
             b {
@@ -180,4 +175,24 @@
 
     //banner type09
     &09 {}
+
+    //banner type10
+    &10 {
+        border: 1px solid $color5;
+        .banner-body {
+            @include banner-body-static;
+            padding: 15px 20px;
+            text-align: left;
+        }
+        .prm-title {
+            font-size: 14px;
+            color: $color4;
+            font-weight: 700;
+        }
+        .prm-desc {
+            font-size: 14px;
+            color: $color1;
+            margin-top: 10px;
+        }
+    }
 }

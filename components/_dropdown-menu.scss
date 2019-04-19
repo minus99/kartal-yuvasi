@@ -3,6 +3,7 @@
     &-header {
         position: relative;
         border-top: 1px solid $color6;
+        border-bottom: 1px solid transparent;
         padding: 8px 10px;
         font-weight: 700;
         margin-left: 10px;
@@ -20,6 +21,10 @@
     > ul {
         display: none;
         animation: show 0.5s;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        background: $color1;
         > li {
             &.selected {
                 display: none;
@@ -29,7 +34,7 @@
 
     &.opened {
         .mobi-dropdown-header {
-            border-bottom: 1px solid $color6;
+            border-color: $color6;
             &::after {
                 @include turn-mirror;
             }

@@ -80,18 +80,14 @@
 //product widget
 .swiper-product {
     .swiper-slide {
-        width: 275px;
+        width: 265px;
+        padding: 0 10px;
     }
-
     .swiper-button-prev {
         left: -135px;
     }
     .swiper-button-next {
         right: -135px;
-    }
-
-    .ems-prd-inner {
-        margin: 0 10px;
     }
 }
 

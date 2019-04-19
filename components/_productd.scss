@@ -137,7 +137,7 @@
             border: 1px solid $color5;
             font-size: 13px;
             text-align: center;
-            margin: 5px;
+            margin: $marginl;
             &.selectedOption {
                 background: $color1;
                 color: $color2;

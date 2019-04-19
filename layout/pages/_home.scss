@@ -2,14 +2,22 @@
     padding-top: 20px;
     background: $color1;
     color: $color2;
+    .banner {
+        + .banner {
+            margin-left: 15px;
+        }
+    }
 }
+
 .new-season {
     background: $color1;
 }
+
 .collections {
     background: $color1;
     padding-top: 40px;
 }
+
 .best-sellers {
     position: relative;
     padding-top: 40px;
@@ -31,10 +39,15 @@
         }
     }
 }
+
 .campaigns {
     background: $color1;
+    .swiper-container {
+        max-width: $container-large + 40px;
+    }
     .swiper-slide {
-        width: 335px;
+        width: 320px;
+        padding: 0 10px;
     }
     .swiper-pagination {
         margin-top: -20px;

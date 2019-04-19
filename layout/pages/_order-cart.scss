@@ -8,9 +8,19 @@
 }
 
 .cart-promotion-info {
-    display: none;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    .swiper-container {
+        max-width: $container-large;
+    }
+    .swiper-slide {
+        width: 320px;
+        height: auto;
+        padding: 0 5px;
+    }
+    .banner {
+        height: 100%;
+    }
 }
 
 .ems-cart-button {

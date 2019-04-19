@@ -11,10 +11,9 @@
         left: 0;
         top: 50%;
         transform: translateY(-50%);
-        width: 100%;
         padding-left: 50px;
         padding-right: 50px;
-        text-align: unset;
+        text-align: left;
     }
 
     //banner type01
@@ -29,10 +28,6 @@
         }
         .prm-url {
             @include ems-cover;
-        }
-
-        + .banner01 {
-            margin-left: 30px;
         }
     }
 
@@ -61,15 +56,10 @@
             padding-right: 0;
             margin-top: 0;
         }
-
-        + .banner03 {
-            margin-left: 40px;
-        }
     }
 
     //banner type04
     &04 {
-        margin: 0;
         .banner-body {
             @include banner-body-static;
         }
@@ -106,6 +96,9 @@
 
     //banner type07
     &07 {
+        .banner-body {
+            @include banner-body-bottom-revert;
+        }
         .prm-title {
             font-size: 50px;
         }
@@ -133,9 +126,18 @@
             font-size: 22px;
             text-shadow: 0 0 35px #000;
         }
+    }
 
-        + .banner09 {
-            margin-left: 34px;
+    //banner type10
+    &10 {
+        .banner-body {
+            @include banner-body-static;
+        }
+        .prm-title {
+            font-size: 14px;
+        }
+        .prm-desc {
+            font-size: 14px;
         }
     }
 }

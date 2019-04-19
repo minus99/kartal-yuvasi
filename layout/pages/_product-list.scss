@@ -12,6 +12,9 @@
     }
     .banner {
         max-width: 216px;
+        + .banner {
+            margin-left: 34px;
+        }
     }
 }
 

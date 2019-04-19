@@ -2056,7 +2056,8 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-product .swiper-slide {
-  width: 275px;
+  width: 265px;
+  padding: 0 10px;
 }
 
 .swiper-product .swiper-button-prev {
@@ -2065,10 +2066,6 @@ button.swiper-pagination-bullet {
 
 .swiper-product .swiper-button-next {
   right: -135px;
-}
-
-.swiper-product .ems-prd-inner {
-  margin: 0 10px;
 }
 
 .mobi-swiper .swiper-button-prev,
@@ -2239,6 +2236,7 @@ button.swiper-pagination-bullet {
 
 .banner-body {
   position: relative;
+  width: 100%;
   padding: 25px 20px 40px;
   text-align: center;
 }
@@ -2254,10 +2252,6 @@ button.swiper-pagination-bullet {
   border-color: #c9c9c9;
 }
 
-.banner01 + .banner01 {
-  margin-left: 15px;
-}
-
 .banner02 .btn {
   margin-top: 20px;
 }
@@ -2266,12 +2260,8 @@ button.swiper-pagination-bullet {
   margin-top: 10px;
 }
 
-.banner04 {
-  margin: 0 10px;
-}
-
 .banner04 .banner-body {
-  text-align: unset;
+  text-align: left;
   padding: 20px 0;
 }
 
@@ -2322,17 +2312,12 @@ button.swiper-pagination-bullet {
   text-align: center;
 }
 
-.banner07 .prm-media img {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
 .banner07 .banner-body {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  transform: none;
   text-align: center;
-  max-width: 1200px;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .banner07 .prm-title {
@@ -2345,7 +2330,7 @@ button.swiper-pagination-bullet {
 
 .banner07 .prm-title i {
   font-style: normal;
-  letter-spacing: 1em;
+  letter-spacing: .75em;
   margin-bottom: 1em;
 }
 
@@ -2355,6 +2340,29 @@ button.swiper-pagination-bullet {
 
 .banner07 .btn {
   margin-top: 50px;
+}
+
+.banner10 {
+  border: 1px solid #c9c9c9;
+}
+
+.banner10 .banner-body {
+  position: static;
+  transform: none;
+  padding: 15px 20px;
+  text-align: left;
+}
+
+.banner10 .prm-title {
+  font-size: 14px;
+  color: #c5242b;
+  font-weight: 700;
+}
+
+.banner10 .prm-desc {
+  font-size: 14px;
+  color: #000;
+  margin-top: 10px;
 }
 
 .instagram-feed-grid {
@@ -3365,6 +3373,7 @@ a.btnsepeteAt {
 .mobi-dropdown-header {
   position: relative;
   border-top: 1px solid #515151;
+  border-bottom: 1px solid transparent;
   padding: 8px 10px;
   font-weight: 700;
   margin-left: 10px;
@@ -3382,6 +3391,10 @@ a.btnsepeteAt {
 .mobi-dropdown > ul {
   display: none;
   animation: show 0.5s;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  background: #000;
 }
 
 .mobi-dropdown > ul > li.selected {
@@ -3389,7 +3402,7 @@ a.btnsepeteAt {
 }
 
 .mobi-dropdown.opened .mobi-dropdown-header {
-  border-bottom: 1px solid #515151;
+  border-color: #515151;
 }
 
 .mobi-dropdown.opened .mobi-dropdown-header::after {
@@ -3404,6 +3417,10 @@ a.btnsepeteAt {
   padding-top: 20px;
   background: #000;
   color: #fff;
+}
+
+.primary-categories .banner + .banner {
+  margin-left: 15px;
 }
 
 .new-season {
@@ -3441,8 +3458,13 @@ a.btnsepeteAt {
   background: #000;
 }
 
+.campaigns .swiper-container {
+  max-width: 1240px;
+}
+
 .campaigns .swiper-slide {
-  width: 335px;
+  width: 320px;
+  padding: 0 10px;
 }
 
 .campaigns .swiper-pagination {
@@ -3495,6 +3517,10 @@ a.btnsepeteAt {
 
 .primary-sub-categories .banner {
   max-width: 216px;
+}
+
+.primary-sub-categories .banner + .banner {
+  margin-left: 34px;
 }
 
 .top-buttons {
@@ -3667,9 +3693,22 @@ ul.product-list-grid > li {
 }
 
 .cart-promotion-info {
-  display: none;
   margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+}
+
+.cart-promotion-info .swiper-container {
+  max-width: 1200px;
+}
+
+.cart-promotion-info .swiper-slide {
+  width: 320px;
+  height: auto;
+  padding: 0 5px;
+}
+
+.cart-promotion-info .banner {
+  height: 100%;
 }
 
 .ems-cart-button {
@@ -4117,11 +4156,12 @@ a.btnAdresEkle,
 .onBilgilendirmeFormMetin {
   display: none;
   position: fixed;
-  left: 0;
+  right: 0;
   top: 0;
-  z-index: 2;
+  z-index: 10;
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 100px);
+  max-width: 910px;
   background: #fff;
 }
 
@@ -4129,6 +4169,7 @@ a.btnAdresEkle,
 .onBilgilendirmeFormMetin > span {
   height: inherit !important;
   padding: 0 20px;
+  overflow-x: hidden !important;
 }
 
 .siparisOnaySozlesmeMetin .a1,
@@ -4151,7 +4192,15 @@ a.btnAdresEkle,
   font-size: 16px;
 }
 
+.ems-form1-animate .agreement-overlay {
+  display: block;
+}
+
 .ems-form1-animate .onBilgilendirmeFormMetin {
+  display: block;
+}
+
+.ems-form2-animate .agreement-overlay {
   display: block;
 }
 
@@ -5100,8 +5149,8 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     .swiper-product {
       max-width: 930px;
     }
-    .swiper-product .ems-prd-inner {
-      margin: 0 15px;
+    .swiper-product .swiper-slide {
+      padding: 0 15px;
     }
     .banner .prm-title {
       font-size: 40px;
@@ -5114,10 +5163,9 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
       left: 0;
       top: 50%;
       transform: translateY(-50%);
-      width: 100%;
       padding-left: 50px;
       padding-right: 50px;
-      text-align: unset;
+      text-align: left;
     }
     .banner01 .banner-body {
       top: auto;
@@ -5141,9 +5189,6 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     .banner01 .prm-url > * {
       display: none;
     }
-    .banner01 + .banner01 {
-      margin-left: 30px;
-    }
     .banner02 .banner-body {
       padding: 20px 75px;
     }
@@ -5164,12 +5209,6 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
       padding-left: 0;
       padding-right: 0;
       margin-top: 0;
-    }
-    .banner03 + .banner03 {
-      margin-left: 40px;
-    }
-    .banner04 {
-      margin: 0;
     }
     .banner04 .banner-body {
       position: static;
@@ -5199,6 +5238,11 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     .banner05 .prm-title {
       font-size: 14px;
     }
+    .banner07 .banner-body {
+      top: 50%;
+      bottom: auto;
+      transform: translateY(-50%);
+    }
     .banner07 .prm-title {
       font-size: 50px;
     }
@@ -5220,8 +5264,15 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
       font-size: 22px;
       text-shadow: 0 0 35px #000;
     }
-    .banner09 + .banner09 {
-      margin-left: 34px;
+    .banner10 .banner-body {
+      position: static;
+      transform: none;
+    }
+    .banner10 .prm-title {
+      font-size: 14px;
+    }
+    .banner10 .prm-desc {
+      font-size: 14px;
     }
     .design-uniform .ga2 {
       display: block;
@@ -5491,6 +5542,9 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
       padding-top: 25px;
       padding-bottom: 95px;
     }
+    .primary-categories .banner + .banner {
+      margin-left: 30px;
+    }
     .new-season {
       padding-top: 120px;
       padding-bottom: 100px;
@@ -5498,6 +5552,9 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     .collections {
       padding-top: 120px;
       padding-bottom: 40px;
+    }
+    .collections .banner + .banner {
+      margin-left: 40px;
     }
     .best-sellers {
       padding-top: 60px;
@@ -5507,13 +5564,9 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
       bottom: -20px;
       height: 240px;
     }
-    .campaigns .swiper-wrapper {
-      width: auto;
-      margin-left: -40px;
-    }
     .campaigns .swiper-slide {
-      width: calc((100% / 3) - 40px);
-      margin-left: 40px;
+      width: calc(100% / 3);
+      padding: 0 20px;
     }
     .instagram-feed {
       background: #000;
@@ -5647,6 +5700,12 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     }
     .ems-step0 .ems-grid-table-cart > .ems-grid-row {
       grid-template-columns: 90px 1fr 113px 1fr 20px;
+    }
+    .cart-promotion-info {
+      margin-bottom: 40px;
+    }
+    .cart-promotion-info .swiper-slide {
+      padding: 0 10px;
     }
     .pnlDipToplamTable {
       font-size: 16px;
