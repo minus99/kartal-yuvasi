@@ -3,12 +3,10 @@
 @import 'abstracts/mixins';
 
 //BASE
-@import 'base/global';
 @import 'base/typography';
 @import 'base/icons';
-@import 'base/utilities';
+@import 'base/global';
 @import 'base/animations';
-//@import 'vendors/animate';
 @import 'components/button';
 @import 'components/form';
 
@@ -31,6 +29,7 @@
 @import 'layout/footer/copyright';
 
 //COMPONENTS
+@import 'components/popup';
 @import 'vendors/swiper';
 @import 'components/swiper-customize';
 @import 'components/tab';
@@ -46,7 +45,7 @@
 @import 'components/productd';
 @import 'components/order-step';
 @import 'components/grid-table';
-@import 'components/dropdown-menu';
+@import 'components/hierarchy-menu';
 
 //PAGES
 @import 'layout/pages/home';
@@ -54,6 +53,7 @@
 @import 'layout/pages/product-list';
 @import 'layout/pages/product-detail';
 @import 'layout/pages/search';
+@import 'layout/pages/hierarchy';
 @import 'layout/pages/order-main';
 @import 'layout/pages/order-cart';
 @import 'layout/pages/order-delivery';
@@ -72,7 +72,7 @@
 @supports(grid-area: auto) {
     @include setMinMedia($breakpoint-medium) {
         //BASE
-        @import 'base/utilities-desktop';
+        @import 'base/global-desktop';
         @import 'components/form-desktop';
 
         //HEADER
@@ -104,7 +104,7 @@
         @import 'components/productd-desktop';
         @import 'components/order-step-desktop';
         @import 'components/grid-table-desktop';
-        @import 'components/dropdown-menu-desktop';
+        @import 'components/hierarchy-menu-desktop';
 
         //PAGES
         @import 'layout/pages/home-desktop';
@@ -112,6 +112,7 @@
         @import 'layout/pages/product-list-desktop';
         @import 'layout/pages/product-detail-desktop';
         @import 'layout/pages/search-desktop';
+        @import 'layout/pages/hierarchy-desktop';
         @import 'layout/pages/order-main-desktop';
         @import 'layout/pages/order-cart-desktop';
         @import 'layout/pages/order-delivery-desktop';

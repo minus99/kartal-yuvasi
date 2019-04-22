@@ -48,6 +48,8 @@
     z-index: 10;
     margin: 10px;
     width: calc(100% - 20px);
+    height: auto;
+    overflow: auto;
     background: $color2;
     color: $color1;
     line-height: normal;
@@ -70,18 +72,4 @@
 }
 %header-mods-sub-overlay {
     display: block;
-}
-
-.sub-close {
-    position: absolute;
-    right: 14px;
-    top: 14px;
-}
-
-.sub-header {
-    position: relative;
-    background: $color3;
-    padding: 18px 20px 19px;
-    font-size: 18px;
-    font-weight: 700;
 }

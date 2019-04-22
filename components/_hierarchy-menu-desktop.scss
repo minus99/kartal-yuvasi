@@ -1,6 +1,7 @@
 .mobi-dropdown {
     > ul {
         display: block;
+        position: relative;
         > li {
             &.selected {
                 display: block;

@@ -1,0 +1,92 @@
+.kutuSolMenuTree {
+    .mobi-dropdown {
+        > a {
+            display: block;
+            padding: 50px 20px 30px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+
+    b,
+    .kutuHeaderSolMenuTree,
+    .kutuFooterSolMenuTree {
+        display: none;
+    }
+}
+
+.mobi-dropdown {
+    position: relative;
+    &-header {
+        position: relative;
+        border-top: 1px solid $color6;
+        border-bottom: 1px solid transparent;
+        padding: 8px 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-weight: 700;
+        letter-spacing: .93px;
+        &::after {
+            @extend %triangle;
+            @extend %triangle-b;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            margin-top: -4px;
+            transition: transform .32s ease;
+        }
+    }
+    li {
+        > a {
+            display: flex;
+            align-items: center;
+            padding: 9px 20px;
+            font-weight: 700;
+            letter-spacing: .93px;
+            line-height: 32px;
+        }
+    }
+    svg {
+        margin-right: 13px;
+    }
+
+    > ul {
+        display: none;
+        animation: show 0.5s;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        background: $color1;
+        color: $color2;
+        > li {
+            > a {
+                background: transparent right 70px center / 32px no-repeat;
+                transition: all .2s ease-in-out;
+            }
+            &:hover,
+            &.selected,
+            &.act {
+                > a {
+                    padding-left: 30px;
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23FFFFFF' d='M6 15h14v-3l6 4-6 4v-3H6z'/%3E%3C/svg%3E");
+                    background-position: right 20px center;
+                }
+            }
+            &.selected {
+                display: none;
+            }
+        }
+    }
+
+    &.opened {
+        .mobi-dropdown-header {
+            border-color: $color6;
+            &::after {
+                @include turn-mirror;
+            }
+        }
+        > ul {
+            display: block;
+        }
+    }
+}

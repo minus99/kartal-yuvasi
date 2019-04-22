@@ -1,5 +1,5 @@
 .mini-search {
-    position: relative;
+    display: block;
     background: $color2;
     color: $color1;
     &-info {
@@ -15,31 +15,18 @@
     &-sub {
         @extend %header-mods-sub;
         max-width: 910px;
-        padding: 10px 30px 30px;
         max-height: 95vh;
-        overflow: auto;
+        padding: 10px 30px 30px;
     }
     .sub-close {
+        left: auto;
         right: 30px;
         top: 56px;
     }
     
     .ems-form {
+        margin-left: 0;
         margin-right: 52px;
-    }
-    .search-input input {
-        padding-right: 50px;
-        color: $color9;
-    }
-    a[id$="btnArama"] {
-        position: absolute;
-        right: 7px;
-        top: 6px;
-    }
-    .no-result {
-        display: none;
-        font-family: $font2;
-        font-size: 15px;
     }
 
     &-ready {
@@ -56,180 +43,45 @@
             @extend %header-mods-sub-animate;
         }
     }
+}
 
-    &-focused {
-        .search-input input {
-            color: $color1;
-        }
+.popular-search-words {
+    margin-left: 0;
+    .ems-section-title {
+        margin-bottom: 0;
     }
-
-    &-result-found {
-        .popular-search-words-append {
-            display: none;
-        }
-        .searchSuggestDiv {
-            display: block;
-        }
+    .ems-section-wrapper {
+        margin-left: 0;
     }
-
-    &-no-result {
-        .no-result {
-            display: block;
+    &-append {
+        .popular-search-words {
+            display: flex;
         }
     }
 }
 
 .searchSuggestDiv {
-    position: relative !important;
-    width: 100% !important;
-    display: none;
-    
     &Holder {
-        display: grid;
-        grid-template-columns: 1fr 160px;
-        grid-gap: 0 56px;
+        grid-template-columns: 1fr 56px 160px;
         grid-template-areas:
-        "ga1 ga1"
-        "ga2 ga3"
-        "ga4 .";
+        "ga1 ga1 ga1"
+        "ga2 . ga3"
+        "ga4 . .";
 
         .prd {
-            grid-area: ga2;
-            h3 {
-                display: none;
-            }
             .sHolder {
-                display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 grid-gap: 10px;
-                > div {
-                    display: none;
-                    &:nth-child(1),
-                    &:nth-child(2),
-                    &:nth-child(3),
-                    &:nth-child(4),
-                    &:nth-child(5),
-                    &:nth-child(6) {
-                        display: block;
-                        box-shadow: 0px 0px 3px -2px #000;
-                    }
-                }
-            }
-            table {
-                tr {
-                    display: grid;
-                    .emos_invisible {
-                        display: block;
-                    }
-                    th {
-                        display: none;
-                    }
-                    td {
-                        padding-left: 20px;
-                        padding-right: 20px;
-                        background: $color10;
-                    }
-                }
-            }
-            .suggest_urnsmallimg_con {
-                grid-row: 1;
-                padding-left: 0;
-                padding-right: 0;
-                background: none;
-                > img {
-                    min-height: 218px;
-                }
-            }
-            .suggest_urnsname_con {
-                grid-row: 2;
-                font-family: $font3;
-                font-size: 16px;
-                padding-top: 15px;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                overflow: hidden;
-            }
-            .suggest_urnprice_con {
-                grid-row: 3;
-                padding-top: 5px;
-                font-size: 18px;
-                font-weight: 700;
-                padding-bottom: 15px;
-                .suggest_urnprice {
-                    display: flex;
-                }
-            }
-            .suggest_urnurunkod_con,
-            .suggest_urnnormalprice_con,
-            .suggest_urnsubscriptiondiscountrate_con,
-            .suggest_urnsubscriptionprice_con,
-            .suggest_urndiscountrate_con {
-                display: none;
+                margin-right: 0;
+                margin-left: 0;
             }
         }
         .cat {
-            grid-area: ga3;
-            h3 {
-                margin: 0 0 10px;
-            }
-            .suggest_link {
-                > a {
-                    display: none;
-                }
-                > span {
-                    position: relative;
-                    display: block;
-                    padding: 6px 15px 6px 15px;
-                    font-family: $font2;
-                    font-size: 13px;
-                    line-height: 20px;
-                    color: $color7;
-                    span {
-                        display: none;
-                    }
-                    &::before {
-                        position: absolute;
-                        left: 0;
-                        top: 50%;
-                        transform: translateY(-50%);
-                    }
-                    a {
-                        display: inline-block;
-                        &:not(:first-child) {
-                            color: $color1;
-                            margin-left: 5px;
-                            &::before {
-                                content: "/";
-                                margin-right: 5px;
-                            }
-                        }
-                    }
-                }
-            }
+            margin-top: 0;
+            margin-left: 0;
         }
         .prdCount {
-            grid-area: ga1;
-            display: block;
-            padding: 20px 0;
-            font-family: $font2;
-            font-size: 15px;
-            h3 {
-                display: none;
-            }
-        }
-        .dvTumunuGoster {
-            grid-area: ga4;
-            display: block;
-            justify-self: center;
-            padding-top: 30px;
-            #ascAramaBtnTumunuGoster {
-                min-width: 280px;
-                text-align: center;
-            }
-        }
-        .brand,
-        .wordSearch {
-            display: none;
+            margin-left: 0;
         }
     }
 }
