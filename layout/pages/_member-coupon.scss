@@ -1,21 +1,21 @@
 .ems-member-coupon {}
 
 .coupon-tab {
-    margin: 15px 10px 0;
-    > a {
+    margin: 15px 10px 0 0;
+    a {
         @extend %btn-reset;
         font-family: $font3;
         font-size: 14px;
         font-weight: 700;
         border: 1px solid $color5;
-        padding: 10px 20px;
+        padding: 10px;
         margin-left: 10px;
         margin-top: 10px;
     }
 }
 
 .ems-grid-table-coupon {
-    margin-top: 25px;
+    margin-top: 30px;
     > .ems-grid-row {
         grid-template-columns: 1fr;
         grid-gap: 10px;

@@ -49,8 +49,7 @@
                 font-size: inherit;
             }
             > .sub,
-            > ul,
-            .lvl-2 {
+            > ul {
                 animation: none;
             }
         }
@@ -168,7 +167,7 @@
         column-count: 4;
         column-gap: 20px;
         padding: 30px;
-        animation: animation-02 .5s cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+        animation: animation-02 .5s cubic-bezier(0.215, 0.610, 0.355, 1.000) !important; /* easeOutCubic */
         li {
             break-inside: avoid;
             &.single {

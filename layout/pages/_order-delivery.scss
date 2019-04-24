@@ -18,7 +18,7 @@ a.btnAdresEkle,
 .delivery-gift-select {
     padding: 20px;
     font-family: $font2;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 a.btnAdresEkle {
@@ -106,6 +106,9 @@ a.btnAdresEkle {
     }
     .ems-form {
         margin-top: 30px;
+    }
+    #plhAdresTipi {
+        justify-content: left;
     }
     [id$="CEPTELEFON"] {
         width: 100% !important;

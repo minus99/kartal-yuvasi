@@ -53,7 +53,7 @@
 @import 'layout/pages/product-list';
 @import 'layout/pages/product-detail';
 @import 'layout/pages/search';
-@import 'layout/pages/hierarchy';
+//@import 'layout/pages/hierarchy';
 @import 'layout/pages/order-main';
 @import 'layout/pages/order-cart';
 @import 'layout/pages/order-delivery';
@@ -66,6 +66,7 @@
 @import 'layout/pages/member-password';
 @import 'layout/pages/member-coupon';
 @import 'layout/pages/member-favorite';
+@import 'layout/pages/member-message';
 
 
 //DESKTOP
@@ -125,5 +126,6 @@
         @import 'layout/pages/member-password-desktop';
         @import 'layout/pages/member-coupon-desktop';
         @import 'layout/pages/member-favorite-desktop';
+        @import 'layout/pages/member-message-desktop';
     }
 }
