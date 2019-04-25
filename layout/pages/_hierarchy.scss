@@ -1,16 +1,12 @@
 .ems-page-hierarchy {
     &-grid {
-        grid-template-columns: 300px 40px 1fr;
-        grid-template-areas:
-        "ga1 ga1 ga1"
-        "ga2 . ga3";
-
-        @include setGridArea(1,3);
-
         > .ga2 {
-            min-height: 710px;
             background: $color1;
             color: $color2;
+        }
+        > .ga3 {
+            padding-bottom: 100px;
+            @extend .ems-container;
         }
     }
 
@@ -22,6 +18,7 @@
         }
     }
     .page-top-title {
+        font-family: $font2;
         font-size: 18px;
         margin-top: 30px;
         font-weight: 700;

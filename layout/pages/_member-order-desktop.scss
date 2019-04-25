@@ -7,3 +7,13 @@
         grid-template-columns: 130px 80px 80px 1fr 1fr max-content;
     }
 }
+
+//order-detail
+.ems-member-order-detail {}
+
+.order-detail-info {
+    $ml: 20px;
+    column-count: 2;
+    column-gap: 0;
+    margin-left: -$ml;
+}

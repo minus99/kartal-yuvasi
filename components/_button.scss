@@ -29,6 +29,15 @@
         }
     }
 
+    &-secondary {
+        background: $color3;
+        color: $color1;
+        &:hover {
+            background: $color4;
+            color: $color2;
+        }
+    }
+
     &-transparent {
         background: transparent;
         color: inherit;
@@ -73,6 +82,10 @@ a.btnDefault {
 
 .btn-primary {
     @extend %btn-primary;
+}
+
+.btn-secondary {
+    @extend %btn-secondary;
 }
 
 .btn-transparent {

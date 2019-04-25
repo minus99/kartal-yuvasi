@@ -1,0 +1,14 @@
+.ems-page-hierarchy {
+    &-grid {
+        grid-template-columns: 300px 20px minmax(auto, 890px) 1fr;
+        grid-template-areas:
+        "ga1 ga1 ga1 ga1"
+        "ga2 . ga3 .";
+
+        @include setGridArea(1,3);
+
+        > .ga2 {
+            min-height: 710px;
+        }
+    }
+}

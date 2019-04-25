@@ -40,6 +40,10 @@ textarea {
 [id$="CEPTELEFON"] {
     width: calc(100% - 70px) !important;
 }
+.geneltelefon,
+.site_textarea {
+    width: 100% !important;
+}
 
 .ems-form {
     position: relative;
@@ -172,8 +176,8 @@ textarea {
     #imgCaptcha {
         position: absolute;
         left: 1px;
-        top: 24px;
-        height: 40px;
+        top: 22px;
+        height: 42px;
         border-right: 1px solid $color5;
         border-radius: 0 5px 5px 0;
     }

@@ -1,3 +1,16 @@
+//new message
+#mesajGonder {
+    .ems-form {
+        max-width: 330px;
+    }
+    .mesajGonderiliyor {
+        display: block;
+        text-align: center;
+        animation: show .5s;
+    }
+}
+
+//message list
 .kutuMesaj {
     position: relative;
 }
@@ -42,7 +55,6 @@
 }
 
 .ems-member-message {}
-
 .ems-grid-table-message {
     margin-top: 30px;
     > .ems-grid-row {
@@ -55,9 +67,11 @@
     }
 }
 
-
+//message detail
 .ems-member-message-detail {
     .ems-form {
+        max-width: none;
+        margin: 0 20px;
         &-obj {
             p {
                 margin: 0;
@@ -65,6 +79,14 @@
         }
     }
 }
+#plhMesajTitle {
+    display: none;
+}
 #plhBtnMesajCozuldu {
-    margin-left: 20px;
+    margin-top: 10px;
+}
+
+[id$="lblSistemMesaj"] {
+    display: block;
+    margin-top: 30px;
 }

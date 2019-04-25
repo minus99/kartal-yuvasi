@@ -7,3 +7,58 @@
         padding-right: 80px;
     }
 }
+
+//order-detail
+.ems-member-order-detail {}
+
+.order-detail-info {
+    $ml: 20px;
+    font-family: $font2;
+    font-size: 14px;
+    .text {
+        font-weight: 500;
+    }
+    > div {
+        display: flex;
+        align-items: center;
+        > div {
+            flex: 1;
+            padding: 10px $ml;
+        }
+    }
+}
+
+#plhSipTekrarla {
+    margin: 30px 20px 40px;
+    .lnkSipTekrarla {
+        @extend %btn;
+        text-transform: uppercase;
+    }
+    .st-list {
+        display: none;
+    }
+    .st-detail {
+        display: inline;
+    }
+}
+
+.order-address {
+    margin-top: 20px;
+    font-family: $font2;
+    font-size: 15px;
+    .text {
+        font-weight: 700;
+    }
+    > div {
+        padding: 2px 20px;
+    }
+}
+
+.order-detail-info-payment {
+    font-size: 16px;
+    th, td {
+        padding-left: 20px;
+        padding-right: 20px;
+        width: auto;
+    }
+}

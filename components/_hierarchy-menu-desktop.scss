@@ -1,3 +1,11 @@
+.kutuSolMenuTree {
+    .mobi-dropdown {
+        > a {
+            display: block;
+        }
+    }
+}
+
 .mobi-dropdown {
     > ul {
         display: block;

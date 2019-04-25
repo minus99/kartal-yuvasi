@@ -73,6 +73,10 @@ ul:not(.ul-list) {
         display: none !important;
     }
 
+    &-none0 {
+        display: none;
+    }
+
     //OVERLAY
     &-overlay {
         display: none;

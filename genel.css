@@ -216,6 +216,10 @@ ul:not(.ul-list) {
   display: none !important;
 }
 
+.ems-none0 {
+  display: none;
+}
+
 .ems-overlay {
   display: none;
   content: "";
@@ -228,7 +232,7 @@ ul:not(.ul-list) {
   background: rgba(0, 0, 0, 0.4);
 }
 
-.ems-container, .urunPaging {
+.ems-container, .urunPaging, .ems-page-hierarchy-grid > .ga3 {
   width: calc(100% - 40px);
   margin-left: auto;
   margin-right: auto;
@@ -528,7 +532,7 @@ table {
 }
 
 .btn,
-a.btnDefault, .cart-prd-page-url .lnkSepet {
+a.btnDefault, .cart-prd-page-url .lnkSepet, #plhSipTekrarla .lnkSipTekrarla {
   position: relative;
   display: inline-block;
   padding: 0 20px;
@@ -544,11 +548,11 @@ a.btnDefault, .cart-prd-page-url .lnkSepet {
 }
 
 .btn:hover,
-a.btnDefault:hover, .cart-prd-page-url .lnkSepet:hover {
+a.btnDefault:hover, .cart-prd-page-url .lnkSepet:hover, #plhSipTekrarla .lnkSipTekrarla:hover {
   background: #515151;
 }
 
-.btn > span, a.btnDefault > span, .cart-prd-page-url .lnkSepet > span {
+.btn > span, a.btnDefault > span, .cart-prd-page-url .lnkSepet > span, #plhSipTekrarla .lnkSipTekrarla > span {
   position: relative;
   display: flex;
   align-items: center;
@@ -562,6 +566,16 @@ a.btnDefault:hover, .cart-prd-page-url .lnkSepet:hover {
 
 .btn-primary:hover {
   background: #eee;
+}
+
+.btn-secondary {
+  background: #eee;
+  color: #000;
+}
+
+.btn-secondary:hover {
+  background: #c5242b;
+  color: #fff;
 }
 
 .btn-transparent, .ems-prdd-block2 a.btnDefault, a.btnFacebookLogin, .mini-user a.btnFacebookLoginKutu, .ems-new-address .btnAdresIptal {
@@ -648,6 +662,11 @@ textarea {
 
 [id$="CEPTELEFON"] {
   width: calc(100% - 70px) !important;
+}
+
+.geneltelefon,
+.site_textarea {
+  width: 100% !important;
 }
 
 .ems-form {
@@ -807,8 +826,8 @@ textarea {
 [id$="divCaptcha"] #imgCaptcha {
   position: absolute;
   left: 1px;
-  top: 24px;
-  height: 40px;
+  top: 22px;
+  height: 42px;
   border-right: 1px solid #c9c9c9;
   border-radius: 0 5px 5px 0;
 }
@@ -1110,7 +1129,7 @@ textarea {
   line-height: 35px;
 }
 
-.mini-user .mini-user-links .kutuUyeGiris_lbfUyeMesajSayi {
+.kutuUyeGiris_lbfUyeMesajSayi {
   margin-left: 5px;
 }
 
@@ -3773,7 +3792,7 @@ a.btnsepeteAt {
 }
 
 .kutuSolMenuTree .mobi-dropdown > a {
-  display: block;
+  display: none;
   padding: 50px 20px 30px;
   font-size: 18px;
   font-weight: 700;
@@ -4109,6 +4128,33 @@ ul.product-list-grid > li {
 
 .featured-prds {
   padding-top: 40px;
+}
+
+.ems-page-hierarchy-grid > .ga2 {
+  background: #000;
+  color: #fff;
+}
+
+.ems-page-hierarchy-grid > .ga3 {
+  padding-bottom: 100px;
+}
+
+.ems-page-hierarchy [id$="lblICR_METIN_TEMPLATE"] {
+  font-family: fira;
+  font-size: 16px;
+}
+
+.ems-page-hierarchy [id$="lblICR_METIN_TEMPLATE"] b {
+  font-weight: 500;
+}
+
+.ems-page-hierarchy .page-top-title {
+  font-family: fira;
+  font-size: 18px;
+  margin-top: 30px;
+  font-weight: 700;
+  padding: 20px 0;
+  border-bottom: 1px solid #c9c9c9;
 }
 
 .ems-page-order .block2 {
@@ -4756,6 +4802,65 @@ a.btnAdresEkle,
   padding-right: 80px;
 }
 
+.order-detail-info {
+  font-family: fira;
+  font-size: 14px;
+}
+
+.order-detail-info .text {
+  font-weight: 500;
+}
+
+.order-detail-info > div {
+  display: flex;
+  align-items: center;
+}
+
+.order-detail-info > div > div {
+  flex: 1;
+  padding: 10px 20px;
+}
+
+#plhSipTekrarla {
+  margin: 30px 20px 40px;
+}
+
+#plhSipTekrarla .lnkSipTekrarla {
+  text-transform: uppercase;
+}
+
+#plhSipTekrarla .st-list {
+  display: none;
+}
+
+#plhSipTekrarla .st-detail {
+  display: inline;
+}
+
+.order-address {
+  margin-top: 20px;
+  font-family: fira;
+  font-size: 15px;
+}
+
+.order-address .text {
+  font-weight: 700;
+}
+
+.order-address > div {
+  padding: 2px 20px;
+}
+
+.order-detail-info-payment {
+  font-size: 16px;
+}
+
+.order-detail-info-payment th, .order-detail-info-payment td {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: auto;
+}
+
 .ems-member-info {
   padding-left: 20px;
   padding-right: 20px;
@@ -4816,6 +4921,16 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
 .selected-action .remove-selected > a {
   background: #eee;
   color: #000;
+}
+
+#mesajGonder .ems-form {
+  max-width: 330px;
+}
+
+#mesajGonder .mesajGonderiliyor {
+  display: block;
+  text-align: center;
+  animation: show .5s;
 }
 
 .kutuMesaj {
@@ -4881,12 +4996,26 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
   font-weight: 700;
 }
 
+.ems-member-message-detail .ems-form {
+  max-width: none;
+  margin: 0 20px;
+}
+
 .ems-member-message-detail .ems-form-obj p {
   margin: 0;
 }
 
+#plhMesajTitle {
+  display: none;
+}
+
 #plhBtnMesajCozuldu {
-  margin-left: 20px;
+  margin-top: 10px;
+}
+
+[id$="lblSistemMesaj"] {
+  display: block;
+  margin-top: 30px;
 }
 
 @supports (grid-area: auto) {
@@ -5783,6 +5912,9 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     .ems-grid-option1 {
       grid-column: span 1;
     }
+    .kutuSolMenuTree .mobi-dropdown > a {
+      display: block;
+    }
     .mobi-dropdown > ul {
       display: block;
       position: relative;
@@ -5907,6 +6039,22 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     }
     .featured-prds {
       padding-top: 60px;
+    }
+    .ems-page-hierarchy-grid {
+      grid-template-columns: 300px 20px minmax(auto, 890px) 1fr;
+      grid-template-areas: "ga1 ga1 ga1 ga1" "ga2 . ga3 .";
+    }
+    .ems-page-hierarchy-grid > .ga1 {
+      grid-area: ga1;
+    }
+    .ems-page-hierarchy-grid > .ga2 {
+      grid-area: ga2;
+    }
+    .ems-page-hierarchy-grid > .ga3 {
+      grid-area: ga3;
+    }
+    .ems-page-hierarchy-grid > .ga2 {
+      min-height: 710px;
     }
     .ems-page-order .site-header {
       position: relative;
@@ -6084,8 +6232,8 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
       max-width: 330px;
     }
     .ems-page-member-grid {
-      grid-template-areas: "ga1 . ga2 .";
       grid-template-columns: 300px 40px minmax(auto, 850px) 1fr;
+      grid-template-areas: "ga1 . ga2 .";
     }
     .ems-page-member-grid > .ga1 {
       grid-area: ga1;
@@ -6104,6 +6252,11 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     }
     .ems-grid-table-order > .ems-grid-row {
       grid-template-columns: 130px 80px 80px 1fr 1fr max-content;
+    }
+    .order-detail-info {
+      column-count: 2;
+      column-gap: 0;
+      margin-left: -20px;
     }
     .ems-member-info {
       padding: 20px 0;
@@ -6134,6 +6287,10 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
       margin-top: 0;
       margin-left: 20px;
     }
+    #mesajGonder .btnMesajGonder {
+      width: auto;
+      min-width: 170px;
+    }
     .kutuBodyMesaj {
       margin: 30px 0 0 -10px;
     }
@@ -6152,6 +6309,13 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     }
     .ems-grid-table-message .newMessage .ems-grid-date {
       font-weight: 500;
+    }
+    .ems-member-message-detail .ems-form {
+      margin: 0;
+    }
+    #plhBtnMesajCozuldu {
+      margin-top: 0;
+      margin-left: 20px;
     }
   }
 }

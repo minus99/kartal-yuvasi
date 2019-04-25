@@ -1,7 +1,8 @@
 .ems-page-member {
     &-grid {
-        grid-template-areas: "ga1 . ga2 .";
         grid-template-columns: 300px 40px minmax(auto, 850px) 1fr;
+        grid-template-areas: 
+        "ga1 . ga2 .";
         
         @include setGridArea(1,2);
         
