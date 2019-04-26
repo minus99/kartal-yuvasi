@@ -9,7 +9,14 @@
 }
 
 //order-detail
-.ems-member-order-detail {}
+.ems-member-order-detail {
+    .inner-title {
+        font-size: 22px;
+        font-weight: 700;
+        padding: 20px;
+        border-bottom: 1px solid $color5;
+    }
+}
 
 .order-detail-info {
     $ml: 20px;
@@ -54,11 +61,37 @@
     }
 }
 
+.ems-grid-table-order-products {
+    margin-top: -1px;
+    .ems-grid-name {
+        font-size: 0;
+        a {
+            font-size: 16px;
+            strong {
+                display: none;
+            }
+            ~ a {
+                display: none;
+            }
+        }
+    }
+}
+
 .order-detail-info-payment {
     font-size: 16px;
     th, td {
         padding-left: 20px;
         padding-right: 20px;
         width: auto;
+    }
+}
+
+a.btnSipariseDon {
+    @extend %btn-reset;
+    font-family: $font2;
+    font-size: 16px;
+    margin: 20px 0;
+    .icon-triangle-b {
+        @include setTurn(90);
     }
 }

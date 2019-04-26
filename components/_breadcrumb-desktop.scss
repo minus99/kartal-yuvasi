@@ -39,3 +39,13 @@
         }
     }
 }
+
+.nav-type2 {
+    .navigasyon {
+        position: absolute;
+        padding: 40px;
+        ol {
+            color: $color2;
+        }
+    }
+}

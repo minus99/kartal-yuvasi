@@ -9,11 +9,27 @@
 }
 
 //order-detail
-.ems-member-order-detail {}
+.ems-member-order-detail {
+    .inner-title {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
 
 .order-detail-info {
     $ml: 20px;
     column-count: 2;
     column-gap: 0;
     margin-left: -$ml;
+}
+
+.order-address {
+    margin-left: -20px;
+    margin-bottom: 30px;
+}
+
+.ems-step0 .ems-grid-table-order-products {
+    > .ems-grid-row {
+        grid-template-columns: 90px 1fr 113px 1fr;
+    }
 }

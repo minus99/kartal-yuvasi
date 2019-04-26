@@ -12,14 +12,6 @@
     
         @include setGridArea(1,3);
     }
-
-    .navigasyon {
-        position: absolute;
-        padding: 40px;
-        ol {
-            color: $color2;
-        }
-    }
 }
 
 ul.product-list-grid {

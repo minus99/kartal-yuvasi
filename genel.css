@@ -92,7 +92,7 @@
   height: 10px;
 }
 
-[class*="base64-"], .base64, .ems-tab-vertical .ems-tab-inner-header, .navigation-full-path::after, .urunKiyaslamaOzellik_ozellikAd, .urunKiyaslamaOzellik, .ozellikFiltreSecim > a, .filter-type2 .urunKiyaslamaOzellik.link_selected::before, #lbfPagingPrev,
+[class*="base64-"], .base64, .ems-tab-vertical .ems-tab-inner-header, .navigation-full-path::after, .urunKiyaslamaOzellik_ozellikAd, .urunKiyaslamaOzellik, .filter-type2 .urunKiyaslamaOzellik.link_selected::before, #lbfPagingPrev,
 #lbfPagingNext {
   background-repeat: no-repeat;
 }
@@ -125,7 +125,7 @@
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4gICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9IiMwMDAiPiAgICAgICAgPHJlY3Qgd2lkdGg9IjE3IiBoZWlnaHQ9IjE3IiB4PSIuNSIgeT0iLjUiIHJ4PSI4LjUiLz4gICAgICAgIDxwYXRoIHN0cm9rZS13aWR0aD0iMiIgZD0iTTUgOC42ODFsMi41NSAyLjU1TDEyLjc4MiA2Ii8+ICAgIDwvZz48L3N2Zz4=);
 }
 
-.base64-remove, .ozellikFiltreSecim > a {
+.base64-remove {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4gICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4gICAgICAgIDxyZWN0IHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgeD0iOSIgeT0iOSIgZmlsbD0iI0Q4RDhEOCIgcng9IjEiLz4gICAgICAgIDxwYXRoIGZpbGw9IiM4Nzg3ODciIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTE2IDE1LjI5M2wzLjE4Mi0zLjE4Mi43MDcuNzA3TDE2LjcwNyAxNmwzLjE4MiAzLjE4Mi0uNzA3LjcwN0wxNiAxNi43MDdsLTMuMTgyIDMuMTgyLS43MDctLjcwN0wxNS4yOTMgMTZsLTMuMTgyLTMuMTgyLjcwNy0uNzA3TDE2IDE1LjI5M3oiLz4gICAgPC9nPjwvc3ZnPg==);
 }
 
@@ -532,7 +532,7 @@ table {
 }
 
 .btn,
-a.btnDefault, .cart-prd-page-url .lnkSepet, #plhSipTekrarla .lnkSipTekrarla {
+a.btnDefault, .cart-prd-page-url .lnkSepet, .urunKiyaslamaOzellik_tumunuTemizle a, #plhSipTekrarla .lnkSipTekrarla {
   position: relative;
   display: inline-block;
   padding: 0 20px;
@@ -548,11 +548,11 @@ a.btnDefault, .cart-prd-page-url .lnkSepet, #plhSipTekrarla .lnkSipTekrarla {
 }
 
 .btn:hover,
-a.btnDefault:hover, .cart-prd-page-url .lnkSepet:hover, #plhSipTekrarla .lnkSipTekrarla:hover {
+a.btnDefault:hover, .cart-prd-page-url .lnkSepet:hover, .urunKiyaslamaOzellik_tumunuTemizle a:hover, #plhSipTekrarla .lnkSipTekrarla:hover {
   background: #515151;
 }
 
-.btn > span, a.btnDefault > span, .cart-prd-page-url .lnkSepet > span, #plhSipTekrarla .lnkSipTekrarla > span {
+.btn > span, a.btnDefault > span, .cart-prd-page-url .lnkSepet > span, .urunKiyaslamaOzellik_tumunuTemizle a > span, #plhSipTekrarla .lnkSipTekrarla > span {
   position: relative;
   display: flex;
   align-items: center;
@@ -578,13 +578,13 @@ a.btnDefault:hover, .cart-prd-page-url .lnkSepet:hover, #plhSipTekrarla .lnkSipT
   color: #fff;
 }
 
-.btn-transparent, .ems-prdd-block2 a.btnDefault, a.btnFacebookLogin, .mini-user a.btnFacebookLoginKutu, .ems-new-address .btnAdresIptal {
+.btn-transparent, .ems-prdd-block2 a.btnDefault, .urunKiyaslamaOzellik_tumunuTemizle a, a.btnFacebookLogin, .mini-user a.btnFacebookLoginKutu, .ems-new-address .btnAdresIptal {
   background: transparent;
   color: inherit;
   border-color: #c9c9c9;
 }
 
-.btn-transparent:hover, .ems-prdd-block2 a.btnDefault:hover, a.btnFacebookLogin:hover, .mini-user a.btnFacebookLoginKutu:hover, .ems-new-address .btnAdresIptal:hover {
+.btn-transparent:hover, .ems-prdd-block2 a.btnDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle a:hover, a.btnFacebookLogin:hover, .mini-user a.btnFacebookLoginKutu:hover, .ems-new-address .btnAdresIptal:hover {
   background: transparent;
 }
 
@@ -598,7 +598,7 @@ a.btnDefault:hover, .cart-prd-page-url .lnkSepet:hover, #plhSipTekrarla .lnkSipT
 }
 
 .btn-reset, .mini-user a.btnKutuLogout, .mini-search a[id$="btnArama"], .mini-bulletin a.btnBultenGonder, .ems-grid-address-buttons > a, .ems-grid-address-select a, .ems-cart-button a.btnDefault, .ems-cart-coupon-info a.btnHediyeCekiIptal, a.btnAdresEkle, .siparisOnaySozlesmeMetin > span a.btnDefault,
-.onBilgilendirmeFormMetin > span a.btnDefault, .coupon-tab a {
+.onBilgilendirmeFormMetin > span a.btnDefault, a.btnSipariseDon, .coupon-tab a {
   padding: unset;
   background: unset;
   border: unset;
@@ -611,7 +611,7 @@ a.btnDefault:hover, .cart-prd-page-url .lnkSepet:hover, #plhSipTekrarla .lnkSipT
 }
 
 .btn-reset:hover, .mini-user a.btnKutuLogout:hover, .mini-search a:hover[id$="btnArama"], .mini-bulletin a.btnBultenGonder:hover, .ems-grid-address-buttons > a:hover, .ems-grid-address-select a:hover, .ems-cart-button a.btnDefault:hover, .ems-cart-coupon-info a.btnHediyeCekiIptal:hover, a.btnAdresEkle:hover, .siparisOnaySozlesmeMetin > span a.btnDefault:hover,
-.onBilgilendirmeFormMetin > span a.btnDefault:hover, .coupon-tab a:hover {
+.onBilgilendirmeFormMetin > span a.btnDefault:hover, a.btnSipariseDon:hover, .coupon-tab a:hover {
   background: unset;
 }
 
@@ -2819,7 +2819,7 @@ button.swiper-pagination-bullet {
 
 .uniform-preview {
   position: relative;
-  background: url(/images/frontend/design-uniform-bg.png) center bottom/100% no-repeat;
+  background: center bottom / 100% no-repeat;
   min-height: 411px;
 }
 
@@ -3047,12 +3047,17 @@ button.swiper-pagination-bullet {
   display: none;
 }
 
-.categories-append .swiper-slide {
-  width: auto;
+.categories-append {
+  min-height: 40px;
+  background: url(/images/ajaxtabs/loading.gif) center center/20px no-repeat;
 }
 
-.categories-append .swiper-slide + .swiper-slide {
-  margin-left: -1px;
+.categories-append .swiper-container {
+  background: #fff;
+}
+
+.categories-append .swiper-slide {
+  width: auto;
 }
 
 .categories-append .swiper-slide > ul {
@@ -3064,6 +3069,7 @@ button.swiper-pagination-bullet {
   padding: 0 20px;
   line-height: 38px;
   border: 1px solid #f5f5f5;
+  margin-left: -1px;
   font-family: fira;
   font-size: 13px;
 }
@@ -3104,7 +3110,7 @@ button.swiper-pagination-bullet {
 .kutuBodyOzellikFiltre {
   font-family: fira;
   font-size: 15px;
-  height: calc(100% - 144px);
+  height: calc(100% - 162px);
   overflow-x: auto;
 }
 
@@ -3117,6 +3123,7 @@ button.swiper-pagination-bullet {
 .urunKiyaslamaOzellik_ozellikAd {
   position: sticky;
   top: 0;
+  z-index: 1;
   background-color: #eee;
   font-weight: 700;
   padding: 18px 0;
@@ -3146,15 +3153,18 @@ button.swiper-pagination-bullet {
 .kutuFooterOzellikFiltre {
   position: fixed;
   left: 0;
-  bottom: 20px;
+  bottom: 0;
+  z-index: 2;
   width: 100%;
-  padding: 0 20px;
+  padding: 20px 15px;
+  background: inherit;
   display: flex;
   justify-content: space-between;
 }
 
 .kutuFooterOzellikFiltre > div {
   flex: 1;
+  padding: 0 5px;
 }
 
 .kutuFooterOzellikFiltre a {
@@ -3162,9 +3172,12 @@ button.swiper-pagination-bullet {
   line-height: 48px;
 }
 
-.urunKiyaslamaOzellik_tumunuTemizle:not(:empty) {
+.urunKiyaslamaOzellik_tumunuTemizle {
   display: block !important;
-  margin-right: 10px;
+}
+
+.urunKiyaslamaOzellik_tumunuTemizle:empty {
+  display: none !important;
 }
 
 .pnlUrunKiyasSecim {
@@ -3187,7 +3200,7 @@ button.swiper-pagination-bullet {
 .urunKiyaslamaOzellik_secimler > div {
   background: #f5f5f5;
   color: #000;
-  padding: 11px 12px;
+  padding: 9px 20px 10px 10px;
   margin-left: 10px;
   margin-top: 10px;
 }
@@ -3199,13 +3212,14 @@ button.swiper-pagination-bullet {
 }
 
 .ozellikFiltreSecim {
+  display: flex;
+  margin-top: 4px;
+  margin-left: -10px;
   font-size: 13px;
 }
 
 .ozellikFiltreSecim > a {
-  background-position: left center;
-  padding: 0 10px 0 30px;
-  line-height: 32px;
+  margin-left: 10px;
 }
 
 .filter-type2 .urunKiyaslamaOzellik_ozellikIcerik table > tbody {
@@ -3243,6 +3257,7 @@ button.swiper-pagination-bullet {
 .filter-type3 .urunKiyaslamaOzellik_ozellikIcerik table > tbody {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(32px, max-content));
+  padding-top: 1px;
 }
 
 .filter-type3 .urunKiyaslamaOzellik_ozellikIcerik table > tbody > tr {
@@ -3265,6 +3280,10 @@ button.swiper-pagination-bullet {
 .filter-type3 .urunKiyaslamaOzellik.link_selected {
   background: #000;
   color: #fff;
+}
+
+.ems-filter-animate {
+  position: fixed;
 }
 
 .ems-filter-animate #pnlSecimiDarat {
@@ -3309,6 +3328,10 @@ button.swiper-pagination-bullet {
 
 .ems-sort #dvUrunKiyaslamaOzellik.views .urunKiyaslamaOzellik svg {
   margin-right: 5px;
+}
+
+.ems-sort-animate {
+  position: fixed;
 }
 
 .ems-sort-animate .ems-sort {
@@ -4802,6 +4825,13 @@ a.btnAdresEkle,
   padding-right: 80px;
 }
 
+.ems-member-order-detail .inner-title {
+  font-size: 22px;
+  font-weight: 700;
+  padding: 20px;
+  border-bottom: 1px solid #c9c9c9;
+}
+
 .order-detail-info {
   font-family: fira;
   font-size: 14px;
@@ -4851,6 +4881,26 @@ a.btnAdresEkle,
   padding: 2px 20px;
 }
 
+.ems-grid-table-order-products {
+  margin-top: -1px;
+}
+
+.ems-grid-table-order-products .ems-grid-name {
+  font-size: 0;
+}
+
+.ems-grid-table-order-products .ems-grid-name a {
+  font-size: 16px;
+}
+
+.ems-grid-table-order-products .ems-grid-name a strong {
+  display: none;
+}
+
+.ems-grid-table-order-products .ems-grid-name a ~ a {
+  display: none;
+}
+
 .order-detail-info-payment {
   font-size: 16px;
 }
@@ -4859,6 +4909,16 @@ a.btnAdresEkle,
   padding-left: 20px;
   padding-right: 20px;
   width: auto;
+}
+
+a.btnSipariseDon {
+  font-family: fira;
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+a.btnSipariseDon .icon-triangle-b {
+  transform: rotate(90deg);
 }
 
 .ems-member-info {
@@ -5261,9 +5321,9 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
       top: auto;
       bottom: 0;
       width: 0;
-      border-width: 4px;
-      border-color: transparent transparent currentColor transparent;
-      transition: all .2s ease;
+      border-width: 2px;
+      border-color: currentColor;
+      transition: all .32s ease;
       opacity: 0;
     }
     .menu .lvl-1 > li.selected > a {
@@ -5716,6 +5776,13 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     .navigasyon ol .icon-breadcrumb {
       display: none;
     }
+    .nav-type2 .navigasyon {
+      position: absolute;
+      padding: 40px;
+    }
+    .nav-type2 .navigasyon ol {
+      color: #fff;
+    }
     .kutuKategori {
       position: relative;
       display: block;
@@ -5982,13 +6049,6 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     .ems-page-product-list-grid > .ga3 {
       grid-area: ga3;
     }
-    .ems-page-product-list .navigasyon {
-      position: absolute;
-      padding: 40px;
-    }
-    .ems-page-product-list .navigasyon ol {
-      color: #fff;
-    }
     ul.product-list-grid {
       margin-top: 30px;
       grid-template-columns: repeat(3, 1fr);
@@ -6253,10 +6313,21 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     .ems-grid-table-order > .ems-grid-row {
       grid-template-columns: 130px 80px 80px 1fr 1fr max-content;
     }
+    .ems-member-order-detail .inner-title {
+      padding-left: 0;
+      padding-right: 0;
+    }
     .order-detail-info {
       column-count: 2;
       column-gap: 0;
       margin-left: -20px;
+    }
+    .order-address {
+      margin-left: -20px;
+      margin-bottom: 30px;
+    }
+    .ems-step0 .ems-grid-table-order-products > .ems-grid-row {
+      grid-template-columns: 90px 1fr 113px 1fr;
     }
     .ems-member-info {
       padding: 20px 0;

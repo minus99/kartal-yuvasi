@@ -3,11 +3,13 @@
 }
 
 .categories-append {
+    min-height: 40px;
+    background: url(/images/ajaxtabs/loading.gif) center center / 20px no-repeat;
+    .swiper-container {
+        background: $color2;
+    }
     .swiper-slide {
         width: auto;
-        + .swiper-slide {
-            margin-left: -1px;
-        }
         > ul {
             display: none;
         }
@@ -17,6 +19,7 @@
         padding: 0 20px;
         line-height: 38px;
         border: 1px solid $color10;
+        margin-left: -1px;
         font-family: $font2;
         font-size: 13px;
         &.active {
