@@ -126,3 +126,9 @@
         }
     }
 }
+
+.basket-empty {
+    .ems-step0 .ems-order-cart-grid {
+        display: none;
+    }
+}

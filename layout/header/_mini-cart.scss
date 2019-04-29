@@ -41,6 +41,7 @@
     }
     
     &-animate {
+        @extend %header-mods-animate;
         .mini-cart-overlay {
             @extend %header-mods-sub-overlay;
         }
@@ -49,6 +50,19 @@
         }
     }
 }
+
+.kutuSepet_urunYok {
+    display: block;
+    margin-top: 20px;
+}
+.basket-empty {
+    .kutuSepet_icerik,
+    .cart-prd-total,
+    .cart-prd-page-url {
+        display: none;
+    }
+}
+
 .kutuSepet_icerik {
     font-family: $font2;
     font-size: 16px;

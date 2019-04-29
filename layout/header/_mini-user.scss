@@ -75,6 +75,7 @@
     }
 
     &-animate {
+        @extend %header-mods-animate;
         .mini-user-overlay {
             @extend %header-mods-sub-overlay;
         }

@@ -27,6 +27,7 @@
     }
 
     &-animate {
+        @extend %header-mods-animate;
         .mini-lang-info {
             z-index: 10;
             .icon-triangle-b {

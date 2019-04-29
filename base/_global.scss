@@ -77,6 +77,11 @@ ul:not(.ul-list) {
         display: none;
     }
 
+    //UTILITY
+    &-link {
+        text-decoration: underline;
+    }
+
     //OVERLAY
     &-overlay {
         display: none;
@@ -129,7 +134,30 @@ ul:not(.ul-list) {
             }
         }
     }
-    
+
+    //MESSAGE
+    &-message {
+        background: $color3;
+        font-family: $font2;
+        font-size: 15px;
+        min-height: 230px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        p {
+            margin: 0;
+        }
+        .i86 {
+            margin-bottom: 6px;
+            animation: animation-03 .5s;
+            svg {
+                font-size: 86px;
+            }
+        }
+    }
+
     //FLEX
     &-flex {
         display: flex;
@@ -329,11 +357,17 @@ table {
 }
 
 //no result fixer
-[id$="lbfGNL_KAYITYOK"] {
+[id$="lbfGNL_KAYITYOK"],
+[id$="lbfUYM_KAYITYOK_MESAJ"] {
     display: none;
     margin-top: 20px;
     &:not(:empty) {
         display: block;
+    }
+}
+[id$="lbfGNL_KAYITYOK"] {
+    > div {
+        display: none;
     }
 }
 

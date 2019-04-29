@@ -1,4 +1,14 @@
-.ems-member-favorite {}
+.ems-member-favorite {
+    &.no-result {
+        padding-top: 0;
+        .ems-message-favorite {
+            display: flex;
+        }
+        .selected-action {
+            display: none;
+        }
+    }
+}
 
 .ems-grid-table-favorite {
     > .ems-grid-row {

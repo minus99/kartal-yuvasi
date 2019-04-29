@@ -64,6 +64,9 @@
 %header-mods-sub-ready {
     display: block;
 }
+%header-mods-animate {
+    position: initial;
+}
 %header-mods-sub-animate {
     pointer-events: auto;
     transform: scale(1,1);

@@ -36,6 +36,7 @@
     }
 
     &-animate {
+        @extend %header-mods-animate;
         .mini-search-overlay {
             @extend %header-mods-sub-overlay;
         }

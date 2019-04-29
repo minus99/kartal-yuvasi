@@ -1,4 +1,10 @@
-.ems-member-coupon {}
+.ems-member-coupon {
+    &.no-result {
+        .ems-message-coupon {
+            display: flex;
+        }
+    }
+}
 
 .coupon-tab {
     margin: 15px 10px 0 0;

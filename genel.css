@@ -220,6 +220,10 @@ ul:not(.ul-list) {
   display: none;
 }
 
+.ems-link {
+  text-decoration: underline;
+}
+
 .ems-overlay {
   display: none;
   content: "";
@@ -267,6 +271,31 @@ ul:not(.ul-list) {
 
 .ems-section-wrapper:empty {
   display: none !important;
+}
+
+.ems-message {
+  background: #eee;
+  font-family: fira;
+  font-size: 15px;
+  min-height: 230px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ems-message p {
+  margin: 0;
+}
+
+.ems-message .i86 {
+  margin-bottom: 6px;
+  animation: animation-03 .5s;
+}
+
+.ems-message .i86 svg {
+  font-size: 86px;
 }
 
 .ems-flex {
@@ -470,13 +499,19 @@ table {
   padding-bottom: 12px;
 }
 
-[id$="lbfGNL_KAYITYOK"] {
+[id$="lbfGNL_KAYITYOK"],
+[id$="lbfUYM_KAYITYOK_MESAJ"] {
   display: none;
   margin-top: 20px;
 }
 
-[id$="lbfGNL_KAYITYOK"]:not(:empty) {
+[id$="lbfGNL_KAYITYOK"]:not(:empty),
+[id$="lbfUYM_KAYITYOK_MESAJ"]:not(:empty) {
   display: block;
+}
+
+[id$="lbfGNL_KAYITYOK"] > div {
+  display: none;
 }
 
 .anaBody > div[ondblclick][style] {
@@ -528,6 +563,18 @@ table {
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+@keyframes animation-03 {
+  0% {
+    transform: scale(0.7);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
@@ -1169,6 +1216,17 @@ textarea {
 .mini-cart-sub .sub-header {
   margin-left: -20px;
   margin-right: -20px;
+}
+
+.kutuSepet_urunYok {
+  display: block;
+  margin-top: 20px;
+}
+
+.basket-empty .kutuSepet_icerik,
+.basket-empty .cart-prd-total,
+.basket-empty .cart-prd-page-url {
+  display: none;
 }
 
 .kutuSepet_icerik {
@@ -4336,6 +4394,10 @@ ul.product-list-grid > li {
   display: block;
 }
 
+.basket-empty .ems-step0 .ems-order-cart-grid {
+  display: none;
+}
+
 .ems-order-delivery .ems-order-cart-grid > .ga1 {
   display: none;
 }
@@ -4819,6 +4881,24 @@ a.btnAdresEkle,
   margin-top: 5px;
 }
 
+.pageUyeBasarili {
+  padding-top: 40px;
+  font-family: fira;
+  font-size: 15px;
+}
+
+.pageHeaderUyeBasarili {
+  display: none;
+}
+
+.ems-member-order.no-result {
+  padding-top: 0;
+}
+
+.ems-member-order.no-result .ems-message-order {
+  display: flex;
+}
+
 .ems-grid-table-order > .ems-grid-row {
   grid-template-columns: 1fr;
   grid-gap: 10px;
@@ -4930,6 +5010,14 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
   max-width: 178px;
 }
 
+.ems-member-address.no-result .ems-message-address {
+  display: flex;
+}
+
+.ems-member-coupon.no-result .ems-message-coupon {
+  display: flex;
+}
+
 .coupon-tab {
   margin: 15px 10px 0 0;
 }
@@ -4956,6 +5044,18 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
 .ems-grid-table-coupon .ems-grid-label {
   display: block;
   font-weight: 700;
+}
+
+.ems-member-favorite.no-result {
+  padding-top: 0;
+}
+
+.ems-member-favorite.no-result .ems-message-favorite {
+  display: flex;
+}
+
+.ems-member-favorite.no-result .selected-action {
+  display: none;
 }
 
 .ems-grid-table-favorite > .ems-grid-row {
@@ -5236,6 +5336,9 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     }
     .mini-user-ready .mini-user-sub, .mini-cart-ready .mini-cart-sub, .mini-lang-ready .mini-lang-sub, .mini-search-ready .mini-search-sub {
       display: block;
+    }
+    .mini-user-animate, .mini-cart-animate, .mini-lang-animate, .mini-search-animate {
+      position: initial;
     }
     .mini-user-animate .mini-user-sub, .mini-cart-animate .mini-cart-sub, .mini-lang-animate .mini-lang-sub, .mini-search-animate .mini-search-sub {
       pointer-events: auto;
