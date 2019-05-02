@@ -1367,6 +1367,8 @@ textarea {
   display: none;
   font-family: fira;
   font-size: 15px;
+  margin-left: -55px;
+  margin-right: -20px;
 }
 
 .mini-search-ready .mini-search {
@@ -1752,6 +1754,10 @@ textarea {
   padding: 18px 20px 19px;
   font-size: 18px;
   font-weight: 700;
+}
+
+.emos-confirm {
+  max-width: 90%;
 }
 
 /**
@@ -4049,6 +4055,13 @@ a.btnsepeteAt {
   padding-bottom: 40px;
 }
 
+.ems-prd-list-count {
+  margin-top: 20px;
+  padding: 0 20px;
+  font-family: fira;
+  font-size: 15px;
+}
+
 .primary-sub-categories {
   background: #000;
   color: #fff;
@@ -4069,8 +4082,8 @@ a.btnsepeteAt {
 }
 
 .top-buttons {
-  padding: 20px;
-  margin-bottom: -20px;
+  margin-top: 20px;
+  padding: 0 20px;
 }
 
 .top-buttons a {
@@ -4211,6 +4224,23 @@ ul.product-list-grid > li {
   padding-top: 40px;
 }
 
+.ems-page-search .pageArama,
+.ems-page-search [id$="validatingForm"],
+.ems-page-search .tableTitleArama {
+  display: none;
+}
+
+.ems-page-search .ems-prd-list-count {
+  display: block;
+}
+
+.ems-page-search.no-result .ems-page-search-grid > .ga1,
+.ems-page-search.no-result .ems-page-search-grid > .ga2,
+.ems-page-search.no-result .ems-prd-list-count,
+.ems-page-search.no-result ul.product-list-grid {
+  display: none;
+}
+
 .ems-page-hierarchy-grid > .ga2 {
   background: #000;
   color: #fff;
@@ -4236,6 +4266,312 @@ ul.product-list-grid > li {
   font-weight: 700;
   padding: 20px 0;
   border-bottom: 1px solid #c9c9c9;
+}
+
+.ems-page-dealer-body header,
+.ems-page-dealer-body footer {
+  display: none;
+}
+
+.page-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid red;
+  line-height: 1;
+}
+
+.page-nav > a {
+  padding: 20px;
+}
+
+.page-nav .back {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.page-nav .back i {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.page-nav .view i {
+  font-size: 28px;
+}
+
+.page-nav .view-list {
+  display: none;
+}
+
+.page-top-desc {
+  display: none;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.or {
+  display: flex;
+  align-items: center;
+  color: yellow;
+  font-weight: 500;
+  margin: 30px 0;
+}
+
+.or::after {
+  content: "";
+  border-top: 1px solid orange;
+  flex: 1;
+}
+
+.or > span {
+  padding-right: 20px;
+}
+
+.allow-share-location-btn {
+  display: none;
+  margin-bottom: 20px;
+  max-width: 270px;
+}
+
+.mod-service-list-header {
+  box-shadow: 0 2px 4px 0 #dddddd;
+}
+
+.mod-service-list-header .ems-form-inner {
+  display: flex;
+  padding: 12px;
+}
+
+.mod-service-list-header .ems-field + .ems-field {
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+.mod-service-list-header .select {
+  width: 100%;
+}
+
+.mod-service-list-body {
+  padding: 10px 25px;
+}
+
+.mod-service-list-body .or {
+  display: none;
+}
+
+#Map.map {
+  width: 100%;
+  height: 0;
+}
+
+body.view-map #Map.map {
+  height: calc(100vh - 70px);
+}
+
+.back-btn,
+.toggle-map {
+  display: none;
+}
+
+.servis_bilgi {
+  display: none;
+}
+
+.dealer-result {
+  font-size: 12px;
+  color: green;
+  padding: 10px 0;
+}
+
+.pServisListe {
+  position: relative;
+  padding: 10px 0 40px;
+  border-top: 1px solid blue;
+}
+
+.pServisListe > *:not(.divServisListe_FirmaAdi):not(.divServisListe_Adres):not(.divServisListe_Koordinat):not(.distance-service) {
+  display: none;
+}
+
+.divServisListe_FirmaAdi {
+  font-weight: 500;
+  padding-right: 65px;
+}
+
+.divServisListe_Adres {
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.divServisListe_Koordinat > a [class^="view-"] {
+  display: none;
+}
+
+.divServisListe_Koordinat > a[rel] {
+  margin-top: 8px;
+  padding: 5px 0;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.divServisListe_Koordinat > a[rel] .view-point {
+  display: inline;
+}
+
+.divServisListe_Koordinat > a.show-map-btn {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
+  color: purple;
+  background: red;
+}
+
+.divServisListe_Koordinat > a.show-map-btn .view-navigation {
+  display: inline;
+}
+
+.distance-service {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 12px;
+  color: purple;
+}
+
+.distance-service i {
+  font-style: normal;
+}
+
+.selected-address-detail {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: turquoise;
+  box-shadow: 0 -2px 4px 0 #dddddd;
+}
+
+.selected-address-detail .pServisListe {
+  padding: 25px 25px 50px;
+  border-top: none;
+}
+
+.selected-address-detail .divServisListe_Koordinat > a[rel] {
+  display: none;
+}
+
+.selected-address-detail .divServisListe_Koordinat > a.show-map-btn {
+  right: 10px;
+}
+
+.map .title {
+  margin-bottom: 10px;
+}
+
+.map .title ~ p {
+  margin-bottom: 10px;
+}
+
+.map .view-point {
+  display: none;
+}
+
+body.view-map .view-list,
+body.view-map #Map.map,
+body.view-map .selected-address-detail {
+  display: block;
+}
+
+body.view-map .view-map,
+body.view-map .page-top-desc,
+body.view-map .mod-service-list-header .ems-form-inner,
+body.view-map .mod-service-list-body {
+  display: none;
+}
+
+.no-result .page-nav .view {
+  display: none;
+}
+
+.no-result .dealer-result {
+  display: none;
+}
+
+/*
+ * Media Query
+ ========================================================================== */
+@supports (grid-area: auto) {
+  @media screen and (min-width: 960px) {
+    .ems-page-dealer-body header,
+    .ems-page-dealer-body footer {
+      display: block;
+    }
+    .mod-service-list-inner-wrp {
+      display: grid;
+      grid-template-columns: 40px minmax(auto, 1fr) 40px 325px 40px;
+      grid-template-rows: minmax(0, auto);
+      grid-template-areas: ". r1 . r2 ." ". r1 . r3 .";
+      margin-bottom: 40px;
+    }
+    .mod-service-list-header {
+      grid-area: r2;
+    }
+    .address-detail {
+      grid-area: r1;
+    }
+    .mod-service-list-body {
+      grid-area: r3;
+    }
+    .page-nav {
+      border-bottom: none;
+    }
+    .page-nav > a {
+      padding: 10px 0;
+    }
+    .page-nav .back {
+      font-size: 30px;
+      pointer-events: none;
+    }
+    .page-nav .back i {
+      display: none;
+    }
+    .page-nav .view {
+      display: none;
+    }
+    .mod-service-list-header {
+      box-shadow: none;
+    }
+    .mod-service-list-header .page-top-desc {
+      display: block !important;
+    }
+    .mod-service-list-header .ems-form-inner {
+      display: flex !important;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .mod-service-list-body {
+      display: block !important;
+      padding: 0;
+    }
+    .mod-service-list-body .or {
+      display: flex;
+    }
+    .allow-share-location-btn {
+      display: block;
+    }
+    .address-detail-inner {
+      position: sticky;
+      top: 70px;
+    }
+    #Map.map {
+      display: block;
+      height: calc(100vh - 70px);
+    }
+  }
 }
 
 .ems-page-order .block2 {
@@ -4808,10 +5144,16 @@ a.btnAdresEkle,
   width: 50px;
 }
 
-.result-content [class*="icon-"], .result-content .icon {
+.result-content [class*="icon"] {
   margin-top: 80px;
-  background: #fff;
   font-size: 70px;
+  color: #000;
+  background: #fff;
+}
+
+.result-content .icon-error {
+  color: #fff;
+  background: #c5242b;
 }
 
 .result-content .rtitle {
@@ -5597,6 +5939,10 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
       margin-left: 0;
       margin-right: 52px;
     }
+    .mini-search .no-result {
+      margin-left: 0;
+      margin-right: 0;
+    }
     .popular-search-words {
       margin-left: 0;
     }
@@ -6151,6 +6497,10 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     }
     .ems-page-product-list-grid > .ga3 {
       grid-area: ga3;
+    }
+    .ems-prd-list-count {
+      margin-top: 40px;
+      padding: 0;
     }
     ul.product-list-grid {
       margin-top: 30px;

@@ -1,0 +1,302 @@
+.ems-page-dealer-body {
+    header, 
+    footer {
+        display: none;
+    }
+}
+
+.page-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid red;
+    line-height: 1;
+    > a {
+        padding: 20px;
+    }
+    .back {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.7;
+        i {
+            font-size: 14px;
+            margin-right: 5px;
+        }
+    }
+    .view {
+        i {
+            font-size: 28px;
+        }
+        &-list {
+            display: none;
+        }
+    }
+}
+
+.page-top-desc {
+    display: none;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.or {
+    display: flex;
+    align-items: center;
+    color: yellow;
+    font-weight: 500;
+    margin: 30px 0;
+    &::after {
+        content: "";
+        border-top: 1px solid orange;
+        flex: 1;
+    }
+    > span {
+        padding-right: 20px;
+    }
+}
+
+.allow-share-location-btn {
+    display: none;
+    margin-bottom: 20px;
+    max-width: 270px;
+}
+
+.mod-service-list-header {
+    box-shadow: 0 2px 4px 0 #dddddd;
+    .ems-form-inner {
+        display: flex;
+        padding: 12px;
+    }
+    .ems-field + .ems-field {
+        margin-top: 0;
+        margin-left: 10px;
+    }
+    .select {
+        width: 100%;
+    }
+}
+
+.mod-service-list-body {
+    padding: 10px 25px;
+    .or {
+        display: none;
+    }
+}
+
+#Map.map {
+    width: 100%;
+    height: 0;
+    body.view-map & {
+        height: calc(100vh - 70px);
+    }
+}
+.back-btn,
+.toggle-map {
+    display: none;
+}
+
+.servis_bilgi {
+    display: none;
+}
+.dealer-result {
+    font-size: 12px;
+    color: green;
+    padding: 10px 0;
+}
+.pServisListe {
+    position: relative;
+    padding: 10px 0 40px;
+    border-top: 1px solid blue;
+    > *:not(.divServisListe_FirmaAdi):not(.divServisListe_Adres):not(.divServisListe_Koordinat):not(.distance-service) {
+        display: none;
+    }
+}
+.divServisListe_FirmaAdi {
+    font-weight: 500;
+    padding-right: 65px;
+}
+.divServisListe_Adres {
+    margin-top: 10px;
+    font-size: 12px;
+}
+.divServisListe_Koordinat {
+    > a {
+        [class^="view-"] {
+            display: none;
+        }
+        &[rel] {
+            margin-top: 8px;
+            padding: 5px 0;
+            font-size: 12px;
+            font-weight: 700;
+            .view-point {
+                display: inline;
+            }
+        }
+        &.show-map-btn {
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+            padding: 5px 10px;
+            font-size: 12px;
+            color: purple;
+            background: red;
+            .view-navigation {
+                display: inline;
+            }
+        }
+    }
+}
+.distance-service {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 12px;
+    color: purple;
+    i {
+        font-style: normal; 
+    }
+}
+.selected-address-detail {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: turquoise;
+    box-shadow: 0 -2px 4px 0 #dddddd;
+    .pServisListe {
+        padding: 25px 25px 50px;
+        border-top: none;
+    }
+    .divServisListe_Koordinat {
+        > a {
+            &[rel] {
+                display: none;
+            }
+            &.show-map-btn {
+                right: 10px;
+            }
+        }
+    }
+}
+
+.map {
+    .title {
+        margin-bottom: 10px;
+        ~ p {
+            margin-bottom: 10px;
+        }
+    }
+    .view-point {
+        display: none;
+    }
+}
+
+
+body.view-map {
+    .view-list,
+    #Map.map,
+    .selected-address-detail {
+        display: block;
+    }
+    .view-map,
+    .page-top-desc,
+    .mod-service-list-header .ems-form-inner,
+    .mod-service-list-body {
+        display: none;
+    }
+}
+
+.no-result {
+    .page-nav {
+        .view {
+            display: none;
+        }
+    }
+    .dealer-result {
+        display: none;
+    }
+}
+
+/*
+ * Media Query
+ ========================================================================== */
+ @supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        .ems-page-dealer-body {
+            header,
+            footer {
+                display: block;
+            }
+        }
+
+        .mod-service-list-inner-wrp {
+            display: grid;
+            grid-template-columns: 40px minmax(auto, 1fr) 40px 325px 40px;
+            grid-template-rows: minmax(0, auto);
+            grid-template-areas: ". r1 . r2 ." ". r1 . r3 .";
+            margin-bottom: 40px;
+        }
+        .mod-service-list-header {
+            grid-area: r2;
+        }
+        .address-detail {
+            grid-area: r1;
+        }
+        .mod-service-list-body {
+            grid-area: r3;
+        }
+
+        .page-nav {
+            border-bottom: none;
+            > a {
+                padding: 10px 0;
+            }
+            .back {
+                font-size: 30px;
+                pointer-events: none;
+                i {
+                    display: none;
+                }
+            }
+            .view {
+                display: none;
+            }
+        }
+
+        .mod-service-list-header {
+            box-shadow: none;
+            .page-top-desc {
+                display: block !important;
+            }
+            .ems-form-inner {
+                display: flex !important;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+        
+        .mod-service-list-body {
+            display: block !important;
+            padding: 0;
+            .or {
+                display: flex;
+            }
+        }
+
+        .allow-share-location-btn {
+            display: block;
+        }
+
+        .address-detail-inner {
+            position: sticky;
+            top: 70px;
+        }
+
+        #Map.map {
+            display: block;
+            height: calc(100vh - 70px);
+        }
+    }
+}

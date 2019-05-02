@@ -29,6 +29,11 @@
         margin-right: 52px;
     }
 
+    .no-result {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     &-ready {
         .mini-search-sub {
             @extend %header-mods-sub-ready;

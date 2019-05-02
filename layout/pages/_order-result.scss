@@ -18,10 +18,15 @@
     .rlogo {
         width: 50px;
     }
-    [class*="icon-"] {
+    [class*="icon"] {
         margin-top: 80px;
-        background: $color2;
         font-size: 70px;
+        color: $color1;
+        background: $color2;
+    }
+    .icon-error {
+        color: $color2;
+        background: $color4;
     }
     .rtitle {
         font-size: 22px;

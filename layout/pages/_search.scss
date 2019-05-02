@@ -1,1 +1,20 @@
-.ems-page-search {}
+.ems-page-search {
+    .pageArama,
+    [id$="validatingForm"],
+    .tableTitleArama {
+        display: none;
+    }
+
+    .ems-prd-list-count {
+        display: block;
+    }
+
+    &.no-result {
+        .ems-page-search-grid > .ga1,
+        .ems-page-search-grid > .ga2,
+        .ems-prd-list-count,
+        ul.product-list-grid {
+            display: none;
+        }
+    }
+}

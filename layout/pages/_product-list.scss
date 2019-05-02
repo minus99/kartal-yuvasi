@@ -2,6 +2,13 @@
     padding-bottom: 40px;
 }
 
+.ems-prd-list-count {
+    margin-top: 20px;
+    padding: 0 20px;
+    font-family: $font2;
+    font-size: 15px;
+}
+
 .primary-sub-categories {
     background: $color1;
     color: $color2;
@@ -19,8 +26,8 @@
 }
 
 .top-buttons {
-    padding: 20px;
-    margin-bottom: -20px;
+    margin-top: 20px;
+    padding: 0 20px;
     a {
         border: none;
         line-height: normal;
