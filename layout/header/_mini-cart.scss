@@ -51,11 +51,12 @@
     }
 }
 
-.kutuSepet_urunYok {
-    display: block;
-    margin-top: 20px;
-}
 .basket-empty {
+    .kutuSepet_urunYok {
+        display: block !important;
+        margin-top: 20px;
+    }
+    
     .kutuSepet_icerik,
     .cart-prd-total,
     .cart-prd-page-url {

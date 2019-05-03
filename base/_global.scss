@@ -137,6 +137,7 @@ ul:not(.ul-list) {
 
     //MESSAGE
     &-message {
+        position: relative;
         background: $color3;
         font-family: $font2;
         font-size: 15px;

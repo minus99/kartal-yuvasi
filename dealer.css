@@ -1,0 +1,136 @@
+.ems-page-dealer-grid > .ga1 {
+  padding-top: 20px;
+  padding-bottom: 85px;
+}
+
+.page-top-title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.page-top-desc {
+  font-family: fira;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.dealer-form .ems-field {
+  width: calc(50% - 5px);
+}
+
+.or {
+  font-family: fira;
+  font-size: 13px;
+  color: #515151;
+}
+
+.servisIcerik {
+  margin-top: 35px;
+}
+
+.servis_bilgi {
+  font-family: fira;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.secIlce:not(:empty)::before {
+  content: "- ";
+}
+
+.pServisListe {
+  position: relative;
+  border-top: 1px solid #ccc;
+  padding: 15px 10px;
+  font-family: fira;
+  font-size: 15px;
+}
+
+.pServisListe > * {
+  display: none;
+}
+
+.divServisListe_FirmaAdi {
+  display: block;
+  font-weight: 500;
+}
+
+.divServisListe_Adres {
+  display: block;
+  margin-top: 15px;
+}
+
+.divServisListe_Telefon {
+  display: block;
+  margin-top: 15px;
+  color: #999;
+}
+
+.divServisListe_Koordinat a[rel] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+}
+
+.divServisListe_Koordinat a[rel] > * {
+  display: none;
+}
+
+.show-map-btn {
+  display: none;
+}
+
+.address-detail {
+  display: none;
+}
+
+.address-detail-inner {
+  position: sticky;
+  top: 130px;
+}
+
+.address-detail-inner .back-btn,
+.address-detail-inner .toggle-map,
+.address-detail-inner .left-column {
+  display: none;
+}
+
+#Map.map {
+  height: 600px;
+}
+
+@supports (grid-area: auto) {
+  @media screen and (min-width: 960px) {
+    .ems-page-dealer-grid > .ga1 {
+      padding-top: 50px;
+      padding-bottom: 60px;
+    }
+    .mod-service-list-grid {
+      grid-template-columns: 1fr 380px 20px minmax(auto, 780px) 1fr;
+      grid-template-rows: minmax(0, auto);
+      grid-template-areas: ". ga1 . ga2 ." ". ga3 . ga2 .";
+    }
+    .mod-service-list-grid > .mod-service-list-header {
+      grid-area: ga1;
+    }
+    .mod-service-list-grid > .address-detail {
+      grid-area: ga2;
+    }
+    .mod-service-list-grid > .mod-service-list-body {
+      grid-area: ga3;
+    }
+    .page-top-title {
+      margin-top: 0;
+    }
+    .divServisListe_Koordinat {
+      display: block;
+    }
+    .address-detail {
+      display: block;
+    }
+  }
+}
