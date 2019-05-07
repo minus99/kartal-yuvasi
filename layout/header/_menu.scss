@@ -1,5 +1,6 @@
 .menu {
     display: none;
+    flex-direction: column;
     position: fixed;
     left: 0;
     top: 0;
@@ -69,7 +70,7 @@
     }
 
     .lvl-1 {
-        max-height: calc(100% - 250px);
+        max-height: calc(100% - 220px);
         overflow: auto;
     }
 
@@ -118,7 +119,7 @@
 
     &-ready {
         .menu {
-            display: block;
+            display: flex;
         }
     }
 

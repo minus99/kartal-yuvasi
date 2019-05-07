@@ -1,3 +1,63 @@
+//EMOS CONFIRM
+.emos-confirm {
+    max-width: calc(100% - 20px);
+}
+
+//JQUERY CONFIRM
+.jconfirm {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.jconfirm-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+.jconfirm-box-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 20px);
+    transition: transform;
+}
+.jconfirm-box {
+    position: relative;
+    background: $color2;
+    outline: none;
+}
+.jconfirm-closeIcon {
+    position: absolute;
+    right: 20px;
+    top: 14px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: url(/images/frontend/close.svg);
+
+    .btnMinPpCl {
+        display: none;
+    }
+}
+.jconfirm-content-pane {
+    transition-property: height;
+}
+.jconfirm-content {
+    height: 100%;
+    min-height: 550px;
+}
+.jconfirm-title-c {
+    display: none;
+}
+
+//CUSTOM POPUP
 .sub-close {
     position: absolute;
     right: 14px;
@@ -12,6 +72,22 @@
     font-weight: 700;
 }
 
-.emos-confirm {
-    max-width: 90%;
+.popupTitleDefault {
+    position: sticky;
+    top: 0;
+    background: #eee;
+    padding: 18px 60px 19px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+    min-height: 60px;
+}
+div[class$="icerik"] {
+    > span {
+        text-align: left;
+        padding: 20px;
+    }
+}
+div[class$="Yazdir"] {
+    display: none;
 }

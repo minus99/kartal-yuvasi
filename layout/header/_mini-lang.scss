@@ -1,32 +1,77 @@
-.mini-lang {
-    position: relative;
-    &-sub {
+ul.menu-mini-lang {
+    margin-top: auto;
+    li {
         > a {
-            display: inline-block;
-            width: 50%;
-            padding: 12px 25px;
-            border: 1px solid transparent;
-            text-align: center;
-            &.selected {
-                border-color: $color5;
-            }
-            b {
-                display: block;
-            }
-            img {
-                display: none;
-            }
+            border-bottom: none;
+            border-top: 1px solid $color3;
+        }
+    }
+    .mini-lang {
+        display: block !important;
+        &-sub {
+            padding: 10px 20px;
+        }
+        .ems-form {
+            margin-top: 0;
+        }
+    }
+    .sub-header {
+        display: none;
+    }
+}
+
+.mini-lang {
+    &-info {
+        position: relative;
+        .icon-triangle-b {
+            transition: transform .32s ease;
+        }
+        > span {
+            @extend %header-mods-title;
         }
     }
 
-    &-append {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        padding: 20px;
-        .mini-lang {
-            display: block !important;
+    $p: 40px;
+    &-sub {
+        @extend %header-mods-sub;
+        max-width: 410px;
+        padding: $p;
+        > a {
+            display: block;
+            width: auto;
+        }
+    }
+    
+    .sub-header {
+        margin-top: -$p;
+        margin-right: -$p;
+        margin-left: -$p;
+    }
+
+    .ems-form {
+        margin-top: 40px;
+    }
+
+    &-ready {
+        .mini-lang-sub {
+            @extend %header-mods-sub-ready;
+        }
+    }
+
+    &-animate {
+        @extend %header-mods-animate;
+        .mini-lang-info {
+            z-index: 10;
+            .icon-triangle-b {
+                @include turn-mirror;
+            }
+        }
+        
+        .mini-lang-overlay {
+            @extend %header-mods-sub-overlay;
+        }
+        .mini-lang-sub {
+            @extend %header-mods-sub-animate;
         }
     }
 }

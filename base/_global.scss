@@ -85,7 +85,6 @@ ul:not(.ul-list) {
     //OVERLAY
     &-overlay {
         display: none;
-        content: "";
         position: fixed;
         left: 0;
         top: 0;
@@ -147,14 +146,26 @@ ul:not(.ul-list) {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        p {
-            margin: 0;
-        }
-        .i86 {
+        > svg {
+            font-size: 86px;
             margin-bottom: 6px;
             animation: animation-03 .5s;
-            svg {
-                font-size: 86px;
+        }
+        > p {
+            margin: 0;
+        }
+
+        &-horizontal {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+            min-height: auto;
+            > svg {
+                font-size: 32px;
+                margin: -3px 5px 0 -10px;
+            }
+            > p {
+                flex: 1;
             }
         }
     }

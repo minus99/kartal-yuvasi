@@ -24,8 +24,12 @@
   color: #515151;
 }
 
+.dealer-stock-information {
+  margin-top: 50px;
+}
+
 .servisIcerik {
-  margin-top: 35px;
+  margin-top: 30px;
 }
 
 .servis_bilgi {
@@ -125,6 +129,9 @@
     }
     .page-top-title {
       margin-top: 0;
+    }
+    .dealer-stock-information {
+      margin-top: 30px;
     }
     .divServisListe_Koordinat {
       display: block;

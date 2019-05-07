@@ -29,10 +29,10 @@
     .ems-obj-logon {
         .sub-header {
             margin-top: -$pv;
-            margin-left: -$ph;
             margin-right: -$ph;
-            padding-left: 40px;
-            padding-right: 40px;
+            margin-left: -$ph;
+            padding-left: $ph;
+            padding-right: $ph;
             > .ga2 {
                 padding-right: 20px;
             }
