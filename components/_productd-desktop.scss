@@ -30,3 +30,35 @@
         }
     }
 }
+
+//added to cart
+.mini-product-info {
+    $p: 30px;
+    &-sub {
+        @extend %header-mods-sub;
+        max-width: 600px;
+        padding: $p;
+        bottom: auto;
+    }
+    .sub-header {
+        margin: #{-$p} #{-$p} #{$p} #{-$p};
+    }
+    &-ready {
+        .mini-product-info-sub {
+            @extend %header-mods-sub-ready;
+        }
+    }
+    &-animate {
+        .mini-product-info-sub {
+            @extend %header-mods-sub-animate;
+        }
+    }
+}
+.added-prd {
+    .prm-content {
+        padding-left: 30px;
+    }
+}
+.suggest-prd {
+    display: block;
+}

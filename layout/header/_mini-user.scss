@@ -28,24 +28,22 @@
     
     .ems-obj-logon {
         .sub-header {
-            margin-top: -$pv;
-            margin-right: -$ph;
-            margin-left: -$ph;
+            margin: #{-$pv} #{-$ph} 20px #{-$ph};
             padding-left: $ph;
             padding-right: $ph;
-            > .ga2 {
-                padding-right: 20px;
-            }
         }
     }
 
     .kutuUyeGiris_profilFoto {
         display: inline-block !important;
-        margin-right: 15px;
+        padding-right: 15px;
         img {
             border-radius: 100%;
             max-width: 60px;
         }
+    }
+    .kutuUyeGiris_profilAd {
+        padding-right: 20px;
     }
     a.btnKutuLogout {
         @extend %btn-reset;
@@ -55,7 +53,6 @@
         margin-top: 5px;
     }
     .mini-user-links {
-        margin-top: 20px;
         font-family: $font2;
         font-size: 18px;
         a {

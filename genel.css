@@ -939,6 +939,35 @@ textarea {
   align-items: center;
 }
 
+.mini-product-info-sub {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  background: #fff;
+  color: #000;
+  opacity: 0;
+  transform: translateY(50%);
+  transition: all 0.12s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  /* easeInExpo */
+}
+
+.mini-product-info-ready .mini-product-info-holder {
+  display: block;
+}
+
+.mini-product-info-animate .mini-product-info-sub {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  /* easeOutExpo */
+}
+
+.mini-product-info-animate .mini-product-info-overlay {
+  display: block;
+}
+
 .menu {
   display: none;
   flex-direction: column;
@@ -1141,13 +1170,7 @@ ul.menu-mini-lang .sub-header {
 }
 
 .mini-lang .sub-header {
-  margin-top: -40px;
-  margin-right: -40px;
-  margin-left: -40px;
-}
-
-.mini-lang .ems-form {
-  margin-top: 40px;
+  margin: -40px -40px 40px -40px;
 }
 
 .mini-lang-animate .mini-lang-info {
@@ -1177,25 +1200,23 @@ ul.menu-mini-lang .sub-header {
 }
 
 .mini-user .ems-obj-logon .sub-header {
-  margin-top: -30px;
-  margin-right: -40px;
-  margin-left: -40px;
+  margin: -30px -40px 20px -40px;
   padding-left: 40px;
   padding-right: 40px;
 }
 
-.mini-user .ems-obj-logon .sub-header > .ga2 {
-  padding-right: 20px;
-}
-
 .mini-user .kutuUyeGiris_profilFoto {
   display: inline-block !important;
-  margin-right: 15px;
+  padding-right: 15px;
 }
 
 .mini-user .kutuUyeGiris_profilFoto img {
   border-radius: 100%;
   max-width: 60px;
+}
+
+.mini-user .kutuUyeGiris_profilAd {
+  padding-right: 20px;
 }
 
 .mini-user a.btnKutuLogout {
@@ -1206,7 +1227,6 @@ ul.menu-mini-lang .sub-header {
 }
 
 .mini-user .mini-user-links {
-  margin-top: 20px;
   font-family: fira;
   font-size: 18px;
 }
@@ -1253,8 +1273,7 @@ ul.menu-mini-lang .sub-header {
 }
 
 .mini-cart-sub .sub-header {
-  margin-left: -20px;
-  margin-right: -20px;
+  margin: 0 -20px;
 }
 
 .basket-empty .kutuSepet_urunYok {
@@ -1357,10 +1376,6 @@ ul.menu-mini-lang .sub-header {
 
 .cart-prd-page-url .lnkSepet {
   display: block;
-}
-
-.mini-search {
-  display: none;
 }
 
 .mini-search-sub {
@@ -3006,7 +3021,7 @@ button.swiper-pagination-bullet {
   min-height: 411px;
 }
 
-.uniform-image {
+.uniform-image-container {
   position: absolute;
   max-width: 200px;
   left: 50%;
@@ -3781,6 +3796,61 @@ button.swiper-pagination-bullet {
 
 a.btnsepeteAt {
   width: 100%;
+}
+
+.mini-product-info-sub {
+  padding: 20px;
+}
+
+.mini-product-info .sub-header {
+  margin: -20px -20px 20px -20px;
+}
+
+.added-prd .prm-media-holder {
+  position: relative;
+  flex-basis: 100px;
+}
+
+.added-prd .prm-media-holder svg {
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  font-size: 18px;
+  animation: animation-03 .5s ease;
+}
+
+.added-prd .prm-content {
+  padding-left: 15px;
+}
+
+.added-prd .prm-title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.added-prd .prm-btns {
+  margin-top: 20px;
+}
+
+.added-prd .prm-btns > a {
+  width: calc(50% - 5px);
+}
+
+.added-prd .prm-btns > a + a {
+  margin-left: 10px;
+}
+
+.suggest-prd {
+  display: none;
+  border-top: 1px solid #f5f5f5;
+  margin-top: 20px;
+}
+
+.suggest-prd .prm-title {
+  font-family: fira;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 20px 0;
 }
 
 .tabloTabBtnAdim {
@@ -5468,7 +5538,7 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
       padding: 0 10px;
       cursor: pointer;
     }
-    .mini-lang-sub, .mini-user-sub, .mini-cart-sub, .mini-search-sub {
+    .mini-lang-sub, .mini-user-sub, .mini-cart-sub, .mini-search-sub, .mini-product-info-sub {
       display: none;
       position: fixed;
       right: 0;
@@ -5489,13 +5559,13 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
       transition: all 0.12s cubic-bezier(0.55, 0.055, 0.675, 0.19);
       /* easeInCubic */
     }
-    .mini-lang-ready .mini-lang-sub, .mini-user-ready .mini-user-sub, .mini-cart-ready .mini-cart-sub, .mini-search-ready .mini-search-sub {
+    .mini-lang-ready .mini-lang-sub, .mini-user-ready .mini-user-sub, .mini-cart-ready .mini-cart-sub, .mini-search-ready .mini-search-sub, .mini-product-info-ready .mini-product-info-sub {
       display: block;
     }
     .mini-lang-animate, .mini-user-animate, .mini-cart-animate, .mini-search-animate {
       position: initial;
     }
-    .mini-lang-animate .mini-lang-sub, .mini-user-animate .mini-user-sub, .mini-cart-animate .mini-cart-sub, .mini-search-animate .mini-search-sub {
+    .mini-lang-animate .mini-lang-sub, .mini-user-animate .mini-user-sub, .mini-cart-animate .mini-cart-sub, .mini-search-animate .mini-search-sub, .mini-product-info-animate .mini-product-info-sub {
       pointer-events: auto;
       transform: scale(1, 1);
       opacity: 1;
@@ -5822,6 +5892,9 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
       margin-top: 10px;
       text-align: left;
     }
+    .swiper-container {
+      width: 100%;
+    }
     .swiper-button-prev,
     .swiper-button-next {
       display: block;
@@ -5973,7 +6046,7 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
       min-height: 100%;
       background-size: 110%;
     }
-    .uniform-image {
+    .uniform-image-container {
       max-width: 285px;
       bottom: 50px;
     }
@@ -6183,6 +6256,20 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     .urunDetay_urunSecenek .dropdown-options > a {
       min-width: 46px;
       line-height: 32px;
+    }
+    .mini-product-info-sub {
+      max-width: 600px;
+      padding: 30px;
+      bottom: auto;
+    }
+    .mini-product-info .sub-header {
+      margin: -30px -30px 30px -30px;
+    }
+    .added-prd .prm-content {
+      padding-left: 30px;
+    }
+    .suggest-prd {
+      display: block;
     }
     .tabloTabBtnAdim {
       position: relative;

@@ -176,3 +176,68 @@
 a.btnsepeteAt {
     width: 100%;
 }
+
+//added to cart
+.mini-product-info {
+    $p: 20px;
+    &-sub {
+        @extend %footer-mods-sub;
+        padding: $p;
+    }
+    .sub-header {
+        margin: #{-$p} #{-$p} #{$p} #{-$p};
+    }
+    &-ready {
+        .mini-product-info-holder {
+            @extend %footer-mods-sub-ready;
+        }
+    }
+    &-animate {
+        .mini-product-info-overlay {
+            @extend %footer-mods-sub-overlay;
+        }
+        .mini-product-info-sub {
+            @extend %footer-mods-sub-animate;
+        }
+    }
+}
+.added-prd {
+    .prm-media-holder {
+        position: relative;
+        flex-basis: 100px;
+        svg {
+            position: absolute;
+            right: -5px;
+            top: -5px;
+            font-size: 18px;
+            animation: animation-03 .5s ease;
+        }
+    }
+    .prm-content {
+        padding-left: 15px;
+    }
+    .prm-title {
+        font-size: 22px;
+        font-weight: 700;
+    }
+    .prm-btns {
+        margin-top: 20px;
+        > a {
+            width: calc(50% - 5px);
+            + a {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+.suggest-prd {
+    display: none;
+    border-top: 1px solid $color10;
+    margin-top: 20px;
+    .prm-title {
+        font-family: $font2;
+        font-size: 15px;
+        font-weight: 700;
+        padding: 20px 0;
+    }
+}

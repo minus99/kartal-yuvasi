@@ -43,13 +43,7 @@ ul.menu-mini-lang {
     }
     
     .sub-header {
-        margin-top: -$p;
-        margin-right: -$p;
-        margin-left: -$p;
-    }
-
-    .ems-form {
-        margin-top: 40px;
+        margin: #{-$p} #{-$p} #{$p} #{-$p};
     }
 
     &-ready {

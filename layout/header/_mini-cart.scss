@@ -29,8 +29,7 @@
             }
         }
         .sub-header {
-            margin-left: -$ph;
-            margin-right: -$ph;
+            margin: 0 #{-$ph};
         }
     }
 

@@ -24,3 +24,29 @@
     display: flex;
     align-items: center;
 }
+
+//footer mods extend obj
+%footer-mods-sub {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+    background: $color2;
+    color: $color1;
+
+    opacity: 0;
+    transform: translateY(50%);
+    transition: all .12s cubic-bezier(0.950, 0.050, 0.795, 0.035); /* easeInExpo */
+}
+%footer-mods-sub-ready {
+    display: block;
+}
+%footer-mods-sub-animate {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all .3s cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
+}
+%footer-mods-sub-overlay {
+    display: block;
+}
