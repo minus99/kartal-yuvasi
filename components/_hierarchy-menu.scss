@@ -52,7 +52,7 @@
 
     > ul {
         display: none;
-        animation: show 0.5s;
+        animation: show 0.5s ease;
         position: absolute;
         z-index: 1;
         width: 100%;

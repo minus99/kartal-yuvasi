@@ -20,7 +20,7 @@
     &-content {
         > * {
             display: none;
-            animation: show 0.5s;
+            animation: show 0.5s ease;
             &.selected {
                 display: block;
             }
@@ -65,7 +65,7 @@
         .ems-tab-inner-content {
             display: none;
             margin-top: -$p;
-            animation: show 0.5s;
+            animation: show 0.5s ease;
         }
     }
 }

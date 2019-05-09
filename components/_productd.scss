@@ -156,18 +156,12 @@
 //add to cart
 .urunDetay_urunAdet {
     position: relative;
-    > input[type="text"] {
-        padding-right: calc(100% - 60px);
-        text-align: center;
+    .sStylerWrp_select {
         background: $color3;
     }
-    > span {
-        position: absolute;
-        left: 60px;
-        top: 0;
-        line-height: 44px;
-        font-family: $font2;
-        font-size: 15px;
+    [id$="txtURN_ADET"],
+    [id$="lblURN_ADET"] {
+        display: none;
     }
 }
 .urunDetay_btnSepeteAt {
@@ -185,7 +179,7 @@ a.btnsepeteAt {
         padding: $p;
     }
     .sub-header {
-        margin: #{-$p} #{-$p} #{$p} #{-$p};
+        margin: #{-$p} #{-$p} #{$p};
     }
     &-ready {
         .mini-product-info-holder {
@@ -239,5 +233,79 @@ a.btnsepeteAt {
         font-size: 15px;
         font-weight: 700;
         padding: 20px 0;
+    }
+}
+
+//size guide
+.mini-size-guide {
+    $p: 20px;
+    &-sub {
+        @extend %footer-mods-sub;
+        padding: $p;
+        height: 100%;
+        overflow: auto;
+    }
+    .sub-header {
+        margin: #{-$p} #{-$p} #{$p};
+    }
+    &-tab {
+        margin-top: 20px;
+    }
+    .ems-tab-header {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $color10;
+        justify-content: flex-start;
+    }
+
+    &-ready {
+        .mini-size-guide {
+            @extend %footer-mods-sub-ready;
+        }
+    }
+    &-animate {
+        .mini-size-guide-overlay {
+            @extend %footer-mods-sub-overlay;
+        }
+        .mini-size-guide-sub {
+            @extend %footer-mods-sub-animate;
+        }
+    }
+}
+
+.size-guide-table {
+    table {
+        table-layout: fixed;
+    }
+    tr {
+        &:nth-child(odd) {
+            td {
+                background: #f2f2f2;
+                &:nth-child(even) {
+                    background: #e5e5e5;
+                }
+            }
+        }
+    }
+    th,td {
+        padding: 10px 30px;
+        text-align: left;
+    }
+    th {
+        background: $color6;
+        color: $color2;
+        font-weight: 700;
+    }
+    td {
+        font-family: $font2;
+        font-size: 16px;
+        background: #fff;
+        &:nth-child(even) {
+            background: #f2f2f2;
+        }
+    }
+
+    + .size-guide-table {
+        margin-top: 40px;
     }
 }

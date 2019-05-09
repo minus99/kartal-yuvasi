@@ -115,7 +115,7 @@
     }
     .mod-service-list-grid {
       grid-template-columns: 1fr 380px 20px minmax(auto, 780px) 1fr;
-      grid-template-rows: minmax(0, auto);
+      grid-template-rows: max-content 1fr;
       grid-template-areas: ". ga1 . ga2 ." ". ga3 . ga2 .";
     }
     .mod-service-list-grid > .mod-service-list-header {

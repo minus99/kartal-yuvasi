@@ -67,15 +67,20 @@
 .sub-header {
     position: relative;
     background: $color3;
-    padding: 18px 20px 19px;
+    padding: 18px 60px 19px 20px;
     font-size: 18px;
     font-weight: 700;
+}
+
+.sub-desc {
+    font-family: $font2;
+    font-size: 15px;
 }
 
 .popupTitleDefault {
     position: sticky;
     top: 0;
-    background: #eee;
+    background: $color3;
     padding: 18px 60px 19px 20px;
     font-size: 18px;
     font-weight: 700;

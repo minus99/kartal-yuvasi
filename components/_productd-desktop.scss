@@ -2,11 +2,11 @@
     position: relative;
 
     grid-template-columns: 1fr 770px 20px 370px 1fr;
+    grid-template-rows: max-content 1fr;
     grid-template-areas:
     ". ga2 . ga1 ."
     ". ga2 . ga3 ."
     ". ga4 ga4 ga4 .";
-    grid-template-rows: max-content 1fr;
 
     @include setGridArea(1,4);
 }
@@ -38,10 +38,9 @@
         @extend %header-mods-sub;
         max-width: 600px;
         padding: $p;
-        bottom: auto;
     }
     .sub-header {
-        margin: #{-$p} #{-$p} #{$p} #{-$p};
+        margin: #{-$p} #{-$p} #{$p};
     }
     &-ready {
         .mini-product-info-sub {
@@ -55,10 +54,31 @@
     }
 }
 .added-prd {
+    .prm-media-holder {
+        flex-basis: 140px;
+    }
     .prm-content {
         padding-left: 30px;
     }
 }
 .suggest-prd {
     display: block;
+}
+
+//size guide
+.mini-size-guide {
+    &-sub {
+        @extend %header-mods-sub;
+        max-width: 910px;
+    }
+    &-ready {
+        .mini-size-guide-sub {
+            @extend %header-mods-sub-ready;
+        }
+    }
+    &-animate {
+        .mini-size-guide-sub {
+            @extend %header-mods-sub-animate;
+        }
+    }
 }

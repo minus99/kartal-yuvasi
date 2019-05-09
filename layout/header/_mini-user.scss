@@ -30,7 +30,6 @@
         .sub-header {
             margin: #{-$pv} #{-$ph} 20px #{-$ph};
             padding-left: $ph;
-            padding-right: $ph;
         }
     }
 
@@ -41,9 +40,6 @@
             border-radius: 100%;
             max-width: 60px;
         }
-    }
-    .kutuUyeGiris_profilAd {
-        padding-right: 20px;
     }
     a.btnKutuLogout {
         @extend %btn-reset;

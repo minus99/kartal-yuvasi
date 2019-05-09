@@ -149,7 +149,7 @@ ul:not(.ul-list) {
         > svg {
             font-size: 86px;
             margin-bottom: 6px;
-            animation: animation-03 .5s;
+            animation: animation-03 .5s ease;
         }
         > p {
             margin: 0;
@@ -283,6 +283,15 @@ table {
     display: table !important;
     border-collapse: collapse;
     width: 100%;
+}
+
+.table-overflow {
+    overflow: auto;
+    padding-bottom: 10px;
+    table {
+        width: auto;
+        min-width: 100%;
+    }
 }
 
 //datepicker fixer
