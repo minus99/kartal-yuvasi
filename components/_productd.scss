@@ -215,12 +215,10 @@ a.btnsepeteAt {
         font-weight: 700;
     }
     .prm-btns {
-        margin-top: 20px;
+        $m: 5px;
+        margin: 15px 0 0 #{-$m};
         > a {
-            width: calc(50% - 5px);
-            + a {
-                margin-left: 10px;
-            }
+            margin: 5px;
         }
     }
 }

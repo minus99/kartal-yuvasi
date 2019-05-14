@@ -108,7 +108,7 @@ a.btnAdresEkle {
         margin-top: 30px;
     }
     #plhAdresTipi {
-        justify-content: left;
+        justify-content: flex-start;
     }
     [id$="CEPTELEFON"] {
         width: 100% !important;
@@ -119,5 +119,11 @@ a.btnAdresEkle {
     .btnAdresIptal {
         margin-top: 20px;
         @extend %btn-transparent;
+    }
+}
+.ems-corporate-selection {
+    .tcCheck,
+    .tcCheck-2 {
+        display: none;
     }
 }

@@ -1,10 +1,10 @@
 .ems-page-hierarchy {
     &-grid {
-        > .ga2 {
+        > .ga1 {
             background: $color1;
             color: $color2;
         }
-        > .ga3 {
+        > .ga2 {
             padding-bottom: 100px;
             @extend .ems-container;
         }
@@ -24,5 +24,14 @@
         font-weight: 700;
         padding: 20px 0;
         border-bottom: 1px solid $color5;
+        + .html-content {
+            margin-top: 1em;
+        }
     }
+}
+
+
+//FAQ
+.ems-page-faq {
+
 }

@@ -10,9 +10,15 @@
     }
 
     &.no-result {
+        .ems-page-search-grid {
+            grid-template-areas: 
+            "ga1 ga1 ga1 ga1 ga1"  ". ga3 ga3 ga3 .";
+        }
+
         .ems-page-search-grid > .ga1,
         .ems-page-search-grid > .ga2,
         .ems-prd-list-count,
+        .ems-sort,
         ul.product-list-grid {
             display: none;
         }

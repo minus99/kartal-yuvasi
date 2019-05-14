@@ -48,7 +48,7 @@
 }
 
 .qty-wrapper a[onclick*="ekle"]::before,
-.qty-wrapper a[onclick*="cikar"]::before, .menu li > a::after, .popular-search-words li > a::before, .searchSuggestDivHolder .cat .suggest_link > span::before, .mobi-dropdown-header::after {
+.qty-wrapper a[onclick*="cikar"]::before, .dropdown-header::after, .menu li > a::after, .popular-search-words li > a::before, .searchSuggestDivHolder .cat .suggest_link > span::before, .mobi-dropdown-header::after {
   content: "";
   border-width: 4px;
   border-style: solid;
@@ -63,7 +63,7 @@
 }
 
 
-.qty-wrapper a[onclick*="cikar"]::before, .mobi-dropdown-header::after {
+.qty-wrapper a[onclick*="cikar"]::before, .dropdown-header::after, .mobi-dropdown-header::after {
   border-color: currentColor transparent transparent transparent;
 }
 
@@ -206,6 +206,7 @@ ul:not(.ul-list) {
 
 .ems-none, .ayiracDefault,
 .kutuBosluk,
+.icerikTemplateListeEtiket,
 .brFiyat,
 .satBrFiyat,
 .floatFixer,
@@ -235,7 +236,7 @@ ul:not(.ul-list) {
   background: rgba(0, 0, 0, 0.4);
 }
 
-.ems-container, .urunPaging, .ems-page-hierarchy-grid > .ga3 {
+.ems-container, .urunPaging, .ems-page-hierarchy-grid > .ga2 {
   width: calc(100% - 40px);
   margin-left: auto;
   margin-right: auto;
@@ -691,7 +692,7 @@ a.btnDefault .icon-arrow-r {
 }
 
 input:not([type=checkbox]):not([type=radio]),
-select, .sStylerWrp_select,
+select, .sStylerWrp_select, .dropdown,
 textarea {
   font-family: fira;
   font-size: 15px;
@@ -764,7 +765,7 @@ textarea {
   border-top: 1px solid #c9c9c9;
 }
 
-.ems-form-label, [id$="divCaptcha"] [id$="lbfUYE_KONTROLKODU"], .tableOdemeBilgiKrediKarti th, .tableTitleOdemeTaksit td {
+.ems-form-label, [id$="divCaptcha"] [id$="lbfUYE_KONTROLKODU"], .tableOdemeBilgiKrediKarti th, .tableTitleOdemeTaksit td, .tableSifremiUnuttum th {
   position: relative;
   font-family: fira;
   font-size: 13px;
@@ -773,7 +774,7 @@ textarea {
   margin-bottom: 5px;
 }
 
-.ems-form-label:empty, [id$="divCaptcha"] :empty[id$="lbfUYE_KONTROLKODU"], .tableOdemeBilgiKrediKarti th:empty, .tableTitleOdemeTaksit td:empty {
+.ems-form-label:empty, [id$="divCaptcha"] :empty[id$="lbfUYE_KONTROLKODU"], .tableOdemeBilgiKrediKarti th:empty, .tableTitleOdemeTaksit td:empty, .tableSifremiUnuttum th:empty {
   display: none;
 }
 
@@ -879,6 +880,41 @@ textarea {
 
 .sStylerWrp_select .icon-select-active {
   display: none;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-header::after {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -4px;
+  transition: transform .32s ease;
+}
+
+.dropdown > ul {
+  display: none;
+  animation: show 0.5s ease;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 1;
+  width: 100%;
+  background: #fff;
+  margin-top: -1px;
+  border: 1px solid #c9c9c9;
+}
+
+.dropdown > ul > li a {
+  display: block;
+  padding: 5px 10px;
+  line-height: 1.3;
+}
+
+.dropdown.opened > ul {
+  display: block;
 }
 
 [id$="divCaptcha"] {
@@ -1140,11 +1176,6 @@ ul.menu-mini-lang {
   margin-top: auto;
 }
 
-ul.menu-mini-lang li > a {
-  border-bottom: none;
-  border-top: 1px solid #eee;
-}
-
 ul.menu-mini-lang .mini-lang {
   display: block !important;
 }
@@ -1174,21 +1205,39 @@ ul.menu-mini-lang .sub-header {
   padding: 40px;
 }
 
-.mini-lang-sub > a {
-  display: block;
-  width: auto;
-}
-
 .mini-lang .sub-header {
   margin: -40px -40px 40px;
 }
 
-.mini-lang-animate .mini-lang-info {
-  z-index: 10;
+.mini-lang .dropdown li.selected {
+  position: static;
 }
 
-.mini-lang-animate .mini-lang-info .icon-triangle-b {
-  transform: scale(-1);
+.mini-lang .dropdown li.selected > a {
+  padding: 5px 10px;
+  background: #fff;
+}
+
+.mini-lang .dropdown a {
+  position: unset;
+  align-items: unset;
+  margin: unset;
+  font-weight: unset;
+  border-bottom: unset;
+  transition: unset;
+}
+
+.mini-lang .dropdown a::after {
+  display: none;
+}
+
+.inner-mini-lang-sub img {
+  display: none;
+}
+
+.inner-mini-lang-sub .emos_invisible {
+  display: block;
+  font-weight: normal;
 }
 
 .mini-user {
@@ -3622,6 +3671,10 @@ button.swiper-pagination-bullet {
   display: none;
 }
 
+.icerikListePagingUst {
+  display: none;
+}
+
 .ems-prdd-grid > .ga1 {
   padding-left: 20px;
   padding-right: 20px;
@@ -3833,15 +3886,11 @@ a.btnsepeteAt {
 }
 
 .added-prd .prm-btns {
-  margin-top: 20px;
+  margin: 15px 0 0 -5px;
 }
 
 .added-prd .prm-btns > a {
-  width: calc(50% - 5px);
-}
-
-.added-prd .prm-btns > a + a {
-  margin-left: 10px;
+  margin: 5px;
 }
 
 .suggest-prd {
@@ -4182,6 +4231,7 @@ a.btnsepeteAt {
   display: none;
   animation: show 0.5s ease;
   position: absolute;
+  top: 100%;
   z-index: 1;
   width: 100%;
   background: #000;
@@ -4358,8 +4408,6 @@ ul.product-list-grid > li {
   grid-gap: 0;
 }
 
-.ems-prd-list-count,
-.ems-prd-list-sort,
 .urunPaging_btnKiyaslama,
 .urunPaging_paging {
   display: none;
@@ -4485,19 +4533,24 @@ ul.product-list-grid > li {
   display: block;
 }
 
+.ems-page-search.no-result .ems-page-search-grid {
+  grid-template-areas: "ga1 ga1 ga1 ga1 ga1"  ". ga3 ga3 ga3 .";
+}
+
 .ems-page-search.no-result .ems-page-search-grid > .ga1,
 .ems-page-search.no-result .ems-page-search-grid > .ga2,
 .ems-page-search.no-result .ems-prd-list-count,
+.ems-page-search.no-result .ems-sort,
 .ems-page-search.no-result ul.product-list-grid {
   display: none;
 }
 
-.ems-page-hierarchy-grid > .ga2 {
+.ems-page-hierarchy-grid > .ga1 {
   background: #000;
   color: #fff;
 }
 
-.ems-page-hierarchy-grid > .ga3 {
+.ems-page-hierarchy-grid > .ga2 {
   padding-bottom: 100px;
 }
 
@@ -4517,6 +4570,10 @@ ul.product-list-grid > li {
   font-weight: 700;
   padding: 20px 0;
   border-bottom: 1px solid #c9c9c9;
+}
+
+.ems-page-hierarchy .page-top-title + .html-content {
+  margin-top: 1em;
 }
 
 .ems-page-order .block2 {
@@ -4799,7 +4856,7 @@ a.btnAdresEkle,
 }
 
 .ems-new-address #plhAdresTipi {
-  justify-content: left;
+  justify-content: flex-start;
 }
 
 .ems-new-address [id$="CEPTELEFON"] {
@@ -4812,6 +4869,11 @@ a.btnAdresEkle,
 
 .ems-new-address .btnAdresIptal {
   margin-top: 20px;
+}
+
+.ems-corporate-selection .tcCheck,
+.ems-corporate-selection .tcCheck-2 {
+  display: none;
 }
 
 .ems-order-payment-grid > .ga1 > div {
@@ -5301,6 +5363,36 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
   display: flex;
 }
 
+.pageSifremiUnuttum {
+  padding-top: 50px;
+}
+
+.pageHeaderSifremiUnuttum,
+.pageDescSifremiUnuttum {
+  display: none;
+}
+
+.pageErrorSifremiUnuttum {
+  margin-bottom: 30px;
+}
+
+.tableSifremiUnuttum {
+  max-width: 330px;
+}
+
+.tableSifremiUnuttum tr {
+  display: flex;
+  flex-direction: column;
+}
+
+.tableSifremiUnuttum tr + tr {
+  margin-top: 20px;
+}
+
+.tableSifremiUnuttum th {
+  text-align: left;
+}
+
 .ems-member-coupon.no-result .ems-message-coupon {
   display: flex;
 }
@@ -5611,7 +5703,6 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
       margin: 10px;
       width: calc(100% - 20px);
       height: auto;
-      overflow: auto;
       background: #fff;
       color: #000;
       line-height: normal;
@@ -6503,7 +6594,7 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     }
     .ems-page-hierarchy-grid {
       grid-template-columns: 300px 20px minmax(auto, 890px) 1fr;
-      grid-template-areas: "ga1 ga1 ga1 ga1" "ga2 . ga3 .";
+      grid-template-areas: "ga1 . ga2 .";
     }
     .ems-page-hierarchy-grid > .ga1 {
       grid-area: ga1;
@@ -6511,10 +6602,7 @@ a.btnUyeBilgi, a.btnSifreGuncelle {
     .ems-page-hierarchy-grid > .ga2 {
       grid-area: ga2;
     }
-    .ems-page-hierarchy-grid > .ga3 {
-      grid-area: ga3;
-    }
-    .ems-page-hierarchy-grid > .ga2 {
+    .ems-page-hierarchy-grid > .ga1 {
       min-height: 710px;
     }
     .ems-page-order .site-header {

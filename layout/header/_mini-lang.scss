@@ -1,11 +1,5 @@
 ul.menu-mini-lang {
     margin-top: auto;
-    li {
-        > a {
-            border-bottom: none;
-            border-top: 1px solid $color3;
-        }
-    }
     .mini-lang {
         display: block !important;
         &-sub {
@@ -36,14 +30,33 @@ ul.menu-mini-lang {
         @extend %header-mods-sub;
         max-width: 410px;
         padding: $p;
-        > a {
-            display: block;
-            width: auto;
-        }
     }
     
     .sub-header {
         margin: #{-$p} #{-$p} #{$p};
+    }
+
+    .dropdown {
+        li {
+            &.selected {
+                position: static;
+                > a {
+                    padding: 5px 10px;
+                    background: $color2;
+                }
+            }
+        }
+        a {
+            position: unset;
+            align-items: unset;
+            margin: unset;
+            font-weight: unset;
+            border-bottom: unset;
+            transition: unset;
+            &::after {
+                display: none;
+            }
+        }
     }
 
     &-ready {
@@ -54,18 +67,21 @@ ul.menu-mini-lang {
 
     &-animate {
         @extend %header-mods-animate;
-        .mini-lang-info {
-            z-index: 10;
-            .icon-triangle-b {
-                @include turn-mirror;
-            }
-        }
-        
         .mini-lang-overlay {
             @extend %header-mods-sub-overlay;
         }
         .mini-lang-sub {
             @extend %header-mods-sub-animate;
         }
+    }
+}
+
+.inner-mini-lang-sub {
+    img {
+        display: none;
+    }
+    .emos_invisible {
+        display: block;
+        font-weight: normal;
     }
 }
