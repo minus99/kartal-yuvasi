@@ -150,6 +150,13 @@
         font-weight: 500;
         word-break: break-all;
     }
+    &-coupon-date {
+        > span:empty {
+            &::before {
+                content: "-";
+            }
+        }
+    }
     &-option1 {
         grid-column: span 2;
     }

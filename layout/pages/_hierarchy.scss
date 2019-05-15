@@ -5,12 +5,13 @@
             color: $color2;
         }
         > .ga2 {
-            padding-bottom: 100px;
+            padding-bottom: 50px;
             @extend .ems-container;
         }
     }
 
-    [id$="lblICR_METIN_TEMPLATE"] {
+    [id$="lblICR_METIN_TEMPLATE"],
+    .icerikTemplateListeContainer {
         font-family: $font2;
         font-size: 16px;
         b {
@@ -20,18 +21,15 @@
     .page-top-title {
         font-family: $font2;
         font-size: 18px;
-        margin-top: 30px;
         font-weight: 700;
+        margin-top: 30px;
         padding: 20px 0;
         border-bottom: 1px solid $color5;
         + .html-content {
-            margin-top: 1em;
+            margin-top: 30px;
         }
     }
 }
-
-
-//FAQ
-.ems-page-faq {
-
+.obb {
+    border-bottom: 1px solid $color10;
 }

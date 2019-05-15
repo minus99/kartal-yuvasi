@@ -41,31 +41,33 @@
             > * {
                 display: block;
                 border-bottom: 1px solid $color10;
-                &.selected {
-                    .ems-tab-inner-header {
-                        @extend .base64-minus;
-                    }
-                    .ems-tab-inner-content {
-                        display: block;
-                    }
-                }
             }
         }
-        $p: 25px;
-        .ems-tab-inner-header {
-            @extend .base64;
-            @extend .base64-plus;
-            padding: $p 0;
-            background-position: right center;
-            background-size: 32px;
-            transition: background-image .25s ease;
-            font-weight: 700;
-            cursor: pointer;
-        }
-        .ems-tab-inner-content {
-            display: none;
-            margin-top: -$p;
-            animation: show 0.5s ease;
+        @at-root {
+            $p: 25px;
+            .ems-tab-inner-header {
+                @extend .base64;
+                @extend .base64-plus;
+                padding: $p 0;
+                background-position: right center;
+                background-size: 32px;
+                transition: background-image .25s ease;
+                font-weight: 700;
+                cursor: pointer;
+            }
+            .ems-tab-inner-content {
+                display: none;
+                margin-top: -$p;
+                animation: show 0.5s ease;
+            }
+            .selected {
+                .ems-tab-inner-header {
+                    @extend .base64-minus;
+                }
+                .ems-tab-inner-content {
+                    display: block;
+                }
+            }
         }
     }
 }

@@ -10,4 +10,10 @@
             min-height: 710px;
         }
     }
+
+    .page-top-title {
+        + .html-content {
+            margin-top: 20px;
+        }
+    }
 }

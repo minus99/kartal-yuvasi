@@ -10,7 +10,8 @@
 
     b,
     .kutuHeaderSolMenuTree,
-    .kutuFooterSolMenuTree {
+    .kutuFooterSolMenuTree,
+    .sev3 > ul {
         display: none;
     }
 }
@@ -26,6 +27,7 @@
         margin-right: 10px;
         font-weight: 700;
         letter-spacing: .93px;
+        line-height: 32px;
         &::after {
             @extend %triangle;
             @extend %triangle-b;
@@ -73,7 +75,8 @@
                     background-position: right 20px center;
                 }
             }
-            &.selected {
+            &.selected,
+            &.act {
                 display: none;
             }
         }
