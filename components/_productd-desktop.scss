@@ -22,12 +22,10 @@
 }
 
 //sizes
-.urunDetay_urunSecenek {
-    .dropdown-options {
-        > a {
-            min-width: 46px;
-            line-height: 32px;
-        }
+.dropdown-options {
+    > a {
+        min-width: 46px;
+        line-height: 32px;
     }
 }
 

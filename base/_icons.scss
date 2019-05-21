@@ -75,3 +75,26 @@
         background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4gICAgPHBhdGggZmlsbD0iIzAwMCIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTUuMjkzIDE2TDguNTc1IDkuMjgybC43MDctLjcwN0wxNiAxNS4yOTNsNi43MTgtNi43MTguNzA3LjcwN0wxNi43MDcgMTZsNi43MTggNi43MTgtLjcwNy43MDdMMTYgMTYuNzA3bC02LjcxOCA2LjcxOC0uNzA3LS43MDdMMTUuMjkzIDE2eiIvPjwvc3ZnPg==);
     }
 }
+
+//CUSTOM
+.i-play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 104px;
+    height: 104px;
+    border: 2px solid currentColor;
+    border-radius: 100%;
+    color: $color2;
+    &::before {
+        content: "";
+        position: absolute;
+        left: calc(50% + 5px);
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-width: 15px 0px 15px 25px;
+        border-style: solid;
+        border-color: transparent transparent transparent currentColor;
+    }
+}

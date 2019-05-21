@@ -195,4 +195,19 @@
             margin-top: 10px;
         }
     }
+
+    //banner type11
+    &11 {
+        .prm-media {
+            max-width: 1200px;
+            margin: 50px auto 0;
+        }
+        .banner-body {
+            @include banner-body-static;
+            text-align: center;
+        }
+        .prm-title {
+            font-size: 30px;
+        }
+    }
 }

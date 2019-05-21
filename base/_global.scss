@@ -27,7 +27,7 @@ html {
 body {
     margin: 0;
     overflow-y: scroll;
-    font-family: $font1, arial;
+    font-family: $font1, arial, sans-serif;
     font-size: $font-size;
     color: $color1;
     font-weight: $font-weight;
@@ -168,6 +168,11 @@ ul:not(.ul-list) {
                 flex: 1;
             }
         }
+    }
+
+    //VIDEO
+    &-video-player {
+        position: relative;
     }
 
     //FLEX

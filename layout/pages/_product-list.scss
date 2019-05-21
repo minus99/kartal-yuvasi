@@ -9,7 +9,7 @@
     font-size: 15px;
 }
 
-.primary-sub-categories {
+.primary-box {
     background: $color1;
     color: $color2;
     padding: 40px 30px 50px;
@@ -23,6 +23,22 @@
             margin-left: 34px;
         }
     }
+}
+
+.page-cover-image {
+    .banner {
+        .prm-media {
+            img {
+                height: 378px;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.page-cover-video {
+    background: $color1;
+    color: $color2;
 }
 
 .top-buttons {

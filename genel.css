@@ -3,6 +3,7 @@
   src: url(/styles/fonts/din/DINPro-Bold.woff2) format("woff2"), url(/styles/fonts/din/DINPro-Bold.woff) format("woff"), url(/styles/fonts/din/DINPro-Bold.ttf) format("truetype");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -10,6 +11,7 @@
   src: url(/styles/fonts/din/DINPro-Light.woff2) format("woff2"), url(/styles/fonts/din/DINPro-Light.woff) format("woff"), url(/styles/fonts/din/DINPro-Light.ttf) format("truetype");
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -17,6 +19,7 @@
   src: url(/styles/fonts/din/DINPro-CondensedBold.woff2) format("woff2"), url(/styles/fonts/din/DINPro-CondensedBold.woff) format("woff"), url(/styles/fonts/din/DINPro-CondensedBold.ttf) format("truetype");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -24,6 +27,7 @@
   src: url(/styles/fonts/din/DINPro-CondensedRegular.woff2) format("woff2"), url(/styles/fonts/din/DINPro-CondensedRegular.woff) format("woff"), url(/styles/fonts/din/DINPro-CondensedRegular.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -31,6 +35,7 @@
   src: url(/styles/fonts/fira/FiraSans-Bold.woff2) format("woff2"), url(/styles/fonts/fira/FiraSans-Bold.woff) format("woff"), url(/styles/fonts/fira/FiraSans-Bold.ttf) format("truetype");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -38,6 +43,7 @@
   src: url(/styles/fonts/fira/FiraSans-Medium.woff2) format("woff2"), url(/styles/fonts/fira/FiraSans-Medium.woff) format("woff"), url(/styles/fonts/fira/FiraSans-Medium.ttf) format("truetype");
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -45,6 +51,7 @@
   src: url(/styles/fonts/fira/FiraSans-Regular.woff2) format("woff2"), url(/styles/fonts/fira/FiraSans-Regular.woff) format("woff"), url(/styles/fonts/fira/FiraSans-Regular.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 .qty-wrapper a[onclick*="ekle"]::before,
@@ -138,6 +145,29 @@
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4gICAgPHBhdGggZmlsbD0iIzAwMCIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTUuMjkzIDE2TDguNTc1IDkuMjgybC43MDctLjcwN0wxNiAxNS4yOTNsNi43MTgtNi43MTguNzA3LjcwN0wxNi43MDcgMTZsNi43MTggNi43MTgtLjcwNy43MDdMMTYgMTYuNzA3bC02LjcxOCA2LjcxOC0uNzA3LS43MDdMMTUuMjkzIDE2eiIvPjwvc3ZnPg==);
 }
 
+.i-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 104px;
+  height: 104px;
+  border: 2px solid currentColor;
+  border-radius: 100%;
+  color: #fff;
+}
+
+.i-play::before {
+  content: "";
+  position: absolute;
+  left: calc(50% + 5px);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-width: 15px 0px 15px 25px;
+  border-style: solid;
+  border-color: transparent transparent transparent currentColor;
+}
+
 @media screen and (max-width: 960px) {
   .obj-desktop {
     display: none !important;
@@ -166,7 +196,7 @@ html::before {
 body {
   margin: 0;
   overflow-y: scroll;
-  font-family: din, arial;
+  font-family: din, arial, sans-serif;
   font-size: 14px;
   color: #000;
   font-weight: 400;
@@ -310,6 +340,10 @@ ul:not(.ul-list) {
 
 .ems-message-horizontal > p {
   flex: 1;
+}
+
+.ems-video-player {
+  position: relative;
 }
 
 .ems-flex {
@@ -1863,7 +1897,6 @@ ul.menu-mini-lang .sub-header {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  overflow-y: scroll;
 }
 
 .jconfirm-bg {
@@ -1915,6 +1948,15 @@ ul.menu-mini-lang .sub-header {
   display: none;
 }
 
+.popup_favori .jconfirm-content-pane {
+  height: 330px !important;
+}
+
+.popupFavori_mesaj,
+.popupFavori_aciklama {
+  margin-top: 10px;
+}
+
 .sub-close {
   position: absolute;
   right: 14px;
@@ -1934,6 +1976,11 @@ ul.menu-mini-lang .sub-header {
   font-size: 15px;
 }
 
+.popupDefault {
+  text-align: left;
+  padding: 20px;
+}
+
 .popupTitleDefault {
   position: sticky;
   top: 0;
@@ -1943,11 +1990,7 @@ ul.menu-mini-lang .sub-header {
   font-weight: 700;
   text-align: left;
   min-height: 60px;
-}
-
-div[class$="icerik"] > span {
-  text-align: left;
-  padding: 20px;
+  margin: -20px -20px 20px;
 }
 
 div[class$="Yazdir"] {
@@ -3048,6 +3091,21 @@ button.swiper-pagination-bullet {
   margin-top: 10px;
 }
 
+.banner11 .prm-media {
+  max-width: 1200px;
+  margin: 50px auto 0;
+}
+
+.banner11 .banner-body {
+  position: static;
+  transform: none;
+  text-align: center;
+}
+
+.banner11 .prm-title {
+  font-size: 30px;
+}
+
 .instagram-feed-grid {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -3237,6 +3295,7 @@ button.swiper-pagination-bullet {
 
 .navigasyon {
   position: relative;
+  width: 100vw;
   padding: 20px;
   font-size: 22px;
   font-weight: 700;
@@ -3802,14 +3861,14 @@ button.swiper-pagination-bullet {
   margin-top: -7px;
 }
 
-.urunDetay_urunSecenek .dropdown-options {
+.dropdown-options {
   display: block !important;
   margin-left: -5px;
   margin-right: -5px;
   font-size: 0;
 }
 
-.urunDetay_urunSecenek .dropdown-options > a {
+.dropdown-options > a {
   display: inline-block;
   min-width: calc(25% - 10px);
   padding-left: 5px;
@@ -3821,12 +3880,12 @@ button.swiper-pagination-bullet {
   margin: 5px;
 }
 
-.urunDetay_urunSecenek .dropdown-options > a.selectedOption {
+.dropdown-options > a.selectedOption {
   background: #000;
   color: #fff;
 }
 
-.urunDetay_urunSecenek .dropdown-trigger {
+.dropdown-trigger {
   display: none;
 }
 
@@ -4370,23 +4429,33 @@ a.btnsepeteAt {
   font-size: 15px;
 }
 
-.primary-sub-categories {
+.primary-box {
   background: #000;
   color: #fff;
   padding: 40px 30px 50px;
 }
 
-.primary-sub-categories .ems-section-title {
+.primary-box .ems-section-title {
   font-size: 30px;
   margin-bottom: 30px;
 }
 
-.primary-sub-categories .banner {
+.primary-box .banner {
   max-width: 216px;
 }
 
-.primary-sub-categories .banner + .banner {
+.primary-box .banner + .banner {
   margin-left: 34px;
+}
+
+.page-cover-image .banner .prm-media img {
+  height: 378px;
+  object-fit: cover;
+}
+
+.page-cover-video {
+  background: #000;
+  color: #fff;
 }
 
 .top-buttons {
@@ -4528,6 +4597,115 @@ ul.product-list-grid > li {
 
 .featured-prds {
   padding-top: 40px;
+}
+
+.ems-page-dealer-grid > .ga1 {
+  padding-top: 20px;
+  padding-bottom: 85px;
+}
+
+.page-top-title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.page-top-desc {
+  font-family: fira;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.dealer-form .ems-field {
+  width: calc(50% - 5px);
+}
+
+.or {
+  font-family: fira;
+  font-size: 13px;
+  color: #515151;
+}
+
+.dealer-stock-information {
+  margin-top: 50px;
+}
+
+.servisIcerik {
+  margin-top: 30px;
+}
+
+.servis_bilgi {
+  font-family: fira;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.secIlce:not(:empty)::before {
+  content: "- ";
+}
+
+.pServisListe {
+  position: relative;
+  border-top: 1px solid #ccc;
+  padding: 15px 10px;
+  font-family: fira;
+  font-size: 15px;
+}
+
+.pServisListe > * {
+  display: none;
+}
+
+.divServisListe_FirmaAdi {
+  display: block;
+  font-weight: 500;
+}
+
+.divServisListe_Adres {
+  display: block;
+  margin-top: 15px;
+}
+
+.divServisListe_Telefon {
+  display: block;
+  margin-top: 15px;
+  color: #999;
+}
+
+.divServisListe_Koordinat a[rel] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+}
+
+.divServisListe_Koordinat a[rel] > * {
+  display: none;
+}
+
+.show-map-btn {
+  display: none;
+}
+
+.address-detail {
+  display: none;
+}
+
+.address-detail-inner {
+  position: sticky;
+  top: 130px;
+}
+
+.address-detail-inner .back-btn,
+.address-detail-inner .toggle-map,
+.address-detail-inner .left-column {
+  display: none;
+}
+
+#Map.map {
+  height: 600px;
 }
 
 .ems-page-search .pageArama,
@@ -6240,6 +6418,7 @@ a.btnUyeSifreGonder {
       font-weight: 400;
       padding-left: 40px;
       padding-right: 40px;
+      width: auto;
     }
     .navigasyon ol {
       color: #000;
@@ -6276,6 +6455,7 @@ a.btnUyeSifreGonder {
     }
     .nav-type2 .navigasyon {
       position: absolute;
+      z-index: 2;
       padding: 40px;
     }
     .nav-type2 .navigasyon ol {
@@ -6437,7 +6617,7 @@ a.btnUyeSifreGonder {
       grid-template-columns: 1fr 1fr;
       grid-gap: 10px;
     }
-    .urunDetay_urunSecenek .dropdown-options > a {
+    .dropdown-options > a {
       min-width: 46px;
       line-height: 32px;
     }
@@ -6620,6 +6800,36 @@ a.btnUyeSifreGonder {
     }
     .featured-prds {
       padding-top: 60px;
+    }
+    .ems-page-dealer-grid > .ga1 {
+      padding-top: 50px;
+      padding-bottom: 60px;
+    }
+    .mod-service-list-grid {
+      grid-template-columns: 1fr 380px 20px minmax(auto, 780px) 1fr;
+      grid-template-rows: max-content 1fr;
+      grid-template-areas: ". ga1 . ga2 ." ". ga3 . ga2 .";
+    }
+    .mod-service-list-grid > .mod-service-list-header {
+      grid-area: ga1;
+    }
+    .mod-service-list-grid > .address-detail {
+      grid-area: ga2;
+    }
+    .mod-service-list-grid > .mod-service-list-body {
+      grid-area: ga3;
+    }
+    .page-top-title {
+      margin-top: 0;
+    }
+    .dealer-stock-information {
+      margin-top: 30px;
+    }
+    .divServisListe_Koordinat {
+      display: block;
+    }
+    .address-detail {
+      display: block;
     }
     .ems-page-hierarchy-grid {
       grid-template-columns: 300px 20px minmax(auto, 890px) 1fr;
@@ -6870,7 +7080,7 @@ a.btnUyeSifreGonder {
       padding-top: 50px;
     }
     .ems-grid-table-favorite > .ems-grid-row {
-      grid-template-columns: 20px 100px 1fr 1fr 1fr 1fr;
+      grid-template-columns: 20px 100px 2.5fr 2fr 113px 1fr;
     }
     .selected-action a {
       min-width: auto;
