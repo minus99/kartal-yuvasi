@@ -45,7 +45,7 @@
 @import 'components/productd';
 @import 'components/order-step';
 @import 'components/grid-table';
-@import 'components/hierarchy-menu';
+@import 'components/content';
 
 //PAGES
 @import 'layout/pages/home';
@@ -55,6 +55,7 @@
 @import 'layout/pages/dealer';
 @import 'layout/pages/search';
 @import 'layout/pages/hierarchy';
+@import 'layout/pages/gift-card';
 @import 'layout/pages/order-main';
 @import 'layout/pages/order-cart';
 @import 'layout/pages/order-delivery';
@@ -106,7 +107,7 @@
         @import 'components/productd-desktop';
         @import 'components/order-step-desktop';
         @import 'components/grid-table-desktop';
-        @import 'components/hierarchy-menu-desktop';
+        @import 'components/content-desktop';
 
         //PAGES
         @import 'layout/pages/home-desktop';

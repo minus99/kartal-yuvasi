@@ -452,8 +452,38 @@ table {
 }
 
 .table-overflow table {
+  table-layout: fixed;
   width: auto;
   min-width: 100%;
+}
+
+.table-overflow tr:nth-child(odd) td {
+  background: #f2f2f2;
+}
+
+.table-overflow tr:nth-child(odd) td:nth-child(even) {
+  background: #e5e5e5;
+}
+
+.table-overflow th, .table-overflow td {
+  padding: 13px 10px;
+  text-align: center;
+}
+
+.table-overflow th {
+  background: #515151;
+  color: #fff;
+  font-weight: 700;
+}
+
+.table-overflow td {
+  font-family: fira;
+  font-size: 16px;
+  background: #fff;
+}
+
+.table-overflow td:nth-child(even) {
+  background: #f2f2f2;
 }
 
 #ui-datepicker-div {
@@ -987,6 +1017,19 @@ textarea {
   padding: 4px;
   font-family: fira;
   font-size: 11px;
+}
+
+.xmlForm_btnGonder {
+  margin-top: 30px;
+  text-align: left;
+}
+
+a.btnXMLFORM {
+  min-width: 180px;
+}
+
+.xmlFormHeader {
+  display: none;
 }
 
 .site-header {
@@ -3100,6 +3143,7 @@ button.swiper-pagination-bullet {
   position: static;
   transform: none;
   text-align: center;
+  padding: 70px;
 }
 
 .banner11 .prm-title {
@@ -3987,39 +4031,6 @@ a.btnsepeteAt {
   justify-content: flex-start;
 }
 
-.size-guide-table table {
-  table-layout: fixed;
-}
-
-.size-guide-table tr:nth-child(odd) td {
-  background: #f2f2f2;
-}
-
-.size-guide-table tr:nth-child(odd) td:nth-child(even) {
-  background: #e5e5e5;
-}
-
-.size-guide-table th, .size-guide-table td {
-  padding: 10px 30px;
-  text-align: left;
-}
-
-.size-guide-table th {
-  background: #515151;
-  color: #fff;
-  font-weight: 700;
-}
-
-.size-guide-table td {
-  font-family: fira;
-  font-size: 16px;
-  background: #fff;
-}
-
-.size-guide-table td:nth-child(even) {
-  background: #f2f2f2;
-}
-
 .size-guide-table + .size-guide-table {
   margin-top: 40px;
 }
@@ -4331,6 +4342,63 @@ a.btnsepeteAt {
   display: block;
 }
 
+.ff2 {
+  font-family: fira;
+}
+
+.fst {
+  font-size: 30px;
+}
+
+.fsd {
+  font-size: 16px;
+}
+
+.obb {
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.mt2 {
+  margin-top: 20px;
+}
+
+.mt5 {
+  margin-top: 50px;
+}
+
+.primary-box {
+  background: #000;
+  color: #fff;
+  padding: 40px 30px 50px;
+}
+
+.primary-box .ems-section-title {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.primary-box .banner {
+  max-width: 216px;
+}
+
+.primary-box .banner + .banner {
+  margin-left: 34px;
+}
+
+.page-cover-image .banner .prm-media img {
+  height: 378px;
+  object-fit: cover;
+}
+
+.page-cover-image .banner .prm-title {
+  font-size: 30px;
+}
+
+.page-cover-video {
+  background: #000;
+  color: #fff;
+}
+
 .primary-categories {
   padding-top: 20px;
   background: #000;
@@ -4427,35 +4495,6 @@ a.btnsepeteAt {
   padding: 0 20px;
   font-family: fira;
   font-size: 15px;
-}
-
-.primary-box {
-  background: #000;
-  color: #fff;
-  padding: 40px 30px 50px;
-}
-
-.primary-box .ems-section-title {
-  font-size: 30px;
-  margin-bottom: 30px;
-}
-
-.primary-box .banner {
-  max-width: 216px;
-}
-
-.primary-box .banner + .banner {
-  margin-left: 34px;
-}
-
-.page-cover-image .banner .prm-media img {
-  height: 378px;
-  object-fit: cover;
-}
-
-.page-cover-video {
-  background: #000;
-  color: #fff;
 }
 
 .top-buttons {
@@ -4761,10 +4800,6 @@ ul.product-list-grid > li {
 
 .ems-page-hierarchy .page-top-title + .html-content {
   margin-top: 30px;
-}
-
-.obb {
-  border-bottom: 1px solid #f5f5f5;
 }
 
 .ems-page-order .block2 {
@@ -5547,7 +5582,7 @@ a.btnSipariseDon .icon-triangle-b {
 }
 
 a.btnUyeBilgi, a.btnSifreGuncelle {
-  max-width: 178px;
+  max-width: 180px;
 }
 
 .ems-member-address.no-result .ems-message-address {
@@ -6390,6 +6425,9 @@ a.btnUyeSifreGonder {
     .banner10 .prm-desc {
       font-size: 14px;
     }
+    .banner11 .prm-title {
+      font-size: 30px;
+    }
     .design-uniform .ga2 {
       display: block;
     }
@@ -6455,7 +6493,7 @@ a.btnUyeSifreGonder {
     }
     .nav-type2 .navigasyon {
       position: absolute;
-      z-index: 2;
+      z-index: 1;
       padding: 40px;
     }
     .nav-type2 .navigasyon ol {

@@ -296,8 +296,36 @@ table {
     padding-bottom: 10px;
     width: 100vw;
     table {
+        table-layout: fixed;
         width: auto;
         min-width: 100%;
+    }
+    tr {
+        &:nth-child(odd) {
+            td {
+                background: #f2f2f2;
+                &:nth-child(even) {
+                    background: #e5e5e5;
+                }
+            }
+        }
+    }
+    th,td {
+        padding: 13px 10px;
+        text-align: center;
+    }
+    th {
+        background: $color6;
+        color: $color2;
+        font-weight: 700;
+    }
+    td {
+        font-family: $font2;
+        font-size: 16px;
+        background: #fff;
+        &:nth-child(even) {
+            background: #f2f2f2;
+        }
     }
 }
 
