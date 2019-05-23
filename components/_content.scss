@@ -1,3 +1,26 @@
+//CONTENT UTILITY
+.ff2 {
+    font-family: $font2;
+}
+.fwb {
+    font-weight: bold;
+}
+.fst {
+    font-size: 30px;
+}
+.fsd {
+    font-size: 16px;
+}
+.obb {
+    border-bottom: 1px solid $color10;
+}
+.mt2 {
+    margin-top: 20px;
+}
+.mt5 {
+    margin-top: 50px;
+}
+
 //SYSTEM MENU
 .kutuSolMenuTree {
     .mobi-dropdown {
@@ -97,26 +120,6 @@
     }
 }
 
-//CONTENT UTILITY
-.ff2 {
-    font-family: $font2;
-}
-.fst {
-    font-size: 30px;
-}
-.fsd {
-    font-size: 16px;
-}
-.obb {
-    border-bottom: 1px solid $color10;
-}
-.mt2 {
-    margin-top: 20px;
-}
-.mt5 {
-    margin-top: 50px;
-}
-
 //BOX
 .primary-box {
     background: $color1;
@@ -153,4 +156,37 @@
 .page-cover-video {
     background: $color1;
     color: $color2;
+}
+
+//CARD
+.card {
+    position: relative;
+    background: $color1;
+    color: $color2;
+    width: 435px;
+    height: 275px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 0 20px #000 inset;
+    padding: 40px;
+    &-logo {
+        img {
+            width: 40px;
+        }
+    }
+    &-title {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    &-price {
+        margin-top: auto;
+        font-size: 32px;
+        animation: show .5s ease;
+        &:empty {
+            display: none;
+        }
+    }
 }

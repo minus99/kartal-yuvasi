@@ -4253,6 +4253,34 @@ a.btnsepeteAt {
   grid-column: span 2;
 }
 
+.ff2 {
+  font-family: fira;
+}
+
+.fwb {
+  font-weight: bold;
+}
+
+.fst {
+  font-size: 30px;
+}
+
+.fsd {
+  font-size: 16px;
+}
+
+.obb {
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.mt2 {
+  margin-top: 20px;
+}
+
+.mt5 {
+  margin-top: 50px;
+}
+
 .kutuSolMenuTree .mobi-dropdown > a {
   display: none;
   padding: 50px 20px 30px;
@@ -4342,30 +4370,6 @@ a.btnsepeteAt {
   display: block;
 }
 
-.ff2 {
-  font-family: fira;
-}
-
-.fst {
-  font-size: 30px;
-}
-
-.fsd {
-  font-size: 16px;
-}
-
-.obb {
-  border-bottom: 1px solid #f5f5f5;
-}
-
-.mt2 {
-  margin-top: 20px;
-}
-
-.mt5 {
-  margin-top: 50px;
-}
-
 .primary-box {
   background: #000;
   color: #fff;
@@ -4397,6 +4401,40 @@ a.btnsepeteAt {
 .page-cover-video {
   background: #000;
   color: #fff;
+}
+
+.card {
+  position: relative;
+  background: #000;
+  color: #fff;
+  width: 435px;
+  height: 275px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 0 20px #000 inset;
+  padding: 40px;
+}
+
+.card-logo img {
+  width: 40px;
+}
+
+.card-title {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.card-price {
+  margin-top: auto;
+  font-size: 32px;
+  animation: show .5s ease;
+}
+
+.card-price:empty {
+  display: none;
 }
 
 .primary-categories {
@@ -4800,6 +4838,60 @@ ul.product-list-grid > li {
 
 .ems-page-hierarchy .page-top-title + .html-content {
   margin-top: 30px;
+}
+
+.ems-page-gift-card {
+  background: #000 url(/images/frontend/bg01.png) left top/100% no-repeat;
+  color: #fff;
+  padding: 70px 20px;
+}
+
+.ems-page-gift-card-grid {
+  grid-template-columns: 1fr 710px 1fr;
+  grid-template-areas: ". ga1 .";
+}
+
+.ems-page-gift-card-grid > .ga1 {
+  grid-area: ga1;
+}
+
+.card01 {
+  background: #111111 url(/images/frontend/card01.jpg) left center/298px no-repeat;
+  padding-left: 260px;
+}
+
+.ems-member-gift-card-list {
+  font-family: fira;
+  font-size: 16px;
+}
+
+ul.giftCardList {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+ul.giftCardList li > a {
+  display: block;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  font-size: 16px;
+}
+
+ul.giftCardList li.selected > a {
+  border: 1px solid #fff;
+}
+
+ul.giftCardList .urunCekAd {
+  display: none;
+}
+
+.gift-card-send {
+  margin-top: 40px;
+}
+
+.giftCardInfoContainer {
+  margin-top: 40px;
 }
 
 .ems-page-order .block2 {
@@ -6135,7 +6227,7 @@ a.btnUyeSifreGonder {
     .menu .lvl-2 li {
       break-inside: avoid;
     }
-    .menu .lvl-2 li.single {
+    .menu .lvl-2 li.ems-sub-menu {
       height: 100%;
     }
     .menu .lvl-2 li a {
@@ -6884,6 +6976,13 @@ a.btnUyeSifreGonder {
     }
     .ems-page-hierarchy .page-top-title + .html-content {
       margin-top: 20px;
+    }
+    .ems-page-1-col-grid {
+      grid-template-columns: 1fr;
+      grid-template-areas: "ga1";
+    }
+    .ems-page-1-col-grid > .ga1 {
+      grid-area: ga1;
     }
     .ems-page-order .site-header {
       position: relative;

@@ -1,3 +1,4 @@
+//DEFAULT
 .ems-page-hierarchy {
     &-grid {
         grid-template-columns: 300px 20px minmax(auto, 890px) 1fr;
@@ -15,5 +16,16 @@
         + .html-content {
             margin-top: 20px;
         }
+    }
+}
+
+//1 COL
+.ems-page-1-col {
+    &-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "ga1";
+        
+        @include setGridArea(1,1);
     }
 }

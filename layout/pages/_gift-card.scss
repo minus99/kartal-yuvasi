@@ -1,0 +1,53 @@
+.ems-page-gift-card {
+    background: $color1 url(/images/frontend/bg01.png) left top / 100% no-repeat;
+    color: $color2;
+    padding: 70px 20px;
+    &-grid {
+        grid-template-columns: 1fr 710px 1fr;
+        grid-template-areas:
+        ". ga1 .";
+        
+        @include setGridArea(1,1);
+    }
+}
+
+.card01 {
+    background: #111111 url(/images/frontend/card01.jpg) left center / 298px no-repeat;
+    padding-left: 260px;
+}
+
+.ems-member-gift-card-list {
+    font-family: $font2;
+    font-size: 16px;
+}
+
+ul.giftCardList {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    li {
+        > a {
+            display: block;
+            padding: 10px 20px;
+            border: 1px solid transparent;
+            font-size: 16px;
+        }
+        &.selected {
+            > a {
+                border: 1px solid $color2;
+            }
+        }
+    }
+
+    .urunCekAd {
+        display: none;
+    }
+}
+
+.gift-card-send {
+    margin-top: 40px;
+}
+
+.giftCardInfoContainer {
+    margin-top: 40px;
+}

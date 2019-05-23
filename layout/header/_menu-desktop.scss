@@ -170,7 +170,7 @@
         animation: animation-02 .5s cubic-bezier(0.215, 0.610, 0.355, 1.000) !important; /* easeOutCubic */
         li {
             break-inside: avoid;
-            &.single {
+            &.ems-sub-menu {
                 height: 100%;
             }
             a {
