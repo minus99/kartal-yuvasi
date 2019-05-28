@@ -5,28 +5,28 @@
             padding-bottom: 85px;
         }
     }
-}
 
-.page-top-title {
-    font-size: 22px;
-    font-weight: 700;
-}
-.page-top-desc {
-    font-family: $font2;
-    font-size: 16px;
-    margin-top: 20px;
+    .page-top-title {
+        font-size: 22px;
+        font-weight: 700;
+    }
+    .page-top-desc {
+        font-family: $font2;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .or {
+        font-family: $font2;
+        font-size: 13px;
+        color: $color6;
+    }
 }
 
 .dealer-form {
     .ems-field {
         width: calc(50% - 5px);
     }
-}
-
-.or {
-    font-family: $font2;
-    font-size: 13px;
-    color: $color6;
 }
 
 .dealer-stock-information {

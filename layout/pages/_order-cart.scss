@@ -23,6 +23,12 @@
     }
 }
 
+.odemeCeki {
+    .baslik {
+        color: $color1;
+    }
+}
+
 .ems-cart-button {
     margin: 20px 30px 0 10px;
     a.btnDefault {
@@ -66,42 +72,35 @@
 }
 
 .ems-cart-coupon {
-    margin-top: -48px;
-    .ems-form-label-custom {
-        display: inline-block;
-        margin-bottom: 15px;
-        font-family: $font2;
-        font-size: 14px;
-        color: inherit;
-    }
+    margin-top: -20px;
     .input-btn {
         input + table {
             right: 8px;
             font-size: 0;
         }
     }
-    .btnHediyeCekiKullan {
-        padding-left: 0;
-        padding-right: 0;
-        .icon-arrow-r {
-            margin-left: 0;
-        }
+}
+a.btnHediyeCekiKullan {
+    padding-left: 0;
+    padding-right: 0;
+    .icon-arrow-r {
+        margin-left: 0;
     }
-    [id$="lblHCK_HATA"]:not(:empty) {
-        display: block;
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
+}
+[id$="lblHCK_HATA"]:not(:empty) {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 .ems-cart-coupon-info {
     position: relative;
-    [id$="lblKuponKodBilgi"]:not(:empty) {
-        font-size: 16px;
-        font-weight: 700;
-    }
-    a.btnHediyeCekiIptal {
-        @extend %btn-reset;
-    }
+}
+[id$="lblKuponKodBilgi"]:not(:empty) {
+    font-size: 16px;
+    font-weight: 700;
+}
+a.btnHediyeCekiIptal {
+    @extend %btn-reset;
 }
 
 .customer-support {

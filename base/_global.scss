@@ -6,9 +6,9 @@
 }
 
 //GLOBAL
-*,
-*::after,
-*::before {
+*, 
+::after, 
+::before {
     box-sizing: border-box;
 }
 
@@ -26,8 +26,7 @@ html {
 
 body {
     margin: 0;
-    overflow-y: scroll;
-    font-family: $font1, arial, sans-serif;
+    font-family: $font1;
     font-size: $font-size;
     color: $color1;
     font-weight: $font-weight;
@@ -345,7 +344,7 @@ table {
 .satBrFiyatVrg,
 .brFiyatVrg,
 .pnlDipToplamTable td > span {
-    display: flex !important;
+    display: inline-flex !important;
     .d {
         display: none;
     }

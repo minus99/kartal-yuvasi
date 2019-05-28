@@ -8,7 +8,6 @@
         grid-template-areas:
         "ga1 ga1 ga1 ga1 ga1"
         ". ga2 . ga3 .";
-        grid-row-gap: 40px;
     
         @include setGridArea(1,3);
     }

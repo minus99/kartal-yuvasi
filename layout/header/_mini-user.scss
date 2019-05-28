@@ -19,45 +19,10 @@
         padding: $pv $ph;
     }
 
-    .uyeGirisFacebookConnectKutu {
-        @extend .kutuUyeGirisFacebookConnect;
-    }
-    a.btnFacebookLoginKutu {
-        @extend .btnFacebookLogin;
-    }
-    
     .ems-obj-logon {
         .sub-header {
             margin: #{-$pv} #{-$ph} 20px #{-$ph};
             padding-left: $ph;
-        }
-    }
-
-    .kutuUyeGiris_profilFoto {
-        display: inline-block !important;
-        padding-right: 15px;
-        img {
-            border-radius: 100%;
-            max-width: 60px;
-        }
-    }
-    a.btnKutuLogout {
-        @extend %btn-reset;
-        font-size: 14px;
-        font-weight: 300;
-        display: table;
-        margin-top: 5px;
-    }
-    .mini-user-links {
-        font-family: $font2;
-        font-size: 18px;
-        a {
-            line-height: 35px;
-        }
-        @at-root {
-            .kutuUyeGiris_lbfUyeMesajSayi {
-                margin-left: 5px;
-            }
         }
     }
 
@@ -74,6 +39,41 @@
         }
         .mini-user-sub {
             @extend %header-mods-sub-animate;
+        }
+    }
+}
+
+.uyeGirisFacebookConnectKutu {
+    @extend .kutuUyeGirisFacebookConnect;
+}
+a.btnFacebookLoginKutu {
+    @extend .btnFacebookLogin;
+}
+
+.kutuUyeGiris_profilFoto {
+    display: inline-block !important;
+    padding-right: 15px;
+    img {
+        border-radius: 100%;
+        max-width: 60px;
+    }
+}
+a.btnKutuLogout {
+    @extend %btn-reset;
+    font-size: 14px;
+    font-weight: 300;
+    display: table;
+    margin-top: 5px;
+}
+.mini-user-links {
+    font-family: $font2;
+    font-size: 18px;
+    a {
+        line-height: 35px;
+    }
+    @at-root {
+        .kutuUyeGiris_lbfUyeMesajSayi {
+            margin-left: 5px;
         }
     }
 }

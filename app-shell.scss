@@ -1,0 +1,55 @@
+//ABSTRACTS
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+//BASE
+@import 'base/typography';
+@import 'base/icons';
+@import 'base/global';
+@import 'base/animations';
+
+//COMPONENTS
+@import 'components/button';
+@import 'vendors/swiper';
+@import 'components/swiper-customize';
+@import 'components/banner';
+
+//HEADER
+@import 'layout/header/header';
+@import 'layout/header/menu';
+@import 'layout/header/top-menu';
+@import 'layout/header/mini-lang';
+@import 'layout/header/mini-user';
+@import 'layout/header/mini-cart';
+@import 'layout/header/mini-search';
+
+//PAGES
+@import 'layout/pages/home';
+@import 'layout/pages/login';
+
+
+//DESKTOP
+@supports(grid-area: auto) {
+    @include setMinMedia($breakpoint-medium) {
+        //BASE
+        @import 'base/global-desktop';
+        
+        //COMPONENTS
+        @import 'components/swiper-customize-desktop';
+        @import 'components/banner-desktop';
+
+        //HEADER
+        @import 'layout/header/header-desktop';
+        @import 'layout/header/menu-desktop';
+        @import 'layout/header/top-menu-desktop';
+        @import 'layout/header/mini-lang-desktop';
+        @import 'layout/header/mini-user-desktop';
+        @import 'layout/header/mini-cart-desktop';
+        @import 'layout/header/mini-search-desktop';
+        @import 'layout/header/logo-desktop';
+
+        //PAGES
+        @import 'layout/pages/home-desktop';
+        @import 'layout/pages/login-desktop';
+    }
+}

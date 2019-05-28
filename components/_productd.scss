@@ -69,12 +69,12 @@
     }
     &-block2 {
         margin-top: 10px;
-        > * {
-            width: calc(50% - 5px);
+        > span {
+            flex: 1;
+            padding: 0 5px;
         }
         a.btnDefault {
             @extend .btn-transparent;
-            width: 100%;
             padding-left: 3px;
             padding-right: 3px;
         }
@@ -169,6 +169,10 @@ $m: 5px;
 }
 a.btnsepeteAt {
     width: 100%;
+}
+a.btnStokHaberci {
+    width: 100%;
+    pointer-events: none;
 }
 
 //added to cart

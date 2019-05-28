@@ -41,7 +41,8 @@
             overflow: hidden;
         }
         .urnKisaAd,
-        > a + span {
+        > a + span,
+        .odemeCeki {
             display: block;
             color: $color7;
             margin-top: 3px;

@@ -163,15 +163,14 @@
     position: relative;
     background: $color1;
     color: $color2;
-    width: 435px;
-    height: 275px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
     overflow: hidden;
     text-align: center;
-    box-shadow: 0 0 20px #000 inset;
+    box-shadow: 0 0 5px #000 inset;
     padding: 40px;
+    animation: show .5s ease;
     &-logo {
         img {
             width: 40px;
@@ -187,6 +186,29 @@
         animation: show .5s ease;
         &:empty {
             display: none;
+        }
+    }
+
+    &01 {
+        width: 435px;
+        height: 250px;
+        background: #111111 url(/images/frontend/card01.png) left center / 300px no-repeat;
+        padding-left: 280px;
+    }
+    &02 {
+        width: 340px;
+        height: 190px;
+        background: #111111 url(/images/frontend/card01.png) left top / 230px no-repeat;
+        padding-left: 210px;
+        padding-right: 20px;
+
+        .card-logo {
+            img {
+                width: 30px;
+            }
+        }
+        .card-title {
+            font-size: 13px;
         }
     }
 }

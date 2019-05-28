@@ -99,3 +99,17 @@ a.btnDefault {
 .btn-reset {
     @extend %btn-reset;
 }
+
+.btn-group {
+    $p: 5px;
+    display: flex;
+    margin-left: #{-$p};
+    margin-right: #{-$p};
+    > * {
+        flex: 1;
+        padding: 0 5px;
+        > a {
+            width: 100%;
+        }
+    }
+}

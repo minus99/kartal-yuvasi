@@ -1,0 +1,94 @@
+//GIFT CARD SATIN AL
+.ems-page-gift-card {
+    background: $color1 url(/images/frontend/bg01.png) left top / 100% no-repeat;
+    color: $color2;
+    padding: 70px 20px 0;
+    &-grid {
+        grid-template-columns: 1fr 710px 1fr;
+        grid-template-areas:
+        ". ga1 ."
+        "ga2 ga2 ga2";
+        
+        @include setGridArea(1,2);
+
+        > .ga1 {
+            min-height: 900px;
+        }
+    }
+
+    .instagram-feed {
+        padding-top: 120px;
+    }
+}
+
+.ems-member-gift-card-list {
+    font-family: $font2;
+    font-size: 16px;
+
+    a.btnsepeteAt {
+        @extend %btn-primary;
+        max-width: 370px;
+    }
+}
+
+ul.giftCardList {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    li {
+        > a {
+            display: block;
+            padding: 10px 20px;
+            border: 1px solid transparent;
+            font-size: 16px;
+        }
+        &.selected {
+            > a {
+                border: 1px solid $color2;
+            }
+        }
+    }
+}
+
+.gift-card-send {
+    margin-top: 40px;
+    animation: show .5s ease;
+}
+
+.giftCardInfoContainer {
+    margin-top: 40px;
+}
+
+//GIFT CARD SORGULA
+.ems-member-gift-card {}
+.gift-card-control {
+    > .ga2 {
+        padding-left: 40px;
+    }
+}
+
+.lnkSorgula {
+    @extend %btn;
+}
+.lnkSatinAl {
+    @extend %btn;
+    @extend %btn-secondary;
+}
+
+//GIFT CARD UYGULA
+.pageOdemeBilgi_odemeCekiGiris {
+    display: block !important;
+    margin-top: 20px;
+}
+.odemeCekiKullanim {
+    position: relative;
+}
+.odemeCekiEkleBtn {
+    position: absolute;
+    right: 8px;
+    top: 26px;
+    font-size: 0;
+}
+a.btnOdemeCekiEkle {
+    @extend .btnHediyeCekiKullan;
+}

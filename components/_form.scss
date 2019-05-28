@@ -236,6 +236,11 @@ textarea {
 }
 
 //XML FORM
+.xmlForm {
+    #dvSehirBilgi {
+        @extend .ems-field;
+    }
+}
 .xmlForm_btnGonder {
     margin-top: 30px;
     text-align: left;
@@ -245,4 +250,11 @@ a.btnXMLFORM {
 }
 .xmlFormHeader {
     display: none;
+}
+.xmlFormCaptcha {
+    margin-top: 20px;
+}
+.prmSehir {
+    @extend .ems-form-label;
+    display: block !important;
 }

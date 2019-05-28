@@ -40,11 +40,8 @@
     height: 32px;
     cursor: pointer;
     background: url(/images/frontend/close.svg);
-
-    .btnMinPpCl {
-        display: none;
-    }
 }
+
 .jconfirm-content-pane {
     transition-property: height;
 }
@@ -56,20 +53,38 @@
     display: none;
 }
 
-//SYSTEM POPUP
-//FAVORİ
-.popup_favori {
-    .jconfirm-content-pane {
-        height: 330px !important;
+//MINUS POPUP
+a.btnMinPpCl[class] {
+    @extend .jconfirm-closeIcon;
+}
+
+//POPUP INNER
+$p: 20px;
+.popupDefault {
+    text-align: left;
+    padding: $p;
+    > [class*="_mesaj"],
+    > [class*="_aciklama"] {
+        margin-top: 10px;
+    }
+    
+    > [class$="Yazdir"] {
+        display: none;
     }
 }
-.popupFavori_mesaj,
-.popupFavori_aciklama {
-    margin-top: 10px;
+.popupTitleDefault {
+    position: sticky;
+    top: 0;
+    background: $color3;
+    padding: 18px 60px 19px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+    min-height: 60px;
+    margin: #{-$p} #{-$p} #{$p};
 }
 
-
-//CUSTOM POPUP
+//CUSTOM POPUP OBJ
 .sub-close {
     position: absolute;
     right: 14px;
@@ -87,24 +102,4 @@
 .sub-desc {
     font-family: $font2;
     font-size: 15px;
-}
-
-$p: 20px;
-.popupDefault {
-    text-align: left;
-    padding: $p;
-}
-.popupTitleDefault {
-    position: sticky;
-    top: 0;
-    background: $color3;
-    padding: 18px 60px 19px 20px;
-    font-size: 18px;
-    font-weight: 700;
-    text-align: left;
-    min-height: 60px;
-    margin: #{-$p} #{-$p} #{$p};
-}
-div[class$="Yazdir"] {
-    display: none;
 }

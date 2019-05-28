@@ -13,7 +13,7 @@
                 width: 100%;
             }
             &-push {
-                margin-right: calc(100% - #{$f});
+                margin-right: #{$f};
             }
         }
     }
