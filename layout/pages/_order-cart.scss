@@ -81,11 +81,7 @@
     }
 }
 a.btnHediyeCekiKullan {
-    padding-left: 0;
-    padding-right: 0;
-    .icon-arrow-r {
-        margin-left: 0;
-    }
+    @extend %btn-icon;
 }
 [id$="lblHCK_HATA"]:not(:empty) {
     display: block;

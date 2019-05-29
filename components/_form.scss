@@ -108,6 +108,9 @@ textarea {
             }
         }
     }
+    &-post-loading {
+        animation: show .5s ease;
+    }
 }
 
 .sStylerMainWrp {

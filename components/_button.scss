@@ -100,6 +100,14 @@ a.btnDefault {
     @extend %btn-reset;
 }
 
+%btn-icon {
+    padding-left: 0;
+    padding-right: 0;
+    .icon-arrow-r {
+        margin-left: 0;
+    }
+}
+
 .btn-group {
     $p: 5px;
     display: flex;

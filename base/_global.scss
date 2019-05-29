@@ -343,7 +343,8 @@ table {
 .suggest_urnprice,
 .satBrFiyatVrg,
 .brFiyatVrg,
-.pnlDipToplamTable td > span {
+.pnlDipToplamTable td > span,
+.odemeCekiTutar {
     display: inline-flex !important;
     .d {
         display: none;
@@ -352,7 +353,8 @@ table {
         order: -1;
     }
 }
-.pnlDipToplamTable td > span {
+.pnlDipToplamTable td > span,
+.odemeCekiTutar {
     .d {
         display: inline;
     }
@@ -382,7 +384,9 @@ table {
         background: $color3 !important;
     }
     a[onclick*="ekle"],
-    a[onclick*="cikar"] {
+    a[onclick*="cikar"],
+    .bottom-btn,
+    .top-btn {
         position: absolute;
         right: 0;
         padding-left: 20px;
@@ -395,14 +399,16 @@ table {
             display: none;
         }
     }
-    a[onclick*="ekle"] {
+    a[onclick*="ekle"],
+    .top-btn {
         top: 0;
         padding-top: 12px;
         &::before {
             @extend %triangle-t;
         }
     }
-    a[onclick*="cikar"] {
+    a[onclick*="cikar"],
+    .bottom-btn {
         bottom: 0;
         padding-bottom: 12px;
         &::before {
@@ -431,7 +437,7 @@ table {
     position: relative;
     z-index: 9999;
     * {
-        font-family: arial;
+        font-family: $font0;
         font-size: 13px;
         color: #000;
     }

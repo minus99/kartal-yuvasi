@@ -80,15 +80,49 @@ ul.giftCardList {
     display: block !important;
     margin-top: 20px;
 }
+.odemeCekiKullanim,
+.odemeCekiKullanimOzet > div {
+    border-top: 1px solid $color5;
+    padding: 20px 0;
+}
+
 .odemeCekiKullanim {
     position: relative;
+    
 }
 .odemeCekiEkleBtn {
     position: absolute;
     right: 8px;
-    top: 26px;
+    top: calc(50% + 10px);
+    transform: translateY(-50%);
     font-size: 0;
 }
 a.btnOdemeCekiEkle {
-    @extend .btnHediyeCekiKullan;
+    @extend %btn-icon;
+}
+
+.odemeCekiKullanimOzet {
+    font-family: $font2;
+    font-size: 16px;
+}
+.ulOdemeCekiKullanim {
+    > li {
+        display: flex;
+        align-items: center;
+        + li {
+            margin-top: 10px;
+        }
+    }
+}
+.odemeCekiKaldir {
+    order: -1;
+}
+.odemeCekiTutar {
+    margin-left: auto;
+    font-weight: 700;
+}
+
+.odemeCekiKalan {
+    font-weight: 700;
+    text-align: right;
 }

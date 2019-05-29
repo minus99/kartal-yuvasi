@@ -160,5 +160,8 @@
     }
     &-option1 {
         grid-column: span 2;
+        .dropdown-trigger {
+            display: block;
+        }
     }
 }

@@ -14,7 +14,8 @@
         padding-left: 20px;
     }
     a.btnBultenGonder {
-        @extend %btn-reset;
+        @extend %btn-icon;
+        background: transparent;
     }
     #plhPrivacyNotice {
         opacity: 0;

@@ -55,13 +55,16 @@
 }
 
 .qty-wrapper a[onclick*="ekle"]::before,
-.qty-wrapper a[onclick*="cikar"]::before, .dropdown-header::after, .mobi-dropdown-header::after, .menu li > a::after, .popular-search-words li > a::before, .searchSuggestDivHolder .cat .suggest_link > span::before {
+.qty-wrapper a[onclick*="cikar"]::before,
+.qty-wrapper .bottom-btn::before,
+.qty-wrapper .top-btn::before, .dropdown-header::after, .mobi-dropdown-header::after, .menu li > a::after, .popular-search-words li > a::before, .searchSuggestDivHolder .cat .suggest_link > span::before {
   content: "";
   border-width: 4px;
   border-style: solid;
 }
 
-.qty-wrapper a[onclick*="ekle"]::before {
+.qty-wrapper a[onclick*="ekle"]::before,
+.qty-wrapper .top-btn::before {
   border-color: transparent transparent currentColor transparent;
 }
 
@@ -70,7 +73,8 @@
 }
 
 
-.qty-wrapper a[onclick*="cikar"]::before, .dropdown-header::after, .mobi-dropdown-header::after {
+.qty-wrapper a[onclick*="cikar"]::before,
+.qty-wrapper .bottom-btn::before, .dropdown-header::after, .mobi-dropdown-header::after {
   border-color: currentColor transparent transparent transparent;
 }
 
@@ -498,7 +502,8 @@ table {
 .suggest_urnprice,
 .satBrFiyatVrg,
 .brFiyatVrg,
-.pnlDipToplamTable td > span {
+.pnlDipToplamTable td > span,
+.odemeCekiTutar {
   display: inline-flex !important;
 }
 
@@ -511,7 +516,8 @@ table {
 .suggest_urnprice .d,
 .satBrFiyatVrg .d,
 .brFiyatVrg .d,
-.pnlDipToplamTable td > span .d {
+.pnlDipToplamTable td > span .d,
+.odemeCekiTutar .d {
   display: none;
 }
 
@@ -524,11 +530,13 @@ table {
 .suggest_urnprice [class^="pb"],
 .satBrFiyatVrg [class^="pb"],
 .brFiyatVrg [class^="pb"],
-.pnlDipToplamTable td > span [class^="pb"] {
+.pnlDipToplamTable td > span [class^="pb"],
+.odemeCekiTutar [class^="pb"] {
   order: -1;
 }
 
-.pnlDipToplamTable td > span .d {
+.pnlDipToplamTable td > span .d,
+.odemeCekiTutar .d {
   display: inline;
 }
 
@@ -560,7 +568,9 @@ table {
 }
 
 .qty-wrapper a[onclick*="ekle"],
-.qty-wrapper a[onclick*="cikar"] {
+.qty-wrapper a[onclick*="cikar"],
+.qty-wrapper .bottom-btn,
+.qty-wrapper .top-btn {
   position: absolute;
   right: 0;
   padding-left: 20px;
@@ -568,21 +578,27 @@ table {
 }
 
 .qty-wrapper a[onclick*="ekle"]::before,
-.qty-wrapper a[onclick*="cikar"]::before {
+.qty-wrapper a[onclick*="cikar"]::before,
+.qty-wrapper .bottom-btn::before,
+.qty-wrapper .top-btn::before {
   display: block;
 }
 
 .qty-wrapper a[onclick*="ekle"] > span,
-.qty-wrapper a[onclick*="cikar"] > span {
+.qty-wrapper a[onclick*="cikar"] > span,
+.qty-wrapper .bottom-btn > span,
+.qty-wrapper .top-btn > span {
   display: none;
 }
 
-.qty-wrapper a[onclick*="ekle"] {
+.qty-wrapper a[onclick*="ekle"],
+.qty-wrapper .top-btn {
   top: 0;
   padding-top: 12px;
 }
 
-.qty-wrapper a[onclick*="cikar"] {
+.qty-wrapper a[onclick*="cikar"],
+.qty-wrapper .bottom-btn {
   bottom: 0;
   padding-bottom: 12px;
 }
@@ -608,7 +624,7 @@ table {
 }
 
 .anaBody > div[ondblclick][style] * {
-  font-family: arial;
+  font-family: arial, sans-serif;
   font-size: 13px;
   color: #000;
 }
@@ -732,7 +748,7 @@ a.btnDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle a:hover, .cart-prd-page-
   font-size: 0;
 }
 
-.btn-reset, .ems-grid-address-buttons > a, .ems-grid-address-select a, a.btnKutuLogout, .mini-search a[id$="btnArama"], .mini-bulletin a.btnBultenGonder, .ems-cart-button a.btnDefault, a.btnHediyeCekiIptal, a.btnAdresEkle, .siparisOnaySozlesmeMetin > span a.btnDefault,
+.btn-reset, .ems-grid-address-buttons > a, .ems-grid-address-select a, a.btnKutuLogout, .mini-search a[id$="btnArama"], .ems-cart-button a.btnDefault, a.btnHediyeCekiIptal, a.btnAdresEkle, .siparisOnaySozlesmeMetin > span a.btnDefault,
 .onBilgilendirmeFormMetin > span a.btnDefault, a.btnSipariseDon, .coupon-tab a {
   padding: unset;
   background: unset;
@@ -745,7 +761,7 @@ a.btnDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle a:hover, .cart-prd-page-
   letter-spacing: unset;
 }
 
-.btn-reset:hover, .ems-grid-address-buttons > a:hover, .ems-grid-address-select a:hover, a.btnKutuLogout:hover, .mini-search a:hover[id$="btnArama"], .mini-bulletin a.btnBultenGonder:hover, .ems-cart-button a.btnDefault:hover, a.btnHediyeCekiIptal:hover, a.btnAdresEkle:hover, .siparisOnaySozlesmeMetin > span a.btnDefault:hover,
+.btn-reset:hover, .ems-grid-address-buttons > a:hover, .ems-grid-address-select a:hover, a.btnKutuLogout:hover, .mini-search a:hover[id$="btnArama"], .ems-cart-button a.btnDefault:hover, a.btnHediyeCekiIptal:hover, a.btnAdresEkle:hover, .siparisOnaySozlesmeMetin > span a.btnDefault:hover,
 .onBilgilendirmeFormMetin > span a.btnDefault:hover, a.btnSipariseDon:hover, .coupon-tab a:hover {
   background: unset;
 }
@@ -753,6 +769,15 @@ a.btnDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle a:hover, .cart-prd-page-
 .btn .icon-arrow-r,
 a.btnDefault .icon-arrow-r {
   margin-left: 10px;
+}
+
+.mini-bulletin a.btnBultenGonder, a.btnHediyeCekiKullan, a.btnOdemeCekiEkle {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.mini-bulletin a.btnBultenGonder .icon-arrow-r, a.btnHediyeCekiKullan .icon-arrow-r, a.btnOdemeCekiEkle .icon-arrow-r {
+  margin-left: 0;
 }
 
 .btn-group {
@@ -892,6 +917,10 @@ textarea {
   top: 50%;
   color: #000;
   transform: translateY(-50%);
+}
+
+.ems-form-post-loading {
+  animation: show .5s ease;
 }
 
 .sStylerMainWrp {
@@ -3377,6 +3406,10 @@ a.btnStokHaberci {
   grid-column: span 2;
 }
 
+.ems-grid-option1 .dropdown-trigger {
+  display: block;
+}
+
 .ff2 {
   font-family: fira, arial, sans-serif;
 }
@@ -3692,6 +3725,7 @@ a.btnStokHaberci {
   width: 100%;
   height: 100%;
   background: #fff;
+  overflow: auto;
 }
 
 .menu li.selected > a {
@@ -4382,6 +4416,10 @@ a.btnKutuLogout {
   padding-left: 20px;
 }
 
+.mini-bulletin a.btnBultenGonder {
+  background: transparent;
+}
+
 .mini-bulletin #plhPrivacyNotice {
   opacity: 0;
   transition: opacity .2s ease;
@@ -4887,6 +4925,64 @@ ul.product-list-grid > li {
   margin-top: 30px;
 }
 
+.ems-page-error {
+  background: #000 url(/images/frontend/bg02.png) center center/cover no-repeat;
+  color: #fff;
+  overflow: hidden;
+}
+
+.ems-page-error-grid {
+  grid-template-columns: 1fr;
+  grid-template-areas: "ga1";
+}
+
+.ems-page-error-grid > .ga1 {
+  grid-area: ga1;
+}
+
+.error-content {
+  position: relative;
+  z-index: 1;
+  min-height: 620px;
+  padding: 40px 20px;
+}
+
+.error-content > * {
+  position: relative;
+  z-index: 2;
+}
+
+.error-content .prm-media {
+  margin-bottom: 20px;
+}
+
+.error-content .prm-media img {
+  width: 60px;
+}
+
+.error-content .prm-title {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.error-content .prm-desc {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.error-content .btn-error {
+  margin-top: 30px;
+}
+
+.error-content-obj {
+  position: absolute;
+  right: -25px;
+  bottom: 0;
+  z-index: 1;
+  max-width: 160px;
+  animation: animation-03 .5s ease;
+}
+
 .ems-page-order .block2 {
   background: #eee;
   padding: 10px 20px;
@@ -4990,15 +5086,6 @@ ul.product-list-grid > li {
 .ems-cart-coupon .input-btn input + table {
   right: 8px;
   font-size: 0;
-}
-
-a.btnHediyeCekiKullan, a.btnOdemeCekiEkle {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-a.btnHediyeCekiKullan .icon-arrow-r, a.btnOdemeCekiEkle .icon-arrow-r {
-  margin-left: 0;
 }
 
 [id$="lblHCK_HATA"]:not(:empty) {
@@ -5786,12 +5873,6 @@ a.btnUyeSifreGonder {
   max-width: 330px;
 }
 
-#mesajGonder .mesajGonderiliyor {
-  display: block;
-  text-align: center;
-  animation: show .5s ease;
-}
-
 .kutuMesaj {
   position: relative;
 }
@@ -5948,6 +6029,12 @@ ul.giftCardList li.selected > a {
   margin-top: 20px;
 }
 
+.odemeCekiKullanim,
+.odemeCekiKullanimOzet > div {
+  border-top: 1px solid #c9c9c9;
+  padding: 20px 0;
+}
+
 .odemeCekiKullanim {
   position: relative;
 }
@@ -5955,8 +6042,37 @@ ul.giftCardList li.selected > a {
 .odemeCekiEkleBtn {
   position: absolute;
   right: 8px;
-  top: 26px;
+  top: calc(50% + 10px);
+  transform: translateY(-50%);
   font-size: 0;
+}
+
+.odemeCekiKullanimOzet {
+  font-family: fira, arial, sans-serif;
+  font-size: 16px;
+}
+
+.ulOdemeCekiKullanim > li {
+  display: flex;
+  align-items: center;
+}
+
+.ulOdemeCekiKullanim > li + li {
+  margin-top: 10px;
+}
+
+.odemeCekiKaldir {
+  order: -1;
+}
+
+.odemeCekiTutar {
+  margin-left: auto;
+  font-weight: 700;
+}
+
+.odemeCekiKalan {
+  font-weight: 700;
+  text-align: right;
 }
 
 @supports (grid-area: auto) {
@@ -6612,6 +6728,7 @@ ul.giftCardList li.selected > a {
       width: auto;
       height: auto;
       background: none;
+      overflow: visible;
     }
     .menu li.selected > a {
       background: none;
@@ -7054,6 +7171,23 @@ ul.giftCardList li.selected > a {
     .ems-page-1-col-grid > .ga1 {
       grid-area: ga1;
     }
+    .error-content {
+      min-height: 850px;
+      padding: 90px 0;
+    }
+    .error-content .prm-media {
+      margin-bottom: 95px;
+    }
+    .error-content .prm-title {
+      font-size: 80px;
+    }
+    .error-content .prm-desc {
+      font-size: 30px;
+    }
+    .error-content-obj {
+      max-width: none;
+      right: 0;
+    }
     .ems-page-order .site-header {
       position: relative;
       z-index: auto;
@@ -7087,7 +7221,7 @@ ul.giftCardList li.selected > a {
       border-top: 1px solid #c9c9c9;
     }
     .bottom-step {
-      margin: 20px -20px 0 -20px;
+      margin: 30px -20px 0 -20px;
     }
     .ems-step0 .ems-order-cart-grid {
       grid-template-columns: 1fr 780px 20px 380px 1fr;
@@ -7325,6 +7459,14 @@ ul.giftCardList li.selected > a {
     #plhBtnMesajCozuldu {
       margin-top: 0;
       margin-left: 20px;
+    }
+    .odemeCekiKullanim,
+    .odemeCekiKullanimOzet > div {
+      margin: 0 -30px;
+      padding: 20px 30px;
+    }
+    .odemeCekiEkleBtn {
+      right: 38px;
     }
   }
 }
