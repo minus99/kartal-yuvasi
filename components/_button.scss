@@ -100,7 +100,8 @@ a.btnDefault {
     @extend %btn-reset;
 }
 
-%btn-icon {
+%btn-icon,
+.btn-icon {
     padding-left: 0;
     padding-right: 0;
     .icon-arrow-r {

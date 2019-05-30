@@ -16,6 +16,29 @@
     }
 }
 
+.urunListe_secenek1 {
+    .dropdown-trigger {
+        display: block;
+    }
+    .dropdown-options {
+        display: none !important;
+        animation: show 0.5s ease;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        z-index: 1;
+        width: calc(100% + 2px);
+        margin: 0 0 0 -1px;
+        background: $color2;
+        border: 1px solid $color5;
+    }
+    &.opened {
+        .dropdown-options {
+            display: block !important;
+        }
+    }
+}
+
 .selected-action {
     margin-top: 20px;
     a {

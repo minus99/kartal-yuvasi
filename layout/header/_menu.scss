@@ -104,6 +104,28 @@
         }
     }
 
+    .dropdown {
+        li {
+            &.selected {
+                position: static;
+                > a {
+                    background: $color2;
+                }
+            }
+        }
+        a {
+            position: unset;
+            align-items: unset;
+            margin: unset;
+            font-weight: unset;
+            border-bottom: unset;
+            transition: unset;
+            &::after {
+                display: none;
+            }
+        }
+    }
+
     &-user-info {
         .sub {
             li {

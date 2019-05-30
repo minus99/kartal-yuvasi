@@ -165,17 +165,20 @@
 
     .lvl-2 {
         height: 100%;
-        column-count: 4;
+        display: flex !important;
         column-gap: 20px;
         padding: 30px;
         animation: animation-02 .5s cubic-bezier(0.215, 0.610, 0.355, 1.000) !important; /* easeOutCubic */
-        li {
-            break-inside: avoid;
+        > li {
+            flex: 1;
             &.ems-sub-menu {
                 height: 100%;
             }
             a {
                 display: inline-flex;
+            }
+            + li {
+                margin-left: 50px;
             }
         }
     }
@@ -209,3 +212,8 @@
         }
     }
 }
+
+
+/*.lvl-1 > .test > .sub {
+    display: flex !important;
+}*/

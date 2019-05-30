@@ -1,0 +1,51 @@
+.countdown-container {
+    background: $color4;
+    color: $color2;
+    
+    li {
+        min-height: 50px;
+        margin: 0 10px;
+        > * {
+            + * {
+                margin-left: 4vw;
+            }
+        }
+    }
+
+    .prm-title {
+        p {
+            margin: 0;
+        }
+    }
+
+    .prm-link {
+        border-color: transparent;
+        text-decoration: underline;
+    }
+
+    &.end-countdown {
+        display: none;
+    }
+}
+
+.countdown {
+    font-weight: 700;
+    br {
+        display: none;
+    }
+}
+.countdown_row {
+    display: flex;
+    align-items: center;
+}
+.countdown_amount {
+    padding: 0 3px;
+}
+
+.countdown_show4 {
+    .countdown_section {
+        &:first-child {
+            margin-right: 10px;
+        }
+    }
+}

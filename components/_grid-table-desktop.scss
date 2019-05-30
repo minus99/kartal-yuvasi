@@ -1,14 +1,11 @@
-.ems-grid-table-default {
-    > .ems-grid-row {
-        grid-gap: 10px 20px;
-        padding-left: 0;
-        padding-right: 0;
-        &.ems-grid-header {
-            display: grid;
-        }
+.ems-grid-row {
+    grid-gap: 10px 20px;
+    padding-left: 0;
+    padding-right: 0;
+    &.ems-grid-header {
+        display: grid;
     }
 }
-
 .ems-grid {
     &-name {
         padding-right: 0;
@@ -19,7 +16,9 @@
         }
     }
     &-remove {
-        position: static;
+        position: relative;
+        top: 0;
+        right: 0;
     }
     &-address-name {
         grid-column: span 2;

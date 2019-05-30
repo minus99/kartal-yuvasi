@@ -68,14 +68,15 @@
     font-size: 16px;
     max-height: calc(100vh - 250px);
     overflow: auto;
-    > .ems-row {
-        position: relative;
-        margin-top: 20px;
+    margin-top: 10px;
+    .ems-grid-row {
         grid-template-columns: 100px 1fr 32px;
+        border: none;
         grid-gap: 0 15px;
-        > .ga3 {
-            z-index: 1;
-        }
+        padding: 10px 0;
+    }
+    .ems-grid-remove {
+        align-self: flex-start;
     }
 }
 .cart-prd {
