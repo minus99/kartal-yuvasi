@@ -1,6 +1,7 @@
+$subGapL: 300px;
 .site-header-grid {
     position: relative;
-    grid-template-columns: 300px 1fr auto auto 150px 150px;
+    grid-template-columns: #{$subGapL} 1fr auto auto 150px 150px;
     grid-template-areas:
     "ga1 . ga2 ga3 ga4 ga5"
     "ga6 ga7 ga7 ga7 ga8 ga8";
@@ -18,6 +19,10 @@
     > .ga7,
     > .ga8 {
         line-height: 70px;
+    }
+
+    > .ga1 {
+        grid-column: span 2;
     }
 }
 

@@ -27,6 +27,7 @@
             > img,
             > svg {
                 margin-right: 5px;
+                max-width: 32px;
             }
             &::after {
                 @extend %triangle;
@@ -79,7 +80,7 @@
         display: none;
     }
 
-    .discount {
+    .color02 {
         > a {
             color: $color4;
         }

@@ -1,12 +1,3 @@
-//SYSTEM MENU
-.kutuSolMenuTree {
-    .mobi-dropdown {
-        > a {
-            display: block;
-        }
-    }
-}
-
 //HIERARCHY MENU
 .mobi-dropdown {
     > ul {
@@ -17,6 +8,14 @@
             &.act {
                 display: block;
             }
+        }
+    }
+}
+//SYSTEM MENU
+.kutuSolMenuTree {
+    .mobi-dropdown {
+        > a {
+            display: block;
         }
     }
 }

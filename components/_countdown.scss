@@ -1,26 +1,8 @@
 .countdown-container {
-    background: $color4;
-    color: $color2;
-    
-    li {
-        min-height: 50px;
-        margin: 0 10px;
-        > * {
-            + * {
-                margin-left: 4vw;
-            }
-        }
-    }
+    display: none;
 
-    .prm-title {
-        p {
-            margin: 0;
-        }
-    }
-
-    .prm-link {
-        border-color: transparent;
-        text-decoration: underline;
+    &.start-countdown {
+        display: block;
     }
 
     &.end-countdown {
@@ -29,23 +11,23 @@
 }
 
 .countdown {
-    font-weight: 700;
     br {
         display: none;
     }
 }
 .countdown_row {
-    display: flex;
-    align-items: center;
+    display: block;
 }
 .countdown_amount {
-    padding: 0 3px;
+    padding: 0 2px;
 }
 
+//SHOW DAY
 .countdown_show4 {
     .countdown_section {
         &:first-child {
-            margin-right: 10px;
+            display: block;
+            font-size: .7em;
         }
     }
 }

@@ -31,7 +31,7 @@
 
 //DESKTOP
 @supports(grid-area: auto) {
-    @include setMinMedia($breakpoint-medium) {
+    @include setMediaScreen(min-width, $breakpoint-medium) {
         //BASE
         @import 'base/global-desktop';
         

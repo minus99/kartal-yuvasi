@@ -1,45 +1,3 @@
-//CONTENT UTILITY
-.ff2 {
-    font-family: $font2;
-}
-.fwb {
-    font-weight: 700;
-}
-.fst {
-    font-size: 30px;
-}
-.fsd {
-    font-size: 16px;
-}
-.obb {
-    border-bottom: 1px solid $color10;
-}
-.mt2 {
-    margin-top: 20px;
-}
-.mt5 {
-    margin-top: 50px;
-}
-
-//SYSTEM MENU
-.kutuSolMenuTree {
-    .mobi-dropdown {
-        > a {
-            display: none;
-            padding: 50px 20px 30px;
-            font-size: 18px;
-            font-weight: 700;
-        }
-    }
-
-    b,
-    .kutuHeaderSolMenuTree,
-    .kutuFooterSolMenuTree,
-    .sev3 > ul {
-        display: none;
-    }
-}
-
 //HIERARCHY MENU
 .mobi-dropdown {
     position: relative;
@@ -119,43 +77,52 @@
         }
     }
 }
-
-//BOX
-.primary-box {
-    background: $color1;
-    color: $color2;
-    padding: 40px 30px 50px;
-    .ems-section-title {
-        font-size: 30px;
-        margin-bottom: 30px;
-    }
-    .banner {
-        max-width: 216px;
-        + .banner {
-            margin-left: 34px;
+//SYSTEM MENU
+.kutuSolMenuTree {
+    .mobi-dropdown {
+        > a {
+            display: none;
+            padding: 50px 20px 30px;
+            font-size: 18px;
+            font-weight: 700;
         }
     }
-}
 
-//COVER IMAGE
-.page-cover-image {
-    .banner {
-        .prm-media {
-            img {
-                height: 378px;
-                object-fit: cover;
-            }
-        }
-        .prm-title {
-            font-size: 30px;
-        }
+    b,
+    .kutuHeaderSolMenuTree,
+    .kutuFooterSolMenuTree,
+    .sev3 > ul {
+        display: none;
     }
 }
 
-//COVER VIDEO
-.page-cover-video {
-    background: $color1;
-    color: $color2;
+//CONTENT UTILITY
+.ff2 {
+    font-family: $font2;
+}
+.fwb {
+    font-weight: 700;
+}
+.fst {
+    font-size: 30px;
+}
+.fsd {
+    font-size: 16px;
+}
+.c02 {
+    color: $color4;
+}
+.obb {
+    border-bottom: 1px solid $color10;
+}
+.mt2 {
+    margin-top: 20px;
+}
+.mt5 {
+    margin-top: 50px;
+}
+.mb5 {
+    margin-bottom: 50px;
 }
 
 //CARD
@@ -211,4 +178,40 @@
             font-size: 13px;
         }
     }
+}
+
+//BOX
+.primary-box {
+    background: $color1;
+    color: $color2;
+    padding: 40px 30px 50px;
+    .ems-section-title {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    $p: 34px;
+    .swiper-inner {
+        margin-left: #{-$p};
+    }
+    .swiper-slide {
+        padding-left: #{$p};
+        width: calc(100% / 5);
+    }
+}
+
+//COVER IMAGE
+.primary-image {
+    .banner {
+        .prm-title {
+            font-size: 30px;
+        }
+    }
+}
+
+//COVER VIDEO
+.primary-video {
+    background: $color1;
+    color: $color2;
+    padding: 70px 30px;
 }

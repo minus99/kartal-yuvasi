@@ -11,15 +11,15 @@
     }
 }
 
-//media max-width<
-@mixin setMaxMedia($width) {
-    @media screen and (max-width: #{$width}) {
+//@media
+@mixin setMediaScreen($feature, $value) {
+    @media screen and (#{$feature}: #{$value}) {
         @content;
     }
 }
-//media min-width>
-@mixin setMinMedia($width) {
-    @media screen and (min-width: #{$width}) {
+
+@mixin setMediaPrint {
+    @media print {
         @content;
     }
 }

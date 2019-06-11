@@ -75,15 +75,15 @@
 
 //DESKTOP
 @supports(grid-area: auto) {
-    @include setMinMedia($breakpoint-medium) {
+    @include setMediaScreen(min-width, $breakpoint-medium) {
         //BASE
         @import 'base/global-desktop';
         
         //COMPONENTS
+        @import 'components/button-desktop';
         @import 'components/form-desktop';
         @import 'components/swiper-customize-desktop';
         @import 'components/banner-desktop';
-        @import 'components/countdown-desktop';
         @import 'components/design-uniform-desktop';
         @import 'components/product-desktop';
         @import 'components/breadcrumb-desktop';
@@ -135,5 +135,12 @@
         @import 'layout/pages/member-favorite-desktop';
         @import 'layout/pages/member-message-desktop';
         @import 'layout/pages/member-gift-card-desktop';
+
+        
+        //DESKTOP MINI
+        @include setMediaScreen(max-width, $breakpoint-large) {
+            //HEADER
+            @import 'layout/header/header-desktop-mini';
+        }
     }
 }

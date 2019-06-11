@@ -27,13 +27,13 @@ $font2: fira, $font0;
 $font3: dinc, $font0;
 
 //CONTAINER
-$container-padding: 20px;
+$container-gap: 20px;
 $container-large: 1200px;
 $container-medium: 1040px;
-$container-small: 700px;
+$container-small: 880px;
 
 //BREAKPOINTS
-$breakpoint-small: 640px !default;  // Phone landscape
-$breakpoint-medium: 960px !default;  // Tablet Landscape
-$breakpoint-large: 1200px !default; // Desktop
-$breakpoint-xlarge: 1600px !default; // Large Screens
+$breakpoint-small: 640px !default;
+$breakpoint-medium: 961px !default;
+$breakpoint-large: 1350px !default;
+$breakpoint-xlarge: 1600px !default;

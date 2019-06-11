@@ -1,11 +1,28 @@
+.top-notification {
+    background: $color4;
+    animation: show .5s ease;
+
+    .swiper-wrapper {
+        align-items: center;
+    }
+}
+
+.homepage-slider {
+    background: $color1;
+}
+
 .primary-categories {
     padding-top: 20px;
     background: $color1;
     color: $color2;
-    .banner {
-        + .banner {
-            margin-left: 15px;
-        }
+    
+    $p: 15px;
+    .swiper-inner {
+        margin-left: #{-$p};
+    }
+    .swiper-slide {
+        padding-left: #{$p};
+        width: calc(100% / 3);
     }
 }
 
@@ -42,12 +59,15 @@
 
 .campaigns {
     background: $color1;
-    .swiper-container {
-        max-width: $container-large + 40px;
+
+    $p: 20px;
+    .swiper-inner {
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .swiper-slide {
-        width: 320px;
-        padding: 0 10px;
+        padding-left: #{$p};
+        width: calc(100% - #{$p});
     }
     .swiper-pagination {
         margin-top: -20px;

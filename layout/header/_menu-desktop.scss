@@ -98,13 +98,12 @@
     }
 
     .sub {
-        $subGap: 300px;
         display: none;
         position: absolute;
-        left: -$subGap;
+        left: #{-$subGapL};
         top: 100%;
         z-index: 2;
-        width: calc(100% + #{$subGap * 2});
+        width: calc(100% + #{$subGapL * 2});
         height: 360px;
         background: $color3;
         font-family: $font2;
@@ -115,11 +114,11 @@
             overflow: hidden;
         }
         .r1 {
-            flex-basis: $subGap;
+            flex-basis: $subGapL;
             @include setCurve(15, 48);
             z-index: 1;
             background: $color3;
-            > * {
+            > img {
                 @include setCurve(-15, 0);
             }
             + .r2 {
@@ -164,9 +163,8 @@
     }
 
     .lvl-2 {
-        height: 100%;
         display: flex !important;
-        column-gap: 20px;
+        height: 100%;
         padding: 30px;
         animation: animation-02 .5s cubic-bezier(0.215, 0.610, 0.355, 1.000) !important; /* easeOutCubic */
         > li {
@@ -197,13 +195,20 @@
             height: auto;
         }
         .lvl-2 {
-            column-count: 3;
-        }
-        .banner {
-            max-width: 190px;
+            > li {
+                max-width: 190px;
+                + li {
+                    margin-left: 20px;
+                }
+            }
         }
     }
 
+    &-ready {
+        .menu {
+            display: block;
+        }
+    }
 
     &-animate {
         position: initial;
@@ -212,8 +217,3 @@
         }
     }
 }
-
-
-/*.lvl-1 > .test > .sub {
-    display: flex !important;
-}*/

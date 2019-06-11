@@ -1,25 +1,35 @@
 .primary-categories {
     padding-top: 25px;
     padding-bottom: 95px;
-    .banner {
-        + .banner {
-            margin-left: 30px;
-        }
+    .ems-section-title {
+        display: none;
+    }
+
+    $p: 30px;
+    .swiper-inner {
+        margin-left: #{-$p};
+    }
+    .swiper-slide {
+        padding-left: #{$p};
     }
 }
 
 .new-season {
-    padding-top: 120px;
-    padding-bottom: 100px;
+    padding-top: 85px;
+    padding-bottom: 85px;
 }
 
 .collections {
     padding-top: 120px;
     padding-bottom: 40px;
-    .banner {
-        + .banner {
-            margin-left: 40px;
-        }
+
+    $p: 40px;
+    .swiper-inner {
+        margin-left: #{-$p};
+    }
+    .swiper-slide {
+        padding-left: #{$p};
+        width: calc(100% / 2);
     }
 }
 
@@ -33,9 +43,17 @@
 }
 
 .campaigns {
+    $p: 40px;
+    .swiper-inner {
+        margin-left: #{-$p};
+        padding: 0;
+    }
     .swiper-slide {
+        padding-left: #{$p};
         width: calc(100% / 3);
-        padding: 0 20px;
+    }
+    .swiper-pagination {
+        display: none;
     }
 }
 

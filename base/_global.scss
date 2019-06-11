@@ -1,5 +1,5 @@
 //HIDDEN DESKTOP OBJECTS
-@include setMaxMedia($breakpoint-medium) {
+@include setMediaScreen(max-width, $breakpoint-medium) {
     .obj-desktop {
         display: none !important;
     }
@@ -95,7 +95,7 @@ ul:not(.ul-list) {
     
     //CONTAINER
     &-container {
-        width: calc(100% - #{$container-padding * 2});
+        width: calc(100% - #{$container-gap * 2});
         margin-left: auto;
         margin-right: auto;
         
@@ -114,10 +114,6 @@ ul:not(.ul-list) {
         }
     }
 
-    &-overflow-hidden {
-        overflow: hidden;
-    }
-
     //SECTION
     &-section {
         &-title {
@@ -125,6 +121,9 @@ ul:not(.ul-list) {
             font-weight: 700;
             text-align: center;
             margin-bottom: 20px;
+            > b {
+                font-weight: 400;
+            }
         }
         &-wrapper {
             &:empty {
@@ -234,6 +233,9 @@ ul:not(.ul-list) {
     //GRID
     &-grid {
         display: grid;
+        > * {
+            overflow: hidden;
+        }
     }
 
     //TEXT
@@ -246,6 +248,16 @@ ul:not(.ul-list) {
         }
         &-right {
             text-align: right;
+        }
+    }
+
+    //OVERFLOW
+    &-overflow {
+        &-visible {
+            overflow: visible;
+        }
+        &-hidden {
+            overflow: hidden;
         }
     }
 }
@@ -353,6 +365,8 @@ table {
         order: -1;
     }
 }
+//show price decimals
+#lblUrunTutari,
 .pnlDipToplamTable td > span,
 .odemeCekiTutar {
     .d {

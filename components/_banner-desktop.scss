@@ -13,10 +13,9 @@
         transform: translateY(-50%);
         padding-left: 50px;
         padding-right: 50px;
-        text-align: left;
     }
 
-    //banner type01
+    //banner type01 *primary categories
     &01 {
         .banner-body {
             @include banner-body-bottom;
@@ -26,17 +25,14 @@
             font-size: 30px;
             padding-right: 160px;
         }
-        .prm-url {
-            @include ems-cover;
-        }
     }
 
-    //banner type02
+    //banner type02 *new season
     &02 {
         .banner-body {
             padding: 20px 75px;
         }
-        .btn {
+        .prm-link {
             background: $color2;
             color: $color1;
             &:hover {
@@ -45,20 +41,21 @@
         }
     }
 
-    //banner type03
+    //banner type03 *collections
     &03 {
+        text-align: left;
         .banner-body {
             @include banner-body-bottom;
             padding: 40px 50px;
         }
-        .btn {
+        .prm-link {
             padding-left: 0;
             padding-right: 0;
             margin-top: 0;
         }
     }
 
-    //banner type04
+    //banner type04 *campaigns
     &04 {
         .banner-body {
             @include banner-body-static;
@@ -66,21 +63,13 @@
         .prm-title {
             font-size: 30px;
         }
-        .btn {
-            position: static;
-            margin-top: 5px;
+        .prm-link {
             padding-left: 0;
             padding-right: 0;
-            width: auto;
-            height: auto;
-            font-size: 16px;
-            > span {
-                display: flex;
-            }
         }
     }
 
-    //banner type05
+    //banner type05 *collections menu
     &05 {
         .banner-body {
             @include banner-body-bottom;
@@ -91,20 +80,27 @@
         }
     }
 
-    //banner type06
+    //banner type06 *instagram first content
     &06 {}
 
-    //banner type07
+    //banner type07 *home slider
     &07 {
         .banner-body {
             @include banner-body-bottom-revert;
+            padding: 3% calc((100% - 1000px) / 2);
         }
         .prm-title {
             font-size: 50px;
         }
+        .prm-link {
+            margin-top: 30px;
+        }
+        &::before {
+            display: none;
+        }
     }
 
-    //banner type08
+    //banner type08 *login
     &08 {
         position: static;
         .prm-media {
@@ -117,7 +113,7 @@
         }
     }
 
-    //banner type09
+    //banner type09 *primary box
     &09 {
         .banner-body {
             @include banner-body-bottom;
@@ -129,7 +125,7 @@
         }
     }
 
-    //banner type10
+    //banner type10 *cart promotion
     &10 {
         .banner-body {
             @include banner-body-static;
@@ -142,10 +138,42 @@
         }
     }
 
-    //banner type11
+    //banner type11 *primary video
     &11 {
         .prm-title {
             font-size: 30px;
         }
-    }    
+    }
+
+    //banner type12
+    &12 {}
+
+    //banner type13 *top notification
+    &13 {
+        .banner-body {
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+        .prm-title {
+            font-size: 16px;
+            min-width: 300px;
+            flex: none;
+        }
+        .countdown {
+            font-size: 18px;
+        }
+    }
+}
+
+//options
+.theme-light {
+    .banner {
+        color: $color1;
+    }
+}
+
+.align-l {
+    .banner {
+        text-align: left;
+    }
 }
