@@ -56,6 +56,10 @@ ul:not(.ul-list) {
     list-style: none;
 }
 
+iframe {
+    border: none;
+}
+
 //<main>
 .site-main {
     min-height: 500px;
@@ -171,6 +175,17 @@ ul:not(.ul-list) {
     //VIDEO
     &-video-player {
         position: relative;
+        &.is-play {
+            .i-play {
+                opacity: 0;
+                transition: all .2s ease;
+            }
+            &:hover {
+                .i-play {
+                    opacity: 1;
+                }
+            }
+        }
     }
 
     //FLEX

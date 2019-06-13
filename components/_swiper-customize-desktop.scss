@@ -1,12 +1,36 @@
-.swiper-button-prev,
-.swiper-button-next {
-    display: block;
-}
-
 //product widget
 .swiper-product {
-    max-width: 930px;
+    $p: 30px;
+    .swiper-inner {
+        padding-left: 0;
+        margin-left: #{-$p};
+    }
     .swiper-slide {
-        padding: 0 15px;
+        padding-left: #{$p};
+        width: calc(100% / 3);
+    }
+}
+
+//if navigation selected
+.slider-navigation {
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: block;
+    }
+}
+
+//swipe only mobile
+.mobi-swiper {
+    .swiper-button-prev,
+    .swiper-button-next,
+    .swiper-pagination {
+        display: none;
+    }
+}
+
+//swipe only desktop
+.desktop-swiper {
+    .swiper-pagination {
+        display: block;
     }
 }

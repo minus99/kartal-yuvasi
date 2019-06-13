@@ -14,9 +14,10 @@ textarea {
     background: $color2;
     color: $color1;
     font-weight: 400;
-    line-height: 2.8;
     letter-spacing: .7px;
     width: 100%;
+    line-height: 44px;
+    height: 44px;
     padding: 0 15px;
     border: 1px solid $color5;
     border-radius: 0;
@@ -26,11 +27,6 @@ textarea {
 input:disabled,
 input:read-only {
     background: $color3 !important;
-}
-
-select {
-    padding-top: 11px;
-    padding-bottom: 11px;
 }
 
 textarea {
@@ -52,74 +48,6 @@ textarea {
 .geneltelefon,
 .site_textarea {
     width: 100% !important;
-}
-
-.ems-form {
-    position: relative;
-    @at-root {
-        .ems-field {
-            margin-top: 20px;
-            &-submit {
-                margin-top: 30px;
-                a.btnDefault {
-                    width: 100%;
-                }
-            }
-            &-small {
-                margin-top: 10px;
-            }
-            &-comment {
-                padding-top: 20px;
-                border-top: 1px solid $color5;
-            }
-        }
-    }
-    &-label {
-        position: relative;
-        font-family: $font2;
-        font-size: 13px;
-        color: $color6;
-        font-weight: 500;
-        margin-bottom: 5px;
-        &:empty {
-            display: none;
-        }
-    }
-    &-obj {
-        position: relative;
-        &:empty {
-            display: none;
-        }
-        > span,
-        > label {
-            font-family: $font2;
-            font-size: 15px;
-        }
-        &.chk-padding {
-            padding-left: 20px;
-            > .checkbox {
-                position: absolute;
-                left: 0;
-            }
-        }
-        &.input-btn {
-            input {
-                width: 100% !important;
-                padding-right: 60px;
-                + * {
-                    width: auto;
-                    position: absolute;
-                    right: 20px;
-                    top: 50%;
-                    color: #000;
-                    transform: translateY(-50%);
-                }
-            }
-        }
-    }
-    &-post-loading {
-        animation: show .5s ease;
-    }
 }
 
 .sStylerMainWrp {
@@ -209,6 +137,74 @@ textarea {
         > ul {
             display: block;
         }
+    }
+}
+
+.ems-form {
+    position: relative;
+    @at-root {
+        .ems-field {
+            margin-top: 20px;
+            &-submit {
+                margin-top: 30px;
+                a.btnDefault {
+                    width: 100%;
+                }
+            }
+            &-small {
+                margin-top: 10px;
+            }
+            &-comment {
+                padding-top: 20px;
+                border-top: 1px solid $color5;
+            }
+        }
+    }
+    &-label {
+        position: relative;
+        font-family: $font2;
+        font-size: 13px;
+        color: $color6;
+        font-weight: 500;
+        margin-bottom: 5px;
+        &:empty {
+            display: none;
+        }
+    }
+    &-obj {
+        position: relative;
+        &:empty {
+            display: none;
+        }
+        > span,
+        > label {
+            font-family: $font2;
+            font-size: 15px;
+        }
+        &.chk-padding {
+            padding-left: 20px;
+            > .checkbox {
+                position: absolute;
+                left: 0;
+            }
+        }
+        &.input-btn {
+            input {
+                width: 100% !important;
+                padding-right: 60px;
+                + * {
+                    width: auto;
+                    position: absolute;
+                    right: 20px;
+                    top: 50%;
+                    color: #000;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+    &-post-loading {
+        animation: show .5s ease;
     }
 }
 

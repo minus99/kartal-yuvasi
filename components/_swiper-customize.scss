@@ -29,6 +29,7 @@
 }
 
 .swiper-pagination {
+    display: none;
     position: static;
     padding: 20px;
     font-size: 0;
@@ -50,30 +51,31 @@
     margin: 0 7.5px;
 }
 
-
 //product widget
 .swiper-product {
+    $p: 20px;
+    .swiper-inner {
+        padding-left: 45px;
+    }
     .swiper-slide {
+        padding-left: #{$p};
         width: 265px;
-        padding: 0 10px;
-    }
-    .swiper-button-prev {
-        left: -135px;
-    }
-    .swiper-button-next {
-        right: -135px;
     }
 }
 
+//if pagination selected
+.slider-pagination {
+    .swiper-pagination {
+        display: block;
+    }
+}
 
-//only slide on mobile
-.mobi-swiper {
-    .swiper-button-prev,
-    .swiper-button-next {
+//swipe only desktop
+.desktop-swiper {
+    .swiper-pagination {
         display: none;
     }
 }
-
 
 
 //LIGHT THEME

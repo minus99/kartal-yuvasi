@@ -1,15 +1,8 @@
-.countdown-container {
-    display: none;
-
-    &.start-countdown {
-        display: block;
-    }
-
+[data-countdown] {
     &.end-countdown {
         display: none;
     }
 }
-
 .countdown {
     br {
         display: none;

@@ -45,8 +45,8 @@
 .campaigns {
     $p: 40px;
     .swiper-inner {
+        padding-left: 0;
         margin-left: #{-$p};
-        padding: 0;
     }
     .swiper-slide {
         padding-left: #{$p};

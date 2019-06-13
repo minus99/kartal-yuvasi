@@ -56,14 +56,9 @@
     .prm-desc {
         font-family: $font2;
         font-size: 20px;
-        margin-top: 20px;
-        margin-bottom: 10px;
         a {
             color: $color7;
         }
-    }
-    .prm-content {
-        margin-top: 30px;
     }
 
     &-body {
@@ -156,6 +151,9 @@
         .prm-link {
             margin-top: 10px;
         }
+        .prm-content {
+            margin-top: 30px;
+        }
         &::before {
             content: "";
             position: absolute;
@@ -176,9 +174,10 @@
     //banner type10 *cart promotion
     &10 {
         border: 1px solid $color5;
+        color: $color1;
         .banner-body {
             @include banner-body-static;
-            padding: 15px 20px;
+            padding: 20px;
         }
         .prm-title {
             font-size: 14px;
@@ -187,7 +186,6 @@
         }
         .prm-desc {
             font-size: 14px;
-            color: $color1;
             margin-top: 10px;
         }
     }
@@ -195,8 +193,18 @@
     //banner type11 *primary video
     &11 {}
 
-    //banner type12 
-    &12 {}
+    //banner type12 *seo content
+    &12 {
+        color: $color7;
+        .banner-body {
+            @include banner-body-static;
+            padding: 0;
+        }
+        .prm-content {
+            font-family: $font2;
+            font-size: 16px;
+        }
+    }
 
     //banner type13 *top notification
     &13 {

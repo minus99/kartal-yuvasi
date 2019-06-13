@@ -11,6 +11,18 @@
         }
     }
 
+    &-grid-full {}
+
+    &-grid-col1 {
+        .editable-content > .page-top-title {
+            display: block !important;
+        }
+        > .ga1 {
+            @extend .ems-container;
+            padding-bottom: 50px;
+        }
+    }
+
     [id$="lblICR_METIN_TEMPLATE"],
     .icerikTemplateListeContainer {
         font-family: $font2;
