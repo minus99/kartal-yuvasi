@@ -96,8 +96,12 @@
         font-weight: 700;
     }
     &-discount {
+        display: none;
         color: $color4;
         margin-top: 5px;
+        .ems-show-discount & {
+            display: block;
+        }
     }
     &-proname:not(:empty) {
         margin-top: 5px;

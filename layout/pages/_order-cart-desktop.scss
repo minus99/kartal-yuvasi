@@ -17,8 +17,16 @@
 
 .cart-promotion-info {
     margin-bottom: 40px;
+
+    $p: 20px;
+    .swiper-inner {
+        margin-left: #{-$p};
+        padding-left: 10px;
+        padding-right: 10px;
+    }
     .swiper-slide {
-        padding: 0 10px;
+        padding-left: #{$p};
+        width: calc(100% / 3);
     }
 }
 

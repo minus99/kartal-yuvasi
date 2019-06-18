@@ -10,13 +10,12 @@
 .cart-promotion-info {
     margin-top: 20px;
     margin-bottom: 10px;
-    .swiper-container {
-        max-width: $container-large;
-    }
+
+    $p: 10px;
     .swiper-slide {
-        width: 320px;
+        padding-left: #{$p};
+        width: calc(100% - (20px + #{$p}));
         height: auto;
-        padding: 0 5px;
     }
     .banner {
         height: 100%;
