@@ -17,6 +17,8 @@
 @import 'components/tab';
 @import 'components/banner';
 @import 'components/countdown';
+@import 'vendors/threesixty';
+@import 'components/threesixty-customize';
 @import 'components/instagram-feed';
 @import 'components/design-uniform';
 @import 'components/product';
@@ -63,6 +65,7 @@
 @import 'layout/pages/order-delivery';
 @import 'layout/pages/order-payment';
 @import 'layout/pages/order-result';
+@import 'layout/pages/order-guest';
 @import 'layout/pages/member-main';
 @import 'layout/pages/member-order';
 @import 'layout/pages/member-info';

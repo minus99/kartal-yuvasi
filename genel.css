@@ -189,7 +189,7 @@
   right: 38%;
 }
 
-@media screen and (max-width: 961px) {
+@media screen and (max-width: 960px) {
   .obj-desktop {
     display: none !important;
   }
@@ -265,8 +265,8 @@ iframe {
 .satBrFiyat,
 .floatFixer,
 .ems-obj-required,
-.ems-logon-body .ems-obj-logoff,
-.ems-logoff-body .ems-obj-logon,
+.ems-login .ems-obj-logoff,
+.ems-logoff .ems-obj-login,
 .ems-step1 .ems-obj-step0 {
   display: none !important;
 }
@@ -730,7 +730,7 @@ table {
 }
 
 .btn,
-a.btnDefault, .urunKiyaslamaOzellik_tumunuTemizle a, .cart-prd-page-url .lnkSepet, #plhSipTekrarla .lnkSipTekrarla, .lnkSorgula, .lnkSatinAl {
+a.btnDefault, .urunKiyaslamaOzellik_tumunuTemizle a, .cart-prd-page-url .lnkSepet, a#lnkGuestCheckout, #plhSipTekrarla a.lnkSipTekrarla, a.lnkSorgula, a.lnkSatinAl {
   position: relative;
   display: inline-block;
   padding: 0 20px;
@@ -746,11 +746,11 @@ a.btnDefault, .urunKiyaslamaOzellik_tumunuTemizle a, .cart-prd-page-url .lnkSepe
 }
 
 .btn:hover,
-a.btnDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle a:hover, .cart-prd-page-url .lnkSepet:hover, #plhSipTekrarla .lnkSipTekrarla:hover, .lnkSorgula:hover, .lnkSatinAl:hover {
+a.btnDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle a:hover, .cart-prd-page-url .lnkSepet:hover, a#lnkGuestCheckout:hover, #plhSipTekrarla a.lnkSipTekrarla:hover, a.lnkSorgula:hover, a.lnkSatinAl:hover {
   background: #515151;
 }
 
-.btn > span, a.btnDefault > span, .urunKiyaslamaOzellik_tumunuTemizle a > span, .cart-prd-page-url .lnkSepet > span, #plhSipTekrarla .lnkSipTekrarla > span, .lnkSorgula > span, .lnkSatinAl > span {
+.btn > span, a.btnDefault > span, .urunKiyaslamaOzellik_tumunuTemizle a > span, .cart-prd-page-url .lnkSepet > span, a#lnkGuestCheckout > span, #plhSipTekrarla a.lnkSipTekrarla > span, a.lnkSorgula > span, a.lnkSatinAl > span {
   position: relative;
   display: flex;
   align-items: center;
@@ -766,23 +766,25 @@ a.btnDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle a:hover, .cart-prd-page-
   background: #eee;
 }
 
-.btn-secondary, .lnkSatinAl {
+.btn-secondary, a.btnSipIade,
+a.btnSipIptal, a.lnkSatinAl {
   background: #eee;
   color: #000;
 }
 
-.btn-secondary:hover, .lnkSatinAl:hover {
+.btn-secondary:hover, a.btnSipIade:hover,
+a.btnSipIptal:hover, a.lnkSatinAl:hover {
   background: #c5242b;
   color: #fff;
 }
 
-.btn-transparent, .ems-prdd-block2 a.btnDefault, .urunKiyaslamaOzellik_tumunuTemizle a, a.btnFacebookLogin, a.btnFacebookLoginKutu, .ems-new-address .btnAdresIptal {
+.btn-transparent, .ems-prdd-block2 a.btnDefault, .urunKiyaslamaOzellik_tumunuTemizle a, a.btnFacebookLogin, a.btnFacebookLoginKutu, .ems-new-address a.btnAdresIptal {
   background: transparent;
   color: inherit;
   border-color: #c9c9c9;
 }
 
-.btn-transparent:hover, .ems-prdd-block2 a.btnDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle a:hover, a.btnFacebookLogin:hover, a.btnFacebookLoginKutu:hover, .ems-new-address .btnAdresIptal:hover {
+.btn-transparent:hover, .ems-prdd-block2 a.btnDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle a:hover, a.btnFacebookLogin:hover, a.btnFacebookLoginKutu:hover, .ems-new-address a.btnAdresIptal:hover {
   background: transparent;
 }
 
@@ -886,13 +888,13 @@ textarea {
   resize: none;
 }
 
-[id$="CEPTELEFONALAN"] {
+[id$="UYE_CEPTELEFONALAN"] {
   width: 65px !important;
   margin-right: 5px;
   text-align: center;
 }
 
-[id$="CEPTELEFON"] {
+[id$="UYE_CEPTELEFON"] {
   width: calc(100% - 70px) !important;
 }
 
@@ -2353,6 +2355,126 @@ button.swiper-pagination-bullet {
 .countdown_show4 .countdown_section:first-child {
   display: block;
   font-size: .7em;
+}
+
+.threesixty {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.threesixty .threesixty_images {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.threesixty .threesixty_images img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+
+.threesixty .threesixty_images img.previous-image {
+  visibility: hidden;
+  /*
+             Do not put here any other styles.
+             It causes massive recalc / repaints and image flickering,
+             especially on Firefox.
+          */
+}
+
+.threesixty .threesixty_images img.current-image {
+  visibility: visible;
+  /*
+             Do not put here any other styles.
+             It causes massive recalc / repaints and image flickering,
+             especially on Firefox.
+          */
+}
+
+.threesixty .spinner {
+  width: 60px;
+  display: block;
+  margin: 0 auto;
+  height: 30px;
+  background: #333;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.threesixty .spinner span {
+  font-family: Arial, "MS Trebuchet", sans-serif;
+  font-size: 12px;
+  font-weight: bolder;
+  color: #FFF;
+  text-align: center;
+  line-height: 30px;
+  display: block;
+}
+
+.threesixty .nav_bar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 11;
+}
+
+.threesixty .nav_bar a {
+  display: block;
+  width: 32px;
+  height: 32px;
+  float: left;
+  background: url(/assets/sprites.png) no-repeat;
+  text-indent: -99999px;
+}
+
+.threesixty .nav_bar a.nav_bar_play {
+  background-position: 0 0 !important;
+}
+
+.threesixty .nav_bar a.nav_bar_previous {
+  background-position: 0 -73px !important;
+}
+
+.threesixty .nav_bar a.nav_bar_stop {
+  background-position: 0 -37px !important;
+}
+
+.threesixty .nav_bar a.nav_bar_next {
+  background-position: 0 -104px !important;
+}
+
+/* html */
+.threesixty:-webkit-full-screen {
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  padding-top: 200px;
+}
+
+.threesixty:-moz-full-screen {
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  padding-top: 200px;
+}
+
+.threesixty {
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: grab;
+}
+
+.threesixty .spinner {
+  margin-top: 50% !important;
 }
 
 .instagram-feed .swiper-wrapper {
@@ -4016,7 +4138,7 @@ ul.menu-mini-lang .sub-header {
   padding: 30px 40px;
 }
 
-.mini-user .ems-obj-logon .sub-header {
+.mini-user .ems-obj-login .sub-header {
   margin: -30px -40px 20px -40px;
   padding-left: 40px;
 }
@@ -4737,6 +4859,10 @@ a.btnKutuLogout {
   margin: 20px auto 0;
 }
 
+a#lnkGuestCheckout {
+  display: block;
+}
+
 .ems-page-product-list {
   padding-bottom: 40px;
 }
@@ -5314,15 +5440,28 @@ a.btnAdresEkle,
 .divTeslimatKargo {
   font-family: fira, arial, sans-serif;
   font-size: 15px;
+  margin-top: 30px;
 }
 
 .divTeslimatKargo li {
   position: relative;
   padding: 20px 20px 20px 85px;
   border: 1px solid #c9c9c9;
-  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
+}
+
+.divTeslimatKargo li + li {
+  margin-top: 20px;
+}
+
+.divTeslimatKargo li .sStylerWrp_radio {
+  position: static;
+  margin-right: 0;
+}
+
+.divTeslimatKargo li .rStyler {
+  display: none;
 }
 
 .divTeslimatKargo img {
@@ -5351,6 +5490,7 @@ a.btnAdresEkle,
 .divTeslimatKargo .kargoBilgi {
   order: 4;
   margin-top: 5px;
+  flex-basis: 100%;
 }
 
 .divTeslimatKargo .kargoAdi,
@@ -5394,20 +5534,21 @@ a.btnAdresEkle,
   justify-content: flex-start;
 }
 
-.ems-new-address [id$="CEPTELEFON"] {
-  width: 100% !important;
-}
-
 .ems-new-address #plhTcDegilLabel {
   margin-bottom: -1px;
 }
 
-.ems-new-address .btnAdresIptal {
+.ems-new-address a.btnAdresIptal {
   margin-top: 20px;
 }
 
-.ems-corporate-selection .tcCheck,
-.ems-corporate-selection .tcCheck-2 {
+.bireysel .vergNoCheck,
+.bireysel .vergCheck {
+  display: none;
+}
+
+.kurumsal .tcCheck,
+.kurumsal .tcCheck-2 {
   display: none;
 }
 
@@ -5727,6 +5868,14 @@ a.btnAdresEkle,
   display: none;
 }
 
+.guestCheckout .divTeslimatKargo {
+  margin-top: 0;
+}
+
+.guest-checkout-form {
+  margin-top: 50px;
+}
+
 .ems-page-member-grid > .ga1 {
   background: #000;
   color: #fff;
@@ -5734,6 +5883,13 @@ a.btnAdresEkle,
 
 .ems-page-member-grid > .ga2 {
   padding-bottom: 100px;
+}
+
+.ems-page-member .page-top-title {
+  font-size: 22px;
+  font-weight: 700;
+  padding: 20px;
+  border-bottom: 1px solid #c9c9c9;
 }
 
 .ems-page-member .ems-new-address {
@@ -5789,16 +5945,10 @@ a.btnAdresEkle,
   padding-right: 80px;
 }
 
-.ems-member-order-detail .inner-title {
-  font-size: 22px;
-  font-weight: 700;
-  padding: 20px;
-  border-bottom: 1px solid #c9c9c9;
-}
-
 .order-detail-info {
   font-family: fira, arial, sans-serif;
   font-size: 14px;
+  margin-top: 5px;
 }
 
 .order-detail-info .text {
@@ -5815,11 +5965,15 @@ a.btnAdresEkle,
   padding: 10px 20px;
 }
 
-#plhSipTekrarla {
-  margin: 30px 20px 40px;
+.act-btns {
+  margin-top: 20px;
 }
 
-#plhSipTekrarla .lnkSipTekrarla {
+.act-btns > * + *:not(:empty) {
+  margin-top: 10px;
+}
+
+#plhSipTekrarla a.lnkSipTekrarla {
   text-transform: uppercase;
 }
 
@@ -5890,7 +6044,7 @@ a.btnSipariseDon .icon-triangle-b {
   padding-right: 20px;
 }
 
-a.btnUyeBilgi, a.btnSifreGuncelle {
+a.btnUyeBilgi, a.btnGuestCheckoutSave, a.btnSifreGuncelle {
   max-width: 180px;
 }
 
@@ -6238,7 +6392,7 @@ ul.giftCardList li.selected > a {
 }
 
 @supports (grid-area: auto) {
-  @media screen and (min-width: 961px) {
+  @media screen and (min-width: 960px) {
     .obj-mobile {
       display: none !important;
     }
@@ -7456,17 +7610,21 @@ ul.giftCardList li.selected > a {
     .bottom-step {
       margin: 30px -20px 0 -20px;
     }
-    .ems-step0 .ems-order-cart-grid {
-      grid-template-columns: 1fr 780px 20px 380px 1fr;
-      grid-template-areas: ". ga1 . ga2 .";
+    .ems-step0 .ems-order-cart-grid,
+    .guestCheckout .ems-order-cart-grid {
+      grid-template-columns: 20px 1fr minmax(auto, 780px) 20px 380px 1fr 20px;
+      grid-template-areas: ". . ga1 . ga2 . .";
     }
-    .ems-step0 .ems-order-cart-grid > .ga1 {
+    .ems-step0 .ems-order-cart-grid > .ga1,
+    .guestCheckout .ems-order-cart-grid > .ga1 {
       grid-area: ga1;
     }
-    .ems-step0 .ems-order-cart-grid > .ga2 {
+    .ems-step0 .ems-order-cart-grid > .ga2,
+    .guestCheckout .ems-order-cart-grid > .ga2 {
       grid-area: ga2;
     }
-    .ems-step0 .ems-grid-table-cart > .ems-grid-row {
+    .ems-step0 .ems-grid-table-cart > .ems-grid-row,
+    .guestCheckout .ems-grid-table-cart > .ems-grid-row {
       grid-template-columns: 90px 1fr 113px 1fr 20px;
     }
     .cart-promotion-info {
@@ -7615,6 +7773,10 @@ ul.giftCardList li.selected > a {
     .ems-page-member-grid > .ga1 {
       min-height: 710px;
     }
+    .ems-page-member .page-top-title {
+      padding-left: 0;
+      padding-right: 0;
+    }
     .ems-page-member .ems-new-address {
       margin: 0;
     }
@@ -7624,14 +7786,17 @@ ul.giftCardList li.selected > a {
     .ems-grid-table-order > .ems-grid-row {
       grid-template-columns: 130px 80px 80px 1fr 1fr max-content;
     }
-    .ems-member-order-detail .inner-title {
-      padding-left: 0;
-      padding-right: 0;
-    }
     .order-detail-info {
       column-count: 2;
       column-gap: 0;
       margin-left: -20px;
+    }
+    .order-detail-info > {
+      break-inside: avoid;
+    }
+    .act-btns > * + *:not(:empty) {
+      margin-top: 0;
+      margin-left: 10px;
     }
     .order-address {
       margin-left: -20px;
@@ -7708,7 +7873,7 @@ ul.giftCardList li.selected > a {
       right: 38px;
     }
   }
-  @media screen and (min-width: 961px) and (max-width: 1350px) {
+  @media screen and (min-width: 960px) and (max-width: 1350px) {
     .site-header-grid {
       grid-template-areas: "ga1 . ga2 ga3 ga4 ga5" "ga6 ga6 ga6 ga6 ga8 ga8" "ga7 ga7 ga7 ga7 ga7 ga7";
     }

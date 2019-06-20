@@ -9,19 +9,23 @@
 }
 
 //order-detail
-.ems-member-order-detail {
-    .inner-title {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
 .order-detail-info {
     $ml: 20px;
     column-count: 2;
     column-gap: 0;
     margin-left: -$ml;
+    > {
+        break-inside: avoid;
+    }
 }
+
+.act-btns {
+    > * + *:not(:empty) {
+        margin-top: 0;
+        margin-left: 10px;
+    }
+}
+
 
 .order-address {
     margin-left: -20px;

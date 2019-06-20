@@ -28,3 +28,8 @@
 a.btnFacebookLogin {
     @extend %btn-transparent;
 }
+
+a#lnkGuestCheckout {
+    @extend %btn;
+    display: block;
+}

@@ -67,10 +67,10 @@ ul.giftCardList {
     }
 }
 
-.lnkSorgula {
+a.lnkSorgula {
     @extend %btn;
 }
-.lnkSatinAl {
+a.lnkSatinAl {
     @extend %btn;
     @extend %btn-secondary;
 }

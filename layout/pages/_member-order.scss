@@ -16,19 +16,11 @@
 }
 
 //order-detail
-.ems-member-order-detail {
-    .inner-title {
-        font-size: 22px;
-        font-weight: 700;
-        padding: 20px;
-        border-bottom: 1px solid $color5;
-    }
-}
-
 .order-detail-info {
     $ml: 20px;
     font-family: $font2;
     font-size: 14px;
+    margin-top: 5px;
     .text {
         font-weight: 500;
     }
@@ -42,9 +34,15 @@
     }
 }
 
+.act-btns {
+    margin-top: 20px;
+    > * + *:not(:empty) {
+        margin-top: 10px;
+    }
+}
+
 #plhSipTekrarla {
-    margin: 30px 20px 40px;
-    .lnkSipTekrarla {
+    a.lnkSipTekrarla {
         @extend %btn;
         text-transform: uppercase;
     }
@@ -54,6 +52,11 @@
     .st-detail {
         display: inline;
     }
+}
+
+a.btnSipIade,
+a.btnSipIptal {
+    @extend %btn-secondary;
 }
 
 .order-address {

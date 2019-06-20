@@ -288,8 +288,8 @@ iframe {
 .satBrFiyat,
 .floatFixer,
 .ems-obj-required,
-.ems-logon-body .ems-obj-logoff,
-.ems-logoff-body .ems-obj-logon,
+.ems-login .ems-obj-logoff,
+.ems-logoff .ems-obj-login,
 .ems-step1 .ems-obj-step0 {
     @extend .ems-none;
 }
