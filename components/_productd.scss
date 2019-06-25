@@ -284,3 +284,19 @@ a.btnStokHaberci {
         margin-top: 40px;
     }
 }
+
+//ZOOM
+.zoom-gallery {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 8;
+    background: $color2;
+    
+    &-ready {
+        .zoom-gallery {
+            display: block;
+        }
+    }
+}

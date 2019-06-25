@@ -101,17 +101,7 @@
     }
 
     //banner type08 *login
-    &08 {
-        position: static;
-        .prm-media {
-            video {
-                position: absolute;
-                left: 0;
-                top: 0;
-                height: 100%;
-            }
-        }
-    }
+    &08 {}
 
     //banner type09 *primary box
     &09 {
@@ -139,7 +129,11 @@
     &11 {}
 
     //banner type12 *seo content
-    &12 {}
+    &12 {
+        .prm-title {
+            font-size: 30px;
+        }
+    }
 
     //banner type13 *top notification
     &13 {

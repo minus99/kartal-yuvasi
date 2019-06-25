@@ -974,6 +974,14 @@ textarea {
   position: relative;
 }
 
+.dropdown-header {
+  cursor: default;
+}
+
+.dropdown-header * {
+  cursor: default;
+}
+
 .dropdown-header::after {
   position: absolute;
   right: 10px;
@@ -990,6 +998,8 @@ textarea {
   top: 100%;
   z-index: 1;
   width: calc(100% + 2px);
+  max-height: 140px;
+  overflow: auto;
   margin: 0 0 0 -1px;
   background: #fff;
   border: 1px solid #c9c9c9;
@@ -1030,7 +1040,7 @@ textarea {
   border-top: 1px solid #c9c9c9;
 }
 
-.ems-form-label, [id$="divCaptcha"] [id$="lbfUYE_KONTROLKODU"], .prmSehir, .tableOdemeBilgiKrediKarti th, .tableTitleOdemeTaksit td, .tableSifremiUnuttum th {
+.ems-form-label, [id$="divCaptcha"] [id$="lbfUYE_KONTROLKODU"], .prmSehir, .tableOdemeBilgiKrediKarti th, .tableTitleOdemeTaksit td, .kutuUyelikOneri_sifre > span, .tableSifremiUnuttum th {
   position: relative;
   font-family: fira, arial, sans-serif;
   font-size: 13px;
@@ -1039,7 +1049,7 @@ textarea {
   margin-bottom: 5px;
 }
 
-.ems-form-label:empty, [id$="divCaptcha"] :empty[id$="lbfUYE_KONTROLKODU"], .prmSehir:empty, .tableOdemeBilgiKrediKarti th:empty, .tableTitleOdemeTaksit td:empty, .tableSifremiUnuttum th:empty {
+.ems-form-label:empty, [id$="divCaptcha"] :empty[id$="lbfUYE_KONTROLKODU"], .prmSehir:empty, .tableOdemeBilgiKrediKarti th:empty, .tableTitleOdemeTaksit td:empty, .kutuUyelikOneri_sifre > span:empty, .tableSifremiUnuttum th:empty {
   display: none;
 }
 
@@ -1271,7 +1281,7 @@ a.btnXMLFORM {
   float: left;
 }
 
-.swiper-container-vertical > .swiper-wrapper {
+.swiper-container-vertical > .swiper-inner > .swiper-wrapper {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -1279,7 +1289,7 @@ a.btnXMLFORM {
   flex-direction: column;
 }
 
-.swiper-wrapper {
+.swiper-inner > .swiper-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
@@ -1298,18 +1308,18 @@ a.btnXMLFORM {
 }
 
 .swiper-container-android .swiper-slide,
-.swiper-wrapper {
+.swiper-inner > .swiper-wrapper {
   -webkit-transform: translate3d(0px, 0, 0);
   transform: translate3d(0px, 0, 0);
 }
 
-.swiper-container-multirow > .swiper-wrapper {
+.swiper-container-multirow > .swiper-inner > .swiper-wrapper {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.swiper-container-free-mode > .swiper-wrapper {
+.swiper-container-free-mode > .swiper-inner > .swiper-wrapper {
   -webkit-transition-timing-function: ease-out;
   -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
@@ -1340,7 +1350,7 @@ a.btnXMLFORM {
   height: auto;
 }
 
-.swiper-container-autoheight .swiper-wrapper {
+.swiper-container-autoheight .swiper-inner > .swiper-wrapper {
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
@@ -1358,7 +1368,7 @@ a.btnXMLFORM {
   perspective: 1200px;
 }
 
-.swiper-container-3d .swiper-wrapper,
+.swiper-container-3d .swiper-inner > .swiper-wrapper,
 .swiper-container-3d .swiper-slide,
 .swiper-container-3d .swiper-slide-shadow-left,
 .swiper-container-3d .swiper-slide-shadow-right,
@@ -1412,13 +1422,13 @@ a.btnXMLFORM {
 
 /* IE10 Windows Phone 8 Fixes */
 .swiper-container-wp8-horizontal,
-.swiper-container-wp8-horizontal > .swiper-wrapper {
+.swiper-container-wp8-horizontal > .swiper-inner > .swiper-wrapper {
   -ms-touch-action: pan-y;
   touch-action: pan-y;
 }
 
 .swiper-container-wp8-vertical,
-.swiper-container-wp8-vertical > .swiper-wrapper {
+.swiper-container-wp8-vertical > .swiper-inner > .swiper-wrapper {
   -ms-touch-action: pan-x;
   touch-action: pan-x;
 }
@@ -1956,7 +1966,7 @@ button.swiper-pagination-bullet {
   backface-visibility: hidden;
 }
 
-.swiper-container-coverflow .swiper-wrapper {
+.swiper-container-coverflow .swiper-inner > .swiper-wrapper {
   /* Windows 8 IE 10 fix */
   -ms-perspective: 1200px;
 }
@@ -2470,7 +2480,7 @@ button.swiper-pagination-bullet {
   position: absolute;
   left: 0;
   top: 0;
-  cursor: grab;
+  cursor: ew-resize;
 }
 
 .threesixty .spinner {
@@ -2523,6 +2533,20 @@ button.swiper-pagination-bullet {
   left: 0;
   bottom: -15px;
   width: 100%;
+  height: 98px;
+  text-align: center;
+  padding-top: 50px;
+  background-size: 342px;
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+
+.uniform-360:hover {
+  background-position: center -98px;
+}
+
+.uniform-360 > b {
+  font-size: 16px;
 }
 
 .uniform-bg {
@@ -3398,6 +3422,19 @@ a.btnStokHaberci {
   margin-top: 40px;
 }
 
+.zoom-gallery {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 8;
+  background: #fff;
+}
+
+.zoom-gallery-ready .zoom-gallery {
+  display: block;
+}
+
 .tabloTabBtnAdim {
   background: #eee;
 }
@@ -3741,6 +3778,26 @@ a.btnStokHaberci {
 
 .mb5 {
   margin-bottom: 50px;
+}
+
+.section-bg01 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: center top / cover no-repeat;
+  width: 100%;
+  height: 120px;
+}
+
+.section-bg01::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 20px;
+  background: #000;
 }
 
 .card {
@@ -4649,12 +4706,16 @@ a.btnKutuLogout {
 
 .mini-bulletin-message > span:not(:empty) {
   display: block;
-  margin-top: 20px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
 .ems-bulletin-focused #plhPrivacyNotice {
   opacity: 1;
+}
+
+.ems-bulletin-focused .mini-bulletin-message {
+  opacity: 0;
 }
 
 .mini-contact {
@@ -4679,13 +4740,16 @@ a.btnKutuLogout {
 }
 
 .social-links {
-  display: flex;
-  justify-content: center;
   margin-top: 50px;
 }
 
-.social-links > a + a {
-  margin-left: 20px;
+.social-links .swiper-inner {
+  margin-left: -20px;
+}
+
+.social-links .swiper-slide {
+  padding-left: 20px;
+  width: auto;
 }
 
 .social-links svg {
@@ -4758,6 +4822,11 @@ a.btnKutuLogout {
   animation: show .5s ease;
 }
 
+.top-notification .swiper-container {
+  height: 50px;
+  overflow: hidden;
+}
+
 .top-notification .swiper-wrapper {
   align-items: center;
 }
@@ -4795,18 +4864,6 @@ a.btnKutuLogout {
   position: relative;
   padding-top: 40px;
   padding-bottom: 75px;
-}
-
-.best-sellers::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -4vw;
-  transform: translateX(-50%);
-  background: url(/images/frontend/eagle.png) center top/cover no-repeat;
-  width: 100%;
-  max-width: 980px;
-  height: 40vw;
 }
 
 .best-sellers .ems-tab-content > div {
@@ -5808,13 +5865,7 @@ a.btnAdresEkle,
 }
 
 .ems-order-result {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 3;
-  width: 100%;
-  height: 100%;
-  padding: 30px 30px 20px;
+  padding: 30px 20px;
   background: #000 url(/images/frontend/order-result-mobile.jpg) center top/cover no-repeat;
   color: #fff;
 }
@@ -5827,7 +5878,7 @@ a.btnAdresEkle,
   width: 50px;
 }
 
-.result-content [class*="icon"] {
+.result-content .ricon {
   margin-top: 80px;
   font-size: 70px;
   color: #000;
@@ -5853,9 +5904,9 @@ a.btnAdresEkle,
 }
 
 .result-content .rbtns {
-  position: fixed;
-  bottom: 20px;
+  margin-top: 50px;
   width: calc(100% - 40px);
+  max-width: 330px;
 }
 
 .result-content .rbtns > a {
@@ -5866,6 +5917,44 @@ a.btnAdresEkle,
 
 .pageSiparisSonuc_lbfOdemeAlinamadi {
   display: none;
+}
+
+.kutuDefault.kutuUyelikOneri {
+  display: none;
+  margin-top: 30px;
+  text-align: left;
+  background: #eee;
+  color: #000;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.kutuUyelikOneri-append .kutuDefault.kutuUyelikOneri {
+  display: block;
+}
+
+.kutuHeaderUyelikOneri {
+  font-family: fira, arial, sans-serif;
+  font-size: 15px;
+}
+
+.kutuBodyUyelikOneri {
+  margin-top: 10px;
+}
+
+.kutuUyelikOneri_sifre > span {
+  display: block;
+}
+
+.kutuUyelikOneri_onay {
+  margin-top: 10px;
+  font-family: fira, arial, sans-serif;
+  font-size: 13px;
+}
+
+.kutuUyelikOneri_btnSend {
+  margin-top: 30px;
+  text-align: center;
 }
 
 .guestCheckout .divTeslimatKargo {
@@ -6585,15 +6674,6 @@ ul.giftCardList li.selected > a {
     .banner07::before {
       display: none;
     }
-    .banner08 {
-      position: static;
-    }
-    .banner08 .prm-media video {
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-    }
     .banner09 .banner-body {
       top: auto;
       bottom: 0;
@@ -6610,6 +6690,9 @@ ul.giftCardList li.selected > a {
     }
     .banner10 .prm-title {
       font-size: 14px;
+    }
+    .banner12 .prm-title {
+      font-size: 30px;
     }
     .banner13 .banner-body {
       padding-top: 2px;
@@ -6631,6 +6714,7 @@ ul.giftCardList li.selected > a {
     }
     .design-uniform {
       min-height: 550px;
+      padding-left: calc((100% - 1200px) / 2);
     }
     .design-uniform > .ga1 {
       flex-basis: 750px;
@@ -6641,7 +6725,7 @@ ul.giftCardList li.selected > a {
       left: 0;
       top: 0;
       z-index: 2;
-      width: 108px;
+      width: calc((100% - 1200px) / 2);
       height: 100%;
       background: #c5242b;
       transform: skewX(-7deg) translateX(-35px);
@@ -6948,6 +7032,10 @@ ul.giftCardList li.selected > a {
     }
     .kutuSolMenuTree .mobi-dropdown > a {
       display: block;
+    }
+    .section-bg01 {
+      background-size: 980px;
+      height: 240px;
     }
     .site-header-grid {
       position: relative;
@@ -7406,10 +7494,6 @@ ul.giftCardList li.selected > a {
       padding-top: 60px;
       padding-bottom: 100px;
     }
-    .best-sellers::after {
-      bottom: -20px;
-      height: 240px;
-    }
     .campaigns .swiper-inner {
       padding-left: 0;
       margin-left: -40px;
@@ -7425,8 +7509,19 @@ ul.giftCardList li.selected > a {
       background: #000;
       padding-top: 60px;
     }
-    .ems-page-login-grid > .ga2 {
-      min-height: 1145px;
+    .ems-page-login-grid {
+      min-height: 1250px;
+    }
+    .ems-page-login-grid > .ga1 {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .ems-page-login-grid > .ga1 * {
+      height: 100%;
     }
     .ems-member-login {
       padding: 40px;
@@ -7742,6 +7837,10 @@ ul.giftCardList li.selected > a {
       margin-top: 0;
       margin-left: 40px;
     }
+    form[action*="siparisSonuc"] .ems-page-order-grid {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
     .ems-order-result {
       padding: 100px 30px;
       background-image: url(/images/frontend/order-result.jpg);
@@ -7749,16 +7848,11 @@ ul.giftCardList li.selected > a {
     .result-content .rlogo {
       width: 100px;
     }
-    .result-content [class*="icon-"], .result-content .icon {
+    .result-content .ricon {
       margin-top: 70px;
     }
     .result-content .rtitle {
       margin-top: 30px;
-    }
-    .result-content .rbtns {
-      position: static;
-      margin-top: 35px;
-      max-width: 330px;
     }
     .ems-page-member-grid {
       grid-template-columns: 300px 40px minmax(auto, 850px) 1fr;

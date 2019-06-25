@@ -104,6 +104,10 @@ textarea {
 .dropdown {
     position: relative;
     &-header {
+        cursor: default;
+        * {
+            cursor: default;
+        }
         &::after {
             @extend %triangle;
             @extend %triangle-b;
@@ -122,6 +126,8 @@ textarea {
         top: 100%;
         z-index: 1;
         width: calc(100% + 2px);
+        max-height: 140px;
+        overflow: auto;
         margin: 0 0 0 -1px;
         background: $color2;
         border: 1px solid $color5;

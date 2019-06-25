@@ -1,11 +1,5 @@
 .ems-order-result {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 3;
-    width: 100%;
-    height: 100%;
-    padding: 30px 30px 20px;
+    padding: 30px 20px;
     background: $color1 url(/images/frontend/order-result-mobile.jpg) center top / cover no-repeat;
     color: $color2;
 
@@ -18,7 +12,7 @@
     .rlogo {
         width: 50px;
     }
-    [class*="icon"] {
+    .ricon {
         margin-top: 80px;
         font-size: 70px;
         color: $color1;
@@ -40,9 +34,9 @@
         margin-top: 10px;
     }
     .rbtns {
-        position: fixed;
-        bottom: 20px;
+        margin-top: 50px;
         width: calc(100% - 40px);
+        max-width: 330px;
         > a {
             display: block;
             margin-top: 10px;
@@ -53,4 +47,41 @@
 
 .pageSiparisSonuc_lbfOdemeAlinamadi {
     display: none;
+}
+
+//guest
+.kutuDefault.kutuUyelikOneri {
+    display: none;
+    margin-top: 30px;
+    text-align: left;
+    background: $color3;
+    color: $color1;
+    padding: 20px;
+    border-radius: 5px;
+
+    .kutuUyelikOneri-append & {
+        display: block;
+    }
+}
+.kutuHeaderUyelikOneri {
+    font-family: $font2;
+    font-size: 15px;
+}
+.kutuBodyUyelikOneri {
+    margin-top: 10px;
+}
+.kutuUyelikOneri_sifre {
+    > span {
+        @extend .ems-form-label;
+        display: block;
+    }
+}
+.kutuUyelikOneri_onay {
+    margin-top: 10px;
+    font-family: $font2;
+    font-size: 13px;
+}
+.kutuUyelikOneri_btnSend {
+    margin-top: 30px;
+    text-align: center;
 }

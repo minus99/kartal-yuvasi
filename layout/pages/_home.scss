@@ -2,6 +2,10 @@
     background: $color4;
     animation: show .5s ease;
 
+    .swiper-container {
+        height: 50px;
+        overflow: hidden;
+    }
     .swiper-wrapper {
         align-items: center;
     }
@@ -40,17 +44,6 @@
     position: relative;
     padding-top: 40px;
     padding-bottom: 75px;
-    &::after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        bottom: -4vw;
-        transform: translateX(-50%);
-        background: url(/images/frontend/eagle.png) center top / cover no-repeat;
-        width: 100%;
-        max-width: 980px;
-        height: 40vw;
-    }
     .ems-tab-content {
         > div {
             min-height: 400px;

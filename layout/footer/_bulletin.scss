@@ -25,7 +25,7 @@
         > span {
             &:not(:empty) {
                 display: block;
-                margin-top: 20px;
+                margin-bottom: 30px;
                 text-align: center;
             }
         }
@@ -35,5 +35,8 @@
 .ems-bulletin-focused {
     #plhPrivacyNotice {
         opacity: 1;
+    }
+    .mini-bulletin-message {
+        opacity: 0;
     }
 }
