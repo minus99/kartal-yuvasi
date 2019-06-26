@@ -20,6 +20,9 @@
             grid-gap: 10px;
         }
     }
+    &-size {
+        margin-top: 15px;
+    }
 }
 
 //sizes
@@ -79,5 +82,15 @@
         .mini-size-guide-sub {
             @extend %header-mods-sub-animate;
         }
+    }
+}
+
+//ZOOM
+.zoom-gallery {
+    .thumbs-wrapper {
+        display: block;
+    }
+    .swiper-pagination {
+        display: none;
     }
 }

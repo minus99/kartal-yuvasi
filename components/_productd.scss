@@ -56,11 +56,10 @@
         }
     }
     &-gallery {
-        width: auto;
         margin-top: 20px;
     }
     &-size {
-        margin-top: 15px;
+        margin-top: 5px;
         font-family: $font2;
         font-size: 13px;
     }
@@ -190,7 +189,8 @@ a.btnStokHaberci {
         margin: #{-$p} #{-$p} #{$p};
     }
     &-ready {
-        .mini-product-info-holder {
+        .mini-product-info-holder,
+        .mini-product-info-sub {
             @extend %footer-mods-sub-ready;
         }
     }
@@ -265,7 +265,8 @@ a.btnStokHaberci {
     }
 
     &-ready {
-        .mini-size-guide {
+        .mini-size-guide,
+        .mini-size-guide-sub {
             @extend %footer-mods-sub-ready;
         }
     }
@@ -292,9 +293,45 @@ a.btnStokHaberci {
     left: 0;
     top: 0;
     z-index: 8;
-    background: $color2;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: $color3;
+    &-inner {
+        height: 100%;
+    }
+    .sub-close {
+        z-index: 2;
+    }
+
+    .thumbs-wrapper {
+        display: none;
+        position: absolute;
+        left: calc((100% - 1040px) / 2);
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60px;
+        height: 318px;
+        .swiper-slide {
+            cursor: pointer;
+            opacity: .25;
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+
+    .zoom-gallery-footer {
+        display: none;
+    }
+
+    .swiper-pagination {
+        position: absolute;
+        padding: 10px;
+    }
     
     &-ready {
+        position: fixed;
         .zoom-gallery {
             display: block;
         }

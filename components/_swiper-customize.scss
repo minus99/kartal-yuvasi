@@ -1,9 +1,12 @@
 .swiper-container {
     overflow: initial;
+    width: 100%;
+    height: 100%;
 }
 
 .swiper-inner {
     overflow: hidden;
+    height: 100%;
 }
 
 .swiper-button-prev,
@@ -47,6 +50,12 @@
         }
     }
 }
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 0;
+}
+
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 7.5px;
 }
@@ -63,19 +72,22 @@
     }
 }
 
-//if pagination selected
+//pagination
 .slider-pagination {
     .swiper-pagination {
         display: block;
     }
 }
 
-//swipe only desktop
-.desktop-swiper {
-    .swiper-pagination {
-        display: none;
+//vertical content layout
+.swiper-layout-v {
+    > .swiper-inner {
+        > .swiper-wrapper {
+            flex-direction: column;
+        }
     }
 }
+
 
 
 //LIGHT THEME

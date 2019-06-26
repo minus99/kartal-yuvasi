@@ -38,6 +38,10 @@
 .collections {
     background: $color1;
     padding-top: 40px;
+
+    .swiper-wrapper {
+        flex-direction: column;
+    }
 }
 
 .best-sellers {

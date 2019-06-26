@@ -11,7 +11,7 @@
     }
 }
 
-//if navigation selected
+//navigation
 .slider-navigation {
     .swiper-button-prev,
     .swiper-button-next {
@@ -21,16 +21,24 @@
 
 //swipe only mobile
 .mobi-swiper {
-    .swiper-button-prev,
-    .swiper-button-next,
-    .swiper-pagination {
-        display: none;
+    &.slider-navigation {
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: none;
+        }
+    }
+    &.slider-pagination {
+        .swiper-pagination {
+            display: none;
+        }
     }
 }
 
-//swipe only desktop
-.desktop-swiper {
-    .swiper-pagination {
-        display: block;
+//horizontal content layout
+.d-swiper-layout-r {
+    > .swiper-inner {
+        > .swiper-wrapper {
+            flex-direction: row;
+        }
     }
 }

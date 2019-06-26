@@ -99,12 +99,12 @@ iframe {
     
     //CONTAINER
     &-container {
-        width: calc(100% - #{$container-gap * 2});
+        width: calc(100% - #{$container-gap * 2}) !important;
         margin-left: auto;
         margin-right: auto;
         
         &-full {
-            width: 100%;
+            width: 100% !important;
         }
         
         &-large {
