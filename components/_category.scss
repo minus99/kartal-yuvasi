@@ -4,7 +4,6 @@
 
 .categories-append {
     min-height: 40px;
-    background: url(/images/ajaxtabs/loading.gif) center center / 20px no-repeat;
     .swiper-container {
         background: $color2;
     }
@@ -31,5 +30,10 @@
 
     b {
         display: none;
+    }
+
+    &:empty {
+        min-height: 68px;
+        background: url(/images/frontend/loading.gif) center center / 90px no-repeat;
     }
 }

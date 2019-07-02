@@ -2,6 +2,345 @@
     padding-bottom: 40px;
 }
 
+@mixin padding-h {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+@mixin padding-h-remove {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+.ems-prdd {
+    &-grid {
+        > .ga1 {
+            @include padding-h();
+        }
+        > .ga3 {
+            @include padding-h();
+        }
+    }
+    
+    &-brand {
+        font-family: $font2;
+        font-size: 16px;
+    }
+    &-name {
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: .5px;
+    }
+    &-block1 {
+        margin-top: 7px;
+    }
+    &-price {
+        font-size: 16px;
+        font-weight: 700;
+        [id*="KDVDAHILSATIS"] {
+            display: none;
+        }
+    }
+    &-badge {
+        position: relative;
+        padding-left: 40px;
+        overflow: hidden;
+        font-family: $font2;
+        font-size: 16px;
+        > div {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 1px;
+            background: $color2;
+            width: 100%;
+            text-align: right;
+            > span {
+                display: block;
+            }
+        }
+    }
+    &-gallery {
+        margin-top: 20px;
+    }
+    &-size {
+        margin-top: 5px;
+        font-family: $font2;
+        font-size: 13px;
+    }
+    &-add-to-cart {
+        margin-top: 20px;
+    }
+    &-block2 {
+        margin-top: 10px;
+        > span {
+            flex: 1;
+            padding: 0 5px;
+        }
+        a.btnDefault {
+            @extend .btn-transparent;
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+    }
+}
+
+//badges
+.indirimli {
+    #plhKazancOran {
+        display: block !important;
+        color: $color4;
+    }
+}
+.yeniUrun {
+    #plhYeniUrunBtn {
+        display: block !important;
+        color: $color11;
+    }
+}
+
+//other colors
+.UrunListeGrup_listeUrunDetayGrup {
+    margin-top: 20px;
+    .listeUrunDetayGrup_listeBaslik,
+    .URN_AD {
+        display: none;
+    }
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        > li {
+            width: 70px;
+            height: 70px;
+            overflow: hidden;
+            cursor: pointer;
+            + li {
+                margin-left: 10px;
+            }
+        }
+    }
+    .URN_RESIM {
+        margin-top: -7px;
+    }
+}
+
+//sizes
+$m: 5px;
+.dropdown-options {
+    display: block !important;
+    margin-left: -$m;
+    margin-right: -$m;
+    font-size: 0;
+    > a {
+        display: inline-block;
+        min-width: calc(25% - 10px);
+        padding-left: 5px;
+        padding-right: 5px;
+        line-height: 44px;
+        border: 1px solid $color5;
+        font-size: 13px;
+        text-align: center;
+        margin: $m;
+        &.selectedOption {
+            background: $color1;
+            color: $color2;
+        }
+        &.stokYok {
+            opacity: .5;
+            pointer-events: none;
+        }
+    }
+}
+.dropdown-trigger {
+    display: none;
+}
+
+.open-size-guide {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+//add to cart
+.urunDetay_urunAdet {
+    position: relative;
+    .sStylerWrp_select {
+        background: $color3;
+    }
+    [id$="txtURN_ADET"],
+    [id$="lblURN_ADET"] {
+        display: none;
+    }
+}
+.urunDetay_btnSepeteAt {
+    margin-top: 20px;
+}
+a.btnsepeteAt {
+    width: 100%;
+}
+a.btnStokHaberci {
+    width: 100%;
+    pointer-events: none;
+}
+
+//added to cart
+.mini-product-info {
+    $p: 20px;
+    &-sub {
+        @extend %footer-mods-sub;
+        padding: $p;
+    }
+    .sub-header {
+        margin: #{-$p} #{-$p} #{$p};
+    }
+    &-ready {
+        .mini-product-info-holder,
+        .mini-product-info-sub {
+            @extend %footer-mods-sub-ready;
+        }
+    }
+    &-animate {
+        .mini-product-info-overlay {
+            @extend %footer-mods-sub-overlay;
+        }
+        .mini-product-info-sub {
+            @extend %footer-mods-sub-animate;
+        }
+    }
+}
+.added-prd {
+    .prm-media-holder {
+        position: relative;
+        flex-basis: 100px;
+        svg {
+            position: absolute;
+            right: -5px;
+            top: -5px;
+            font-size: 18px;
+            animation: animation-03 .5s ease;
+        }
+    }
+    .prm-content {
+        padding-left: 15px;
+    }
+    .prm-title {
+        font-size: 22px;
+        font-weight: 700;
+    }
+    .prm-btns {
+        $m: 5px;
+        margin: 15px 0 0 #{-$m};
+        > a {
+            margin: 5px;
+        }
+    }
+}
+.suggest-prd {
+    display: none;
+    border-top: 1px solid $color10;
+    margin-top: 20px;
+    .prm-title {
+        font-family: $font2;
+        font-size: 15px;
+        font-weight: 700;
+        padding: 20px 0;
+    }
+}
+
+//size guide
+.mini-size-guide {
+    $p: 20px;
+    &-sub {
+        @extend %footer-mods-sub;
+        padding: $p;
+        height: 80%;
+    }
+    .sub-header {
+        margin: #{-$p} #{-$p} #{$p};
+    }
+    &-tab {
+        margin-top: 20px;
+    }
+    .ems-tab-header {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $color10;
+        justify-content: flex-start;
+    }
+
+    &-ready {
+        .mini-size-guide,
+        .mini-size-guide-sub {
+            @extend %footer-mods-sub-ready;
+        }
+    }
+    &-animate {
+        .mini-size-guide-overlay {
+            @extend %footer-mods-sub-overlay;
+        }
+        .mini-size-guide-sub {
+            @extend %footer-mods-sub-animate;
+        }
+    }
+}
+
+.size-guide-table {
+    + .size-guide-table {
+        margin-top: 40px;
+    }
+}
+
+//ZOOM
+.zoom-gallery {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 8;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: $color3;
+    &-inner {
+        height: 100%;
+    }
+    .sub-close {
+        z-index: 2;
+    }
+
+    .thumbs-wrapper {
+        display: none;
+        position: absolute;
+        left: calc((100% - 1040px) / 2);
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60px;
+        height: 318px;
+        .swiper-slide {
+            cursor: pointer;
+            opacity: .25;
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+
+    .zoom-gallery-footer {
+        display: none;
+    }
+
+    .swiper-pagination {
+        position: absolute;
+        padding: 10px;
+    }
+    
+    &-ready {
+        position: fixed;
+        .zoom-gallery {
+            display: block;
+        }
+    }
+}
+
 //primary properties
 .prop-container {
     margin-top: 20px;

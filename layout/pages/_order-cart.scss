@@ -1,4 +1,5 @@
-.ems-step0 {
+.ems-step0,
+.guestCheckout {
     .ems-order-cart {}
     .ems-grid-table-cart {
         > .ems-grid-row {
@@ -110,14 +111,14 @@ a.btnHediyeCekiIptal {
         text-align: inherit;
         margin-bottom: 10px;
     }
-    li {
-        margin-top: 5px;
+    .swiper-slide {
+        + .swiper-slide {
+            margin-top: 5px;
+        }
     }
     
-    &-append {
-        .customer-support {
-            display: block;
-        }
+    &-append & {
+        display: block;
     }
 }
 

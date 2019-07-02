@@ -56,13 +56,16 @@
     .ems-section-title {
         margin-bottom: 0;
     }
-    .ems-section-wrapper {
+    
+    .swiper-inner {
         margin-left: 0;
     }
-    &-append {
-        .popular-search-words {
-            display: flex;
-        }
+    .swiper-container {
+        flex: 1;
+    }
+
+    &-append & {
+        display: flex;
     }
 }
 

@@ -1,7 +1,10 @@
 .threesixty {
-    position: relative;
+    position: absolute;
+    left: 0;
+    top: 0;
     overflow: hidden;
     margin: 0 auto;
+    cursor: ew-resize;
     .threesixty_images {
       display: none;
       list-style: none;
@@ -33,7 +36,7 @@
     .spinner {
       width: 60px;
       display: block;
-      margin: 0 auto;
+      margin: 50% auto !important;
       height: 30px;
       background: #333;
       background: rgba(0, 0, 0, 0.7);

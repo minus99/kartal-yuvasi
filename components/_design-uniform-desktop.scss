@@ -1,11 +1,12 @@
 .design-uniform {
+    $skew:73px;
     min-height: 550px;
-    padding-left: calc((100% - #{$container-large}) / 2);
+    padding-left: calc(((100% - #{$container-large}) / 2) - #{$skew});
     > .ga1 {
         flex-basis: 750px;
     }
     > .ga2 {
-        ////display: block;
+        display: block;
     }
     &::before {
         content: "";
@@ -22,7 +23,6 @@
 .uniform {
     &-preview {
         min-height: 100%;
-        background-position: center bottom;
     }
     &-image-container {
         max-width: 400px;
