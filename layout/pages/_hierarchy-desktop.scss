@@ -1,9 +1,8 @@
 //DEFAULT
 .ems-page-hierarchy {
     &-grid {
-        grid-template-columns: 300px 20px minmax(auto, 890px) 1fr;
-        grid-template-areas:
-        "ga1 . ga2 .";
+        grid-template-columns: 300px 20px minmax(auto, 890px) 20px 1fr;
+        grid-template-areas: "ga1 . ga2 . .";
 
         @include setGridArea(1,2);
 

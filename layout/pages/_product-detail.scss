@@ -61,9 +61,15 @@
     }
     &-gallery {
         margin-top: 20px;
+        .swiper-slide {
+            text-align: center;
+        }
+        .swiper-pagination {
+            padding-bottom: 0;
+        }
     }
     &-size {
-        margin-top: 5px;
+        margin-top: 15px;
         font-family: $font2;
         font-size: 13px;
     }
@@ -156,7 +162,7 @@ $m: 5px;
 }
 
 .open-size-guide {
-    display: inline-block;
+    display: none;
     margin-top: 10px;
 }
 
@@ -252,7 +258,6 @@ a.btnStokHaberci {
     &-sub {
         @extend %footer-mods-sub;
         padding: $p;
-        height: 80%;
     }
     .sub-header {
         margin: #{-$p} #{-$p} #{$p};
@@ -265,6 +270,10 @@ a.btnStokHaberci {
         padding-bottom: 20px;
         border-bottom: 1px solid $color10;
         justify-content: flex-start;
+    }
+    .ems-tab-content {
+        max-height: 50vh;
+        overflow: auto;
     }
 
     &-ready {

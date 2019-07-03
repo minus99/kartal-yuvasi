@@ -3,18 +3,6 @@
     background: $color1 url(/images/frontend/bg01.png) left top / 100% no-repeat;
     color: $color2;
     padding: 70px 20px 0;
-    &-grid {
-        grid-template-columns: 1fr 710px 1fr;
-        grid-template-areas:
-        ". ga1 ."
-        "ga2 ga2 ga2";
-        
-        @include setGridArea(1,2);
-
-        > .ga1 {
-            min-height: 900px;
-        }
-    }
 
     .instagram-feed {
         padding-top: 120px;
@@ -25,9 +13,11 @@
     font-family: $font2;
     font-size: 16px;
 
+    .urunDetay_btnSepeteAt {
+        margin-top: 0;
+    }
     a.btnsepeteAt {
         @extend %btn-primary;
-        max-width: 370px;
     }
 }
 
@@ -62,8 +52,10 @@ ul.giftCardList {
 //GIFT CARD SORGULA
 .ems-member-gift-card {}
 .gift-card-control {
+    > .ga1,
     > .ga2 {
-        padding-left: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 

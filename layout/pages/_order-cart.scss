@@ -70,6 +70,9 @@
         }
     }
 }
+.pnlDipToplam_bankaKomisyon {
+    display: none !important;
+}
 
 .ems-cart-coupon {
     margin-top: -20px;
@@ -120,6 +123,10 @@ a.btnHediyeCekiIptal {
     &-append & {
         display: block;
     }
+}
+
+.ems-extra-product {
+    
 }
 
 .basket-empty {

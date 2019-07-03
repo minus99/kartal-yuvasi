@@ -30,7 +30,25 @@
     &.ajx-loading {
         > .ems-tab-content {
             > *:not(.ajx-loaded) {
-                background: url(/images/ajaxtabs/loading.gif) center center / 32px no-repeat;
+                background: url(/images/frontend/loading.gif) center center / 120px no-repeat;
+            }
+        }
+    }
+
+    //checkbox
+    &-checkbox {
+        &-header {
+            background: $color3;
+            padding: 20px;
+        }
+        &-content {
+            display: none;
+            border: 1px solid $color3;
+            animation: show 0.5s ease;
+        }
+        &.opened {
+            .ems-tab-checkbox-content {
+                display: block;
             }
         }
     }

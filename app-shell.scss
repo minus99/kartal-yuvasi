@@ -10,8 +10,7 @@
 
 //COMPONENTS
 @import 'components/button';
-@import 'vendors/swiper';
-@import 'components/swiper-customize';
+@import 'components/swiper';
 @import 'components/banner';
 @import 'components/countdown';
 
@@ -36,7 +35,7 @@
         @import 'base/global-desktop';
         
         //COMPONENTS
-        @import 'components/swiper-customize-desktop';
+        @import 'components/swiper-desktop';
         @import 'components/banner-desktop';
 
         //HEADER

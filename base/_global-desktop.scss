@@ -54,6 +54,9 @@
         }
 
         //item size
+        &-none {
+            flex: none;
+        }
         &-auto {
             flex: auto;
         }
@@ -82,8 +85,4 @@
             text-align: right;
         }
     }
-}
-
-.table-overflow {
-    width: 100%;
 }
