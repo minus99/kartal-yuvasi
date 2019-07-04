@@ -91,6 +91,11 @@ $prd-pd-l: 20px;
         }
     }
 }
+.urunListe_adet {
+    [id$="lblURN_ADET"] {
+        display: none;
+    }
+}
 
 //badges
 .indirimli {
@@ -103,5 +108,69 @@ $prd-pd-l: 20px;
     .urunListe_yeniUrun {
         display: block !important;
         color: $color11;
+    }
+}
+
+
+.view-horizontal {
+    &.swiper-wrapper {
+        flex-direction: column;
+    }
+    .ems-prd {
+        border-bottom: 1px solid $color3;
+        &-inner {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px 10px 100px 100px;
+        }
+        &-badge {
+            display: none;
+        }
+        &-image {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            max-width: 95px;
+            padding: 10px;
+        }
+        &-body {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 0;
+            background: none;
+            width: 100%;
+            > div {
+                padding: 10px;
+            }
+        }
+        &-name {
+            width: 100%;
+            > a {
+                white-space: normal;
+            }
+        }
+        &-price {
+            margin-top: 0;
+        }
+        &-add-to-cart {
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    }
+    .urunListe_sepetGrup {
+        display: flex;
+        align-items: center;
+    }
+    .urunListe_sepet {
+        flex: 1;
+    }
+    a.btnSepeteAt {
+        width: 100%;
+        @extend %btn-transparent;
     }
 }

@@ -29,3 +29,16 @@ ul.product-list-grid {
         grid-gap: 40px;
     }
 }
+
+.view-horizontal {
+    .ems-prd {
+        &-name {
+            width: auto;
+        }
+        &-add-to-cart {
+            position: static;
+            width: auto;
+            flex: 1;
+        }
+    }
+}

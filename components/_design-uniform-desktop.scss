@@ -27,8 +27,11 @@
     &-image-container {
         max-width: 400px;
     }
+    &-360 {
+        visibility: visible;
+    }
     &-options {
-        padding: 50px 150px 50px 0;
+        padding: 45px 150px 100px 0;
         background: $color14;
         &::before {
             content: "";
@@ -41,10 +44,39 @@
             background: inherit;
             @include setCurve(-7, -80);
         }
+        > div {
+            padding: 0;
+            &:not(.selected) {
+                display: block;
+            }
+            &.ems-flex {
+                display: flex;
+            }
+        }
     }
     &-gender {
+        a {
+            padding: 0;
+            border: none;
+        }
         a + a {
             margin-left: 40px;
         }
+    }
+    &-color {
+        margin-top: 30px;
+    }
+    &-select-size {
+        margin-top: 20px;
+    }
+    &-tab {
+        margin-top: 20px;
+    }
+    &-add-to-cart {
+        margin-top: 30px;
+    }
+    &-price {
+        margin-bottom: 0;
+        flex: 1.3;
     }
 }

@@ -129,9 +129,12 @@
     }
     &-page-url {
         margin-top: 20px;
-        .lnkSepet {
+        > a {
             display: block;
+        }
+        .lnkSepet {
             @extend %btn;
+            display: block;
         }
     }
 }

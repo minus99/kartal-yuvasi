@@ -796,13 +796,13 @@ a.btnSipIptal:hover, a.lnkSatinAl:hover {
   color: #fff;
 }
 
-.btn-transparent, .ems-prdd-block2 a.btnDefault, .urunKiyaslamaOzellik_tumunuTemizle a, a.btnFacebookLogin, a.btnFacebookLoginKutu, .ems-new-address a.btnAdresIptal {
+.btn-transparent, .ems-prdd-block2 a.btnDefault, .urunKiyaslamaOzellik_tumunuTemizle a, a.btnFacebookLogin, a.btnFacebookLoginKutu, .view-horizontal a.btnSepeteAt, .ems-new-address a.btnAdresIptal {
   background: transparent;
   color: inherit;
   border-color: #c9c9c9;
 }
 
-.btn-transparent:hover, .ems-prdd-block2 a.btnDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle a:hover, a.btnFacebookLogin:hover, a.btnFacebookLoginKutu:hover, .ems-new-address a.btnAdresIptal:hover {
+.btn-transparent:hover, .ems-prdd-block2 a.btnDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle a:hover, a.btnFacebookLogin:hover, a.btnFacebookLoginKutu:hover, .view-horizontal a.btnSepeteAt:hover, .ems-new-address a.btnAdresIptal:hover {
   background: transparent;
 }
 
@@ -2045,6 +2045,8 @@ button.swiper-pagination-bullet {
 .ems-tab-checkbox-header {
   background: #eee;
   padding: 20px;
+  font-family: fira, arial, sans-serif;
+  font-size: 16px;
 }
 
 .ems-tab-checkbox-content {
@@ -4294,6 +4296,10 @@ a.btnKutuLogout {
   margin-top: 20px;
 }
 
+.cart-prd-page-url > a {
+  display: block;
+}
+
 .cart-prd-page-url .lnkSepet {
   display: block;
 }
@@ -4946,6 +4952,10 @@ ul.product-list-grid > li {
   display: block;
 }
 
+.urunListe_adet [id$="lblURN_ADET"] {
+  display: none;
+}
+
 .indirimli .urunListe_pnlIndirimOran {
   display: block !important;
   color: #c5242b;
@@ -4954,6 +4964,79 @@ ul.product-list-grid > li {
 .yeniUrun .urunListe_yeniUrun {
   display: block !important;
   color: #004ca5;
+}
+
+.view-horizontal.swiper-wrapper {
+  flex-direction: column;
+}
+
+.view-horizontal .ems-prd {
+  border-bottom: 1px solid #eee;
+}
+
+.view-horizontal .ems-prd-inner {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 10px 100px 100px;
+}
+
+.view-horizontal .ems-prd-badge {
+  display: none;
+}
+
+.view-horizontal .ems-prd-image {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  max-width: 95px;
+  padding: 10px;
+}
+
+.view-horizontal .ems-prd-body {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+  background: none;
+  width: 100%;
+}
+
+.view-horizontal .ems-prd-body > div {
+  padding: 10px;
+}
+
+.view-horizontal .ems-prd-name {
+  width: 100%;
+}
+
+.view-horizontal .ems-prd-name > a {
+  white-space: normal;
+}
+
+.view-horizontal .ems-prd-price {
+  margin-top: 0;
+}
+
+.view-horizontal .ems-prd-add-to-cart {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.view-horizontal .urunListe_sepetGrup {
+  display: flex;
+  align-items: center;
+}
+
+.view-horizontal .urunListe_sepet {
+  flex: 1;
+}
+
+.view-horizontal a.btnSepeteAt {
+  width: 100%;
 }
 
 .ems-page-product-detail {
@@ -5773,6 +5856,11 @@ a.btnStokHaberci {
 
 .customer-support-append .customer-support {
   display: block;
+}
+
+.ems-extra-product {
+  margin-top: 20px;
+  padding: 20px;
 }
 
 .basket-empty .ems-step0 .ems-order-cart-grid {
@@ -7113,8 +7201,11 @@ ul.giftCardList li.selected > a {
     .uniform-image-container {
       max-width: 400px;
     }
+    .uniform-360 {
+      visibility: visible;
+    }
     .uniform-options {
-      padding: 50px 150px 50px 0;
+      padding: 45px 150px 100px 0;
       background: #b4b4b4;
     }
     .uniform-options::before {
@@ -7128,8 +7219,37 @@ ul.giftCardList li.selected > a {
       background: inherit;
       transform: skewX(-7deg) translateX(-80px);
     }
+    .uniform-options > div {
+      padding: 0;
+    }
+    .uniform-options > div:not(.selected) {
+      display: block;
+    }
+    .uniform-options > div.ems-flex {
+      display: flex;
+    }
+    .uniform-gender a {
+      padding: 0;
+      border: none;
+    }
     .uniform-gender a + a {
       margin-left: 40px;
+    }
+    .uniform-color {
+      margin-top: 30px;
+    }
+    .uniform-select-size {
+      margin-top: 20px;
+    }
+    .uniform-tab {
+      margin-top: 20px;
+    }
+    .uniform-add-to-cart {
+      margin-top: 30px;
+    }
+    .uniform-price {
+      margin-bottom: 0;
+      flex: 1.3;
     }
     .navigasyon {
       font-family: fira, arial, sans-serif;
@@ -7896,6 +8016,14 @@ ul.giftCardList li.selected > a {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 40px;
     }
+    .view-horizontal .ems-prd-name {
+      width: auto;
+    }
+    .view-horizontal .ems-prd-add-to-cart {
+      position: static;
+      width: auto;
+      flex: 1;
+    }
     .ems-page-product-detail {
       padding-bottom: 80px;
     }
@@ -8135,6 +8263,10 @@ ul.giftCardList li.selected > a {
     }
     .ems-cart-coupon {
       margin-top: 0;
+    }
+    .ems-extra-product {
+      padding-left: 0;
+      padding-right: 0;
     }
     .ems-order-delivery-grid {
       grid-template-columns: 20px 1fr minmax(auto, 780px) 20px 380px 1fr 20px;
