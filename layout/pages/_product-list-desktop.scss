@@ -32,12 +32,17 @@ ul.product-list-grid {
 
 .view-horizontal {
     .ems-prd {
+        &-inner {
+            padding: 10px;
+        }
+        &-image {
+            position: static;
+        }
         &-name {
-            width: auto;
+            flex: 1;
         }
         &-add-to-cart {
             position: static;
-            width: auto;
             flex: 1;
         }
     }

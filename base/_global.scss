@@ -160,12 +160,12 @@ iframe {
             margin: 0;
         }
         &-error {
-            background: none;
+            background: $color2;
             color: $color4;
             border-color: currentColor;
         }
         &-success {
-            background: none;
+            background: $color2;
             color: $color12;
             border-color: currentColor;
         }
@@ -391,22 +391,19 @@ table {
 .pnlDipToplamTable td > span,
 .odemeCekiTutar {
     display: inline-flex !important;
-    .d {
-        display: none;
-    }
     [class^="pb"] {
         order: -1;
     }
 }
-//show price decimals
-#lblUrunTutari,
-.pnlDipToplamTable td > span,
-.odemeCekiTutar {
+//hidden price decimals
+.urunListe_brutFiyat,
+.urunListe_satisFiyat {
     .d {
-        display: inline;
+        display: none;
     }
 }
 
+//price after discount price
 .ems-price.first,
 .urunListe_brutFiyat,
 .urunDetay_brutFiyat,

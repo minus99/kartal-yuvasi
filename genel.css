@@ -354,13 +354,13 @@ iframe {
 }
 
 .ems-message-error {
-  background: none;
+  background: #fff;
   color: #c5242b;
   border-color: currentColor;
 }
 
 .ems-message-success {
-  background: none;
+  background: #fff;
   color: #2e9a32;
   border-color: currentColor;
 }
@@ -571,20 +571,6 @@ table {
   display: inline-flex !important;
 }
 
-.ems-price .d,
-.urunListe_brutFiyat .d,
-.urunListe_satisFiyat .d,
-.urunDetay_brutFiyat .d,
-.urunDetay_satisFiyat .d,
-#lblUrunTutari .d,
-.suggest_urnprice .d,
-.satBrFiyatVrg .d,
-.brFiyatVrg .d,
-.pnlDipToplamTable td > span .d,
-.odemeCekiTutar .d {
-  display: none;
-}
-
 .ems-price [class^="pb"],
 .urunListe_brutFiyat [class^="pb"],
 .urunListe_satisFiyat [class^="pb"],
@@ -599,10 +585,9 @@ table {
   order: -1;
 }
 
-#lblUrunTutari .d,
-.pnlDipToplamTable td > span .d,
-.odemeCekiTutar .d {
-  display: inline;
+.urunListe_brutFiyat .d,
+.urunListe_satisFiyat .d {
+  display: none;
 }
 
 .ems-price.first:not(:empty),
@@ -1983,6 +1968,10 @@ button.swiper-pagination-bullet {
   flex-direction: column;
 }
 
+.not-trigger .swiper-slide {
+  width: auto;
+}
+
 .swiper-container-light .swiper-button-prev,
 .swiper-container-light .swiper-button-next {
   border-color: rgba(0, 0, 0, 0.4);
@@ -2047,6 +2036,7 @@ button.swiper-pagination-bullet {
   padding: 20px;
   font-family: fira, arial, sans-serif;
   font-size: 16px;
+  user-select: none;
 }
 
 .ems-tab-checkbox-content {
@@ -2114,8 +2104,8 @@ button.swiper-pagination-bullet {
 .banner .prm-marker {
   position: absolute;
   right: 26px;
-  top: 70%;
-  transform: translateY(0) scale(0.8);
+  top: 50%;
+  transform: translateY(-25%) scale(0.9);
   opacity: 0;
   transition: all .32s ease;
   background: transparent;
@@ -2148,7 +2138,6 @@ button.swiper-pagination-bullet {
 }
 
 .banner:hover .prm-marker {
-  top: 50%;
   transform: translateY(-50%) scale(1);
   opacity: 1;
 }
@@ -2689,7 +2678,7 @@ button.toast-close-button {
   display: none;
 }
 
-.design-uniform .icon-radio-active {
+.design-uniform a .icon-radio-active {
   font-size: 18px;
   margin-right: 5px;
   --check: hidden;
@@ -3810,6 +3799,10 @@ button.toast-close-button {
   margin-top: 70px;
 }
 
+.lp-container {
+  display: none;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -4403,7 +4396,6 @@ a.btnKutuLogout {
 
 .popular-search-words .swiper-slide {
   padding-left: 30px;
-  width: auto;
 }
 
 .popular-search-words .prm-link::before {
@@ -4675,13 +4667,16 @@ a.btnKutuLogout {
   margin-top: 50px;
 }
 
+.social-links .swiper-wrapper {
+  justify-content: center;
+}
+
 .social-links .swiper-inner {
   margin-left: -20px;
 }
 
 .social-links .swiper-slide {
   padding-left: 20px;
-  width: auto;
 }
 
 .social-links svg {
@@ -4717,7 +4712,18 @@ a.btnKutuLogout {
 
 .bottom-links {
   margin-top: 35px;
-  text-align: center;
+}
+
+.bottom-links .swiper-wrapper {
+  justify-content: center;
+}
+
+.bottom-links .swiper-inner {
+  margin-left: -10px;
+}
+
+.bottom-links .swiper-slide {
+  padding-left: 10px;
 }
 
 .bottom-links a {
@@ -4725,10 +4731,6 @@ a.btnKutuLogout {
   font-size: 12px;
   color: #c9c9c9;
   padding: 5px;
-}
-
-.bottom-links a + a {
-  margin-left: 15px;
 }
 
 .copyright {
@@ -4952,6 +4954,7 @@ ul.product-list-grid > li {
   display: block;
 }
 
+.urunListe_adet [id$="txtURN_ADET"],
 .urunListe_adet [id$="lblURN_ADET"] {
   display: none;
 }
@@ -4974,10 +4977,14 @@ ul.product-list-grid > li {
   border-bottom: 1px solid #eee;
 }
 
+.view-horizontal .ems-prd:last-child {
+  border-bottom-color: transparent;
+}
+
 .view-horizontal .ems-prd-inner {
   display: flex;
   flex-wrap: wrap;
-  padding: 10px 10px 100px 100px;
+  padding: 10px 10px 80px 100px;
 }
 
 .view-horizontal .ems-prd-badge {
@@ -4999,7 +5006,6 @@ ul.product-list-grid > li {
   align-items: center;
   padding: 0;
   background: none;
-  width: 100%;
 }
 
 .view-horizontal .ems-prd-body > div {
@@ -5007,7 +5013,8 @@ ul.product-list-grid > li {
 }
 
 .view-horizontal .ems-prd-name {
-  width: 100%;
+  flex-basis: 100%;
+  font-family: fira, arial, sans-serif;
 }
 
 .view-horizontal .ems-prd-name > a {
@@ -5016,14 +5023,15 @@ ul.product-list-grid > li {
 
 .view-horizontal .ems-prd-price {
   margin-top: 0;
+  font-size: 20px;
 }
 
 .view-horizontal .ems-prd-add-to-cart {
   display: block;
   position: absolute;
-  left: 0;
+  right: 10px;
+  left: 10px;
   bottom: 0;
-  width: 100%;
 }
 
 .view-horizontal .urunListe_sepetGrup {
@@ -5031,8 +5039,13 @@ ul.product-list-grid > li {
   align-items: center;
 }
 
+.view-horizontal .urunListe_adet {
+  width: 113px;
+}
+
 .view-horizontal .urunListe_sepet {
   flex: 1;
+  padding-left: 20px;
 }
 
 .view-horizontal a.btnSepeteAt {
@@ -5059,7 +5072,6 @@ ul.product-list-grid > li {
 }
 
 .ems-prdd-name {
-  margin-top: 20px;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: .5px;
@@ -5090,7 +5102,8 @@ ul.product-list-grid > li {
   display: none;
   position: absolute;
   right: 0;
-  top: 1px;
+  top: 50%;
+  transform: translateY(-50%);
   background: #fff;
   width: 100%;
   text-align: right;
@@ -5248,9 +5261,26 @@ a.btnStokHaberci {
   margin: -20px -20px 20px;
 }
 
+.added-prd {
+  grid-template-columns: 100px 15px 1fr;
+  grid-template-rows: max-content 1fr;
+  grid-template-areas: "ga1 . ga2" "ga3 ga3 ga3";
+}
+
+.added-prd > .ga1 {
+  grid-area: ga1;
+}
+
+.added-prd > .ga2 {
+  grid-area: ga2;
+}
+
+.added-prd > .ga3 {
+  grid-area: ga3;
+}
+
 .added-prd .prm-media-holder {
   position: relative;
-  flex-basis: 100px;
 }
 
 .added-prd .prm-media-holder svg {
@@ -5261,17 +5291,19 @@ a.btnStokHaberci {
   animation: animation-03 .5s ease;
 }
 
-.added-prd .prm-content {
-  padding-left: 15px;
-}
-
 .added-prd .prm-title {
   font-size: 22px;
   font-weight: 700;
 }
 
+.added-prd .prm-desc {
+  font-family: fira, arial, sans-serif;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
 .added-prd .prm-btns {
-  margin: 15px 0 0 -5px;
+  margin-top: 20px;
 }
 
 .added-prd .prm-btns > a {
@@ -5859,8 +5891,13 @@ a.btnStokHaberci {
 }
 
 .ems-extra-product {
+  display: none;
   margin-top: 20px;
   padding: 20px;
+}
+
+.ems-extra-product-append .ems-extra-product {
+  display: block;
 }
 
 .basket-empty .ems-step0 .ems-order-cart-grid {
@@ -7753,14 +7790,17 @@ ul.giftCardList li.selected > a {
     .menu .lvl-2 > li {
       flex: 1;
     }
-    .menu .lvl-2 > li.ems-sub-menu {
-      height: 100%;
+    .menu .lvl-2 > li > a {
+      line-height: 1.4;
     }
     .menu .lvl-2 > li a {
       display: inline-flex;
     }
     .menu .lvl-2 > li + li {
       margin-left: 50px;
+    }
+    .menu .lvl-2 > li.ems-sub-menu {
+      height: 100%;
     }
     .menu .lvl-3 > li > a {
       font-weight: 400;
@@ -7903,15 +7943,14 @@ ul.giftCardList li.selected > a {
     }
     .bottom-links {
       margin-top: 70px;
-      text-align: right;
+    }
+    .bottom-links .swiper-wrapper {
+      justify-content: flex-end;
     }
     .bottom-links a {
       font-size: 14px;
       padding-top: 0;
       padding-bottom: 0;
-    }
-    .bottom-links a + a {
-      margin-left: 10px;
     }
     .copyright {
       margin-top: 70px;
@@ -8016,12 +8055,17 @@ ul.giftCardList li.selected > a {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 40px;
     }
+    .view-horizontal .ems-prd-inner {
+      padding: 10px;
+    }
+    .view-horizontal .ems-prd-image {
+      position: static;
+    }
     .view-horizontal .ems-prd-name {
-      width: auto;
+      flex: 1;
     }
     .view-horizontal .ems-prd-add-to-cart {
       position: static;
-      width: auto;
       flex: 1;
     }
     .ems-page-product-detail {
@@ -8042,6 +8086,13 @@ ul.giftCardList li.selected > a {
     .ems-prdd-grid > .ga3 {
       grid-area: ga3;
     }
+    .ems-prdd-name {
+      margin-top: 10px;
+      font-size: 30px;
+    }
+    .ems-prdd-price {
+      font-size: 28px;
+    }
     .ems-prdd-gallery {
       margin-top: 0;
     }
@@ -8061,11 +8112,12 @@ ul.giftCardList li.selected > a {
     .mini-product-info .sub-header {
       margin: -30px -30px 30px;
     }
-    .added-prd .prm-media-holder {
-      flex-basis: 140px;
+    .added-prd {
+      grid-template-columns: 140px 30px 1fr;
+      grid-template-areas: "ga1 . ga2" "ga1 . ga3";
     }
-    .added-prd .prm-content {
-      padding-left: 30px;
+    .added-prd .prm-btns {
+      margin-top: 30px;
     }
     .suggest-prd {
       display: block;
@@ -8147,6 +8199,9 @@ ul.giftCardList li.selected > a {
     }
     .address-detail {
       display: block;
+    }
+    #Map.map {
+      height: calc(100vh - 210px);
     }
     .ems-page-hierarchy-grid {
       grid-template-columns: 300px 20px minmax(auto, 890px) 20px 1fr;

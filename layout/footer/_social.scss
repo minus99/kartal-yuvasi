@@ -1,13 +1,14 @@
 .social-links {
     margin-top: 50px;
-
     $p: 20px;
+    .swiper-wrapper {
+        justify-content: center;
+    }
     .swiper-inner {
         margin-left: #{-$p};
     }
     .swiper-slide {
         padding-left: #{$p};
-        width: auto;
     }
     svg {
         font-size: 50px;

@@ -92,6 +92,7 @@ $prd-pd-l: 20px;
     }
 }
 .urunListe_adet {
+    [id$="txtURN_ADET"],
     [id$="lblURN_ADET"] {
         display: none;
     }
@@ -118,10 +119,13 @@ $prd-pd-l: 20px;
     }
     .ems-prd {
         border-bottom: 1px solid $color3;
+        &:last-child {
+            border-bottom-color: transparent;
+        }
         &-inner {
             display: flex;
             flex-wrap: wrap;
-            padding: 10px 10px 100px 100px;
+            padding: 10px 10px 80px 100px;
         }
         &-badge {
             display: none;
@@ -140,34 +144,39 @@ $prd-pd-l: 20px;
             align-items: center;
             padding: 0;
             background: none;
-            width: 100%;
             > div {
                 padding: 10px;
             }
         }
         &-name {
-            width: 100%;
+            flex-basis: 100%;
+            font-family: $font2;
             > a {
                 white-space: normal;
             }
         }
         &-price {
             margin-top: 0;
+            font-size: 20px;
         }
         &-add-to-cart {
             display: block;
             position: absolute;
-            left: 0;
+            right: 10px;
+            left: 10px;
             bottom: 0;
-            width: 100%;
         }
     }
     .urunListe_sepetGrup {
         display: flex;
         align-items: center;
     }
+    .urunListe_adet {
+        width: 113px;
+    }
     .urunListe_sepet {
         flex: 1;
+        padding-left: 20px;
     }
     a.btnSepeteAt {
         width: 100%;

@@ -126,8 +126,13 @@ a.btnHediyeCekiIptal {
 }
 
 .ems-extra-product {
+    display: none;
     margin-top: 20px;
     padding: 20px;
+    
+    &-append & {
+        display: block;
+    }
 }
 
 .basket-empty {

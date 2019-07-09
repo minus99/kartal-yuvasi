@@ -627,6 +627,13 @@ button.swiper-pagination-bullet {
   }
 }
 
+//no swipe
+.not-trigger {
+  .swiper-slide {
+    width: auto;
+  }
+}
+
 
 //LIGHT THEME
 .swiper-container-light {

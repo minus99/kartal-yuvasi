@@ -42,3 +42,6 @@
 .address-detail {
     display: block;
 }
+#Map.map {
+    height: calc(100vh - 210px);
+}

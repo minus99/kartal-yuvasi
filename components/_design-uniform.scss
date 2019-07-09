@@ -5,10 +5,12 @@
         display: none;
     }
 
-    .icon-radio-active {
-        font-size: 18px;
-        margin-right: 5px;
-        --check: hidden;
+    a {
+        .icon-radio-active {
+            font-size: 18px;
+            margin-right: 5px;
+            --check: hidden;
+        }
     }
     a.selected {
         .icon-radio-active {
