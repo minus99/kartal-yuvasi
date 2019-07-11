@@ -185,7 +185,7 @@
         .urunKiyaslamaOzellik_ozellikIcerik {
             table > tbody {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(32px, max-content));
+                grid-template-columns: repeat(auto-fit, calc(100%/3));
                 padding-top: 1px;
                 > tr {
                     margin-left: -1px;

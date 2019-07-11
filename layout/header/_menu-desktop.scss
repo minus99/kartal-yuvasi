@@ -142,41 +142,38 @@
         @include setCurve(15, -52);
     }
 
-    $iw: 248px;
+    $iw: 300px;
     .img1, .img2 {
         position: absolute;
         top: 0;
         width: $iw;
         height: 100%;
+        padding-top: 20px;
     }
     .img1 {
         right: -$iw/2;
         animation: animation-01 .5s cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
     }
     .img2 {
-        left: -75px;
+        left: -102px;
         animation: animation-02 .32s cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
         + .lvl-2 {
-            padding-left: $iw/2 + 150px;
+            padding-left: $iw/2 + 100px;
             max-width: 1000px;
         }
     }
 
     .lvl-2 {
-        display: flex !important;
+        column-count: 1;
+        column-gap: 50px;
         height: 100%;
         padding: 30px;
         animation: animation-02 .5s cubic-bezier(0.215, 0.610, 0.355, 1.000) !important; /* easeOutCubic */
         > li {
-            flex: 1;
-            > a {
-                line-height: 1.4;
-            }
+            break-inside: avoid;
             a {
                 display: inline-flex;
-            }
-            + li {
-                margin-left: 50px;
+                line-height: 1.4;
             }
             &.ems-sub-menu {
                 height: 100%;
@@ -188,6 +185,34 @@
         > li {
             > a {
                 font-weight: 400;
+            }
+        }
+    }
+
+    .col {
+        &-2 {
+            .lvl-2 {
+                column-count: 2;
+            }
+        }
+        &-3 {
+            .lvl-2 {
+                column-count: 3;
+            }
+        }
+        &-4 {
+            .lvl-2 {
+                column-count: 4;
+            }
+        }
+        &-5 {
+            .lvl-2 {
+                column-count: 5;
+            }
+        }
+        &-6 {
+            .lvl-2 {
+                column-count: 6;
             }
         }
     }

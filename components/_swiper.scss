@@ -473,9 +473,15 @@ button.swiper-pagination-bullet {
   max-height: 100%;
   -o-object-fit: contain;
   object-fit: contain;
+  cursor: zoom-in;
 }
-.swiper-slide-zoomed {
+.swiper-slide-zoomed.swiper-slide-active {
   cursor: move;
+}
+.swiper-slide-zoomed.swiper-slide-active {
+  .swiper-zoom-container > img {
+    cursor: move;
+  }
 }
 /* Preloader */
 .swiper-lazy-preloader {
@@ -608,6 +614,15 @@ button.swiper-pagination-bullet {
   .swiper-slide {
       padding-left: #{$p};
       width: 265px;
+  }
+
+  //horizontal product
+  &-horizontal {
+    > .swiper-inner {
+      > .swiper-wrapper {
+        flex-direction: column;
+      }
+    }
   }
 }
 

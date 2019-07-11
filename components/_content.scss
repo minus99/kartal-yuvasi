@@ -242,9 +242,129 @@
 //SEO CONTENT
 .seo-content {
     margin-top: 70px;
+    .swiper-slide {
+        width: 100%;
+    }
 }
 
 //LANDING PAGE
+@mixin padding-h {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+@mixin padding-h-remove {
+    margin-left: -20px;
+    margin-right: -20px;
+}
 .lp-container {
-    display: none;
+    background: $color1;
+    color: $color2;
+    padding-bottom: 40px;
+    .fd {
+        padding-bottom: .1px;
+    }
+}
+.lp-content {
+    .swiper-slide {
+        width: 100%;
+    }
+}
+//full desc
+.fd {
+    background: $color1;
+    color: $color2;
+    text-align: center;
+    @include padding-h;
+    padding-top: .1px;
+    padding-bottom: 40px;
+    margin-top: 40px;
+    > * {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    &-title {
+        margin-top: 40px;
+        font-size: 24px;
+        b {
+            font-weight: 700;
+        }
+    }
+    &-text {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    &-media {
+        margin-top: 40px;
+        @include padding-h-remove;
+    }
+    &-bg-stadium {
+        background: url(/UPLOAD/banner/urun-aciklama/static/stadium.png) center top / 150% no-repeat;
+        padding-top: 40%;
+        margin-top: 0 !important;
+    }
+    &-wing {
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        &-l,
+        &-r {
+            position: absolute;
+            top: 0;
+            transition: transform .32s ease;
+            max-width: 50vw;
+        }
+        &-l {
+            left: 0;
+            transform: rotate(-20deg);
+            transform-origin: right center;
+        }
+        &-r {
+            right: 0;
+            transform: rotate(20deg);
+            transform-origin: left center;
+        }
+        &-c {
+            position: relative;
+            max-width: 46vw;
+            margin-top: 12vw;
+        }
+    }
+
+    &-block {
+        //media block
+        &-media {
+            .fd-media + .fd-media {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+//zebra content
+.lp-z-content {
+    margin-top: 80px;
+    li {
+        .banner14 .banner-body {
+            padding-right: 200px;            
+        }
+        &:nth-child(even) {
+            margin-top: -100px;
+            > * {
+                flex-direction: row-reverse;
+                align-items: flex-end;
+            }
+            .banner14 .banner-body {
+                padding-top: 120px;
+                padding-right: 50px;
+                padding-left: 200px;
+            }
+        }
+    }
+}
+//video
+.lp-video {
+    margin-top: 80px;
 }

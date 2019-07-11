@@ -113,10 +113,7 @@ $prd-pd-l: 20px;
 }
 
 
-.view-horizontal {
-    &.swiper-wrapper {
-        flex-direction: column;
-    }
+.swiper-product-horizontal {
     .ems-prd {
         border-bottom: 1px solid $color3;
         &:last-child {

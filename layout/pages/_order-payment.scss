@@ -46,6 +46,19 @@
         margin-top: 30px;
     }
 }
+.masterpassContent {
+    display: block !important;
+    margin-top: 20px;
+    background: red;
+}
+.masterPassForms {
+    position: relative;
+    > div {
+        margin-top: 10px;
+    }
+}
+
+
 [id$="ODM_ACIKLAMA"]:not(:empty) {
     display: block;
     margin-top: 20px;
