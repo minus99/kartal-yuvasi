@@ -875,11 +875,16 @@ textarea {
   border: 1px solid #c9c9c9;
   border-radius: 0;
   outline: none;
+  box-shadow: none;
 }
 
 input:disabled,
 input:read-only {
   background: #eee !important;
+}
+
+input[type=radio] {
+  margin: 0;
 }
 
 textarea {
@@ -2787,8 +2792,10 @@ button.toast-close-button {
 }
 
 .uniform-options > div {
+  position: relative;
   overflow: auto;
   padding: 10px 20px;
+  max-width: 450px;
 }
 
 .uniform-options > div:not(.selected) {
@@ -2866,6 +2873,14 @@ button.toast-close-button {
 
 .uniform-tab .unique-name::placeholder {
   text-transform: none;
+}
+
+.uniform-emblem {
+  margin-top: 30px;
+}
+
+.uniform-emblem-title {
+  font-family: fira, arial, sans-serif;
 }
 
 .uniform-add-to-cart .sStylerWrp_select {
@@ -3827,6 +3842,7 @@ button.toast-close-button {
 }
 
 .lp-container {
+  display: none;
   background: #000;
   color: #fff;
   padding-bottom: 40px;
@@ -3834,6 +3850,10 @@ button.toast-close-button {
 
 .lp-container .fd {
   padding-bottom: .1px;
+}
+
+.lp-container-active .lp-container {
+  display: block;
 }
 
 .lp-content .swiper-slide {
@@ -6170,8 +6190,11 @@ a.btnAdresEkle,
 
 .masterpassContent {
   display: block !important;
-  margin-top: 20px;
-  background: red;
+  margin-top: 15px;
+}
+
+.imgMasterpassLogo {
+  width: auto !important;
 }
 
 .masterPassForms {
@@ -6180,6 +6203,57 @@ a.btnAdresEkle,
 
 .masterPassForms > div {
   margin-top: 10px;
+}
+
+.masterpassAciklama {
+  font-size: 13px;
+}
+
+.dvAddCreditCard {
+  display: flex;
+}
+
+.dvMpCardAliasName {
+  flex: 1;
+  padding-right: 5px;
+}
+
+.masterpass_cardList {
+  margin-bottom: 30px;
+}
+
+.masterpassLogo_cardList {
+  display: none;
+}
+
+.mpCreditCardSet {
+  font-size: 14px;
+  background: #515151;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 15px 1fr max-content;
+  grid-gap: 0 10px;
+  align-items: center;
+}
+
+.mpCreditCardSet + .mpCreditCardSet {
+  margin-top: 15px;
+}
+
+.lnkDeleteMasterPassCard {
+  text-decoration: underline;
+}
+
+.mpNewCreditCard {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.mpNewCreditCard input[type="radio"] {
+  margin-right: 7px;
 }
 
 [id$="ODM_ACIKLAMA"]:not(:empty) {
@@ -6191,7 +6265,7 @@ a.btnAdresEkle,
   display: none;
   position: absolute;
   right: 70px;
-  top: 24px;
+  top: 0;
 }
 
 .tableTitleOdemeBilgiKrediKarti,
@@ -6201,6 +6275,7 @@ a.btnAdresEkle,
 
 .tableOdemeBilgiKrediKarti input {
   width: 100% !important;
+  text-transform: uppercase;
 }
 
 .tableOdemeBilgiKrediKarti tbody {
@@ -7330,8 +7405,7 @@ ul.giftCardList li.selected > a {
       position: absolute;
       left: 0;
       top: 0;
-      z-index: -1;
-      width: 115px;
+      width: 25%;
       height: 100%;
       background: inherit;
       transform: skewX(-7deg) translateX(-80px);
@@ -7366,7 +7440,6 @@ ul.giftCardList li.selected > a {
     }
     .uniform-price {
       margin-bottom: 0;
-      flex: 1.3;
     }
     .navigasyon {
       font-family: fira, arial, sans-serif;

@@ -46,10 +46,13 @@
         margin-top: 30px;
     }
 }
+
 .masterpassContent {
     display: block !important;
-    margin-top: 20px;
-    background: red;
+    margin-top: 15px;
+}
+.imgMasterpassLogo {
+    width: auto !important;
 }
 .masterPassForms {
     position: relative;
@@ -57,7 +60,49 @@
         margin-top: 10px;
     }
 }
+.masterpassAciklama {
+    font-size: 13px;
+}
+.dvAddCreditCard {
+    display: flex;
+}
+.dvMpCardAliasName {
+    flex: 1;
+    padding-right: 5px;
+}
 
+.masterpass_cardList {
+    margin-bottom: 30px;
+}
+.masterpassLogo_cardList {
+    display: none;
+}
+.mpCreditCardSet {
+    font-size: 14px;
+    background: $color6;
+    color: $color2;
+    border-radius: 5px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 15px 1fr max-content;
+    grid-gap: 0 10px;
+    align-items: center;
+
+    + .mpCreditCardSet {
+        margin-top: 15px;
+    }
+}
+.lnkDeleteMasterPassCard {
+    text-decoration: underline;
+}
+.mpNewCreditCard {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    input[type="radio"] {
+        margin-right: 7px;
+    }
+}
 
 [id$="ODM_ACIKLAMA"]:not(:empty) {
     display: block;
@@ -68,7 +113,7 @@
     display: none;
     position: absolute;
     right: 70px;
-    top: 24px;
+    top: 0;
 }
 
 .tableTitleOdemeBilgiKrediKarti,
@@ -78,6 +123,7 @@
 .tableOdemeBilgiKrediKarti {
     input {
         width: 100% !important;
+        text-transform: uppercase;
     }
     tbody {
         display: flex;

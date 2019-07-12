@@ -38,8 +38,7 @@
             position: absolute;
             left: 0;
             top: 0;
-            z-index: -1;
-            width: 115px;
+            width: 25%;
             height: 100%;
             background: inherit;
             @include setCurve(-7, -80);
@@ -77,6 +76,5 @@
     }
     &-price {
         margin-bottom: 0;
-        flex: 1.3;
     }
 }

@@ -257,11 +257,16 @@
     margin-right: -20px;
 }
 .lp-container {
+    display: none;
     background: $color1;
     color: $color2;
     padding-bottom: 40px;
     .fd {
         padding-bottom: .1px;
+    }
+
+    &-active & {
+        display: block;
     }
 }
 .lp-content {
