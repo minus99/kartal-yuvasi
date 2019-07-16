@@ -17,13 +17,6 @@
     color: $color2;
 }
 
-html {
-    position: relative;
-    &::before {
-        display: none;
-    }
-}
-
 body {
     margin: 0;
     font-family: $font1;

@@ -93,6 +93,25 @@
     }
 }
 
+//find in store
+.ems-find-store {
+    &-sub {
+        @extend %header-mods-sub;
+        max-width: 910px;
+    }
+
+    &-ready {
+        .ems-find-store-sub {
+            @extend %header-mods-sub-ready;
+        }
+    }
+    &-animate {
+        .ems-find-store-sub {
+            @extend %header-mods-sub-animate;
+        }
+    }
+}
+
 //ZOOM
 .zoom-gallery {
     .thumbs-wrapper {

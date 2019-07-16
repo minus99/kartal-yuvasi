@@ -182,6 +182,7 @@ a.btnStokHaberci {
 
 //added to cart
 .mini-product-info {
+    display: none;
     $p: 20px;
     &-sub {
         @extend %footer-mods-sub;
@@ -191,7 +192,7 @@ a.btnStokHaberci {
         margin: #{-$p} #{-$p} #{$p};
     }
     &-ready {
-        .mini-product-info-holder,
+        .mini-product-info,
         .mini-product-info-sub {
             @extend %footer-mods-sub-ready;
         }
@@ -253,6 +254,7 @@ a.btnStokHaberci {
 
 //size guide
 .mini-size-guide {
+    display: none;
     $p: 20px;
     &-sub {
         @extend %footer-mods-sub;
@@ -271,7 +273,7 @@ a.btnStokHaberci {
         justify-content: flex-start;
     }
     .ems-tab-content {
-        max-height: 50vh;
+        max-height: calc(100vh - 250px);
         overflow: auto;
     }
 
@@ -294,6 +296,43 @@ a.btnStokHaberci {
 .size-guide-table {
     + .size-guide-table {
         margin-top: 40px;
+    }
+}
+
+//find in store
+.ems-find-store {
+    display: none;
+    $p: 20px;
+    &-sub {
+        @extend %footer-mods-sub;
+        padding: $p;
+    }
+    .sub-header {
+        margin: #{-$p} #{-$p} #{$p};
+    }
+
+    .dealer-form {
+        .ems-field-css {
+            width: calc((100% / 3) - 5px);
+        }
+    }
+    #findStoreBtn {
+        width: 100%;
+    }
+
+    &-ready {
+        .ems-find-store,
+        .ems-find-store-sub {
+            @extend %footer-mods-sub-ready;
+        }
+    }
+    &-animate {
+        .ems-find-store-overlay {
+            @extend %footer-mods-sub-overlay;
+        }
+        .ems-find-store-sub {
+            @extend %footer-mods-sub-animate;
+        }
     }
 }
 

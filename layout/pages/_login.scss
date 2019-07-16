@@ -7,6 +7,12 @@
     }
 }
 
+.login-video {
+    .swiper-slide {
+        width: 100%;
+    }
+}
+
 .ems-member-login {
     position: relative;
     width: calc(100% - 20px);
@@ -22,11 +28,10 @@
 }
 
 .kutuUyeGirisFacebookConnect {
-    max-width: 214px;
-    margin: 20px auto 0;
+    @extend .uyeGirisFacebookConnectKutu;
 }
 a.btnFacebookLogin {
-    @extend %btn-transparent;
+    @extend .btnFacebookLoginKutu;
 }
 
 a#lnkGuestCheckout {

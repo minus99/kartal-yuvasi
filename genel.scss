@@ -7,6 +7,7 @@
 @import 'base/icons';
 @import 'base/global';
 @import 'base/animations';
+@import 'base/css-loaded';
 
 //COMPONENTS
 @import 'components/button';
@@ -76,7 +77,7 @@
 
 
 //DESKTOP
-@supports(grid-area: auto) {
+@supports (display: grid) {
     @include setMediaScreen(min-width, $breakpoint-medium) {
         //BASE
         @import 'base/global-desktop';

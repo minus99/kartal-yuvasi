@@ -44,10 +44,11 @@
 }
 
 .uyeGirisFacebookConnectKutu {
-    @extend .kutuUyeGirisFacebookConnect;
+    max-width: 214px;
+    margin: 20px auto 0;
 }
 a.btnFacebookLoginKutu {
-    @extend .btnFacebookLogin;
+    @extend %btn-transparent;
 }
 
 .kutuUyeGiris_profilFoto {
@@ -68,6 +69,8 @@ a.btnKutuLogout {
 .mini-user-links {
     font-family: $font2;
     font-size: 18px;
+    max-height: calc(100vh - 250px);
+    overflow: auto;
     a {
         line-height: 35px;
     }

@@ -53,6 +53,9 @@ $prd-pd-l: 20px;
         padding: $prd-pd-t $prd-pd-r $prd-pd-b $prd-pd-l;
     }
     &-image {
+        > a {
+            display: block;
+        }
         img {
             width: 100%;
         }

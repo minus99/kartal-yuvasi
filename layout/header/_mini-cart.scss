@@ -66,9 +66,9 @@
 .kutuSepet_icerik {
     font-family: $font2;
     font-size: 16px;
+    margin-top: 10px;
     max-height: calc(100vh - 250px);
     overflow: auto;
-    margin-top: 10px;
     .ems-grid-row {
         grid-template-columns: 100px 1fr 32px;
         border: none;

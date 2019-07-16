@@ -46,6 +46,9 @@
         margin-top: 30px;
     }
 }
+[id$="pnlPesinDiger"] {
+    display: none;
+}
 
 .masterpassContent {
     display: block !important;
@@ -71,6 +74,9 @@
     padding-right: 5px;
 }
 
+.masterpass_cardAddedSuccess {
+    margin-bottom: 30px;
+}
 .masterpass_cardList {
     margin-bottom: 30px;
 }

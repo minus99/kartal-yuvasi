@@ -26,6 +26,9 @@
             &[poster] {
                 object-fit: cover;
                 object-position: center top;
+                + picture {
+                    display: none;
+                }
             }
         }
     }

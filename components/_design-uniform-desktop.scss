@@ -31,7 +31,7 @@
         visibility: visible;
     }
     &-options {
-        padding: 45px 150px 100px 0;
+        padding: 20px 20px 30px;
         background: $color14;
         &::before {
             content: "";
@@ -41,7 +41,7 @@
             width: 25%;
             height: 100%;
             background: inherit;
-            @include setCurve(-7, -80);
+            @include setCurve(-7, -60);
         }
         > div {
             padding: 0;
@@ -54,6 +54,7 @@
         }
     }
     &-gender {
+        margin-top: 20px;
         a {
             padding: 0;
             border: none;
