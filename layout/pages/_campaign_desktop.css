@@ -1,0 +1,8 @@
+.campaign-list .swiper-inner {
+  margin-left: -40px; }
+
+.campaign-list .swiper-slide {
+  padding-left: 40px;
+  width: calc(100% / 3); }
+  .campaign-list .swiper-slide:nth-child(1), .campaign-list .swiper-slide:nth-child(2) {
+    width: calc(100% / 2); }

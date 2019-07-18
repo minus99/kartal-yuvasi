@@ -57,6 +57,7 @@
 @import 'layout/pages/dealer';
 @import 'layout/pages/search';
 @import 'layout/pages/hierarchy';
+@import 'layout/pages/campaign';
 @import 'layout/pages/404';
 @import 'layout/pages/order-main';
 @import 'layout/pages/order-cart';
@@ -74,7 +75,6 @@
 @import 'layout/pages/member-favorite';
 @import 'layout/pages/member-message';
 @import 'layout/pages/member-gift-card';
-
 
 //DESKTOP
 @supports (display: grid) {
@@ -121,6 +121,7 @@
         @import 'layout/pages/dealer-desktop';
         @import 'layout/pages/search-desktop';
         @import 'layout/pages/hierarchy-desktop';
+        @import 'layout/pages/campaign-desktop';
         @import 'layout/pages/404-desktop';
         @import 'layout/pages/order-main-desktop';
         @import 'layout/pages/order-cart-desktop';

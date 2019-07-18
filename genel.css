@@ -192,7 +192,7 @@
   right: 38%;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1024px) {
   .obj-desktop {
     display: none !important;
   }
@@ -497,6 +497,10 @@ iframe {
 
 .image-loaded {
   opacity: 1;
+}
+
+.lazy-picture ~ img {
+  background: url(/images/frontend/loading.gif) center center/150px no-repeat;
 }
 
 [id^="lblBanner"][align] {
@@ -2058,6 +2062,10 @@ button.swiper-pagination-bullet {
 
 .swiper-layout-v > .swiper-inner > .swiper-wrapper {
   flex-direction: column;
+}
+
+.swiper-layout-f > .swiper-inner > .swiper-wrapper {
+  flex-wrap: wrap;
 }
 
 .not-trigger .swiper-slide {
@@ -6032,6 +6040,34 @@ a.btnStokHaberci {
   margin-top: 30px;
 }
 
+.page-dark-theme {
+  background: #000;
+  color: #fff;
+}
+
+.page-dark-theme .navigasyon ol,
+.page-dark-theme .navigation-full-path {
+  color: #fff;
+}
+
+.page-dark-theme .navigation-full-path:after {
+  -webkit-filter: invert(1);
+  filter: invert(1);
+}
+
+.campaign-list {
+  margin-top: -20px;
+}
+
+.campaign-list .swiper-inner {
+  margin-top: -20px;
+}
+
+.campaign-list .swiper-slide {
+  margin-top: 20px;
+  width: 100%;
+}
+
 .ems-page-error {
   background: #000 url(/images/frontend/bg02.png) center center/cover no-repeat;
   color: #fff;
@@ -7426,7 +7462,7 @@ ul.giftCardList li.selected > a {
 }
 
 @supports (display: grid) {
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1024px) {
     .obj-mobile {
       display: none !important;
     }
@@ -8714,6 +8750,13 @@ ul.giftCardList li.selected > a {
     .ems-find-store-sub {
       max-width: 910px;
     }
+    .ems-find-store .mod-service-list-grid {
+      max-height: calc(100vh - 210px);
+      overflow: auto;
+    }
+    .ems-find-store .mod-service-list-body {
+      overflow: auto;
+    }
     .zoom-gallery .thumbs-wrapper {
       display: block;
     }
@@ -8796,6 +8839,24 @@ ul.giftCardList li.selected > a {
       -ms-grid-row: 2;
       -ms-grid-column: 1;
       grid-area: ga1;
+    }
+    .campaign-list .swiper-inner {
+      margin-top: -40px;
+      margin-left: -40px;
+    }
+    .campaign-list .swiper-slide {
+      margin-top: 40px;
+      padding-left: 40px;
+      width: calc(100% / 3);
+    }
+    .campaign-list .swiper-slide:nth-child(1), .campaign-list .swiper-slide:nth-child(2) {
+      width: calc(100% / 2);
+    }
+    .campaign-list .swiper-slide:nth-child(1) .banner-body, .campaign-list .swiper-slide:nth-child(2) .banner-body {
+      position: absolute;
+      top: auto;
+      bottom: 0;
+      padding: 40px 50px;
     }
     .error-content {
       min-height: 850px;
@@ -9197,7 +9258,7 @@ ul.giftCardList li.selected > a {
       right: 38px;
     }
   }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1024px) {
     .site-header-grid > .prd {
       -ms-grid-row: 1;
       -ms-grid-column: 3;
@@ -11572,7 +11633,7 @@ ul.giftCardList li.selected > a {
       -ms-grid-column-span: 3;
     }
   }
-  @media screen and (min-width: 960px) and (max-width: 1350px) {
+  @media screen and (min-width: 1024px) and (max-width: 1350px) {
     .site-header-grid > .prd {
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
@@ -11831,7 +11892,7 @@ ul.giftCardList li.selected > a {
       -ms-grid-column-span: 1;
     }
   }
-  @media screen and (min-width: 960px) and (max-width: 1350px) {
+  @media screen and (min-width: 1024px) and (max-width: 1350px) {
     .site-header-grid {
       grid-template-areas: "ga1 . ga2 ga3 ga4 ga5" "ga6 ga6 ga6 ga6 ga8 ga8" "ga7 ga7 ga7 ga7 ga7 ga7";
     }

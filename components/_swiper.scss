@@ -642,6 +642,15 @@ button.swiper-pagination-bullet {
   }
 }
 
+//flow content layout
+.swiper-layout-f {
+  > .swiper-inner {
+      > .swiper-wrapper {
+          flex-wrap: wrap;
+      }
+  }
+}
+
 //no swipe
 .not-trigger {
   .swiper-slide {

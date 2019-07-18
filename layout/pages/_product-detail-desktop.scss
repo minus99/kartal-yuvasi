@@ -100,6 +100,14 @@
         max-width: 910px;
     }
 
+    .mod-service-list-grid {
+        max-height: calc(100vh - 210px);
+        overflow: auto;
+    }
+    .mod-service-list-body {
+        overflow: auto;
+    }
+
     &-ready {
         .ems-find-store-sub {
             @extend %header-mods-sub-ready;

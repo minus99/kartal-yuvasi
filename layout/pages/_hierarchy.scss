@@ -43,3 +43,15 @@
         }
     }
 }
+.page-dark-theme {
+    background: $color1;
+    color: $color2;
+
+    .navigasyon ol,
+    .navigation-full-path {
+        color: #fff;
+    }
+    .navigation-full-path:after {
+        filter: invert(1);
+    }
+}

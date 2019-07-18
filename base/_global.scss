@@ -313,6 +313,9 @@ iframe {
 .image-loaded {
     opacity: 1;
 }
+.lazy-picture ~ img {
+    background: url(/images/frontend/loading.gif) center center / 150px no-repeat;
+}
 
 //banner align fixer
 [id^="lblBanner"][align] {
