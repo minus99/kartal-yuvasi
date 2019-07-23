@@ -192,7 +192,7 @@
   right: 38%;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .obj-desktop {
     display: none !important;
   }
@@ -463,7 +463,6 @@ iframe {
 }
 
 .ems-grid {
-  display: -ms-grid;
   display: grid;
 }
 
@@ -925,7 +924,7 @@ a.btnDefault .icon-arrow-r {
 }
 
 input:not([type=checkbox]):not([type=radio]),
-select, .sStylerWrp_select, .dropdown,
+select, .sStylerWrp_select, .dropdown-header,
 textarea {
   font-family: fira, arial, sans-serif;
   font-size: 15px;
@@ -934,13 +933,15 @@ textarea {
   font-weight: 400;
   letter-spacing: .7px;
   width: 100%;
-  line-height: 44px;
+  line-height: 1;
   height: 44px;
   padding: 0 15px;
   border: 1px solid #c9c9c9;
   border-radius: 0;
   outline: none;
-  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 input:disabled,
@@ -1029,6 +1030,8 @@ textarea {
 .sStylerWrp_select {
   display: inline-block;
   vertical-align: middle;
+  line-height: 44px;
+  padding-right: 40px;
 }
 
 .sStylerWrp_select select {
@@ -1056,7 +1059,8 @@ textarea {
 }
 
 .dropdown-header {
-  cursor: default;
+  padding-right: 40px;
+  line-height: 44px;
 }
 
 .dropdown-header * {
@@ -1067,7 +1071,7 @@ textarea {
   position: absolute;
   right: 10px;
   top: 50%;
-  margin-top: -4px;
+  margin-top: -2px;
   transition: -webkit-transform .32s ease;
   transition: transform .32s ease;
   transition: transform .32s ease, -webkit-transform .32s ease;
@@ -1081,10 +1085,10 @@ textarea {
   left: 0;
   top: 100%;
   z-index: 1;
-  width: calc(100% + 2px);
+  width: 100%;
   max-height: 140px;
   overflow: auto;
-  margin: 0 0 0 -1px;
+  margin: -1px 0 0 0;
   background: #fff;
   border: 1px solid #c9c9c9;
 }
@@ -1093,6 +1097,12 @@ textarea {
   display: block;
   padding: 0 10px !important;
   line-height: 44px;
+  font-family: fira, arial, sans-serif;
+  font-size: 15px;
+  color: #000;
+  font-weight: 400;
+  letter-spacing: .7px;
+  cursor: default;
 }
 
 .dropdown.opened > ul {
@@ -2111,6 +2121,10 @@ button.swiper-pagination-bullet {
   letter-spacing: .9px;
   padding: 10px 20px;
   border: 1px solid transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   cursor: pointer;
 }
 
@@ -2120,8 +2134,6 @@ button.swiper-pagination-bullet {
 
 .ems-tab-content > * {
   display: none;
-  -webkit-animation: show 0.5s ease;
-  animation: show 0.5s ease;
 }
 
 .ems-tab-content > *.selected {
@@ -2146,8 +2158,6 @@ button.swiper-pagination-bullet {
 .ems-tab-checkbox-content {
   display: none;
   border: 1px solid #eee;
-  -webkit-animation: show 0.5s ease;
-  animation: show 0.5s ease;
 }
 
 .ems-tab-checkbox.opened .ems-tab-checkbox-content {
@@ -2165,14 +2175,16 @@ button.swiper-pagination-bullet {
   background-size: 32px;
   transition: background-image .25s ease;
   font-weight: 700;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   cursor: pointer;
 }
 
 .ems-tab-inner-content {
   display: none;
   margin-top: -25px;
-  -webkit-animation: show 0.5s ease;
-  animation: show 0.5s ease;
 }
 
 .selected .ems-tab-inner-content {
@@ -2796,17 +2808,11 @@ button.toast-close-button {
 }
 
 .instagram-feed .swiper-wrapper {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .instagram-feed .swiper-wrapper .selected {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 2;
   grid-area: 1 / 3 / span 2 / span 2;
 }
 
@@ -2992,10 +2998,6 @@ button.toast-close-button {
 }
 
 .uniform-tab .unique-name::-webkit-input-placeholder {
-  text-transform: none;
-}
-
-.uniform-tab .unique-name:-ms-input-placeholder {
   text-transform: none;
 }
 
@@ -3340,7 +3342,6 @@ button.toast-close-button {
 }
 
 .filter-type2 .urunKiyaslamaOzellik_ozellikIcerik table > tbody {
-  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, 25px);
   grid-gap: 15px;
@@ -3374,7 +3375,6 @@ button.toast-close-button {
 }
 
 .filter-type3 .urunKiyaslamaOzellik_ozellikIcerik table > tbody {
-  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, calc(100%/3));
   padding-top: 1px;
@@ -3586,7 +3586,6 @@ button.toast-close-button {
 
 .ems-grid-row {
   position: relative;
-  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
   grid-gap: 15px 10px;
@@ -3758,7 +3757,6 @@ button.toast-close-button {
 }
 
 .ems-grid-option1 {
-  -ms-grid-column-span: 2;
   grid-column: span 2;
 }
 
@@ -3899,7 +3897,7 @@ button.toast-close-button {
   position: absolute;
   left: 0;
   bottom: 0;
-  background: center top / cover no-repeat;
+  background: center bottom / 490px no-repeat;
   width: 100%;
   height: 120px;
 }
@@ -4568,7 +4566,6 @@ a.btnKutuLogout {
 }
 
 .kutuSepet_icerik .ems-grid-row {
-  -ms-grid-columns: 100px 1fr 32px;
   grid-template-columns: 100px 1fr 32px;
   border: none;
   grid-gap: 0 15px;
@@ -4780,9 +4777,7 @@ a.btnKutuLogout {
 }
 
 .searchSuggestDivHolder {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
   grid-template-areas: "ga3" "ga1" "ga2" "ga4";
 }
@@ -4798,9 +4793,7 @@ a.btnKutuLogout {
 }
 
 .searchSuggestDivHolder .prd .sHolder {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1px;
   margin-left: -55px;
@@ -4816,7 +4809,6 @@ a.btnKutuLogout {
 }
 
 .searchSuggestDivHolder .prd table tr {
-  display: -ms-grid;
   display: grid;
 }
 
@@ -4835,7 +4827,6 @@ a.btnKutuLogout {
 }
 
 .searchSuggestDivHolder .prd .suggest_urnsmallimg_con {
-  -ms-grid-row: 1;
   grid-row: 1;
   padding-left: 0;
   padding-right: 0;
@@ -4847,7 +4838,6 @@ a.btnKutuLogout {
 }
 
 .searchSuggestDivHolder .prd .suggest_urnsname_con {
-  -ms-grid-row: 2;
   grid-row: 2;
   font-family: dinc, arial, sans-serif;
   font-size: 16px;
@@ -4858,7 +4848,6 @@ a.btnKutuLogout {
 }
 
 .searchSuggestDivHolder .prd .suggest_urnprice_con {
-  -ms-grid-row: 3;
   grid-row: 3;
   padding-top: 5px;
   font-size: 18px;
@@ -4950,7 +4939,6 @@ a.btnKutuLogout {
   -ms-grid-column: 1;
   grid-area: ga4;
   display: block;
-  -ms-grid-column-align: center;
   justify-self: center;
   padding-top: 30px;
 }
@@ -5186,11 +5174,15 @@ a.btnKutuLogout {
 .best-sellers {
   position: relative;
   padding-top: 40px;
-  padding-bottom: 75px;
+  padding-bottom: 45px;
 }
 
-.best-sellers .ems-tab-content > div {
-  min-height: 400px;
+.best-sellers .ems-tab {
+  z-index: 1;
+}
+
+.best-sellers .swiper-product {
+  min-height: 445px;
 }
 
 .campaigns {
@@ -5272,7 +5264,6 @@ ul.product-list-grid {
   margin-top: 20px;
   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
   /* easeOutExpo */
-  -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1px;
 }
@@ -5282,7 +5273,6 @@ ul.product-list-grid > li {
 }
 
 .view-1 ul.product-list-grid {
-  -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
   grid-gap: 0;
 }
@@ -5426,7 +5416,7 @@ ul.product-list-grid > li {
 }
 
 .swiper-product-horizontal .urunListe_adet {
-  width: 113px;
+  width: 120px;
 }
 
 .swiper-product-horizontal .urunListe_sepet {
@@ -5653,10 +5643,7 @@ a.btnStokHaberci {
 }
 
 .added-prd {
-  -ms-grid-columns: 100px 15px 1fr;
   grid-template-columns: 100px 15px 1fr;
-  -ms-grid-rows: -webkit-max-content 1fr;
-  -ms-grid-rows: max-content 1fr;
   grid-template-rows: -webkit-max-content 1fr;
   grid-template-rows: max-content 1fr;
   grid-template-areas: "ga1 . ga2" "ga3 ga3 ga3";
@@ -5771,11 +5758,38 @@ a.btnStokHaberci {
 }
 
 .ems-find-store .dealer-form .ems-field-css {
-  width: calc((100% / 3) - 5px);
+  margin-top: 0;
 }
 
 .ems-find-store #findStoreBtn {
   width: 100%;
+}
+
+.ems-find-store .ems-message {
+  margin-top: 10px;
+}
+
+.ems-find-store .dealer-no-stock {
+  display: none;
+}
+
+.ems-find-store .quantity {
+  display: block;
+  margin-top: 5px;
+  color: #c5242b;
+}
+
+.ems-find-store.ems-no-result .address-detail,
+.ems-find-store.ems-no-result .dealer-stock-information {
+  display: none;
+}
+
+.ems-find-store.ems-no-result .dealer-no-stock {
+  display: flex;
+}
+
+.ems-find-store.ems-result-found .service-list {
+  display: block;
 }
 
 .zoom-gallery {
@@ -5897,14 +5911,15 @@ a.btnStokHaberci {
   margin-top: 50px;
 }
 
-.servisIcerik {
-  margin-top: 30px;
+.servisIcerik:empty {
+  display: none;
 }
 
 .servis_bilgi {
   font-family: fira, arial, sans-serif;
   font-size: 15px;
-  margin-bottom: 20px;
+  margin-top: 25px;
+  margin-bottom: 15px;
 }
 
 .secIlce:not(:empty)::before {
@@ -6075,7 +6090,6 @@ a.btnStokHaberci {
 }
 
 .ems-page-error-grid {
-  -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
   grid-template-areas: "ga1";
 }
@@ -6155,7 +6169,6 @@ a.btnStokHaberci {
 
 .ems-step0 .ems-grid-table-cart > .ems-grid-row,
 .guestCheckout .ems-grid-table-cart > .ems-grid-row {
-  -ms-grid-columns: 75px 1fr;
   grid-template-columns: 75px 1fr;
 }
 
@@ -6296,7 +6309,6 @@ a.btnStokHaberci {
 }
 
 .ems-grid-table-address .ems-grid-row {
-  -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
   font-size: 15px;
 }
@@ -6543,10 +6555,7 @@ a.btnAdresEkle,
   color: #fff;
   border-radius: 5px;
   padding: 20px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 15px 1fr -webkit-max-content;
-  -ms-grid-columns: 15px 1fr max-content;
   grid-template-columns: 15px 1fr -webkit-max-content;
   grid-template-columns: 15px 1fr max-content;
   grid-gap: 0 10px;
@@ -6955,7 +6964,6 @@ a.btnAdresEkle,
 }
 
 .ems-grid-table-order > .ems-grid-row {
-  -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
   grid-gap: 10px;
   padding-right: 80px;
@@ -7065,7 +7073,6 @@ a.btnSipariseDon .icon-triangle-b {
 }
 
 .ems-grid-table-refund > .ems-grid-row {
-  -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
   grid-gap: 10px;
 }
@@ -7076,9 +7083,7 @@ ul.rtnTitle {
 
 ul.rtnPrdInf {
   position: relative;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 90px 30px 80px;
   grid-template-columns: 90px 30px 80px;
   grid-gap: 15px 10px;
   align-items: center;
@@ -7090,7 +7095,6 @@ ul.rtnPrdInf {
 }
 
 .rtnReason {
-  -ms-grid-column-span: 3;
   grid-column: span 3;
 }
 
@@ -7132,12 +7136,6 @@ a.btnIadeEt, a.btnSifreGuncelle, a.btnUyeSifreGonder {
 
 .ems-member-address.no-result .ems-message-address {
   display: flex;
-}
-
-form[action*="sifremiunuttum"] .ems-page-member-grid {
-  -ms-grid-columns: 1fr;
-  grid-template-columns: 1fr;
-  grid-template-areas: "ga2";
 }
 
 form[action*="sifremiunuttum"] .ems-page-member-grid > .ga1 {
@@ -7197,7 +7195,6 @@ form[action*="sifremiunuttum"] .ems-page-member-grid > .ga1 {
 }
 
 .ems-grid-table-coupon > .ems-grid-row {
-  -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
   grid-gap: 10px;
 }
@@ -7220,7 +7217,6 @@ form[action*="sifremiunuttum"] .ems-page-member-grid > .ga1 {
 }
 
 .ems-grid-table-favorite > .ems-grid-row {
-  -ms-grid-columns: 100px 1fr;
   grid-template-columns: 100px 1fr;
 }
 
@@ -7236,8 +7232,8 @@ form[action*="sifremiunuttum"] .ems-page-member-grid > .ga1 {
   left: 0;
   top: 100%;
   z-index: 1;
-  width: calc(100% + 2px);
-  margin: 0 0 0 -1px;
+  width: 100%;
+  margin: -1px 0 0 0;
   background: #fff;
   border: 1px solid #c9c9c9;
 }
@@ -7325,7 +7321,6 @@ form[action*="sifremiunuttum"] .ems-page-member-grid > .ga1 {
 }
 
 .ems-grid-table-message > .ems-grid-row {
-  -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
   grid-gap: 10px;
 }
@@ -7462,7 +7457,7 @@ ul.giftCardList li.selected > a {
 }
 
 @supports (display: grid) {
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1025px) {
     .obj-mobile {
       display: none !important;
     }
@@ -7518,7 +7513,6 @@ ul.giftCardList li.selected > a {
       flex-basis: 100%;
     }
     .d-ems-grid {
-      display: -ms-grid;
       display: grid;
     }
     .d-ems-text-left {
@@ -7647,6 +7641,7 @@ ul.giftCardList li.selected > a {
     }
     .banner05 .prm-title {
       font-size: 14px;
+      line-height: 1.4;
     }
     .banner07 .banner-body {
       top: 50%;
@@ -7980,7 +7975,6 @@ ul.giftCardList li.selected > a {
       padding-right: 0;
     }
     .ems-grid-row.ems-grid-header {
-      display: -ms-grid;
       display: grid;
     }
     .ems-grid-name {
@@ -7995,7 +7989,6 @@ ul.giftCardList li.selected > a {
       right: 0;
     }
     .ems-grid-address-name {
-      -ms-grid-column-span: 2;
       grid-column: span 2;
       padding-right: 0;
     }
@@ -8003,7 +7996,6 @@ ul.giftCardList li.selected > a {
       position: static;
     }
     .ems-grid-option1 {
-      -ms-grid-column-span: 1;
       grid-column: span 1;
     }
     .mobi-dropdown > ul {
@@ -8067,7 +8059,6 @@ ul.giftCardList li.selected > a {
     }
     .site-header-grid {
       position: relative;
-      -ms-grid-columns: 300px 1fr auto auto 150px 150px;
       grid-template-columns: 300px 1fr auto auto 150px 150px;
       grid-template-areas: "ga1 . ga2 ga3 ga4 ga5" "ga6 ga7 ga7 ga7 ga8 ga8";
     }
@@ -8116,7 +8107,6 @@ ul.giftCardList li.selected > a {
       line-height: 70px;
     }
     .site-header-grid > .ga1 {
-      -ms-grid-column-span: 2;
       grid-column: span 2;
     }
     .slogan {
@@ -8344,7 +8334,7 @@ ul.giftCardList li.selected > a {
     }
     .menu .img2 + .lvl-2 {
       padding-left: 250px;
-      max-width: 1000px;
+      max-width: 1300px;
     }
     .menu .lvl-2 {
       -webkit-column-count: 1;
@@ -8361,7 +8351,8 @@ ul.giftCardList li.selected > a {
       -webkit-column-break-inside: avoid;
       break-inside: avoid;
     }
-    .menu .lvl-2 > li a {
+    .menu .lvl-2 > li a,
+    .menu .lvl-2 > li .prm-title {
       display: inline-flex;
       line-height: 1.4;
     }
@@ -8391,14 +8382,15 @@ ul.giftCardList li.selected > a {
       -webkit-column-count: 6;
       column-count: 6;
     }
-    .menu .collection .sub {
+    .menu .type02 .sub {
       height: auto;
     }
-    .menu .collection .lvl-2 > li {
-      max-width: 190px;
+    .menu .type02 .lvl-2 {
+      -webkit-column-gap: 20px;
+      column-gap: 20px;
     }
-    .menu .collection .lvl-2 > li + li {
-      margin-left: 20px;
+    .menu .type02 .lvl-2 > li {
+      width: 190px;
     }
     .menu-ready .menu {
       display: block;
@@ -8467,12 +8459,10 @@ ul.giftCardList li.selected > a {
       display: flex;
     }
     .searchSuggestDivHolder {
-      -ms-grid-columns: 1fr 56px 160px;
       grid-template-columns: 1fr 56px 160px;
       grid-template-areas: "ga1 ga1 ga1" "ga2 . ga3" "ga4 . .";
     }
     .searchSuggestDivHolder .prd .sHolder {
-      -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 10px;
       margin-right: 0;
@@ -8497,7 +8487,6 @@ ul.giftCardList li.selected > a {
     }
     .site-footer-grid {
       position: relative;
-      -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-areas: "ga1 ga1 ga1" ". ga8 ." ". ga2 ." "ga3 ga3 ga3" ". ga4 ." "ga6 ga5 ga5" "ga7 ga7 ga7";
     }
@@ -8589,7 +8578,10 @@ ul.giftCardList li.selected > a {
     }
     .best-sellers {
       padding-top: 60px;
-      padding-bottom: 100px;
+      padding-bottom: 90px;
+    }
+    .best-sellers .swiper-product {
+      min-height: 490px;
     }
     .campaigns .swiper-inner {
       padding-left: 0;
@@ -8630,7 +8622,6 @@ ul.giftCardList li.selected > a {
     }
     .ems-page-product-list-grid {
       position: relative;
-      -ms-grid-columns: 1fr 180px 60px minmax(700px, 900px) 1fr;
       grid-template-columns: 1fr 180px 60px minmax(700px, 900px) 1fr;
       grid-template-areas: "ga1 ga1 ga1 ga1 ga1" ". ga2 . ga3 .";
     }
@@ -8655,12 +8646,10 @@ ul.giftCardList li.selected > a {
     }
     ul.product-list-grid {
       margin-top: 30px;
-      -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 40px 45px;
     }
     .view-2 ul.product-list-grid {
-      -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 40px;
     }
@@ -8682,10 +8671,7 @@ ul.giftCardList li.selected > a {
     }
     .ems-prdd-grid {
       position: relative;
-      -ms-grid-columns: 1fr minmax(auto, 770px) 20px 370px 1fr;
       grid-template-columns: 1fr minmax(auto, 770px) 20px 370px 1fr;
-      -ms-grid-rows: -webkit-max-content 1fr;
-      -ms-grid-rows: max-content 1fr;
       grid-template-rows: -webkit-max-content 1fr;
       grid-template-rows: max-content 1fr;
       grid-template-areas: ". ga2 . ga1 ." ". ga2 . ga3 .";
@@ -8716,11 +8702,16 @@ ul.giftCardList li.selected > a {
       margin-top: 0;
     }
     .ems-prdd-gallery .swiper-wrapper {
-      display: -ms-grid;
       display: grid;
-      -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
       grid-gap: 10px;
+    }
+    .UrunListeGrup_listeUrunDetayGrup ul {
+      justify-content: flex-start;
+    }
+    .UrunListeGrup_listeUrunDetayGrup ul > li {
+      width: 45px;
+      height: 45px;
     }
     .dropdown-options > a {
       min-width: 46px;
@@ -8734,7 +8725,6 @@ ul.giftCardList li.selected > a {
       margin: -30px -30px 30px;
     }
     .added-prd {
-      -ms-grid-columns: 140px 30px 1fr;
       grid-template-columns: 140px 30px 1fr;
       grid-template-areas: "ga1 . ga2" "ga1 . ga3";
     }
@@ -8751,11 +8741,28 @@ ul.giftCardList li.selected > a {
       max-width: 910px;
     }
     .ems-find-store .mod-service-list-grid {
-      max-height: calc(100vh - 210px);
+      max-height: calc(100vh - 150px);
       overflow: auto;
+      grid-template-areas: ". ga1 ga1 ga1 ." ". ga3 . ga2 .";
+    }
+    .ems-find-store .mod-service-list-header {
+      margin-bottom: 30px;
+    }
+    .ems-find-store .dealer-form .ems-field-css {
+      width: calc((100% / 3) - 5px);
     }
     .ems-find-store .mod-service-list-body {
       overflow: auto;
+    }
+    .ems-find-store .ems-message {
+      margin-top: 0;
+    }
+    .ems-find-store #Map.map {
+      height: calc(100vh - 300px);
+      max-height: 450px;
+    }
+    .ems-find-store.ems-no-result .mod-service-list-grid {
+      grid-template-areas: ". ga1 ga1 ga1 ." ". ga3 ga3 ga3 .";
     }
     .zoom-gallery .thumbs-wrapper {
       display: block;
@@ -8774,10 +8781,7 @@ ul.giftCardList li.selected > a {
       margin-top: 0;
     }
     .mod-service-list-grid {
-      -ms-grid-columns: 1fr 380px 20px minmax(auto, 780px) 1fr;
       grid-template-columns: 1fr 380px 20px minmax(auto, 780px) 1fr;
-      -ms-grid-rows: -webkit-max-content 1fr;
-      -ms-grid-rows: max-content 1fr;
       grid-template-rows: -webkit-max-content 1fr;
       grid-template-rows: max-content 1fr;
       grid-template-areas: ". ga1 . ga2 ." ". ga3 . ga2 .";
@@ -8810,7 +8814,6 @@ ul.giftCardList li.selected > a {
       height: calc(100vh - 210px);
     }
     .ems-page-hierarchy-grid {
-      -ms-grid-columns: 300px 20px minmax(auto, 890px) 20px 1fr;
       grid-template-columns: 300px 20px minmax(auto, 890px) 20px 1fr;
       grid-template-areas: "ga1 . ga2 . .";
     }
@@ -8831,7 +8834,6 @@ ul.giftCardList li.selected > a {
       margin-top: 20px;
     }
     .ems-page-1-col-grid {
-      -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
       grid-template-areas: "ga1";
     }
@@ -8912,7 +8914,6 @@ ul.giftCardList li.selected > a {
     }
     .ems-step0 .ems-order-cart-grid,
     .guestCheckout .ems-order-cart-grid {
-      -ms-grid-columns: 20px 1fr minmax(auto, 780px) 20px 380px 1fr 20px;
       grid-template-columns: 20px 1fr minmax(auto, 780px) 20px 380px 1fr 20px;
       grid-template-areas: ". . ga1 . ga2 . .";
     }
@@ -8930,7 +8931,6 @@ ul.giftCardList li.selected > a {
     }
     .ems-step0 .ems-grid-table-cart > .ems-grid-row,
     .guestCheckout .ems-grid-table-cart > .ems-grid-row {
-      -ms-grid-columns: 90px 1fr 113px 1fr 20px;
       grid-template-columns: 90px 1fr 113px 1fr 20px;
     }
     .cart-promotion-info {
@@ -8962,7 +8962,6 @@ ul.giftCardList li.selected > a {
       padding-right: 0;
     }
     .ems-order-delivery-grid {
-      -ms-grid-columns: 20px 1fr minmax(auto, 780px) 20px 380px 1fr 20px;
       grid-template-columns: 20px 1fr minmax(auto, 780px) 20px 380px 1fr 20px;
       grid-template-areas: ". . ga1 . ga2 . .";
     }
@@ -8977,7 +8976,6 @@ ul.giftCardList li.selected > a {
       grid-area: ga2;
     }
     .ems-grid-table-address .ems-grid-row {
-      -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
     }
     a.btnAdresEkle {
@@ -8998,7 +8996,6 @@ ul.giftCardList li.selected > a {
       margin-right: -50px;
     }
     .ems-order-payment-grid {
-      -ms-grid-columns: 20px 1fr minmax(auto, 780px) 20px 380px 1fr 20px;
       grid-template-columns: 20px 1fr minmax(auto, 780px) 20px 380px 1fr 20px;
       grid-template-areas: ". . ga1 . ga2 . .";
     }
@@ -9034,7 +9031,6 @@ ul.giftCardList li.selected > a {
       overflow-y: scroll;
     }
     .ems-order-payment .ems-grid-table-cart > .ems-grid-row {
-      -ms-grid-columns: 75px 1fr;
       grid-template-columns: 75px 1fr;
       border-color: transparent;
       padding: 10px 10px 10px 0;
@@ -9086,7 +9082,6 @@ ul.giftCardList li.selected > a {
       margin-top: 30px;
     }
     .ems-page-member-grid {
-      -ms-grid-columns: 300px 40px minmax(auto, 850px) 20px 1fr;
       grid-template-columns: 300px 40px minmax(auto, 850px) 20px 1fr;
       grid-template-areas: "ga1 . ga2 . .";
     }
@@ -9114,7 +9109,6 @@ ul.giftCardList li.selected > a {
       padding-top: 40px;
     }
     .ems-grid-table-order > .ems-grid-row {
-      -ms-grid-columns: 130px 80px 80px 1fr 1fr 1fr;
       grid-template-columns: 130px 80px 80px 1fr 1fr 1fr;
       padding-right: 0;
     }
@@ -9138,7 +9132,6 @@ ul.giftCardList li.selected > a {
       margin-bottom: 30px;
     }
     .ems-step0 .ems-grid-table-order-products > .ems-grid-row {
-      -ms-grid-columns: 90px 1fr 113px 1fr;
       grid-template-columns: 90px 1fr 113px 1fr;
     }
     .ems-member-refund {
@@ -9148,12 +9141,10 @@ ul.giftCardList li.selected > a {
       grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
     }
     ul.rtnPrdInf {
-      -ms-grid-columns: 90px 30px 80px 1fr;
       grid-template-columns: 90px 30px 80px 1fr;
       padding: 10px;
     }
     .rtnReason {
-      -ms-grid-column-span: 1;
       grid-column: span 1;
     }
     .ems-member-info {
@@ -9161,6 +9152,10 @@ ul.giftCardList li.selected > a {
     }
     .ems-member-info .ems-form {
       max-width: 660px;
+    }
+    form[action*="sifremiunuttum"] .ems-page-member-grid {
+      grid-template-columns: minmax(auto, 600px) 1fr;
+      grid-template-areas: "ga2 .";
     }
     .coupon-tab {
       margin: 30px 0 0 -10px;
@@ -9170,14 +9165,12 @@ ul.giftCardList li.selected > a {
       padding-right: 20px;
     }
     .ems-grid-table-coupon > .ems-grid-row {
-      -ms-grid-columns: 1fr 2fr 150px 150px 1fr;
       grid-template-columns: 1fr 2fr 150px 150px 1fr;
     }
     .ems-member-favorite {
       padding-top: 50px;
     }
     .ems-grid-table-favorite > .ems-grid-row {
-      -ms-grid-columns: 20px 100px 2.5fr 175px 113px 1fr;
       grid-template-columns: 20px 100px 2.5fr 175px 113px 1fr;
     }
     .selected-action a {
@@ -9205,7 +9198,6 @@ ul.giftCardList li.selected > a {
       margin: 0 !important;
     }
     .ems-grid-table-message > .ems-grid-row {
-      -ms-grid-columns: 10px 150px 2fr 1fr 1fr;
       grid-template-columns: 10px 150px 2fr 1fr 1fr;
     }
     .ems-grid-table-message .newMessage .ems-grid-date {
@@ -9219,7 +9211,6 @@ ul.giftCardList li.selected > a {
       margin-left: 20px;
     }
     .ems-page-gift-card-grid {
-      -ms-grid-columns: 1fr 710px 1fr;
       grid-template-columns: 1fr 710px 1fr;
       grid-template-areas: ". ga1 ." "ga2 ga2 ga2";
     }
@@ -9258,7 +9249,7 @@ ul.giftCardList li.selected > a {
       right: 38px;
     }
   }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1025px) {
     .site-header-grid > .prd {
       -ms-grid-row: 1;
       -ms-grid-column: 3;
@@ -9284,6 +9275,11 @@ ul.giftCardList li.selected > a {
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
       -ms-grid-column: 3;
+    }
+    .ems-find-store .mod-service-list-grid > .prd {
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 4;
     }
     .mod-service-list-grid > .prd {
       -ms-grid-row: 1;
@@ -9314,6 +9310,11 @@ ul.giftCardList li.selected > a {
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
       -ms-grid-column: 3;
+    }
+    form[action*="sifremiunuttum"] .ems-page-member-grid > .prd {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 1;
     }
     .ems-page-gift-card-grid > .prd {
       -ms-grid-row: 2;
@@ -9351,6 +9352,16 @@ ul.giftCardList li.selected > a {
       -ms-grid-column: 3;
       -ms-grid-column-span: 1;
     }
+    .ems-find-store .mod-service-list-grid > .cat {
+      -ms-grid-row: 2;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 1;
+    }
+    .ems-find-store.ems-no-result .mod-service-list-grid > .cat {
+      -ms-grid-row: 2;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
     .mod-service-list-grid > .cat {
       -ms-grid-row: 2;
       -ms-grid-column: 2;
@@ -9386,6 +9397,18 @@ ul.giftCardList li.selected > a {
       -ms-grid-row-span: 2;
       -ms-grid-column: 1;
       -ms-grid-column-span: 1;
+    }
+    .ems-find-store .mod-service-list-grid > .prdCount {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
+    .ems-find-store.ems-no-result .mod-service-list-grid > .prdCount {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
     }
     .mod-service-list-grid > .prdCount {
       -ms-grid-row: 1;
@@ -9478,6 +9501,18 @@ ul.giftCardList li.selected > a {
       -ms-grid-column: 1;
       -ms-grid-column-span: 1;
     }
+    .ems-find-store .mod-service-list-grid > .ga1 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
+    .ems-find-store.ems-no-result .mod-service-list-grid > .ga1 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
     .mod-service-list-grid > .ga1 {
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
@@ -9552,6 +9587,11 @@ ul.giftCardList li.selected > a {
       -ms-grid-row-span: 1;
       -ms-grid-column: 3;
     }
+    .ems-find-store .mod-service-list-grid > .ga2 {
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 4;
+    }
     .mod-service-list-grid > .ga2 {
       -ms-grid-row: 1;
       -ms-grid-row-span: 2;
@@ -9581,6 +9621,11 @@ ul.giftCardList li.selected > a {
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
       -ms-grid-column: 3;
+    }
+    form[action*="sifremiunuttum"] .ems-page-member-grid > .ga2 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 1;
     }
     .ems-page-gift-card-grid > .ga2 {
       -ms-grid-row: 2;
@@ -9617,6 +9662,16 @@ ul.giftCardList li.selected > a {
       -ms-grid-row: 2;
       -ms-grid-column: 3;
       -ms-grid-column-span: 1;
+    }
+    .ems-find-store .mod-service-list-grid > .ga3 {
+      -ms-grid-row: 2;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 1;
+    }
+    .ems-find-store.ems-no-result .mod-service-list-grid > .ga3 {
+      -ms-grid-row: 2;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
     }
     .mod-service-list-grid > .ga3 {
       -ms-grid-row: 2;
@@ -9654,6 +9709,18 @@ ul.giftCardList li.selected > a {
       -ms-grid-column: 1;
       -ms-grid-column-span: 1;
     }
+    .ems-find-store .mod-service-list-grid > .ga1 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
+    .ems-find-store.ems-no-result .mod-service-list-grid > .ga1 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
     .mod-service-list-grid > .ga1 {
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
@@ -9733,6 +9800,18 @@ ul.giftCardList li.selected > a {
       -ms-grid-column: 1;
       -ms-grid-column-span: 1;
     }
+    .ems-find-store .mod-service-list-grid > .ga1 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
+    .ems-find-store.ems-no-result .mod-service-list-grid > .ga1 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
     .mod-service-list-grid > .ga1 {
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
@@ -9807,6 +9886,11 @@ ul.giftCardList li.selected > a {
       -ms-grid-row-span: 1;
       -ms-grid-column: 3;
     }
+    .ems-find-store .mod-service-list-grid > .ga2 {
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 4;
+    }
     .mod-service-list-grid > .ga2 {
       -ms-grid-row: 1;
       -ms-grid-row-span: 2;
@@ -9836,6 +9920,11 @@ ul.giftCardList li.selected > a {
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
       -ms-grid-column: 3;
+    }
+    form[action*="sifremiunuttum"] .ems-page-member-grid > .ga2 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 1;
     }
     .ems-page-gift-card-grid > .ga2 {
       -ms-grid-row: 2;
@@ -9872,6 +9961,16 @@ ul.giftCardList li.selected > a {
       -ms-grid-row: 2;
       -ms-grid-column: 3;
       -ms-grid-column-span: 1;
+    }
+    .ems-find-store .mod-service-list-grid > .ga3 {
+      -ms-grid-row: 2;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 1;
+    }
+    .ems-find-store.ems-no-result .mod-service-list-grid > .ga3 {
+      -ms-grid-row: 2;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
     }
     .mod-service-list-grid > .ga3 {
       -ms-grid-row: 2;
@@ -9958,6 +10057,18 @@ ul.giftCardList li.selected > a {
       -ms-grid-column: 1;
       -ms-grid-column-span: 1;
     }
+    .ems-find-store .mod-service-list-grid > .ga1 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
+    .ems-find-store.ems-no-result .mod-service-list-grid > .ga1 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
     .mod-service-list-grid > .ga1 {
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
@@ -10032,6 +10143,11 @@ ul.giftCardList li.selected > a {
       -ms-grid-row-span: 1;
       -ms-grid-column: 3;
     }
+    .ems-find-store .mod-service-list-grid > .ga2 {
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 4;
+    }
     .mod-service-list-grid > .ga2 {
       -ms-grid-row: 1;
       -ms-grid-row-span: 2;
@@ -10061,6 +10177,11 @@ ul.giftCardList li.selected > a {
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
       -ms-grid-column: 3;
+    }
+    form[action*="sifremiunuttum"] .ems-page-member-grid > .ga2 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 1;
     }
     .ems-page-gift-card-grid > .ga2 {
       -ms-grid-row: 2;
@@ -10097,6 +10218,16 @@ ul.giftCardList li.selected > a {
       -ms-grid-row: 2;
       -ms-grid-column: 3;
       -ms-grid-column-span: 1;
+    }
+    .ems-find-store .mod-service-list-grid > .ga3 {
+      -ms-grid-row: 2;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 1;
+    }
+    .ems-find-store.ems-no-result .mod-service-list-grid > .ga3 {
+      -ms-grid-row: 2;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
     }
     .mod-service-list-grid > .ga3 {
       -ms-grid-row: 2;
@@ -10183,6 +10314,18 @@ ul.giftCardList li.selected > a {
       -ms-grid-column: 1;
       -ms-grid-column-span: 1;
     }
+    .ems-find-store .mod-service-list-grid > .ga1 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
+    .ems-find-store.ems-no-result .mod-service-list-grid > .ga1 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
     .mod-service-list-grid > .ga1 {
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
@@ -10257,6 +10400,11 @@ ul.giftCardList li.selected > a {
       -ms-grid-row-span: 1;
       -ms-grid-column: 3;
     }
+    .ems-find-store .mod-service-list-grid > .ga2 {
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 4;
+    }
     .mod-service-list-grid > .ga2 {
       -ms-grid-row: 1;
       -ms-grid-row-span: 2;
@@ -10286,6 +10434,11 @@ ul.giftCardList li.selected > a {
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
       -ms-grid-column: 3;
+    }
+    form[action*="sifremiunuttum"] .ems-page-member-grid > .ga2 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 1;
     }
     .ems-page-gift-card-grid > .ga2 {
       -ms-grid-row: 2;
@@ -10322,6 +10475,16 @@ ul.giftCardList li.selected > a {
       -ms-grid-row: 2;
       -ms-grid-column: 3;
       -ms-grid-column-span: 1;
+    }
+    .ems-find-store .mod-service-list-grid > .ga3 {
+      -ms-grid-row: 2;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 1;
+    }
+    .ems-find-store.ems-no-result .mod-service-list-grid > .ga3 {
+      -ms-grid-row: 2;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
     }
     .mod-service-list-grid > .ga3 {
       -ms-grid-row: 2;
@@ -10359,6 +10522,18 @@ ul.giftCardList li.selected > a {
       -ms-grid-column: 1;
       -ms-grid-column-span: 1;
     }
+    .ems-find-store .mod-service-list-grid > .ga1 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
+    .ems-find-store.ems-no-result .mod-service-list-grid > .ga1 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
     .mod-service-list-grid > .ga1 {
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
@@ -10433,6 +10608,11 @@ ul.giftCardList li.selected > a {
       -ms-grid-row-span: 1;
       -ms-grid-column: 3;
     }
+    .ems-find-store .mod-service-list-grid > .ga2 {
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 4;
+    }
     .mod-service-list-grid > .ga2 {
       -ms-grid-row: 1;
       -ms-grid-row-span: 2;
@@ -10462,6 +10642,11 @@ ul.giftCardList li.selected > a {
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
       -ms-grid-column: 3;
+    }
+    form[action*="sifremiunuttum"] .ems-page-member-grid > .ga2 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 1;
     }
     .ems-page-gift-card-grid > .ga2 {
       -ms-grid-row: 2;
@@ -10499,6 +10684,16 @@ ul.giftCardList li.selected > a {
       -ms-grid-column: 3;
       -ms-grid-column-span: 1;
     }
+    .ems-find-store .mod-service-list-grid > .ga3 {
+      -ms-grid-row: 2;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 1;
+    }
+    .ems-find-store.ems-no-result .mod-service-list-grid > .ga3 {
+      -ms-grid-row: 2;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
     .mod-service-list-grid > .ga3 {
       -ms-grid-row: 2;
       -ms-grid-column: 2;
@@ -10534,6 +10729,18 @@ ul.giftCardList li.selected > a {
       -ms-grid-row-span: 2;
       -ms-grid-column: 1;
       -ms-grid-column-span: 1;
+    }
+    .ems-find-store .mod-service-list-grid > .mod-service-list-header {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
+    .ems-find-store.ems-no-result .mod-service-list-grid > .mod-service-list-header {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
     }
     .mod-service-list-grid > .mod-service-list-header {
       -ms-grid-row: 1;
@@ -10609,6 +10816,11 @@ ul.giftCardList li.selected > a {
       -ms-grid-row-span: 1;
       -ms-grid-column: 3;
     }
+    .ems-find-store .mod-service-list-grid > .address-detail {
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 4;
+    }
     .mod-service-list-grid > .address-detail {
       -ms-grid-row: 1;
       -ms-grid-row-span: 2;
@@ -10638,6 +10850,11 @@ ul.giftCardList li.selected > a {
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
       -ms-grid-column: 3;
+    }
+    form[action*="sifremiunuttum"] .ems-page-member-grid > .address-detail {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 1;
     }
     .ems-page-gift-card-grid > .address-detail {
       -ms-grid-row: 2;
@@ -10675,6 +10892,16 @@ ul.giftCardList li.selected > a {
       -ms-grid-column: 3;
       -ms-grid-column-span: 1;
     }
+    .ems-find-store .mod-service-list-grid > .mod-service-list-body {
+      -ms-grid-row: 2;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 1;
+    }
+    .ems-find-store.ems-no-result .mod-service-list-grid > .mod-service-list-body {
+      -ms-grid-row: 2;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
     .mod-service-list-grid > .mod-service-list-body {
       -ms-grid-row: 2;
       -ms-grid-column: 2;
@@ -10710,6 +10937,18 @@ ul.giftCardList li.selected > a {
       -ms-grid-row-span: 2;
       -ms-grid-column: 1;
       -ms-grid-column-span: 1;
+    }
+    .ems-find-store .mod-service-list-grid > .ga1 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
+    .ems-find-store.ems-no-result .mod-service-list-grid > .ga1 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
     }
     .mod-service-list-grid > .ga1 {
       -ms-grid-row: 1;
@@ -10785,6 +11024,11 @@ ul.giftCardList li.selected > a {
       -ms-grid-row-span: 1;
       -ms-grid-column: 3;
     }
+    .ems-find-store .mod-service-list-grid > .ga2 {
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 4;
+    }
     .mod-service-list-grid > .ga2 {
       -ms-grid-row: 1;
       -ms-grid-row-span: 2;
@@ -10814,6 +11058,11 @@ ul.giftCardList li.selected > a {
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
       -ms-grid-column: 3;
+    }
+    form[action*="sifremiunuttum"] .ems-page-member-grid > .ga2 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 1;
     }
     .ems-page-gift-card-grid > .ga2 {
       -ms-grid-row: 2;
@@ -10851,6 +11100,18 @@ ul.giftCardList li.selected > a {
       -ms-grid-row-span: 2;
       -ms-grid-column: 1;
       -ms-grid-column-span: 1;
+    }
+    .ems-find-store .mod-service-list-grid > .ga1 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
+    .ems-find-store.ems-no-result .mod-service-list-grid > .ga1 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
     }
     .mod-service-list-grid > .ga1 {
       -ms-grid-row: 1;
@@ -10936,6 +11197,20 @@ ul.giftCardList li.selected > a {
       -ms-grid-row-span: 2;
       -ms-grid-column: 1;
       -ms-grid-column-span: 1;
+    }
+    .ems-find-store .mod-service-list-grid > .ga1,
+    .ems-find-store .mod-service-list-grid > .ga1 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
+    .ems-find-store.ems-no-result .mod-service-list-grid > .ga1,
+    .ems-find-store.ems-no-result .mod-service-list-grid > .ga1 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
     }
     .mod-service-list-grid > .ga1,
     .mod-service-list-grid > .ga1 {
@@ -11025,6 +11300,12 @@ ul.giftCardList li.selected > a {
       -ms-grid-row-span: 1;
       -ms-grid-column: 3;
     }
+    .ems-find-store .mod-service-list-grid > .ga2,
+    .ems-find-store .mod-service-list-grid > .ga2 {
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 4;
+    }
     .mod-service-list-grid > .ga2,
     .mod-service-list-grid > .ga2 {
       -ms-grid-row: 1;
@@ -11060,6 +11341,12 @@ ul.giftCardList li.selected > a {
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
       -ms-grid-column: 3;
+    }
+    form[action*="sifremiunuttum"] .ems-page-member-grid > .ga2,
+    form[action*="sifremiunuttum"] .ems-page-member-grid > .ga2 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 1;
     }
     .ems-page-gift-card-grid > .ga2,
     .ems-page-gift-card-grid > .ga2 {
@@ -11099,6 +11386,18 @@ ul.giftCardList li.selected > a {
       -ms-grid-column: 1;
       -ms-grid-column-span: 1;
     }
+    .ems-find-store .mod-service-list-grid > .ga1 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
+    .ems-find-store.ems-no-result .mod-service-list-grid > .ga1 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
     .mod-service-list-grid > .ga1 {
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
@@ -11173,6 +11472,11 @@ ul.giftCardList li.selected > a {
       -ms-grid-row-span: 1;
       -ms-grid-column: 3;
     }
+    .ems-find-store .mod-service-list-grid > .ga2 {
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 4;
+    }
     .mod-service-list-grid > .ga2 {
       -ms-grid-row: 1;
       -ms-grid-row-span: 2;
@@ -11202,6 +11506,11 @@ ul.giftCardList li.selected > a {
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
       -ms-grid-column: 3;
+    }
+    form[action*="sifremiunuttum"] .ems-page-member-grid > .ga2 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 1;
     }
     .ems-page-gift-card-grid > .ga2 {
       -ms-grid-row: 2;
@@ -11240,6 +11549,18 @@ ul.giftCardList li.selected > a {
       -ms-grid-column: 1;
       -ms-grid-column-span: 1;
     }
+    .ems-find-store .mod-service-list-grid > .ga1 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
+    .ems-find-store.ems-no-result .mod-service-list-grid > .ga1 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
     .mod-service-list-grid > .ga1 {
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
@@ -11314,6 +11635,11 @@ ul.giftCardList li.selected > a {
       -ms-grid-row-span: 1;
       -ms-grid-column: 3;
     }
+    .ems-find-store .mod-service-list-grid > .ga2 {
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 4;
+    }
     .mod-service-list-grid > .ga2 {
       -ms-grid-row: 1;
       -ms-grid-row-span: 2;
@@ -11343,6 +11669,11 @@ ul.giftCardList li.selected > a {
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
       -ms-grid-column: 3;
+    }
+    form[action*="sifremiunuttum"] .ems-page-member-grid > .ga2 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 1;
     }
     .ems-page-gift-card-grid > .ga2 {
       -ms-grid-row: 2;
@@ -11381,6 +11712,18 @@ ul.giftCardList li.selected > a {
       -ms-grid-column: 1;
       -ms-grid-column-span: 1;
     }
+    .ems-find-store .mod-service-list-grid > .ga1 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
+    .ems-find-store.ems-no-result .mod-service-list-grid > .ga1 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
     .mod-service-list-grid > .ga1 {
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
@@ -11455,6 +11798,11 @@ ul.giftCardList li.selected > a {
       -ms-grid-row-span: 1;
       -ms-grid-column: 3;
     }
+    .ems-find-store .mod-service-list-grid > .ga2 {
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 4;
+    }
     .mod-service-list-grid > .ga2 {
       -ms-grid-row: 1;
       -ms-grid-row-span: 2;
@@ -11484,6 +11832,11 @@ ul.giftCardList li.selected > a {
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
       -ms-grid-column: 3;
+    }
+    form[action*="sifremiunuttum"] .ems-page-member-grid > .ga2 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 1;
     }
     .ems-page-gift-card-grid > .ga2 {
       -ms-grid-row: 2;
@@ -11522,6 +11875,18 @@ ul.giftCardList li.selected > a {
       -ms-grid-column: 1;
       -ms-grid-column-span: 1;
     }
+    .ems-find-store .mod-service-list-grid > .ga1 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
+    .ems-find-store.ems-no-result .mod-service-list-grid > .ga1 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+    }
     .mod-service-list-grid > .ga1 {
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
@@ -11596,6 +11961,11 @@ ul.giftCardList li.selected > a {
       -ms-grid-row-span: 1;
       -ms-grid-column: 3;
     }
+    .ems-find-store .mod-service-list-grid > .ga2 {
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 4;
+    }
     .mod-service-list-grid > .ga2 {
       -ms-grid-row: 1;
       -ms-grid-row-span: 2;
@@ -11625,6 +11995,11 @@ ul.giftCardList li.selected > a {
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
       -ms-grid-column: 3;
+    }
+    form[action*="sifremiunuttum"] .ems-page-member-grid > .ga2 {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 1;
     }
     .ems-page-gift-card-grid > .ga2 {
       -ms-grid-row: 2;
@@ -11633,7 +12008,7 @@ ul.giftCardList li.selected > a {
       -ms-grid-column-span: 3;
     }
   }
-  @media screen and (min-width: 1024px) and (max-width: 1350px) {
+  @media screen and (min-width: 1025px) and (max-width: 1350px) {
     .site-header-grid > .prd {
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
@@ -11892,7 +12267,7 @@ ul.giftCardList li.selected > a {
       -ms-grid-column-span: 1;
     }
   }
-  @media screen and (min-width: 1024px) and (max-width: 1350px) {
+  @media screen and (min-width: 1025px) and (max-width: 1350px) {
     .site-header-grid {
       grid-template-areas: "ga1 . ga2 ga3 ga4 ga5" "ga6 ga6 ga6 ga6 ga8 ga8" "ga7 ga7 ga7 ga7 ga7 ga7";
     }
@@ -11915,7 +12290,6 @@ ul.giftCardList li.selected > a {
     }
     .menu .img2 + .lvl-2 {
       padding: 30px;
-      max-width: none;
     }
     .menu .lvl-2 {
       justify-content: center;

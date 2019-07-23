@@ -34,13 +34,16 @@
 }
 
 .servisIcerik {
-    margin-top: 30px;
+    &:empty {
+        display: none;
+    }    
 }
 
 .servis_bilgi {
     font-family: $font2;
     font-size: 15px;
-    margin-bottom: 20px;
+    margin-top: 25px;
+    margin-bottom: 15px;
 }
 .secIlce {
     &:not(:empty) {

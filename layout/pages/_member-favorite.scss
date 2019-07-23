@@ -27,8 +27,8 @@
         left: 0;
         top: 100%;
         z-index: 1;
-        width: calc(100% + 2px);
-        margin: 0 0 0 -1px;
+        width: 100%;
+        margin: -1px 0 0 0;
         background: $color2;
         border: 1px solid $color5;
     }

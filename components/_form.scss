@@ -1,3 +1,4 @@
+$form-element-height: 44px;
 .zorunluFont {
     &::before {
         content: "*";
@@ -7,7 +8,7 @@
 }
 
 input:not([type=checkbox]):not([type=radio]),
-select, .sStylerWrp_select, .dropdown,
+select, .sStylerWrp_select, .dropdown-header,
 textarea {
     font-family: $font2;
     font-size: 15px;
@@ -16,13 +17,13 @@ textarea {
     font-weight: 400;
     letter-spacing: .7px;
     width: 100%;
-    line-height: 44px;
-    height: 44px;
+    line-height: 1;
+    height: $form-element-height;
     padding: 0 15px;
     border: 1px solid $color5;
     border-radius: 0;
     outline: none;
-    box-shadow: none;
+    appearance: none;
 }
 
 input:disabled,
@@ -89,6 +90,8 @@ textarea {
 .sStylerWrp_select {
     display: inline-block;
     vertical-align: middle;
+    line-height: $form-element-height;
+    padding-right: 40px;
     select {
         position: absolute;
         left: 0;
@@ -109,7 +112,8 @@ textarea {
 .dropdown {
     position: relative;
     &-header {
-        cursor: default;
+        padding-right: 40px;
+        line-height: $form-element-height;
         * {
             cursor: default;
         }
@@ -119,7 +123,7 @@ textarea {
             position: absolute;
             right: 10px;
             top: 50%;
-            margin-top: -4px;
+            margin-top: -2px;
             transition: transform .32s ease;
         }
     }
@@ -130,17 +134,23 @@ textarea {
         left: 0;
         top: 100%;
         z-index: 1;
-        width: calc(100% + 2px);
+        width: 100%;
         max-height: 140px;
         overflow: auto;
-        margin: 0 0 0 -1px;
+        margin: -1px 0 0 0;
         background: $color2;
         border: 1px solid $color5;
         > li {
             a {
                 display: block;
                 padding: 0 10px !important;
-                line-height: 44px;
+                line-height: $form-element-height;
+                font-family: $font2;
+                font-size: 15px;
+                color: $color1;
+                font-weight: 400;
+                letter-spacing: .7px;
+                cursor: default;
             }
         }
     }

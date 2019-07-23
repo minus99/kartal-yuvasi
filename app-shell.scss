@@ -33,8 +33,14 @@
 @import 'layout/footer/copyright';
 
 //PAGES
+@keyframes app-shell {
+    to {
+        background-position: 100vw 0;
+    }
+}
 .site-main {
-    background: url(/images/frontend/loading.gif) center top / 300px no-repeat;
+    background: linear-gradient(90deg, $color2, $color3);
+    animation: app-shell 1s ease infinite;
     > * {
         display: none;
     }

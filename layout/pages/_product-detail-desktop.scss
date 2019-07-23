@@ -32,6 +32,17 @@
     }
 }
 
+//other colors
+.UrunListeGrup_listeUrunDetayGrup {
+    ul {
+        justify-content: flex-start;
+        > li {
+            width: 45px;
+            height: 45px;
+        }
+    }
+}
+
 //sizes
 .dropdown-options {
     > a {
@@ -101,11 +112,37 @@
     }
 
     .mod-service-list-grid {
-        max-height: calc(100vh - 210px);
+        max-height: calc(100vh - 150px);
         overflow: auto;
+        grid-template-areas: 
+        ". ga1 ga1 ga1 ."
+        ". ga3 . ga2 .";
+    }
+    .mod-service-list-header {
+        margin-bottom: 30px;
+    }
+    .dealer-form {
+        .ems-field-css {
+            width: calc((100% / 3) - 5px);
+        }
     }
     .mod-service-list-body {
         overflow: auto;
+    }
+    .ems-message {
+        margin-top: 0;
+    }
+    #Map.map {
+        height: calc(100vh - 300px);
+        max-height: 450px;
+    }
+
+    &.ems-no-result {
+        .mod-service-list-grid {
+            grid-template-areas: 
+            ". ga1 ga1 ga1 ."
+            ". ga3 ga3 ga3 .";
+        }
     }
 
     &-ready {

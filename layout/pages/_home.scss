@@ -47,11 +47,12 @@
 .best-sellers {
     position: relative;
     padding-top: 40px;
-    padding-bottom: 75px;
-    .ems-tab-content {
-        > div {
-            min-height: 400px;
-        }
+    padding-bottom: 45px;
+    .ems-tab {
+        z-index: 1;
+    }
+    .swiper-product {
+        min-height: 445px;
     }
 }
 

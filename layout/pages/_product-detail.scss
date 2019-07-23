@@ -313,11 +313,39 @@ a.btnStokHaberci {
 
     .dealer-form {
         .ems-field-css {
-            width: calc((100% / 3) - 5px);
+            margin-top: 0;
         }
     }
     #findStoreBtn {
         width: 100%;
+    }
+    .ems-message {
+        margin-top: 10px;
+    }
+    .dealer-no-stock {
+        display: none;
+    }
+
+    .quantity {
+        display: block;
+        margin-top: 5px;
+        color: $color4;
+    }
+
+    &.ems-no-result {
+        .address-detail,
+        .dealer-stock-information {
+            display: none;
+        }
+        .dealer-no-stock {
+            display: flex;
+        }
+    }
+
+    &.ems-result-found {
+        .service-list {
+            display: block;
+        }
     }
 
     &-ready {
