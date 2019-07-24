@@ -68,6 +68,7 @@
         }
     }
     &-animate {
+        @extend %header-mods-animate;
         .mini-product-info-sub {
             @extend %header-mods-sub-animate;
         }
@@ -98,6 +99,7 @@
         }
     }
     &-animate {
+        @extend %header-mods-animate;
         .mini-size-guide-sub {
             @extend %header-mods-sub-animate;
         }
@@ -151,6 +153,7 @@
         }
     }
     &-animate {
+        @extend %header-mods-animate;
         .ems-find-store-sub {
             @extend %header-mods-sub-animate;
         }

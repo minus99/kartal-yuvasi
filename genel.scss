@@ -138,7 +138,6 @@
         @import 'layout/pages/member-favorite-desktop';
         @import 'layout/pages/member-message-desktop';
         @import 'layout/pages/member-gift-card-desktop';
-
         
         //DESKTOP MINI
         @include setMediaScreen(max-width, $breakpoint-large) {

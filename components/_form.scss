@@ -17,7 +17,7 @@ textarea {
     font-weight: 400;
     letter-spacing: .7px;
     width: 100%;
-    line-height: 1;
+    line-height: $line-height;
     height: $form-element-height;
     padding: 0 15px;
     border: 1px solid $color5;
@@ -37,7 +37,6 @@ input[type=radio] {
 
 textarea {
     height: 100px;
-    line-height: 1.5;
     padding-top: 10px;
     padding-bottom: 10px;
     resize: none;
@@ -98,6 +97,8 @@ textarea {
         top: 0;
         width: 100% !important;
         height: 100%;
+        opacity: 0;
+        appearance: none;
     }
     svg {
         position: absolute;

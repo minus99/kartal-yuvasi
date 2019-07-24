@@ -20,6 +20,13 @@ a.btnAdresEkle {
 .ems-delivery-tab {
     width: 100%;
 }
+.ems-gift-tab {
+    background-position: right 60px top 10px;
+    .ems-delivery-tab-wrp {
+        padding-left: 40px;
+        padding-right: 220px;
+    }
+}
 
 .ems-new-address {
     padding: 0;

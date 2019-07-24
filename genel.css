@@ -933,7 +933,7 @@ textarea {
   font-weight: 400;
   letter-spacing: .7px;
   width: 100%;
-  line-height: 1;
+  line-height: 1.3;
   height: 44px;
   padding: 0 15px;
   border: 1px solid #c9c9c9;
@@ -960,7 +960,6 @@ input[type=radio] {
 
 textarea {
   height: 100px;
-  line-height: 1.5;
   padding-top: 10px;
   padding-bottom: 10px;
   resize: none;
@@ -1040,6 +1039,10 @@ textarea {
   top: 0;
   width: 100% !important;
   height: 100%;
+  opacity: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .sStylerWrp_select svg {
@@ -6322,6 +6325,7 @@ a.btnAdresEkle,
 }
 
 .ems-delivery-tab {
+  position: relative;
   width: calc(100% - 40px);
   margin: 0 auto;
 }
@@ -6619,8 +6623,12 @@ a.btnAdresEkle,
   margin-top: 20px;
 }
 
-.tableOdemeBilgiKrediKarti tr:nth-child(2), .tableOdemeBilgiKrediKarti tr:nth-child(3) {
-  flex-basis: 49%;
+.tableOdemeBilgiKrediKarti tr:nth-child(2) {
+  flex-basis: 70%;
+}
+
+.tableOdemeBilgiKrediKarti tr:nth-child(3) {
+  flex-basis: 28%;
 }
 
 .tableOdemeBilgiKrediKarti tr:nth-child(5) {
@@ -6632,16 +6640,12 @@ a.btnAdresEkle,
 }
 
 .tableOdemeBilgiKrediKarti td.tableOdemeBilgiKrediKarti_tddrpKSA_SPR_ID > span:nth-child(1) {
-  width: 55px;
+  width: 85px;
   margin-right: 5px;
 }
 
 .tableOdemeBilgiKrediKarti td.tableOdemeBilgiKrediKarti_tddrpKSA_SPR_ID > span:nth-child(2) {
-  width: calc(100% - 60px);
-}
-
-.tableOdemeBilgiKrediKarti td.tableOdemeBilgiKrediKarti_tddrpKSA_SPR_ID > span svg {
-  display: none;
+  width: calc(100% - 90px);
 }
 
 .tableOdemeBilgiKrediKarti td.tableOdemeBilgiKrediKarti_tdtxtKKARTCVCNO {
@@ -8158,7 +8162,7 @@ ul.giftCardList li.selected > a {
     .ems-find-store-ready .ems-find-store-sub {
       display: block;
     }
-    .mini-lang-animate, .mini-user-animate, .mini-cart-animate, .mini-search-animate {
+    .mini-lang-animate, .mini-user-animate, .mini-cart-animate, .mini-search-animate, .mini-product-info-animate, .mini-size-guide-animate, .ems-find-store-animate {
       position: initial;
     }
     .mini-lang-animate .mini-lang-sub, .mini-user-animate .mini-user-sub, .mini-cart-animate .mini-cart-sub, .mini-search-animate .mini-search-sub, .mini-product-info-animate .mini-product-info-sub, .mini-size-guide-animate .mini-size-guide-sub, .ems-find-store-animate .ems-find-store-sub {
@@ -8984,6 +8988,13 @@ ul.giftCardList li.selected > a {
     .ems-delivery-tab {
       width: 100%;
     }
+    .ems-gift-tab {
+      background-position: right 60px top 10px;
+    }
+    .ems-gift-tab .ems-delivery-tab-wrp {
+      padding-left: 40px;
+      padding-right: 220px;
+    }
     .ems-new-address {
       padding: 0;
       max-width: 330px;
@@ -9016,6 +9027,9 @@ ul.giftCardList li.selected > a {
     .ems-order-payment .ems-order-cart-grid > .ga1 {
       position: relative;
       display: block;
+      margin: 0 -30px 15px;
+      padding: 0 30px 20px;
+      border-bottom: 1px solid #c9c9c9;
     }
     .ems-order-payment .ems-order-cart-grid > .ga1::after {
       content: "";
