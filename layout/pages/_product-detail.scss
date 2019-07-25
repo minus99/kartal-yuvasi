@@ -378,7 +378,9 @@ a.btnStokHaberci {
     &-inner {
         height: 100%;
     }
-    .sub-close {
+
+    .zoom-gallery-header {
+        position: relative;
         z-index: 2;
     }
 

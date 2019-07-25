@@ -50,8 +50,7 @@
     .remove-selected {
         margin-top: 20px;
         > a {
-            background: $color3;
-            color: $color1;
+            @extend %btn-secondary;
         }
     }
 }

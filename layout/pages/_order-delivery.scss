@@ -111,11 +111,14 @@ a.btnAdresEkle {
 }
 
 .ems-new-address {
-    padding: 20px;
+    padding-bottom: 30px;
     .page-top-title {
         font-size: 24px;
         font-weight: 700;
         margin-top: 15px;
+    }
+    .ems-message {
+        margin-top: 30px;
     }
     .ems-form {
         margin-top: 30px;
@@ -127,8 +130,7 @@ a.btnAdresEkle {
         margin-bottom: -1px;
     }
     a.btnAdresIptal {
-        margin-top: 20px;
-        @extend %btn-transparent;
+        @extend %btn-secondary;
     }
 }
 .bireysel {

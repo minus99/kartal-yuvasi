@@ -199,7 +199,8 @@ textarea {
             display: none;
         }
         > span,
-        > label {
+        > label,
+        #lnkSifremiUnuttum {
             font-family: $font2;
             font-size: 15px;
         }
