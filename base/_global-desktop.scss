@@ -8,7 +8,10 @@
     //FLEX
     &-flex {
         display: flex;
-
+        &-inline {
+            display: inline-flex;
+        }
+        
         //horizontal align
         &-left {
             justify-content: flex-start;

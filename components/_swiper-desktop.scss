@@ -2,6 +2,7 @@
 //product widget
 .swiper-product {
     $p: 30px;
+    min-height: 490px;
     .swiper-inner {
         padding-left: 0;
         margin-left: #{-$p};

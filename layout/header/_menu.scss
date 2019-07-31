@@ -87,6 +87,18 @@
             color: $color4;
         }
     }
+    .color03 {
+        > a {
+            color: $color7;
+        }
+    }
+    .cursor0 {
+        > a {
+            &::after {
+                display: none;
+            }
+        }
+    }
 
     .btn-menu-title {
         border-color: transparent;

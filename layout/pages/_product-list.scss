@@ -1,6 +1,4 @@
-.ems-page-product-list {
-    padding-bottom: 40px;
-}
+.ems-page-product-list {}
 
 .category-top-banner {
     margin-bottom: 40px;   
@@ -181,5 +179,14 @@ $prd-pd-l: 20px;
     a.btnSepeteAt {
         width: 100%;
         @extend %btn-transparent;
+    }
+}
+
+.go-page-top {
+    border-bottom: 4px solid $color4;
+    padding: 26px 20px 32px;
+    font-family: $font2;
+    .icon-triangle-b {
+        @include turn-mirror;
     }
 }

@@ -80,6 +80,9 @@
             padding-right: 3px;
         }
     }
+    &-block3 {
+        position: relative;
+    }
 }
 
 //badges
@@ -160,13 +163,12 @@ $m: 5px;
 
 //add to cart
 .urunDetay_urunAdet {
-    position: relative;
     .sStylerWrp_select {
         background: $color3;
     }
     [id$="txtURN_ADET"],
     [id$="lblURN_ADET"] {
-        display: none;
+        display: none !important;
     }
 }
 .urunDetay_btnSepeteAt {

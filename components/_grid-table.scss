@@ -92,10 +92,13 @@
     }
     &-address-name {
         font-weight: 700;
-        padding-right: 120px;
+        padding-right: 130px;
         > span {
             display: none;
         }
+    }
+    &-address {
+        line-height: 1.7;
     }
     &-address-buttons {
         position: absolute;
@@ -166,4 +169,33 @@
             text-decoration: underline;
         }
     }
+}
+
+//STOK UYARI
+.pageErrorStokKontrol {
+    margin-top: 20px;
+}
+.gridSepetStok {
+    margin-top: 5px;
+    margin-bottom: 100px;
+    font-family: $font2;
+    font-size: 16px;
+    td {
+        border: 1px solid $color5;
+        width: auto !important;
+        text-align: center;
+        &:nth-child(1) {
+            width: 90px !important;
+        }
+        &:nth-child(5) {
+            width: 50px !important;
+        }
+        &:nth-child(2),
+        &:nth-child(4) {
+            display: none;
+        }
+    }
+}
+.gridHeaderSepetStok {
+    display: none;
 }

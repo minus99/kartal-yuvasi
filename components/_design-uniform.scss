@@ -40,6 +40,11 @@
         max-width: 342px;
         margin: 0 auto;
     }
+    &-arm {
+        > img {
+            position: absolute;
+        }
+    }
     &-360 {
         visibility: hidden;
         position: absolute;

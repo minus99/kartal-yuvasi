@@ -608,6 +608,7 @@ button.swiper-pagination-bullet {
 //product widget
 .swiper-product {
   $p: 20px;
+  min-height: 445px;
   .swiper-inner {
       padding-left: 45px;
   }

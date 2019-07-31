@@ -1,10 +1,11 @@
 .ems-tab {
     position: relative;
+    z-index: 1;
     &-header {
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
         margin-bottom: 30px;
+        overflow: auto;
         > * {
             font-weight: 700;
             letter-spacing: .9px;
@@ -16,6 +17,9 @@
             &.emos_selected {
                 border-color: $color5;
             }
+        }
+        &::-webkit-scrollbar {
+            display:none;
         }
     }
     &-content {

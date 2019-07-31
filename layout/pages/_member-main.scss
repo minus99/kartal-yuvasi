@@ -3,6 +3,9 @@
         > .ga1 {
             background: $color1;
             color: $color2;
+            position: sticky;
+            top: 50px;
+            z-index: 1;
         }
         > .ga2 {
             padding-bottom: 100px;
@@ -14,12 +17,6 @@
         font-weight: 700;
         padding: 20px;
         border-bottom: 1px solid $color5;
-    }
-
-    .ems-new-address {
-        .page-top-title {
-            display: none;
-        }
     }
 }
 

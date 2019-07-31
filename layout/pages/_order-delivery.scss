@@ -29,11 +29,21 @@ a.btnAdresEkle {
     position: relative;
     width: calc(100% - 40px);
     margin: 0 auto;
+    overflow: hidden;
 }
 .ems-gift-tab {
-    background: $color3 url(/images/frontend/gift-packet.png) right 20px top 10px / 67px no-repeat;
+    background: $color3;
+    &::before {
+        content: "";
+        position: absolute;
+        right: 20px;
+        top: 11px;
+        width: 80px;
+        height: 49px;
+        background: url(/images/frontend/gift-pack.svg) center top no-repeat;
+    }
     .ems-delivery-tab-wrp {
-        padding: 20px;
+        padding: 40px 20px 20px;
         display: none;
     }
     [id$="txtSIP_HEDIYENOTU"] {
@@ -43,6 +53,11 @@ a.btnAdresEkle {
     &-opened {
         .ems-delivery-tab-wrp {
             display: block;
+        }
+        &::before {
+            height: 127px;
+            background-position: center bottom;
+            transition: all .2s ease;
         }
     }
 }
@@ -116,6 +131,8 @@ a.btnAdresEkle {
         font-size: 24px;
         font-weight: 700;
         margin-top: 15px;
+        border-bottom: none !important;
+        padding: 0 !important;
     }
     .ems-message {
         margin-top: 30px;

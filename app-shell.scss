@@ -32,24 +32,6 @@
 @import 'layout/footer/bottom-links';
 @import 'layout/footer/copyright';
 
-//PAGES
-@keyframes app-shell {
-    to {
-        background-position: 100vw 0;
-    }
-}
-.site-main {
-    background: linear-gradient(90deg, $color2, $color3);
-    animation: app-shell 1s ease infinite;
-    > * {
-        display: none;
-    }
-}
-.swiper-wrapper {
-    display: flex;
-}
-
-
 //DESKTOP
 @supports (display: grid) {
     @include setMediaScreen(min-width, $breakpoint-medium) {
@@ -72,4 +54,21 @@
         @import 'layout/footer/bottom-links-desktop';
         @import 'layout/footer/copyright-desktop';
     }
+}
+
+//APP SHELL
+@keyframes app-shell {
+    to {
+        background-position: 100vw 0;
+    }
+}
+.site-main {
+    background: linear-gradient(90deg, $color2, $color3);
+    animation: app-shell 1s ease infinite;
+    > div {
+        display: none;
+    }
+}
+.swiper-wrapper {
+    display: flex;
 }

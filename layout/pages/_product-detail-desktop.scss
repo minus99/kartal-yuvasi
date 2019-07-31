@@ -44,10 +44,24 @@
 }
 
 //sizes
+.urunDetay_urunSecenek:not(:empty) {
+    min-height: 44px;
+    padding-right: 150px;
+}
 .dropdown-options {
     > a {
-        min-width: 46px;
         line-height: 32px;
+    }
+}
+
+//add to cart
+.urunDetay_urunAdet {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    .sStylerWrp_select {
+        line-height: 34px;
+        height: 34px;
     }
 }
 

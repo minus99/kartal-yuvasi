@@ -201,7 +201,10 @@ iframe {
     //FLEX
     &-flex {
         display: flex;
-
+        &-inline {
+            display: inline-flex;
+        }
+        
         //horizontal align
         &-left {
             justify-content: flex-start;
@@ -315,7 +318,7 @@ iframe {
     opacity: 1;
 }
 .lazy-picture ~ img {
-    background: url(/images/frontend/loading.gif) center center / 150px no-repeat;
+    background: url(/images/frontend/loading.gif) center center / 125px no-repeat;
 }
 
 //banner align fixer

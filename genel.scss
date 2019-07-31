@@ -7,7 +7,6 @@
 @import 'base/icons';
 @import 'base/global';
 @import 'base/animations';
-@import 'base/css-loaded';
 
 //COMPONENTS
 @import 'components/button';
@@ -146,3 +145,6 @@
         }
     }
 }
+
+//go go go
+@import 'base/css-loaded';

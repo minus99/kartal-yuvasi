@@ -399,6 +399,10 @@ iframe {
   display: flex;
 }
 
+.ems-flex-inline {
+  display: inline-flex;
+}
+
 .ems-flex-left {
   justify-content: flex-start;
 }
@@ -500,7 +504,7 @@ iframe {
 }
 
 .lazy-picture ~ img {
-  background: url(/images/frontend/loading.gif) center center/150px no-repeat;
+  background: url(/images/frontend/loading.gif) center center/125px no-repeat;
 }
 
 [id^="lblBanner"][align] {
@@ -788,14 +792,6 @@ table {
   }
 }
 
-.site-main {
-  background: none;
-}
-
-.site-main > div {
-  display: inherit;
-}
-
 .btn,
 a.btnDefault, .urunKiyaslamaOzellik_tumunuTemizle a, .cart-prd-page-url .lnkSepet, a#lnkGuestCheckout, #plhSipTekrarla a.lnkSipTekrarla, a.lnkSorgula, a.lnkSatinAl {
   position: relative;
@@ -918,12 +914,6 @@ a.btnDefault .icon-arrow-r {
   width: 100%;
 }
 
-.zorunluFont::before {
-  content: "*";
-  color: #c5242b;
-  margin-right: 3px;
-}
-
 input:not([type=checkbox]):not([type=radio]),
 select, .sStylerWrp_select, .dropdown-header,
 textarea {
@@ -957,6 +947,7 @@ input:read-only {
 
 input[type=radio] {
   margin: 0;
+  outline: 0;
 }
 
 textarea {
@@ -1111,6 +1102,12 @@ textarea {
 
 .dropdown.opened > ul {
   display: block;
+}
+
+.zorunluFont::before {
+  content: "*";
+  color: #c5242b;
+  margin-right: 3px;
 }
 
 .ems-form {
@@ -2059,6 +2056,10 @@ button.swiper-pagination-bullet {
   -ms-perspective: 1200px;
 }
 
+.swiper-product {
+  min-height: 445px;
+}
+
 .swiper-product .swiper-inner {
   padding-left: 45px;
 }
@@ -2113,13 +2114,14 @@ button.swiper-pagination-bullet {
 
 .ems-tab {
   position: relative;
+  z-index: 1;
 }
 
 .ems-tab-header {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 30px;
+  overflow: auto;
 }
 
 .ems-tab-header > * {
@@ -2136,6 +2138,10 @@ button.swiper-pagination-bullet {
 
 .ems-tab-header > *.selected, .ems-tab-header > *.emos_selected {
   border-color: #c9c9c9;
+}
+
+.ems-tab-header::-webkit-scrollbar {
+  display: none;
 }
 
 .ems-tab-content > * {
@@ -2204,6 +2210,7 @@ button.swiper-pagination-bullet {
 }
 
 .banner .prm-media {
+  position: relative;
   display: block;
 }
 
@@ -2219,8 +2226,12 @@ button.swiper-pagination-bullet {
   object-position: center top;
 }
 
-.banner .prm-media video[poster] + picture {
-  display: none;
+.banner .prm-media .ems-video-active {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .banner .prm-title {
@@ -2864,6 +2875,10 @@ button.toast-close-button {
   margin: 0 auto;
 }
 
+.uniform-arm > img {
+  position: absolute;
+}
+
 .uniform-360 {
   visibility: hidden;
   position: absolute;
@@ -3399,7 +3414,7 @@ button.toast-close-button {
   background-image: none;
   border: 1px solid #f5f5f5;
   padding: 0 5px;
-  line-height: 30px;
+  line-height: 42px;
   text-align: center;
 }
 
@@ -3695,11 +3710,15 @@ button.toast-close-button {
 
 .ems-grid-address-name {
   font-weight: 700;
-  padding-right: 120px;
+  padding-right: 130px;
 }
 
 .ems-grid-address-name > span {
   display: none;
+}
+
+.ems-grid-address {
+  line-height: 1.7;
 }
 
 .ems-grid-address-buttons {
@@ -3768,6 +3787,39 @@ button.toast-close-button {
 
 .ems-grid-doc-no a {
   text-decoration: underline;
+}
+
+.pageErrorStokKontrol {
+  margin-top: 20px;
+}
+
+.gridSepetStok {
+  margin-top: 5px;
+  margin-bottom: 100px;
+  font-family: fira, arial, sans-serif;
+  font-size: 16px;
+}
+
+.gridSepetStok td {
+  border: 1px solid #c9c9c9;
+  width: auto !important;
+  text-align: center;
+}
+
+.gridSepetStok td:nth-child(1) {
+  width: 90px !important;
+}
+
+.gridSepetStok td:nth-child(5) {
+  width: 50px !important;
+}
+
+.gridSepetStok td:nth-child(2), .gridSepetStok td:nth-child(4) {
+  display: none;
+}
+
+.gridHeaderSepetStok {
+  display: none;
 }
 
 .mobi-dropdown {
@@ -3903,7 +3955,7 @@ button.toast-close-button {
   position: absolute;
   left: 0;
   bottom: 0;
-  background: center bottom / 490px no-repeat;
+  background: center bottom / 600px no-repeat;
   width: 100%;
   height: 120px;
 }
@@ -3915,7 +3967,7 @@ button.toast-close-button {
   bottom: 0;
   z-index: -1;
   width: 100%;
-  height: 20px;
+  height: 9px;
   background: #000;
 }
 
@@ -4315,6 +4367,14 @@ button.toast-close-button {
 
 .menu .color02 > a {
   color: #c5242b;
+}
+
+.menu .color03 > a {
+  color: #999;
+}
+
+.menu .cursor0 > a::after {
+  display: none;
 }
 
 .menu .btn-menu-title {
@@ -5182,14 +5242,6 @@ a.btnKutuLogout {
   padding-bottom: 45px;
 }
 
-.best-sellers .ems-tab {
-  z-index: 1;
-}
-
-.best-sellers .swiper-product {
-  min-height: 445px;
-}
-
 .campaigns {
   background: #000;
 }
@@ -5237,10 +5289,6 @@ a.btnKutuLogout {
 
 a#lnkGuestCheckout {
   display: block;
-}
-
-.ems-page-product-list {
-  padding-bottom: 40px;
 }
 
 .category-top-banner {
@@ -5433,6 +5481,17 @@ ul.product-list-grid > li {
   width: 100%;
 }
 
+.go-page-top {
+  border-bottom: 4px solid #c5242b;
+  padding: 26px 20px 32px;
+  font-family: fira, arial, sans-serif;
+}
+
+.go-page-top .icon-triangle-b {
+  -webkit-transform: scale(-1);
+  transform: scale(-1);
+}
+
 .ems-page-product-detail {
   padding-bottom: 40px;
 }
@@ -5531,6 +5590,10 @@ ul.product-list-grid > li {
   padding-right: 3px;
 }
 
+.ems-prdd-block3 {
+  position: relative;
+}
+
 .indirimli #plhKazancOran {
   display: block !important;
   color: #c5242b;
@@ -5609,17 +5672,13 @@ ul.product-list-grid > li {
   margin-top: 10px;
 }
 
-.urunDetay_urunAdet {
-  position: relative;
-}
-
 .urunDetay_urunAdet .sStylerWrp_select {
   background: #eee;
 }
 
 .urunDetay_urunAdet [id$="txtURN_ADET"],
 .urunDetay_urunAdet [id$="lblURN_ADET"] {
-  display: none;
+  display: none !important;
 }
 
 .urunDetay_btnSepeteAt {
@@ -6330,14 +6389,25 @@ a.btnAdresEkle,
   position: relative;
   width: calc(100% - 40px);
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .ems-gift-tab {
-  background: #eee url(/images/frontend/gift-packet.png) right 20px top 10px/67px no-repeat;
+  background: #eee;
+}
+
+.ems-gift-tab::before {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 11px;
+  width: 80px;
+  height: 49px;
+  background: url(/images/frontend/gift-pack.svg) center top no-repeat;
 }
 
 .ems-gift-tab .ems-delivery-tab-wrp {
-  padding: 20px;
+  padding: 40px 20px 20px;
   display: none;
 }
 
@@ -6348,6 +6418,12 @@ a.btnAdresEkle,
 
 .ems-gift-tab-opened .ems-delivery-tab-wrp {
   display: block;
+}
+
+.ems-gift-tab-opened::before {
+  height: 127px;
+  background-position: center bottom;
+  transition: all .2s ease;
 }
 
 .divTeslimatKargo {
@@ -6438,6 +6514,8 @@ a.btnAdresEkle,
   font-size: 24px;
   font-weight: 700;
   margin-top: 15px;
+  border-bottom: none !important;
+  padding: 0 !important;
 }
 
 .ems-new-address .ems-message {
@@ -6596,6 +6674,7 @@ a.btnAdresEkle,
   position: absolute;
   right: 70px;
   top: 0;
+  z-index: -1;
 }
 
 .tableTitleOdemeBilgiKrediKarti,
@@ -6742,6 +6821,10 @@ a.btnAdresEkle,
   margin-top: 15px;
 }
 
+.ems-pay-address-obj {
+  line-height: 1.7;
+}
+
 .pageSiparisOnay_btnSatisSozlesmeOnizle,
 .pageSiparisOnay_btnOnBilgilendirmeFormOnizle {
   display: none;
@@ -6788,18 +6871,12 @@ a.btnAdresEkle,
   font-size: 16px;
 }
 
-.ems-form1-animate .agreement-overlay {
-  display: block;
-}
-
+.ems-form1-animate .agreement-overlay,
 .ems-form1-animate .onBilgilendirmeFormMetin {
   display: block;
 }
 
-.ems-form2-animate .agreement-overlay {
-  display: block;
-}
-
+.ems-form2-animate .agreement-overlay,
 .ems-form2-animate .siparisOnaySozlesmeMetin {
   display: block;
 }
@@ -6909,6 +6986,10 @@ a.btnAdresEkle,
 .ems-page-member-grid > .ga1 {
   background: #000;
   color: #fff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50px;
+  z-index: 1;
 }
 
 .ems-page-member-grid > .ga2 {
@@ -6920,10 +7001,6 @@ a.btnAdresEkle,
   font-weight: 700;
   padding: 20px;
   border-bottom: 1px solid #c9c9c9;
-}
-
-.ems-page-member .ems-new-address .page-top-title {
-  display: none;
 }
 
 .member-top-info {
@@ -7015,6 +7092,7 @@ a.btnAdresEkle,
   margin-top: 20px;
   font-family: fira, arial, sans-serif;
   font-size: 15px;
+  line-height: 1.7;
 }
 
 .order-address .text {
@@ -7419,7 +7497,7 @@ ul.giftCardList li.selected > a {
 .odemeCekiEkleBtn {
   position: absolute;
   right: 8px;
-  top: calc(50% + 10px);
+  top: calc(50% + 11px);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   font-size: 0;
@@ -7460,6 +7538,9 @@ ul.giftCardList li.selected > a {
     }
     .d-ems-flex {
       display: flex;
+    }
+    .d-ems-flex-inline {
+      display: inline-flex;
     }
     .d-ems-flex-left {
       justify-content: flex-start;
@@ -7543,6 +7624,9 @@ ul.giftCardList li.selected > a {
     }
     .ems-form-horizontal .ems-field-push {
       margin-right: 50%;
+    }
+    .swiper-product {
+      min-height: 490px;
     }
     .swiper-product .swiper-inner {
       padding-left: 0;
@@ -8008,6 +8092,9 @@ ul.giftCardList li.selected > a {
     .section-bg01 {
       background-size: 980px;
       height: 240px;
+    }
+    .section-bg01::before {
+      height: 15px;
     }
     .card01 {
       padding-left: 280px;
@@ -8577,9 +8664,6 @@ ul.giftCardList li.selected > a {
       padding-top: 60px;
       padding-bottom: 90px;
     }
-    .best-sellers .swiper-product {
-      min-height: 490px;
-    }
     .campaigns .swiper-inner {
       padding-left: 0;
       margin-left: -40px;
@@ -8710,9 +8794,21 @@ ul.giftCardList li.selected > a {
       width: 45px;
       height: 45px;
     }
+    .urunDetay_urunSecenek:not(:empty) {
+      min-height: 44px;
+      padding-right: 150px;
+    }
     .dropdown-options > a {
-      min-width: 46px;
       line-height: 32px;
+    }
+    .urunDetay_urunAdet {
+      position: absolute;
+      right: 0;
+      top: 5px;
+    }
+    .urunDetay_urunAdet .sStylerWrp_select {
+      line-height: 34px;
+      height: 34px;
     }
     .mini-product-info-sub {
       max-width: 600px;
@@ -8988,12 +9084,12 @@ ul.giftCardList li.selected > a {
     .ems-delivery-tab {
       width: 100%;
     }
-    .ems-gift-tab {
-      background-position: right 60px top 10px;
+    .ems-gift-tab::before {
+      right: 60px;
     }
     .ems-gift-tab .ems-delivery-tab-wrp {
-      padding-left: 40px;
-      padding-right: 220px;
+      padding: 20px 220px 20px 40px;
+      margin-top: -20px;
     }
     .ems-new-address {
       padding-bottom: 0;
@@ -9116,6 +9212,9 @@ ul.giftCardList li.selected > a {
     }
     .ems-page-member .ems-new-address {
       margin-left: 0;
+    }
+    .ems-page-member .ems-new-address .page-top-title {
+      display: none;
     }
     .ems-member-order {
       padding-top: 40px;
@@ -12331,4 +12430,12 @@ ul.giftCardList li.selected > a {
       flex: none;
     }
   }
+}
+
+.site-main {
+  background: none;
+}
+
+.site-main > div {
+  display: inherit;
 }
