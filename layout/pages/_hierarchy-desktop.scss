@@ -7,7 +7,9 @@
         @include setGridArea(1,2);
 
         > .ga1 {
-            min-height: 710px;
+            position: static;
+            padding-bottom: 50px;
+            min-height: 100vh;
         }
     }
 

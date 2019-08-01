@@ -4,7 +4,7 @@
     &-grid {
         position: relative;
     
-        grid-template-columns: 1fr 180px 60px minmax(700px, 900px) 1fr;
+        grid-template-columns: 30px 180px 60px minmax(700px, 1fr) 270px;
         grid-template-areas:
         "ga1 ga1 ga1 ga1 ga1"
         ". ga2 . ga3 .";

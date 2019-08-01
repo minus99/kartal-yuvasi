@@ -572,7 +572,8 @@ table {
 .satBrFiyatVrg,
 .brFiyatVrg,
 .pnlDipToplamTable td > span,
-.odemeCekiTutar {
+.odemeCekiTutar,
+#plhIadeTutar > a {
   display: inline-flex !important;
 }
 
@@ -586,7 +587,8 @@ table {
 .satBrFiyatVrg [class^="pb"],
 .brFiyatVrg [class^="pb"],
 .pnlDipToplamTable td > span [class^="pb"],
-.odemeCekiTutar [class^="pb"] {
+.odemeCekiTutar [class^="pb"],
+#plhIadeTutar > a [class^="pb"] {
   order: -1;
 }
 
@@ -2226,7 +2228,7 @@ button.swiper-pagination-bullet {
   object-position: center top;
 }
 
-.banner .prm-media .ems-video-active {
+.banner .prm-media video.is-scrolling {
   position: absolute;
   left: 0;
   top: 0;
@@ -3830,12 +3832,11 @@ button.toast-close-button {
   position: relative;
   border-top: 1px solid #515151;
   border-bottom: 1px solid transparent;
-  padding: 8px 10px;
+  padding: 15px 30px 15px 10px;
   margin-left: 10px;
   margin-right: 10px;
   font-weight: 700;
   letter-spacing: .93px;
-  line-height: 32px;
 }
 
 .mobi-dropdown-header::after {
@@ -3851,14 +3852,16 @@ button.toast-close-button {
 .mobi-dropdown li > a {
   display: flex;
   align-items: center;
-  padding: 9px 20px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  padding: 15px 20px;
   font-weight: 700;
   letter-spacing: .93px;
-  line-height: 32px;
 }
 
 .mobi-dropdown svg {
-  margin-right: 13px;
+  flex: none;
+  margin: -7px 13px -7px 0;
 }
 
 .mobi-dropdown > ul {
@@ -3871,6 +3874,8 @@ button.toast-close-button {
   width: 100%;
   background: #000;
   color: #fff;
+  max-height: calc(100vh - 150px);
+  overflow: auto;
 }
 
 .mobi-dropdown > ul > li > a {
@@ -6082,6 +6087,10 @@ a.btnStokHaberci {
 .ems-page-hierarchy-grid > .ga1 {
   background: #000;
   color: #fff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50px;
+  z-index: 1;
 }
 
 .ems-page-hierarchy-grid > .ga2 {
@@ -7124,13 +7133,7 @@ a.btnAdresEkle,
 }
 
 .order-detail-info-payment {
-  font-size: 16px;
-}
-
-.order-detail-info-payment th, .order-detail-info-payment td {
-  padding-left: 20px;
-  padding-right: 20px;
-  width: auto;
+  max-width: 320px;
 }
 
 a.btnSipariseDon {
@@ -8082,6 +8085,7 @@ ul.giftCardList li.selected > a {
     .mobi-dropdown > ul {
       display: block;
       position: relative;
+      max-height: none;
     }
     .mobi-dropdown > ul > li.selected, .mobi-dropdown > ul > li.act {
       display: block;
@@ -8703,7 +8707,7 @@ ul.giftCardList li.selected > a {
     }
     .ems-page-product-list-grid {
       position: relative;
-      grid-template-columns: 1fr 180px 60px minmax(700px, 900px) 1fr;
+      grid-template-columns: 30px 180px 60px minmax(700px, 1fr) 270px;
       grid-template-areas: "ga1 ga1 ga1 ga1 ga1" ". ga2 . ga3 .";
     }
     .ems-page-product-list-grid > .ga1 {
@@ -8752,7 +8756,7 @@ ul.giftCardList li.selected > a {
     }
     .ems-prdd-grid {
       position: relative;
-      grid-template-columns: 1fr minmax(auto, 770px) 20px 370px 1fr;
+      grid-template-columns: 1fr minmax(auto, 770px) 40px 370px 1fr;
       grid-template-rows: -webkit-max-content 1fr;
       grid-template-rows: max-content 1fr;
       grid-template-areas: ". ga2 . ga1 ." ". ga2 . ga3 .";
@@ -8771,6 +8775,12 @@ ul.giftCardList li.selected > a {
       -ms-grid-row: 1;
       -ms-grid-column: 1;
       grid-area: ga3;
+    }
+    .ems-prdd-grid > .ga1 {
+      padding: 0;
+    }
+    .ems-prdd-grid > .ga3 {
+      padding: 0;
     }
     .ems-prdd-name {
       margin-top: 10px;
@@ -8928,7 +8938,9 @@ ul.giftCardList li.selected > a {
       grid-area: ga2;
     }
     .ems-page-hierarchy-grid > .ga1 {
-      min-height: 710px;
+      position: static;
+      padding-bottom: 50px;
+      min-height: 100vh;
     }
     .ems-page-hierarchy .page-top-title + .html-content {
       margin-top: 20px;
@@ -9204,7 +9216,9 @@ ul.giftCardList li.selected > a {
       grid-area: ga2;
     }
     .ems-page-member-grid > .ga1 {
-      min-height: 710px;
+      position: static;
+      padding-bottom: 50px;
+      min-height: 100vh;
     }
     .ems-page-member .page-top-title {
       padding-left: 0;

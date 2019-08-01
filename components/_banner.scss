@@ -28,14 +28,14 @@
                 object-fit: cover;
                 object-position: center top;
             }
-        }
-        //lazy-video-banner
-        .ems-video-active {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
+            //lazy-video-banner
+            &.is-scrolling {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
         }
     }
     .prm-title {

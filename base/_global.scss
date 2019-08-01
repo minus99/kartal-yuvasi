@@ -389,7 +389,8 @@ table {
 .satBrFiyatVrg,
 .brFiyatVrg,
 .pnlDipToplamTable td > span,
-.odemeCekiTutar {
+.odemeCekiTutar,
+#plhIadeTutar > a {
     display: inline-flex !important;
     [class^="pb"] {
         order: -1;

@@ -4,6 +4,9 @@
         > .ga1 {
             background: $color1;
             color: $color2;
+            position: sticky;
+            top: 50px;
+            z-index: 1;
         }
         > .ga2 {
             padding-bottom: 50px;
@@ -43,6 +46,11 @@
         }
     }
 }
+
+
+
+
+
 .page-dark-theme {
     background: $color1;
     color: $color2;
