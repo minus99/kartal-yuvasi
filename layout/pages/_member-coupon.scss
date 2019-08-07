@@ -13,10 +13,13 @@
         font-family: $font3;
         font-size: 14px;
         font-weight: 700;
-        border: 1px solid $color5;
+        border: 1px solid transparent;
         padding: 10px;
         margin-left: 10px;
         margin-top: 10px;
+        &.selected {
+            border-color: $color5;
+        }
     }
 }
 

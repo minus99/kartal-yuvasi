@@ -12,6 +12,7 @@
 @import 'components/button';
 @import 'components/form';
 @import 'components/popup';
+@import 'components/grid-table';
 
 //HEADER
 @import 'layout/header/header';
@@ -37,6 +38,11 @@
     @include setMediaScreen(min-width, $breakpoint-medium) {
         //BASE
         @import 'base/global-desktop';
+
+        //COMPONENTS
+        @import 'components/button-desktop';
+        @import 'components/form-desktop';
+        @import 'components/grid-table-desktop';
         
         //HEADER
         @import 'layout/header/header-desktop';

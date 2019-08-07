@@ -10,19 +10,12 @@
     display: flex;
     align-items: center;
     padding: 9px 15px;
-    > .ga1 + .ga2 {
-        margin-left: 15px;
-    }
-    > .ga3 {
-        margin-left: auto;
-    }
-    > .ga3 + .ga4 {
+    > div + div {
         margin-left: 15px;
     }
 }
-.go-cart {
-    display: flex;
-    align-items: center;
+.go-cart > b {
+    vertical-align: middle;
 }
 
 //footer mods extend obj

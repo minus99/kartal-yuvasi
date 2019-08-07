@@ -294,6 +294,16 @@ iframe {
             overflow: hidden;
         }
     }
+
+    //PUSH
+    &-push {
+        &-t {
+            margin-top: auto !important;
+        }
+        &-l {
+            margin-left: auto !important;
+        }
+    }
 }
 
 //unneeded objects

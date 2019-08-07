@@ -1,7 +1,5 @@
 .mini-search {
     display: block;
-    background: $color2;
-    color: $color1;
     &-info {
         > span {
             @extend %header-mods-title;
