@@ -46,6 +46,13 @@
 .lp-container {
     padding-bottom: 100px;
 }
+.lp-slider {
+    .prm-media {
+        img {
+            @include setHeight(2880, 1260, 99.1vw);
+        }
+    }
+}
 //full desc
 .fd {
     > .fd-title,

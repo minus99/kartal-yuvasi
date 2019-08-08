@@ -193,6 +193,98 @@
   right: 38%;
 }
 
+@-webkit-keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes animation-01 {
+  0% {
+    -webkit-transform: skewX(-15deg) translateX(50px);
+    transform: skewX(-15deg) translateX(50px);
+  }
+  100% {
+    -webkit-transform: skewX(-15deg) translateX(0);
+    transform: skewX(-15deg) translateX(0);
+  }
+}
+
+@keyframes animation-01 {
+  0% {
+    -webkit-transform: skewX(-15deg) translateX(50px);
+    transform: skewX(-15deg) translateX(50px);
+  }
+  100% {
+    -webkit-transform: skewX(-15deg) translateX(0);
+    transform: skewX(-15deg) translateX(0);
+  }
+}
+
+@-webkit-keyframes animation-02 {
+  0% {
+    -webkit-transform: translateX(-30px);
+    transform: translateX(-30px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes animation-02 {
+  0% {
+    -webkit-transform: translateX(-30px);
+    transform: translateX(-30px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes animation-03 {
+  0% {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes animation-03 {
+  0% {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 @media screen and (max-width: 1025px) {
   .obj-desktop {
     display: none !important;
@@ -709,98 +801,6 @@ table {
 .anaBody > div[ondblclick][style] div {
   padding: 10px 15px;
   border-bottom: 1px solid #7b7b7b;
-}
-
-@-webkit-keyframes show {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes show {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes animation-01 {
-  0% {
-    -webkit-transform: skewX(-15deg) translateX(50px);
-    transform: skewX(-15deg) translateX(50px);
-  }
-  100% {
-    -webkit-transform: skewX(-15deg) translateX(0);
-    transform: skewX(-15deg) translateX(0);
-  }
-}
-
-@keyframes animation-01 {
-  0% {
-    -webkit-transform: skewX(-15deg) translateX(50px);
-    transform: skewX(-15deg) translateX(50px);
-  }
-  100% {
-    -webkit-transform: skewX(-15deg) translateX(0);
-    transform: skewX(-15deg) translateX(0);
-  }
-}
-
-@-webkit-keyframes animation-02 {
-  0% {
-    -webkit-transform: translateX(-30px);
-    transform: translateX(-30px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-
-@keyframes animation-02 {
-  0% {
-    -webkit-transform: translateX(-30px);
-    transform: translateX(-30px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-
-@-webkit-keyframes animation-03 {
-  0% {
-    -webkit-transform: scale(0.7);
-    transform: scale(0.7);
-  }
-  50% {
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-@keyframes animation-03 {
-  0% {
-    -webkit-transform: scale(0.7);
-    transform: scale(0.7);
-  }
-  50% {
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
 }
 
 .btn,
@@ -2286,6 +2286,7 @@ button.swiper-pagination-bullet {
 
 .banner-body {
   position: relative;
+  z-index: 5;
   width: 100%;
   padding: 20px;
 }
@@ -2380,6 +2381,7 @@ button.swiper-pagination-bullet {
   position: absolute;
   left: 0;
   bottom: 0;
+  z-index: 4;
   width: 100%;
   height: 340px;
   background-image: linear-gradient(0, #000, transparent);
@@ -8100,6 +8102,9 @@ ul.giftCardList li.selected > a {
     .lp-container {
       padding-bottom: 100px;
     }
+    .lp-slider .prm-media img {
+      height: calc(99.1vw / 2.28571);
+    }
     .fd > .fd-title,
     .fd > .fd-text {
       padding-left: 75px;
@@ -8609,6 +8614,9 @@ ul.giftCardList li.selected > a {
     }
     form[action*="/default.aspx"] .footer-content {
       display: block;
+    }
+    .homepage-slider .prm-media img {
+      height: calc(99.1vw / 2.28844);
     }
     .primary-categories {
       padding-top: 25px;

@@ -61,3 +61,9 @@
 @mixin turn-mirror {
     transform: scale(-1);
 }
+
+//height
+@mixin setHeight($imgW, $imgH, $container) {
+    $r: $imgW / $imgH;
+    height: calc(#{$container} / #{$r});
+}

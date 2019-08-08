@@ -4,6 +4,14 @@ form[action*="/default.aspx"] {
     } 
 }
 
+.homepage-slider {
+    .prm-media {
+        img {
+            @include setHeight(3840, 1678, 99.1vw);
+        }
+    }
+}
+
 .primary-categories {
     padding-top: 25px;
     padding-bottom: 95px;
