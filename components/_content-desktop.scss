@@ -48,7 +48,8 @@
 }
 .lp-slider {
     .prm-media {
-        img {
+        img,
+        video {
             @include setHeight(2880, 1260, 99.1vw);
         }
     }

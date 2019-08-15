@@ -354,17 +354,24 @@
 //zebra content
 .lp-z-content {
     margin-top: 80px;
+    .banner {
+        overflow: visible;
+    }
+    .prm-media {
+        transform: translateY(100px);
+        transition: all .2s ease;
+    }
+    .banner-body {
+        padding-right: 200px;
+    }
     li {
-        .banner14 .banner-body {
-            padding-right: 200px;            
-        }
         &:nth-child(even) {
             margin-top: -100px;
-            > * {
+            .banner {
                 flex-direction: row-reverse;
                 align-items: flex-end;
             }
-            .banner14 .banner-body {
+            .banner-body {
                 padding-top: 120px;
                 padding-right: 50px;
                 padding-left: 200px;

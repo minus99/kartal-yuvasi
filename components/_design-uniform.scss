@@ -3,6 +3,7 @@
 
     > .ga2 {
         display: none;
+        margin-top: auto;
     }
 
     a {
@@ -24,9 +25,14 @@
         color: $color2;
     }
     > .sub-footer {
-        margin-top: auto;
         background: $color3;
         padding: 10px 20px;
+    }
+
+    &[data-rel="step5"] {
+        .step-next {
+            display: none;
+        }
     }
 }
 .uniform {
@@ -89,6 +95,7 @@
         position: relative;
         z-index: 1;
         min-height: 100%;
+        background: $color3;
         color: $color1;
         > div {
             position: relative;
@@ -210,7 +217,6 @@
     }
 }
 
-
 .ems-forma-popup-ready {
     position: fixed;
     .design-uniform {
@@ -242,3 +248,24 @@
     }
 }
 .ems-forma-popup-animate {}
+
+
+
+
+
+//ürün detay formanı tasarla
+.ems-prdd-gallery .swiper-wrapper li{position: relative;}
+.ems-prdd-gallery .swiper-wrapper .uniform-preview{position: absolute;top: 0;left:0;width: 100%;height: 100%;}
+.ems-prdd-gallery .swiper-wrapper .uniform-preview .uniform-image-container > *{opacity:0;}
+.ems-prdd-gallery .swiper-wrapper .uniform-preview .uniform-image-container > .uniform-name-number{opacity:1;}
+.uniform-design-wrapper .uniform-options > *{display: none !important;}
+.uniform-design-wrapper .uniform-options > [data-rel="step4"],
+.uniform-design-wrapper .uniform-options > [data-rel="step5"]{display: block !important;}
+
+
+.uniform-design-wrapper {
+    border: 1px solid red;
+    .uniform-options {
+        background: none;
+    }
+}

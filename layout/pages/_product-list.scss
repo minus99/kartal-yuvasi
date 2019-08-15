@@ -1,4 +1,18 @@
-.ems-page-product-list {}
+.ems-page-product-list {
+    &.no-result {
+        .navigasyon,
+        .top-buttons,
+        .ems-sort {
+            display: none;
+        }
+        .ems-message-product-list {
+            margin-top: 30px;
+        }
+        .go-page-top {
+            margin-top: 100vh;
+        }
+    }
+}
 
 .category-top-banner {
     margin-bottom: 40px;   
@@ -33,6 +47,10 @@ ul.product-list-grid {
     .view-1 & {
         grid-template-columns: 1fr;
         grid-gap: 0;
+    }
+
+    &:empty {
+        display: none;
     }
 }
 

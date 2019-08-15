@@ -1066,11 +1066,17 @@ textarea {
 
 .dropdown-header {
   padding-right: 40px;
-  line-height: 44px;
+  line-height: 42px;
+  cursor: default;
 }
 
-.dropdown-header * {
-  cursor: default;
+.dropdown-header > * {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-header > * > img {
+  margin-right: 7px;
 }
 
 .dropdown-header::after {
@@ -1099,7 +1105,7 @@ textarea {
   border: 1px solid #c9c9c9;
 }
 
-.dropdown > ul > li a {
+.dropdown > ul > li > a {
   display: block;
   padding: 0 10px !important;
   line-height: 44px;
@@ -1109,6 +1115,15 @@ textarea {
   font-weight: 400;
   letter-spacing: .7px;
   cursor: default;
+}
+
+.dropdown > ul > li > a > img {
+  margin-right: 7px;
+}
+
+.dropdown > ul > li > a:hover {
+  background: #004ca5;
+  color: #fff;
 }
 
 .dropdown.opened > ul {
@@ -2096,6 +2111,10 @@ button.swiper-pagination-bullet {
   flex-wrap: wrap;
 }
 
+.not-trigger .swiper-inner {
+  overflow: visible;
+}
+
 .not-trigger .swiper-slide {
   width: auto;
 }
@@ -2233,8 +2252,8 @@ button.swiper-pagination-bullet {
 .banner .prm-media video[poster] {
   -o-object-fit: cover;
   object-fit: cover;
-  -o-object-position: center top;
-  object-position: center top;
+  -o-object-position: center;
+  object-position: center;
 }
 
 .banner .prm-media video.is-scrolling {
@@ -2843,7 +2862,7 @@ button.toast-close-button {
 }
 
 .instagram-feed .swiper-wrapper .selected {
-  grid-area: 1 / 3 / span 2 / span 2;
+  grid-area: 1 / 3 / 3 / 5;
 }
 
 .design-uniform {
@@ -2852,6 +2871,7 @@ button.toast-close-button {
 
 .design-uniform > .ga2 {
   display: none;
+  margin-top: auto;
 }
 
 .design-uniform a .icon-radio-active {
@@ -2871,9 +2891,12 @@ button.toast-close-button {
 }
 
 .design-uniform > .sub-footer {
-  margin-top: auto;
   background: #eee;
   padding: 10px 20px;
+}
+
+.design-uniform[data-rel="step5"] .step-next {
+  display: none;
 }
 
 .uniform-preview {
@@ -2942,6 +2965,7 @@ button.toast-close-button {
   position: relative;
   z-index: 1;
   min-height: 100%;
+  background: #eee;
   color: #000;
 }
 
@@ -3121,6 +3145,43 @@ button.toast-close-button {
   visibility: visible;
 }
 
+.ems-prdd-gallery .swiper-wrapper li {
+  position: relative;
+}
+
+.ems-prdd-gallery .swiper-wrapper .uniform-preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ems-prdd-gallery .swiper-wrapper .uniform-preview .uniform-image-container > * {
+  opacity: 0;
+}
+
+.ems-prdd-gallery .swiper-wrapper .uniform-preview .uniform-image-container > .uniform-name-number {
+  opacity: 1;
+}
+
+.uniform-design-wrapper .uniform-options > * {
+  display: none !important;
+}
+
+.uniform-design-wrapper .uniform-options > [data-rel="step4"],
+.uniform-design-wrapper .uniform-options > [data-rel="step5"] {
+  display: block !important;
+}
+
+.uniform-design-wrapper {
+  border: 1px solid red;
+}
+
+.uniform-design-wrapper .uniform-options {
+  background: none;
+}
+
 .navigasyon {
   position: relative;
   width: 100vw;
@@ -3264,7 +3325,7 @@ button.toast-close-button {
   font-family: fira, arial, sans-serif;
   font-size: 15px;
   height: calc(100% - 162px);
-  overflow-x: auto;
+  overflow: auto;
 }
 
 #dvUrunKiyaslamaOzellik {
@@ -4199,7 +4260,17 @@ button.toast-close-button {
   margin-top: 80px;
 }
 
-.lp-z-content li .banner14 .banner-body {
+.lp-z-content .banner {
+  overflow: visible;
+}
+
+.lp-z-content .prm-media {
+  -webkit-transform: translateY(100px);
+  transform: translateY(100px);
+  transition: all .2s ease;
+}
+
+.lp-z-content .banner-body {
   padding-right: 200px;
 }
 
@@ -4207,12 +4278,12 @@ button.toast-close-button {
   margin-top: -100px;
 }
 
-.lp-z-content li:nth-child(even) > * {
+.lp-z-content li:nth-child(even) .banner {
   flex-direction: row-reverse;
   align-items: flex-end;
 }
 
-.lp-z-content li:nth-child(even) .banner14 .banner-body {
+.lp-z-content li:nth-child(even) .banner-body {
   padding-top: 120px;
   padding-right: 50px;
   padding-left: 200px;
@@ -5294,6 +5365,20 @@ a#lnkGuestCheckout {
   display: block;
 }
 
+.ems-page-product-list.no-result .navigasyon,
+.ems-page-product-list.no-result .top-buttons,
+.ems-page-product-list.no-result .ems-sort {
+  display: none;
+}
+
+.ems-page-product-list.no-result .ems-message-product-list {
+  margin-top: 30px;
+}
+
+.ems-page-product-list.no-result .go-page-top {
+  margin-top: 100vh;
+}
+
 .category-top-banner {
   margin-bottom: 40px;
 }
@@ -5331,6 +5416,10 @@ ul.product-list-grid > li {
 .view-1 ul.product-list-grid {
   grid-template-columns: 1fr;
   grid-gap: 0;
+}
+
+ul.product-list-grid:empty {
+  display: none;
 }
 
 .ems-prd-inner {
@@ -6762,7 +6851,8 @@ a.btnAdresEkle,
 }
 
 .pageOdemeBilgi_chkBankaBonus {
-  margin-top: 10px;
+  margin-top: 20px;
+  font-size: 14px;
 }
 
 .pageOdemeBilgi_odemeTaksit {
@@ -7956,6 +8046,9 @@ ul.giftCardList li.selected > a {
       padding: 15px 10px;
       border-bottom: 1px solid #f5f5f5;
     }
+    .kutuBodyOzellikFiltre {
+      height: auto;
+    }
     #dvUrunKiyaslamaOzellik {
       margin: 0;
       border-color: #f5f5f5;
@@ -8102,7 +8195,8 @@ ul.giftCardList li.selected > a {
     .lp-container {
       padding-bottom: 100px;
     }
-    .lp-slider .prm-media img {
+    .lp-slider .prm-media img,
+    .lp-slider .prm-media video {
       height: calc(99.1vw / 2.28571);
     }
     .fd > .fd-title,
@@ -8774,7 +8868,7 @@ ul.giftCardList li.selected > a {
       width: 45px;
       height: 45px;
     }
-    .urunDetay_urunSecenek:not(:empty) {
+    .urunDetay_urunSecenek {
       min-height: 88px;
       padding-right: 150px;
     }

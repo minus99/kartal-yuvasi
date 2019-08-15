@@ -107,9 +107,14 @@ textarea {
     position: relative;
     &-header {
         padding-right: 40px;
-        line-height: $form-element-height;
-        * {
-            cursor: default;
+        line-height: $form-element-height - 2;
+        cursor: default;
+        > * {
+            display: flex;
+            align-items: center;
+            > img {
+                margin-right: 7px;
+            }
         }
         &::after {
             @extend %triangle;
@@ -135,7 +140,7 @@ textarea {
         background: $color2;
         border: 1px solid $color5;
         > li {
-            a {
+            > a {
                 display: block;
                 padding: 0 10px !important;
                 line-height: $form-element-height;
@@ -145,6 +150,13 @@ textarea {
                 font-weight: 400;
                 letter-spacing: .7px;
                 cursor: default;
+                > img {
+                    margin-right: 7px;
+                }
+                &:hover {
+                    background: $color11;
+                    color: $color2;
+                }
             }
         }
     }

@@ -654,6 +654,9 @@ button.swiper-pagination-bullet {
 
 //no swipe
 .not-trigger {
+  .swiper-inner {
+    overflow: visible;
+  }
   .swiper-slide {
     width: auto;
   }
