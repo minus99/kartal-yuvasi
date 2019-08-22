@@ -46,9 +46,15 @@
         max-width: 342px;
         margin: 0 auto;
     }
+    &-name-number {
+        #jerseyletters {
+            margin-top: 15px;
+        }
+    }
     &-arm {
         > img {
             position: absolute;
+            left: 0;
         }
     }
     &-360 {
@@ -94,7 +100,6 @@
     &-options {
         position: relative;
         z-index: 1;
-        min-height: 100%;
         background: $color3;
         color: $color1;
         > div {
@@ -123,6 +128,9 @@
             font-size: 15px;
             border: 1px solid currentColor;
             padding: 10px 20px 10px 10px;
+            &[data-type="scarf"] {
+                display: none;
+            }
             + a {
                 margin-left: 10px;
             }
@@ -157,9 +165,6 @@
             justify-content: flex-start;
             overflow: auto;
             margin-bottom: 0;
-            &::-webkit-scrollbar {
-                display:none;
-            }
             > * {
                 white-space: nowrap;
                 border-width: 0 0 5px 0;
@@ -183,7 +188,7 @@
     }
 
     &-emblem {
-        margin-top: 30px;
+        margin-top: 20px;
         &-title {
             font-family: $font2;
         }
@@ -194,11 +199,19 @@
             width: 46px;
             font-size: 0;
             background: $color2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             &.selected {
                 background: $color5;
             }
             + a {
                 margin-left: 10px;
+            }
+        }
+        .arm-none {
+            svg {
+                font-size: 17px;
             }
         }
     }
@@ -241,7 +254,7 @@
         display: none;
     }
     .uniform-preview {
-        padding: 30px 0;
+        padding: 0 0 30px;
     }
     .uniform-360 {
         visibility: visible;
@@ -254,18 +267,137 @@
 
 
 //ürün detay formanı tasarla
-.ems-prdd-gallery .swiper-wrapper li{position: relative;}
-.ems-prdd-gallery .swiper-wrapper .uniform-preview{position: absolute;top: 0;left:0;width: 100%;height: 100%;}
-.ems-prdd-gallery .swiper-wrapper .uniform-preview .uniform-image-container > *{opacity:0;}
-.ems-prdd-gallery .swiper-wrapper .uniform-preview .uniform-image-container > .uniform-name-number{opacity:1;}
-.uniform-design-wrapper .uniform-options > *{display: none !important;}
-.uniform-design-wrapper .uniform-options > [data-rel="step4"],
-.uniform-design-wrapper .uniform-options > [data-rel="step5"]{display: block !important;}
-
+.ems-prdd-gallery {
+    .swiper-wrapper {
+        > li {
+            position: relative;
+        }
+        .uniform {
+            &-preview {
+                display: none;
+                position: absolute;
+                left:0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                padding: 0;
+            }
+            &-image-container {
+                > * {
+                    visibility: hidden;
+                }
+            }
+            &-name-number,
+            &-arm,
+            &-image {
+                visibility: visible;
+            }
+        }
+    }
+}
 
 .uniform-design-wrapper {
-    border: 1px solid red;
-    .uniform-options {
-        background: none;
+    display: none;
+    margin-top: 25px;
+    min-height: 20px;
+    @at-root {
+        .uniform-design-header {
+            font-family: $font2;
+            font-size: 16px;
+            font-weight: 700;
+            color: $color4;
+        }
+        
+        .uniform-design-body {
+            display: none;
+            margin-top: 20px;
+            border: 1px solid $color3;
+        }
+    }
+    .design-uniform {
+        min-height: auto;
+        > .ga1 {
+            display: none;
+        }
+        > .ga2 {
+            display: block;
+        }
+    }
+    .uniform {
+        &-options {
+            background: none;
+            &::before {
+                display: none;
+            }
+            > div {
+                display: none !important;
+                &[data-rel="step4"],
+                &[data-rel="step5"] {
+                    display: block !important;
+                }
+            }
+        }
+        &-tab {
+            margin-top: 0;
+            .ems-tab-header {
+                > a[rel="tab-3"] {
+                    display: none;
+                }
+            }
+        }
+        &-add-to-cart {
+            .sStylerWrp_select,
+            .uniform-btn-add-to-cart {
+                display: none;
+            }
+        }
+    }
+}
+
+.uniform-ready {
+    .uniform-design-wrapper {
+        display: block;
+    }
+}
+
+.uniform-activeted {
+    .ems-prdd-gallery .swiper-wrapper .uniform-preview {
+        display: block;
+    }
+    .uniform-design-body {
+        display: block;
+    }
+    .ems-prdd-info {
+        display: none !important;
+    }
+}
+
+
+//ürün detay atkı tasarla
+.ems-product-scarf {
+    &.uniform-activeted {
+        .ems-prdd-gallery .swiper-wrapper .uniform-preview {
+            display: none !important;
+        }
+    }
+
+    .uniform {
+        &-tab {
+            min-height: auto;
+            margin-top: -20px;
+            .ems-tab-header {
+                display: none;
+            }
+        }
+        &-select-player {
+            display: none;
+        }
+        &-scarf {
+            display: block;
+        }
+    }
+
+    .uniform-design-wrapper .uniform-options > div[data-rel="step5"] {
+        display: none !important;
     }
 }

@@ -1,6 +1,5 @@
 .top-notification {
     background: $color4;
-    animation: show .5s ease;
 
     .swiper-container {
         height: 50px;
@@ -33,6 +32,9 @@
 
 .new-season {
     background: $color1;
+    .swiper-slide {
+        width: 100%;
+    }
 }
 
 .collections {

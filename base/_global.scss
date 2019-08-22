@@ -456,7 +456,7 @@ table {
     a[onclick*="ekle"],
     .top-btn {
         top: 0;
-        padding-top: 12px;
+        padding-top: 10px;
         &::before {
             @extend %triangle-t;
         }
@@ -464,7 +464,7 @@ table {
     a[onclick*="cikar"],
     .bottom-btn {
         bottom: 0;
-        padding-bottom: 12px;
+        padding-bottom: 10px;
         &::before {
             @extend %triangle-b;
         }

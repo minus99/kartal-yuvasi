@@ -99,6 +99,23 @@
         &::before {
             display: none;
         }
+
+        &.v2 {
+            .prm-media-custom {
+                right: calc((100% - 1000px) / 2);
+                width: auto;
+                height: auto;
+            }
+            .banner-body {
+                transform: translateY(45%);
+            }
+
+            .swiper-slide-active & {
+                .banner-body {
+                    transform: translateY(-50%);
+                }
+            }
+        }
     }
 
     //banner type08 *login

@@ -64,6 +64,5 @@
 
 //height
 @mixin setHeight($imgW, $imgH, $container) {
-    $r: $imgW / $imgH;
-    height: calc(#{$container} / #{$r});
+    height: calc(#{$container} / (#{$imgW} / #{$imgH}));
 }

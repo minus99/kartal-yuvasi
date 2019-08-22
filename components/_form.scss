@@ -108,10 +108,15 @@ textarea {
     &-header {
         padding-right: 40px;
         line-height: $form-element-height - 2;
-        cursor: default;
         > * {
             display: flex;
             align-items: center;
+            white-space: nowrap;
+            overflow: auto;
+            cursor: default;
+            &::-webkit-scrollbar {
+                display:none;
+            }
             > img {
                 margin-right: 7px;
             }
@@ -120,7 +125,7 @@ textarea {
             @extend %triangle;
             @extend %triangle-b;
             position: absolute;
-            right: 10px;
+            right: 18px;
             top: 50%;
             margin-top: -2px;
             transition: transform .32s ease;
@@ -128,7 +133,6 @@ textarea {
     }
     > ul {
         display: none;
-        animation: show 0.5s ease;
         position: absolute;
         left: 0;
         top: 100%;
@@ -141,7 +145,10 @@ textarea {
         border: 1px solid $color5;
         > li {
             > a {
-                display: block;
+                display: flex;
+                align-items: center;
+                white-space: nowrap;
+                overflow: auto;
                 padding: 0 10px !important;
                 line-height: $form-element-height;
                 font-family: $font2;
@@ -150,6 +157,9 @@ textarea {
                 font-weight: 400;
                 letter-spacing: .7px;
                 cursor: default;
+                &::-webkit-scrollbar {
+                    display:none;
+                }
                 > img {
                     margin-right: 7px;
                 }

@@ -634,6 +634,15 @@ button.swiper-pagination-bullet {
   }
 }
 
+//hide controls
+.no-controls {
+  .swiper-pagination,
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+}
+
 //vertical content layout
 .swiper-layout-v {
   > .swiper-inner {
@@ -659,6 +668,7 @@ button.swiper-pagination-bullet {
   }
   .swiper-slide {
     width: auto;
+    flex-shrink: 1;
   }
 }
 

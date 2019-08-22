@@ -31,9 +31,4 @@
     b {
         display: none;
     }
-
-    &:empty {
-        min-height: 68px;
-        background: url(/images/frontend/loading.gif) center center / 90px no-repeat;
-    }
 }
