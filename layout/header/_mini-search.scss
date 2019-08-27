@@ -126,11 +126,7 @@ $mr: 20px;
     margin: 0 20px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas:
-    "ga3"
-    "ga1"
-    "ga2"
-    "ga4";
+    grid-template-areas: "ga3" "ga1" "ga2" "ga4";
 
     .prd {
         grid-area: ga2;

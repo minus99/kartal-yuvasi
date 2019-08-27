@@ -4,13 +4,10 @@
     overflow: hidden;
     &-grid {
         grid-template-columns: 1fr;
-        grid-template-areas:
-        "ga1";
-        
+        grid-template-areas: "ga1";
         @include setGridArea(1,1);
     }
 }
-
 
 .error-content {
     position: relative;

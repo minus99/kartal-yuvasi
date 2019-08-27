@@ -3,12 +3,8 @@
     
     &-grid {
         position: relative;
-    
         grid-template-columns: 30px 180px 60px minmax(700px, 1fr) minmax(auto, 270px);
-        grid-template-areas:
-        "ga1 ga1 ga1 ga1 ga1"
-        ". ga2 . ga3 .";
-    
+        grid-template-areas: "ga1 ga1 ga1 ga1 ga1" ". ga2 . ga3 .";
         @include setGridArea(1,3);
     }
 }

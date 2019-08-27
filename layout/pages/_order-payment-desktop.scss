@@ -2,7 +2,6 @@
     &-grid {
         grid-template-columns: 20px 1fr minmax(auto, 780px) 20px 380px 1fr 20px;
         grid-template-areas: ". . ga1 . ga2 . .";
-    
         @include setGridArea(1,2);
         > .ga1 {
             > .ems-pay-type {

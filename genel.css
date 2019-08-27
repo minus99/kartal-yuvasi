@@ -357,7 +357,8 @@ iframe {
 .ems-obj-required,
 .ems-login .ems-obj-logoff,
 .ems-logoff .ems-obj-login,
-.ems-step1 .ems-obj-step0 {
+.ems-step1 .ems-obj-step0,
+.en-US .ems-obj_tr-TR {
   display: none !important;
 }
 
@@ -1034,6 +1035,7 @@ textarea {
   vertical-align: middle;
   line-height: 44px;
   padding-right: 40px;
+  overflow: hidden;
 }
 
 .sStylerWrp_select select {
@@ -1062,11 +1064,16 @@ textarea {
 
 .dropdown {
   position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .dropdown-header {
   padding-right: 40px;
   line-height: 42px;
+  cursor: default;
 }
 
 .dropdown-header > * {
@@ -1646,6 +1653,7 @@ a.btnXMLFORM {
   position: static;
   padding: 20px;
   font-size: 0;
+  min-height: 47px;
   text-align: center;
   -webkit-transition: 300ms opacity;
   -o-transition: 300ms opacity;
@@ -2364,6 +2372,10 @@ button.swiper-pagination-bullet {
   margin-top: 5px;
 }
 
+.banner05 .btn-full {
+  z-index: 10;
+}
+
 .banner06 {
   height: 100%;
 }
@@ -2374,10 +2386,6 @@ button.swiper-pagination-bullet {
   transform: none;
   height: 100%;
   padding: 30px 20px 70px;
-}
-
-.banner06 .prm-title {
-  font-size: 30px;
 }
 
 .banner06 .prm-desc {
@@ -2427,7 +2435,7 @@ button.swiper-pagination-bullet {
 .banner07.v2 .prm-media {
   -webkit-transform: scale(1.13);
   transform: scale(1.13);
-  transition: all .32s ease;
+  transition: all .2s ease;
 }
 
 .banner07.v2 .prm-media-custom {
@@ -2436,11 +2444,12 @@ button.swiper-pagination-bullet {
   bottom: 0;
   width: 100%;
   height: 100%;
+  max-height: 698px;
   -webkit-transform: scale(1);
   transform: scale(1);
   -webkit-transform-origin: center top;
   transform-origin: center top;
-  transition: all .32s ease;
+  transition: all .2s ease;
 }
 
 .banner07.v2 .prm-media-custom img {
@@ -2452,7 +2461,7 @@ button.swiper-pagination-bullet {
   -webkit-transform: translateY(15%);
   transform: translateY(15%);
   opacity: 0;
-  transition: all .32s ease;
+  transition: all .2s ease;
 }
 
 .swiper-slide-active .banner07.v2 .prm-media {
@@ -2944,11 +2953,11 @@ button.toast-close-button {
 .design-uniform a .icon-radio-active {
   font-size: 18px;
   margin-right: 5px;
-  --check: hidden;
+  --check: none;
 }
 
 .design-uniform a.selected .icon-radio-active {
-  --check: visible;
+  --check: block;
 }
 
 .design-uniform > .sub-header {
@@ -2985,6 +2994,10 @@ button.toast-close-button {
 .uniform-arm > img {
   position: absolute;
   left: 0;
+}
+
+.uniform-image {
+  width: 100%;
 }
 
 .uniform-360 {
@@ -3143,6 +3156,7 @@ button.toast-close-button {
 }
 
 .uniform-emblem {
+  min-height: 45px;
   margin-top: 20px;
 }
 
@@ -3156,19 +3170,30 @@ button.toast-close-button {
 
 .uniform-emblem a {
   width: 46px;
+  height: 45px;
   font-size: 0;
   background: #fff;
+  opacity: .7;
+  transition: opacity .15s ease;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.uniform-emblem a img {
+  height: 100%;
+}
+
 .uniform-emblem a.selected {
-  background: #c9c9c9;
+  opacity: 1;
 }
 
 .uniform-emblem a + a {
   margin-left: 10px;
+}
+
+.uniform-emblem .arm-none {
+  opacity: 1;
 }
 
 .uniform-emblem .arm-none svg {
@@ -3976,7 +4001,7 @@ button.toast-close-button {
 
 .ems-grid-address-select a svg {
   font-size: 18px;
-  --check: hidden;
+  --check: none;
   margin-right: 10px;
 }
 
@@ -3985,7 +4010,7 @@ button.toast-close-button {
 }
 
 .ems-grid-address-select a.emos_selected svg {
-  --check: visible;
+  --check: block;
 }
 
 .ems-grid-address-select a + a {
@@ -5096,7 +5121,7 @@ a.btnKutuLogout {
   margin: 0 20px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: "ga3" "ga1" "ga2" "ga4";
+  grid-template-areas: "ga3" "ga1" "ga2" "ga4";
 }
 
 .searchSuggestDivHolder .prd {
@@ -5969,7 +5994,7 @@ a.btnStokHaberci {
   grid-template-columns: 100px 15px 1fr;
   grid-template-rows: -webkit-max-content 1fr;
   grid-template-rows: max-content 1fr;
-  grid-template-areas: "ga1 . ga2" "ga3 ga3 ga3";
+  grid-template-areas: "ga1 . ga2" "ga3 ga3 ga3";
 }
 
 .added-prd > .ga1 {
@@ -7967,7 +7992,9 @@ ul.giftCardList li.selected > a {
     }
     .banner05 .prm-title {
       font-size: 14px;
-      line-height: 1.4;
+    }
+    .banner06 .prm-title {
+      font-size: 30px;
     }
     .banner07 .banner-body {
       top: 50%;
@@ -7988,11 +8015,10 @@ ul.giftCardList li.selected > a {
     .banner07.v2 .prm-media-custom {
       right: calc((100% - 1000px) / 2);
       width: auto;
-      height: auto;
     }
     .banner07.v2 .banner-body {
-      -webkit-transform: translateY(45%);
-      transform: translateY(45%);
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
     }
     .swiper-slide-active .banner07.v2 .banner-body {
       -webkit-transform: translateY(-50%);
@@ -8114,7 +8140,6 @@ ul.giftCardList li.selected > a {
       margin-top: 20px;
     }
     .uniform-tab {
-      min-height: 173px;
       margin-top: 20px;
     }
     .uniform-add-to-cart {
@@ -8416,7 +8441,7 @@ ul.giftCardList li.selected > a {
     .site-header-grid {
       position: relative;
       grid-template-columns: 300px 1fr auto auto 150px 150px;
-      grid-template-areas: "ga1 . ga2 ga3 ga4 ga5" "ga6 ga7 ga7 ga7 ga8 ga8";
+      grid-template-areas: "ga1 . ga2 ga3 ga4 ga5" "ga6 ga7 ga7 ga7 ga8 ga8";
     }
     .site-header-grid > .ga1 {
       grid-area: ga1;
@@ -8812,7 +8837,7 @@ ul.giftCardList li.selected > a {
     .searchSuggestDivHolder {
       margin: 0;
       grid-template-columns: 1fr 56px 160px;
-      grid-template-areas: "ga1 ga1 ga1" "ga2 . ga3" "ga4 . .";
+      grid-template-areas: "ga1 ga1 ga1" "ga2 . ga3" "ga4 . .";
     }
     .searchSuggestDivHolder .prd .sHolder {
       grid-template-columns: repeat(3, 1fr);
@@ -8835,7 +8860,7 @@ ul.giftCardList li.selected > a {
     .site-footer-grid {
       position: relative;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-template-areas: "ga1 ga1 ga1" ". ga8 ." ". ga2 ." "ga3 ga3 ga3" ". ga4 ." "ga6 ga5 ga5" "ga7 ga7 ga7";
+      grid-template-areas: "ga1 ga1 ga1" ". ga8 ." ". ga2 ." "ga3 ga3 ga3" ". ga4 ." "ga6 ga5 ga5" "ga7 ga7 ga7";
     }
     .site-footer-grid > .ga1 {
       grid-area: ga1;
@@ -8965,7 +8990,7 @@ ul.giftCardList li.selected > a {
     .ems-page-product-list-grid {
       position: relative;
       grid-template-columns: 30px 180px 60px minmax(700px, 1fr) minmax(auto, 270px);
-      grid-template-areas: "ga1 ga1 ga1 ga1 ga1" ". ga2 . ga3 .";
+      grid-template-areas: "ga1 ga1 ga1 ga1 ga1" ". ga2 . ga3 .";
     }
     .ems-page-product-list-grid > .ga1 {
       grid-area: ga1;
@@ -9010,7 +9035,7 @@ ul.giftCardList li.selected > a {
       grid-template-columns: 1fr minmax(auto, 770px) 40px 370px 1fr;
       grid-template-rows: -webkit-max-content 1fr;
       grid-template-rows: max-content 1fr;
-      grid-template-areas: ". ga2 . ga1 ." ". ga2 . ga3 .";
+      grid-template-areas: ". ga2 . ga1 ." ". ga2 . ga3 .";
     }
     .ems-prdd-grid > .ga1 {
       grid-area: ga1;
@@ -9074,7 +9099,7 @@ ul.giftCardList li.selected > a {
     }
     .added-prd {
       grid-template-columns: 140px 30px 1fr;
-      grid-template-areas: "ga1 . ga2" "ga1 . ga3";
+      grid-template-areas: "ga1 . ga2" "ga1 . ga3";
     }
     .added-prd .prm-btns {
       margin-top: 30px;
@@ -9091,7 +9116,7 @@ ul.giftCardList li.selected > a {
     .ems-find-store .mod-service-list-grid {
       max-height: calc(100vh - 150px);
       overflow: auto;
-      grid-template-areas: ". ga1 ga1 ga1 ." ". ga3 . ga2 .";
+      grid-template-areas: ". ga1 ga1 ga1 ." ". ga3 . ga2 .";
     }
     .ems-find-store .mod-service-list-header {
       margin-bottom: 30px;
@@ -9110,7 +9135,7 @@ ul.giftCardList li.selected > a {
       max-height: 450px;
     }
     .ems-find-store.ems-no-result .mod-service-list-grid {
-      grid-template-areas: ". ga1 ga1 ga1 ." ". ga3 ga3 ga3 .";
+      grid-template-areas: ". ga1 ga1 ga1 ." ". ga3 ga3 ga3 .";
     }
     .zoom-gallery .thumbs-wrapper {
       display: block;
@@ -9132,7 +9157,7 @@ ul.giftCardList li.selected > a {
       grid-template-columns: 1fr 380px 20px minmax(auto, 780px) 1fr;
       grid-template-rows: -webkit-max-content 1fr;
       grid-template-rows: max-content 1fr;
-      grid-template-areas: ". ga1 . ga2 ." ". ga3 . ga2 .";
+      grid-template-areas: ". ga1 . ga2 ." ". ga3 . ga2 .";
     }
     .mod-service-list-grid > .mod-service-list-header {
       grid-area: ga1;
@@ -9554,7 +9579,7 @@ ul.giftCardList li.selected > a {
     }
     .ems-page-gift-card-grid {
       grid-template-columns: 1fr 710px 1fr;
-      grid-template-areas: ". ga1 ." "ga2 ga2 ga2";
+      grid-template-areas: ". ga1 ." "ga2 ga2 ga2";
     }
     .ems-page-gift-card-grid > .ga1 {
       grid-area: ga1;
@@ -9589,7 +9614,7 @@ ul.giftCardList li.selected > a {
   }
   @media screen and (min-width: 1025px) and (max-width: 1350px) {
     .site-header-grid {
-      grid-template-areas: "ga1 . ga2 ga3 ga4 ga5" "ga6 ga6 ga6 ga6 ga8 ga8" "ga7 ga7 ga7 ga7 ga7 ga7";
+      grid-template-areas: "ga1 . ga2 ga3 ga4 ga5" "ga6 ga6 ga6 ga6 ga8 ga8" "ga7 ga7 ga7 ga7 ga7 ga7";
     }
     .menu::before, .menu::after {
       display: none;

@@ -2,12 +2,8 @@
 .ems-page-gift-card {
     &-grid {
         grid-template-columns: 1fr 710px 1fr;
-        grid-template-areas:
-        ". ga1 ."
-        "ga2 ga2 ga2";
-        
+        grid-template-areas: ". ga1 ." "ga2 ga2 ga2";
         @include setGridArea(1,2);
-
         > .ga1 {
             min-height: 900px;
         }

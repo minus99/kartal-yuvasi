@@ -316,7 +316,8 @@ iframe {
 .ems-obj-required,
 .ems-login .ems-obj-logoff,
 .ems-logoff .ems-obj-login,
-.ems-step1 .ems-obj-step0 {
+.ems-step1 .ems-obj-step0,
+.en-US .ems-obj_tr-TR {
     @extend .ems-none;
 }
 

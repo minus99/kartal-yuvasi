@@ -77,12 +77,15 @@
         }
         .prm-title {
             font-size: 14px;
-            line-height: 1.4;
         }
     }
 
     //banner type06 *instagram first content
-    &06 {}
+    &06 {
+        .prm-title {
+            font-size: 30px;
+        }
+    }
 
     //banner type07 *home slider
     &07 {
@@ -104,10 +107,9 @@
             .prm-media-custom {
                 right: calc((100% - 1000px) / 2);
                 width: auto;
-                height: auto;
             }
             .banner-body {
-                transform: translateY(45%);
+                transform: translateY(0%);
             }
 
             .swiper-slide-active & {

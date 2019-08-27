@@ -10,12 +10,12 @@
         .icon-radio-active {
             font-size: 18px;
             margin-right: 5px;
-            --check: hidden;
+            --check: none;
         }
     }
     a.selected {
         .icon-radio-active {
-            --check: visible;
+            --check: block;
         }
     }
 
@@ -56,6 +56,9 @@
             position: absolute;
             left: 0;
         }
+    }
+    &-image {
+        width: 100%;
     }
     &-360 {
         visibility: hidden;
@@ -188,6 +191,7 @@
     }
 
     &-emblem {
+        min-height: 45px;
         margin-top: 20px;
         &-title {
             font-family: $font2;
@@ -197,19 +201,26 @@
         }
         a {
             width: 46px;
+            height: 45px;
             font-size: 0;
             background: $color2;
+            opacity: .7;
+            transition: opacity .15s ease;
             display: flex;
             align-items: center;
             justify-content: center;
+            img {
+                height: 100%;
+            }
             &.selected {
-                background: $color5;
+                opacity: 1;
             }
             + a {
                 margin-left: 10px;
             }
         }
         .arm-none {
+            opacity: 1;
             svg {
                 font-size: 17px;
             }

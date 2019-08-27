@@ -8,12 +8,8 @@
     
         grid-template-columns: 1fr minmax(auto, 770px) 40px 370px 1fr;
         grid-template-rows: max-content 1fr;
-        grid-template-areas:
-        ". ga2 . ga1 ."
-        ". ga2 . ga3 .";
-    
+        grid-template-areas: ". ga2 . ga1 ." ". ga2 . ga3 .";
         @include setGridArea(1,3);
-
         > .ga1 {
             padding: 0;
         }
@@ -97,9 +93,7 @@
 }
 .added-prd {
     grid-template-columns: 140px 30px 1fr;
-    grid-template-areas: 
-    "ga1 . ga2"
-    "ga1 . ga3";
+    grid-template-areas: "ga1 . ga2" "ga1 . ga3";
     .prm-btns {
         margin-top: 30px;
     }
@@ -137,9 +131,7 @@
     .mod-service-list-grid {
         max-height: calc(100vh - 150px);
         overflow: auto;
-        grid-template-areas: 
-        ". ga1 ga1 ga1 ."
-        ". ga3 . ga2 .";
+        grid-template-areas: ". ga1 ga1 ga1 ." ". ga3 . ga2 .";
     }
     .mod-service-list-header {
         margin-bottom: 30px;
@@ -162,9 +154,7 @@
 
     &.ems-no-result {
         .mod-service-list-grid {
-            grid-template-areas: 
-            ". ga1 ga1 ga1 ."
-            ". ga3 ga3 ga3 .";
+            grid-template-areas: ". ga1 ga1 ga1 ." ". ga3 ga3 ga3 .";
         }
     }
 

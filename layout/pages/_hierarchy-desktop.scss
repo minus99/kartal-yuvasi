@@ -3,9 +3,7 @@
     &-grid {
         grid-template-columns: 300px 20px minmax(auto, 890px) 20px 1fr;
         grid-template-areas: "ga1 . ga2 . .";
-
         @include setGridArea(1,2);
-
         > .ga1 {
             position: static;
             padding-bottom: 50px;
@@ -24,9 +22,7 @@
 .ems-page-1-col {
     &-grid {
         grid-template-columns: 1fr;
-        grid-template-areas:
-        "ga1";
-        
+        grid-template-areas: "ga1";
         @include setGridArea(1,1);
     }
 }

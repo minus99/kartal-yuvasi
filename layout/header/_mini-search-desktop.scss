@@ -72,10 +72,7 @@
 .searchSuggestDivHolder {
     margin: 0;
     grid-template-columns: 1fr 56px 160px;
-    grid-template-areas:
-    "ga1 ga1 ga1"
-    "ga2 . ga3"
-    "ga4 . .";
+    grid-template-areas: "ga1 ga1 ga1" "ga2 . ga3" "ga4 . .";
 
     .prd {
         .sHolder {

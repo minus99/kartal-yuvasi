@@ -118,13 +118,13 @@
             @extend %btn-reset;
             svg {
                 font-size: 18px;
-                --check: hidden;
+                --check: none;
                 margin-right: 10px;
             }
             &.emos_selected {
                 font-weight: 500;
                 svg {
-                    --check: visible;
+                    --check: block;
                 }
             }
             + a {
