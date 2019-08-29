@@ -59,7 +59,8 @@
 }
 .masterPassForms {
     position: relative;
-    > div {
+    margin-top: 20px;
+    > div + div {
         margin-top: 10px;
     }
 }
@@ -85,8 +86,8 @@
 }
 .mpCreditCardSet {
     font-size: 14px;
-    background: $color6;
     color: $color2;
+    background: $color6;
     border-radius: 5px;
     padding: 20px;
     display: grid;
@@ -108,6 +109,24 @@
     input[type="radio"] {
         margin-right: 7px;
     }
+}
+.dvOtpForm {
+    > * {
+        margin-top: 10px;
+    }
+}
+.mpInfoText {
+    padding: 0 !important;
+}
+.resendCodePlace {
+    > * {
+        margin-top: 10px;
+    }
+}
+.validateOtp,
+.btnResendOtp {
+    @extend %btn;
+    cursor: pointer;
 }
 
 [id$="ODM_ACIKLAMA"]:not(:empty) {
@@ -178,6 +197,13 @@
     .div-cc-carttype,
     [id$="CVC_NEDIR"] {
         display: none !important;
+    }
+
+    &[style*="none"] {
+        display: none !important;
+    }
+    &[style*="table"] {
+        display: table !important;
     }
 }
 

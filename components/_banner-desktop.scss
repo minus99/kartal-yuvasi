@@ -32,13 +32,6 @@
         .banner-body {
             padding: 20px 75px;
         }
-        .prm-link {
-            background: $color2;
-            color: $color1;
-            &:hover {
-                background: $color3;
-            }
-        }
     }
 
     //banner type03 *collections
@@ -108,13 +101,10 @@
                 right: calc((100% - 1000px) / 2);
                 width: auto;
             }
-            .banner-body {
-                transform: translateY(0%);
-            }
-
             .swiper-slide-active & {
                 .banner-body {
-                    transform: translateY(-50%);
+                    animation: animation-05 .7s ease forwards;
+                    animation-delay: .35s;
                 }
             }
         }
@@ -170,6 +160,9 @@
             font-size: 18px;
         }
     }
+
+    //banner type14 *lp zebra content
+    &14 {}
 }
 
 //options
