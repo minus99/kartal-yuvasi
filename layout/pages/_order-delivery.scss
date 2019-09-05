@@ -77,14 +77,6 @@ a.btnAdresEkle {
         + li {
             margin-top: 20px;
         }
-
-        .sStylerWrp_radio {
-            position: static;
-            margin-right: 0;
-        }
-        .rStyler {
-            display: none;
-        }
     }
     img {
         order: 1;
@@ -116,10 +108,13 @@ a.btnAdresEkle {
         font-weight: 700;
     }
 
-    .radioButton {
+    .sStylerWrp_radio {
         @include ems-cover;
-        z-index: 1;
-        margin: 0;
+    }
+    .radioButton {
+        display: block !important;
+        width: 100%;
+        height: 100%;
         opacity: 0;
         cursor: pointer;
     }

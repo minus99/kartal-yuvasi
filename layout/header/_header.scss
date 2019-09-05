@@ -18,6 +18,14 @@
     vertical-align: middle;
 }
 
+.slogan {
+    font-family: helvetica, $font0;
+    font-size: 13px;
+    color: $color9;
+    font-weight: 400;
+    padding: 0 40px;
+}
+
 //footer mods extend obj
 %footer-mods-sub {
     display: none;

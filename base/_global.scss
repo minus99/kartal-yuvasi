@@ -17,6 +17,12 @@
     color: $color2;
 }
 
+h1,h2,h3,h4,h5,h6 {
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+}
+
 body {
     margin: 0;
     font-family: $font1;
@@ -317,7 +323,7 @@ iframe {
 .ems-login .ems-obj-logoff,
 .ems-logoff .ems-obj-login,
 .ems-step1 .ems-obj-step0,
-.en-US .ems-obj_tr-TR {
+.en-US .ems-obj-tr-TR {
     @extend .ems-none;
 }
 

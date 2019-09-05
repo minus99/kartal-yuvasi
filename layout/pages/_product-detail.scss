@@ -224,8 +224,9 @@ a.btnStokHaberci {
         }
     }
     .prm-title {
-        font-size: 22px;
+        font-size: 21px;
         font-weight: 700;
+        word-break: break-word;
     }
     .prm-desc {
         font-family: $font2;

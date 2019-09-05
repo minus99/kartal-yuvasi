@@ -1,5 +1,52 @@
 .kutuKategori {
+    position: relative;
     display: none;
+    margin-bottom: 25px;
+}
+.kutuHeaderKategori,
+.kutuFooterKategori {
+    display: none;
+}
+
+ul.menuKategori {
+    ul {
+        padding-left: 15px;
+    }
+    a {
+        position: relative;
+        display: inline-block;
+        font-family: $font2;
+        font-size: 13px;
+        padding: 7px 10px;
+        letter-spacing: .3px;
+    }
+    li {
+        &.sel {
+            > a {
+                font-weight: 700;
+            }
+        }
+
+        &.s1 {
+            + li {
+                margin-top: 15px;
+            }
+        }
+
+        &.s2 {
+            ul {
+                display: none;
+            }
+            &.sel {
+                > ul {
+                    display: block;
+                }
+            }
+        }
+    }
+    b {
+        display: none;
+    }
 }
 
 .categories-append {

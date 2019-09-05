@@ -1,5 +1,7 @@
 .design-uniform {
     position: relative;
+    background: $color1;
+    color: $color2;
 
     > .ga2 {
         display: none;
@@ -20,13 +22,24 @@
     }
 
     > .sub-header {
+        position: sticky;
+        top: 0;
+        z-index: 2;
         background: $color4;
         font-size: 22px;
         color: $color2;
+        line-height: 37px;
     }
-    > .sub-footer {
+    .sub-footer {
         background: $color3;
+        color: $color1;
         padding: 10px 20px;
+    }
+
+    &[data-rel="step1"] {
+        .step-prev {
+            display: none;
+        }
     }
 
     &[data-rel="step5"] {
@@ -39,11 +52,13 @@
     &-preview {
         position: relative;
         z-index: 1;
-        padding: 30px 0 0;
+        background: center top / cover no-repeat;
+        min-height: 411px;
+        padding: 118px 20px 0;
     }
     &-image-container {
         position: relative;
-        max-width: 342px;
+        max-width: 70%;
         margin: 0 auto;
     }
     &-name-number {
@@ -64,38 +79,28 @@
         visibility: hidden;
         position: absolute;
         left: 0;
-        bottom: -15px;
+        bottom: 0;
         width: 100%;
-        height: 98px;
+        height: 74px;
         text-align: center;
-        padding-top: 50px;
-        background-size: 342px;
+        padding-top: 40px;
+        background-size: 258px;
         background-repeat: no-repeat;
         background-position: center 0;
         &:hover {
-            background-position: center -98px;
+            background-position: center -74px;
         }
         > b {
-            font-size: 16px;
+            font-size: 14px;
+            color: $color1;
         }
-    }
-    &-bg {
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: 2;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center bottom;
-        pointer-events: none;
     }
 
     &-start {
-        padding-bottom: 50px;
+        padding-bottom: 40px;
         text-align: center;
         .btn {
-            margin-top: -10px;
+            margin-top: -20px;
             border-color: transparent;
         }
     }
@@ -253,22 +258,33 @@
         width: 100%;
         height: 100%;
         overflow: auto;
-        background: #fff;
-        color: #000;
         > .sub-header,
         > .ga2,
-        > .sub-footer {
+        .sub-footer {
             display: block;
         }
+        
+        > .ga2 {
+            position: fixed;
+            bottom: 0;
+            z-index: 2;
+            width: 100%;
+        }
     }
-    .uniform-start {
-        display: none;
-    }
-    .uniform-preview {
-        padding: 0 0 30px;
-    }
-    .uniform-360 {
-        visibility: visible;
+    .uniform {
+        &-start {
+            display: none;
+        }
+        &-preview {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        &-image-container {
+            max-width: none;
+        }
+        &-360 {
+            visibility: visible;
+        }
     }
 }
 .ems-forma-popup-animate {}
@@ -278,35 +294,6 @@
 
 
 //ürün detay formanı tasarla
-.ems-prdd-gallery {
-    .swiper-wrapper {
-        > li {
-            position: relative;
-        }
-        .uniform {
-            &-preview {
-                display: none;
-                position: absolute;
-                left:0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                padding: 0;
-            }
-            &-image-container {
-                > * {
-                    visibility: hidden;
-                }
-            }
-            &-name-number,
-            &-arm,
-            &-image {
-                visibility: visible;
-            }
-        }
-    }
-}
-
 .uniform-design-wrapper {
     display: none;
     margin-top: 25px;
@@ -336,7 +323,7 @@
     }
     .uniform {
         &-options {
-            background: none;
+            background: #fff;
             &::before {
                 display: none;
             }
@@ -365,6 +352,39 @@
     }
 }
 
+.ems-prdd-gallery {
+    .swiper-wrapper {
+        > li {
+            &[data-order="1"] {
+                position: relative;
+            }
+        }
+    }
+    .uniform {
+        &-preview {
+            display: none;
+            position: absolute;
+            left:0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            min-height: auto;
+        }
+        &-image-container {
+            max-width: none;
+            > * {
+                visibility: hidden;
+            }
+        }
+        &-name-number,
+        &-arm,
+        &-image {
+            visibility: visible;
+        }
+    }
+}
+
 .uniform-ready {
     .uniform-design-wrapper {
         display: block;
@@ -372,9 +392,22 @@
 }
 
 .uniform-activeted {
-    .ems-prdd-gallery .swiper-wrapper .uniform-preview {
-        display: block;
+    .ems-prdd-gallery {
+        .swiper-wrapper {
+            > li {
+                &[data-order="1"] {
+                    pointer-events: none;
+                    > a {
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+        .uniform-preview {
+            display: block;
+        }
     }
+
     .uniform-design-body {
         display: block;
     }

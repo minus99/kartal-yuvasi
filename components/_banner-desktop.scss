@@ -100,6 +100,7 @@
             .prm-media-custom {
                 right: calc((100% - 1000px) / 2);
                 width: auto;
+                max-height: 698px;
             }
             .swiper-slide-active & {
                 .banner-body {

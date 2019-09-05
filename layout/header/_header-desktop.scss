@@ -24,15 +24,6 @@ $subGapL: 300px;
     }
 }
 
-.slogan {
-    font-family: helvetica, $font0;
-    font-size: 13px;
-    color: $color9;
-    font-weight: 400;
-    margin: 0;
-    padding: 0 40px;
-}
-
 //header mods extend obj
 %header-mods-title {
     display: flex;

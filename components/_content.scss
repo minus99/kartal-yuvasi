@@ -326,12 +326,15 @@
         position: relative;
         overflow: hidden;
         text-align: center;
+        max-width: 870px;
+        margin-left: auto;
+        margin-right: auto;
         &-l,
         &-r {
             position: absolute;
-            top: 0;
-            transition: transform .32s ease;
-            max-width: 50vw;
+            top: 30%;
+            transition: all .32s ease;
+            max-width: 50%;
         }
         &-l {
             left: 0;
@@ -345,8 +348,7 @@
         }
         &-c {
             position: relative;
-            max-width: 46vw;
-            margin-top: 12vw;
+            max-width: 50%;
         }
     }
 
@@ -368,25 +370,25 @@
     margin-top: 80px;
     .banner {
         overflow: visible;
+        align-items: flex-start;
     }
     .prm-media {
         flex-basis: 440px;
+        transition: all .2s ease;
     }
     .banner-body {
         flex: 1;
         padding: 50px 200px 50px 70px;
-        transform: translateY(80px);
         transition: all .2s ease;
     }
-    li {
+    .swiper-slide {
         &:nth-child(even) {
             margin-top: -100px;
             .banner {
                 flex-direction: row-reverse;
-                align-items: flex-end;
             }
             .banner-body {
-                padding: 150px 70px 50px 200px;
+                padding: 300px 70px 50px 200px;
             }
         }
     }

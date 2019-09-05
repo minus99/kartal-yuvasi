@@ -82,11 +82,10 @@
     &-wing {
         &-l,
         &-r {
-            max-width: none;
+            top: 0;
         }
         &-c {
-            max-width: 300px;
-            margin-top: 84px;
+            max-width: 240px;
         }
     }
 

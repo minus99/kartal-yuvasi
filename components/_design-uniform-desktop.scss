@@ -1,5 +1,5 @@
 .design-uniform {
-    $skew:73px;
+    $skew: 73px;
     min-height: 566px;
     padding-left: calc(((100% - #{$container-large}) / 2) - #{$skew});
     > .ga1 {
@@ -24,17 +24,23 @@
 .uniform {
     &-preview {
         min-height: 100%;
+        padding: 100px 20px 20px;
     }
     &-image-container {
-        max-width: 400px;
+        max-width: 350px;
     }
     &-360 {
         visibility: visible;
+        background-size: 342px;
+        height: 98px;
+        padding-top: 63px;
+        &:hover {
+            background-position: center -98px;
+        }
     }
     &-options {
         min-height: 100%;
-        padding: 30px 20px;
-        background: $color14;
+        padding: 20px;
         &::before {
             content: "";
             position: absolute;
