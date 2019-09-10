@@ -35,6 +35,12 @@
     .swiper-slide {
         width: 100%;
     }
+    .prm-media {
+        img,
+        video {
+            @include setHeight(750, 900, 100vw);
+        }
+    }
 }
 
 .collections {

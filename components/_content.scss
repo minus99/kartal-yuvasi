@@ -190,6 +190,17 @@
         max-width: 435px;
         height: 250px;
         background: #111111 url(/images/frontend/card01.png) left center/300px no-repeat;
+        &:before {
+            content: "";
+            background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 25%, rgba(255,255,255,0.2) 55%, rgba(255,255,255,1) 100%);
+            position: absolute;
+            left: 0;
+            top: 60%;
+            width: 120%;
+            height: 30%;
+            transform: rotate(-45deg) translateY(-500%);
+            animation: animation-08 2s ease .5s forwards;
+        }
     }
     &02 {
         width: 100%;

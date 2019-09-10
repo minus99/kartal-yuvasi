@@ -78,6 +78,9 @@
 .masterpass_cardAddedSuccess {
     margin-bottom: 30px;
 }
+.masterpass_linkCard {
+    margin-bottom: 30px;
+}
 .masterpass_cardList {
     margin-bottom: 30px;
 }
@@ -197,13 +200,6 @@
     .div-cc-carttype,
     [id$="CVC_NEDIR"] {
         display: none !important;
-    }
-
-    &[style*="none"] {
-        display: none !important;
-    }
-    &[style*="table"] {
-        display: table !important;
     }
 }
 

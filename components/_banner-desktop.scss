@@ -104,8 +104,7 @@
             }
             .swiper-slide-active & {
                 .banner-body {
-                    animation: animation-05 .7s ease forwards;
-                    animation-delay: .35s;
+                    animation: animation-05 .7s ease .35s forwards;
                 }
             }
         }

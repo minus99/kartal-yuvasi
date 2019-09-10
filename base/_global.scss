@@ -17,12 +17,6 @@
     color: $color2;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-}
-
 body {
     margin: 0;
     font-family: $font1;
@@ -30,6 +24,12 @@ body {
     color: $color1;
     font-weight: $font-weight;
     line-height: $line-height;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
 }
 
 a {
@@ -351,11 +351,12 @@ a.emos_selected:hover {
 
 //table fixer
 table {
-    display: table !important;
     border-collapse: collapse;
     width: 100%;
 }
-
+table[style*="inline"] {
+    display: table !important;
+}
 .table-overflow {
     overflow: auto;
     padding-bottom: 10px;

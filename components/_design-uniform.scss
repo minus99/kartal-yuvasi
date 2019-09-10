@@ -62,6 +62,7 @@
         margin: 0 auto;
     }
     &-name-number {
+        position: absolute;
         #jerseyletters {
             margin-top: 15px;
         }
@@ -87,12 +88,15 @@
         background-size: 258px;
         background-repeat: no-repeat;
         background-position: center 0;
-        &:hover {
-            background-position: center -74px;
-        }
         > b {
             font-size: 14px;
-            color: $color1;
+            color: $color7;
+        }
+        &:hover {
+            background-position: center -74px;
+            > b {
+                color: $color4;
+            }
         }
     }
 
@@ -232,7 +236,8 @@
         }
     }
 
-    &-add-to-cart {
+    &-add-to-cart {}
+    &-select-qty {
         .sStylerWrp_select {
             max-width: 80px;
             border-color: transparent;

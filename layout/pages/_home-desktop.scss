@@ -32,7 +32,8 @@ form[action*="/default.aspx"] {
     padding-top: 85px;
     padding-bottom: 85px;
     .prm-media {
-        img {
+        img,
+        video {
             @include setHeight(3840, 1678, 1200px);
         }
     }

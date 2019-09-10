@@ -24,6 +24,7 @@
 ul.giftCardList {
     margin-top: 20px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     li {
         > a {

@@ -381,6 +381,28 @@
   }
 }
 
+@-webkit-keyframes animation-08 {
+  0% {
+    -webkit-transform: rotate(-45deg) translateY(-500%);
+    transform: rotate(-45deg) translateY(-500%);
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translateY(500%);
+    transform: rotate(-45deg) translateY(500%);
+  }
+}
+
+@keyframes animation-08 {
+  0% {
+    -webkit-transform: rotate(-45deg) translateY(-500%);
+    transform: rotate(-45deg) translateY(-500%);
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translateY(500%);
+    transform: rotate(-45deg) translateY(500%);
+  }
+}
+
 @media screen and (max-width: 1025px) {
   .obj-desktop {
     display: none !important;
@@ -398,12 +420,6 @@
   color: #fff;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: inherit;
-  font-weight: inherit;
-  margin: 0;
-}
-
 body {
   margin: 0;
   font-family: din, arial, sans-serif;
@@ -411,6 +427,12 @@ body {
   color: #000;
   font-weight: 400;
   line-height: 1.3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
 }
 
 a {
@@ -721,9 +743,12 @@ a.emos_selected:hover {
 }
 
 table {
-  display: table !important;
   border-collapse: collapse;
   width: 100%;
+}
+
+table[style*="inline"] {
+  display: table !important;
 }
 
 .table-overflow {
@@ -3093,6 +3118,10 @@ button.toast-close-button {
   margin: 0 auto;
 }
 
+.uniform-name-number {
+  position: absolute;
+}
+
 .uniform-name-number #jerseyletters {
   margin-top: 15px;
 }
@@ -3120,13 +3149,17 @@ button.toast-close-button {
   background-position: center 0;
 }
 
+.uniform-360 > b {
+  font-size: 14px;
+  color: #999;
+}
+
 .uniform-360:hover {
   background-position: center -74px;
 }
 
-.uniform-360 > b {
-  font-size: 14px;
-  color: #000;
+.uniform-360:hover > b {
+  color: #c5242b;
 }
 
 .uniform-start {
@@ -3293,7 +3326,7 @@ button.toast-close-button {
   font-size: 17px;
 }
 
-.uniform-add-to-cart .sStylerWrp_select {
+.uniform-select-qty .sStylerWrp_select {
   max-width: 80px;
   border-color: transparent;
   border-radius: 2px 0 0 2px;
@@ -4438,6 +4471,20 @@ ul.menuKategori b {
   max-width: 435px;
   height: 250px;
   background: #111111 url(/images/frontend/card01.png) left center/300px no-repeat;
+}
+
+.card01:before {
+  content: "";
+  background: linear-gradient(180deg, white 0%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.2) 55%, white 100%);
+  position: absolute;
+  left: 0;
+  top: 60%;
+  width: 120%;
+  height: 30%;
+  -webkit-transform: rotate(-45deg) translateY(-500%);
+  transform: rotate(-45deg) translateY(-500%);
+  -webkit-animation: animation-08 2s ease .5s forwards;
+  animation: animation-08 2s ease .5s forwards;
 }
 
 .card02 {
@@ -5654,6 +5701,11 @@ a.btnKutuLogout {
 
 .new-season .swiper-slide {
   width: 100%;
+}
+
+.new-season .prm-media img,
+.new-season .prm-media video {
+  height: calc(100vw / (750 / 900));
 }
 
 .collections {
@@ -7068,6 +7120,10 @@ a.btnAdresEkle,
   margin-bottom: 30px;
 }
 
+.masterpass_linkCard {
+  margin-bottom: 30px;
+}
+
 .masterpass_cardList {
   margin-bottom: 30px;
 }
@@ -7196,14 +7252,6 @@ a.btnAdresEkle,
 .tableOdemeBilgiKrediKarti .div-cc-carttype,
 .tableOdemeBilgiKrediKarti [id$="CVC_NEDIR"] {
   display: none !important;
-}
-
-.tableOdemeBilgiKrediKarti[style*="none"] {
-  display: none !important;
-}
-
-.tableOdemeBilgiKrediKarti[style*="table"] {
-  display: table !important;
 }
 
 .tableOdemeBilgiHavale .tableOdemeBilgiHavale_thlbfBNK_AD_HV {
@@ -7904,6 +7952,7 @@ form[action*="sifremiunuttum"] .ems-page-member-grid > .ga1 {
 ul.giftCardList {
   margin-top: 20px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -8196,10 +8245,8 @@ ul.giftCardList li.selected > a {
       max-height: 698px;
     }
     .swiper-slide-active .banner07.v2 .banner-body {
-      -webkit-animation: animation-05 .7s ease forwards;
-      animation: animation-05 .7s ease forwards;
-      -webkit-animation-delay: .35s;
-      animation-delay: .35s;
+      -webkit-animation: animation-05 .7s ease .35s forwards;
+      animation: animation-05 .7s ease .35s forwards;
     }
     .banner09 .banner-body {
       top: auto;
@@ -8275,7 +8322,7 @@ ul.giftCardList li.selected > a {
       visibility: visible;
       background-size: 342px;
       height: 98px;
-      padding-top: 63px;
+      padding-top: 60px;
     }
     .uniform-360:hover {
       background-position: center -98px;
@@ -9072,7 +9119,8 @@ ul.giftCardList li.selected > a {
       padding-top: 85px;
       padding-bottom: 85px;
     }
-    .new-season .prm-media img {
+    .new-season .prm-media img,
+    .new-season .prm-media video {
       height: calc(1200px / (3840 / 1678));
     }
     .collections {
