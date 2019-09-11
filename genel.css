@@ -2598,6 +2598,10 @@ button.swiper-pagination-bullet {
   animation: animation-04 .7s ease forwards;
 }
 
+.banner09 .btn-full {
+  z-index: 10;
+}
+
 .banner10 {
   border: 1px solid #c9c9c9;
   background: #fff;
@@ -3207,7 +3211,7 @@ button.toast-close-button {
   padding: 10px 20px 10px 10px;
 }
 
-.uniform-gender a[data-type="scarf"] {
+.uniform-gender a[data-type="scarf"], .uniform-gender a[data-type="old"] {
   display: none;
 }
 
@@ -3362,6 +3366,7 @@ button.toast-close-button {
 
 .ems-forma-popup-ready .design-uniform > .ga2 {
   position: fixed;
+  left: 0;
   bottom: 0;
   z-index: 2;
   width: 100%;
@@ -9836,6 +9841,8 @@ ul.giftCardList li.selected > a {
 
 .site-main {
   background: none;
+  -webkit-animation: none;
+  animation: none;
 }
 
 .site-main > div {

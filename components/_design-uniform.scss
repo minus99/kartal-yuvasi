@@ -140,7 +140,8 @@
             font-size: 15px;
             border: 1px solid currentColor;
             padding: 10px 20px 10px 10px;
-            &[data-type="scarf"] {
+            &[data-type="scarf"],
+            &[data-type="old"] {
                 display: none;
             }
             + a {
@@ -271,6 +272,7 @@
         
         > .ga2 {
             position: fixed;
+            left: 0;
             bottom: 0;
             z-index: 2;
             width: 100%;

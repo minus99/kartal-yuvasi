@@ -208,7 +208,11 @@
     &08 {}
 
     //banner type09 *primary box
-    &09 {}
+    &09 {
+        .btn-full {
+            z-index: 10;
+        }
+    }
 
     //banner type10 *cart promotion
     &10 {
