@@ -130,6 +130,12 @@ $prd-pd-l: 20px;
         color: $color11;
     }
 }
+.tukendi {
+    .urunListe_urunStokUyari {
+        display: block !important;
+        color: $color7;
+    }
+}
 
 //horizontal product
 .swiper-product-horizontal {

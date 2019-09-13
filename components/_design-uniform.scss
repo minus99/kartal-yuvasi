@@ -30,6 +30,7 @@
         color: $color2;
         line-height: 37px;
     }
+    
     .sub-footer {
         background: $color3;
         color: $color1;
@@ -38,13 +39,15 @@
 
     &[data-rel="step1"] {
         .step-prev {
-            display: none;
+            opacity: .25;
+            pointer-events: none;
         }
     }
 
     &[data-rel="step5"] {
         .step-next {
-            display: none;
+            opacity: .25;
+            pointer-events: none;
         }
     }
 }
@@ -270,13 +273,13 @@
             display: block;
         }
         
-        > .ga2 {
+        /*//// > .ga2 {
             position: fixed;
             left: 0;
             bottom: 0;
             z-index: 2;
             width: 100%;
-        }
+        }*/
     }
     .uniform {
         &-start {
