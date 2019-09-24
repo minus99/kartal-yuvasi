@@ -42,6 +42,15 @@
     }
 }
 
+//COVER IMAGE
+.primary-image {
+    .prm-media {
+        img {
+            @include setHeight(3840, 1678, 99.1vw);
+        }
+    }
+}
+
 //LANDING PAGE
 .lp-container {
     padding-bottom: 80px;

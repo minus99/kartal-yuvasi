@@ -15,14 +15,15 @@ $btn-cursor: 10px;
     transition: all .32s ease;
     outline: none;
     cursor: pointer;
-    &:hover {
-        background: $color6;
-    }
     > span {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    
+    &:hover {
+        background: $color6;
     }
 
     &-primary {

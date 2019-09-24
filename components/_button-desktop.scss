@@ -1,4 +1,4 @@
-.d-btn {
+%d-btn {
     &-primary {
         background: $color2;
         color: $color1;
@@ -6,4 +6,8 @@
             background: $color3;
         }
     }
+}
+
+.d-btn-primary {
+    @extend %d-btn-primary;
 }

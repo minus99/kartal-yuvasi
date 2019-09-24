@@ -1,9 +1,10 @@
 .ems-page-product-list {
     &.no-result {
         .navigasyon,
+        .categories-append,
         .top-buttons,
         .ems-sort {
-            display: none;
+            display: none !important;
         }
         .ems-message-product-list {
             margin-top: 30px;
@@ -12,10 +13,6 @@
             margin-top: 100vh;
         }
     }
-}
-
-.category-top-banner {
-    margin-bottom: 40px;   
 }
 
 .ems-prd-list-count {

@@ -2,9 +2,6 @@
     .prm-title {
         font-size: 40px;
     }
-    .prm-sub-title {
-        font-size: 40px;
-    }
     
     &-body {
         position: absolute;
@@ -13,6 +10,12 @@
         transform: translateY(-50%);
         padding-left: 50px;
         padding-right: 50px;
+    }
+
+    &:hover {
+        .d-btn-primary {
+            @extend %d-btn-primary:hover;
+        }
     }
 
     //banner type01 *primary categories

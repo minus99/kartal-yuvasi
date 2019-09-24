@@ -950,12 +950,6 @@ a.btnDefault, .urunKiyaslamaOzellik_tumunuTemizle a, .cart-prd-page-url .lnkSepe
   cursor: pointer;
 }
 
-.btn:hover,
-a.btnDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle a:hover, .cart-prd-page-url .lnkSepet:hover, a#lnkGuestCheckout:hover, .validateOtp:hover,
-.btnResendOtp:hover, #plhSipTekrarla a.lnkSipTekrarla:hover, a.lnkSorgula:hover, a.lnkSatinAl:hover {
-  background: #515151;
-}
-
 .btn > span, a.btnDefault > span, .urunKiyaslamaOzellik_tumunuTemizle a > span, .cart-prd-page-url .lnkSepet > span, a#lnkGuestCheckout > span, .validateOtp > span, .btnResendOtp > span, #plhSipTekrarla a.lnkSipTekrarla > span, a.lnkSorgula > span, a.lnkSatinAl > span {
   position: relative;
   display: flex;
@@ -963,12 +957,18 @@ a.btnDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle a:hover, .cart-prd-page-
   justify-content: center;
 }
 
+.btn:hover,
+a.btnDefault:hover, .banner:hover .btn, .urunKiyaslamaOzellik_tumunuTemizle a:hover, .cart-prd-page-url .lnkSepet:hover, a#lnkGuestCheckout:hover, .validateOtp:hover,
+.btnResendOtp:hover, #plhSipTekrarla a.lnkSipTekrarla:hover, a.lnkSorgula:hover, a.lnkSatinAl:hover {
+  background: #515151;
+}
+
 .btn-primary, .ems-member-gift-card-list a.btnsepeteAt {
   background: #fff;
   color: #000;
 }
 
-.btn-primary:hover, .ems-member-gift-card-list a.btnsepeteAt:hover {
+.btn-primary:hover, .banner:hover .btn-primary, .ems-member-gift-card-list a.btnsepeteAt:hover {
   background: #eee;
 }
 
@@ -978,7 +978,7 @@ a.btnSipIptal, .selected-action .remove-selected > a, a.lnkSatinAl {
   color: #000;
 }
 
-.btn-secondary:hover, .ems-new-address a.btnAdresIptal:hover, a.btnSipIade:hover,
+.btn-secondary:hover, .banner:hover .btn-secondary, .ems-new-address a.btnAdresIptal:hover, a.btnSipIade:hover,
 a.btnSipIptal:hover, .selected-action .remove-selected > a:hover, a.lnkSatinAl:hover {
   background: #c5242b;
   color: #fff;
@@ -990,7 +990,7 @@ a.btnSipIptal:hover, .selected-action .remove-selected > a:hover, a.lnkSatinAl:h
   border-color: #c9c9c9;
 }
 
-.btn-transparent:hover, .ems-prdd-block2 a.btnDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle a:hover, a.btnFacebookLoginKutu:hover, a.btnFacebookLogin:hover, .swiper-product-horizontal a.btnSepeteAt:hover {
+.btn-transparent:hover, .ems-prdd-block2 a.btnDefault:hover, .banner:hover .btn-transparent, .banner:hover .ems-prdd-block2 a.btnDefault, .ems-prdd-block2 .banner:hover a.btnDefault, .urunKiyaslamaOzellik_tumunuTemizle a:hover, a.btnFacebookLoginKutu:hover, a.btnFacebookLogin:hover, .swiper-product-horizontal a.btnSepeteAt:hover {
   background: transparent;
 }
 
@@ -2452,6 +2452,10 @@ button.swiper-pagination-bullet {
   margin-left: 20px;
 }
 
+.banner .btn-full {
+  z-index: 10;
+}
+
 .banner .prm-desc {
   font-family: fira, arial, sans-serif;
   font-size: 20px;
@@ -2479,10 +2483,6 @@ button.swiper-pagination-bullet {
   border-color: #c9c9c9;
 }
 
-.banner01 .btn-full {
-  z-index: 10;
-}
-
 .banner03 {
   text-align: center;
 }
@@ -2502,10 +2502,6 @@ button.swiper-pagination-bullet {
 .banner04 .prm-desc {
   font-size: 16px;
   margin-top: 5px;
-}
-
-.banner05 .btn-full {
-  z-index: 10;
 }
 
 .banner06 {
@@ -2561,7 +2557,7 @@ button.swiper-pagination-bullet {
   z-index: 4;
   width: 100%;
   height: 340px;
-  background-image: linear-gradient(0, #000, transparent);
+  background-image: linear-gradient(0, rgba(0, 0, 0, 0.75), transparent);
 }
 
 .banner07.v2 .prm-media-custom {
@@ -2596,10 +2592,6 @@ button.swiper-pagination-bullet {
 .swiper-slide-active .banner07.v2 .banner-body {
   -webkit-animation: animation-04 .7s ease forwards;
   animation: animation-04 .7s ease forwards;
-}
-
-.banner09 .btn-full {
-  z-index: 10;
 }
 
 .banner10 {
@@ -4567,6 +4559,10 @@ ul.menuKategori b {
   width: 100%;
 }
 
+.lp-products {
+  padding-top: 60px;
+}
+
 .fd {
   background: #000;
   color: #fff;
@@ -5779,9 +5775,10 @@ a#lnkGuestCheckout {
 }
 
 .ems-page-product-list.no-result .navigasyon,
+.ems-page-product-list.no-result .categories-append,
 .ems-page-product-list.no-result .top-buttons,
 .ems-page-product-list.no-result .ems-sort {
-  display: none;
+  display: none !important;
 }
 
 .ems-page-product-list.no-result .ems-message-product-list {
@@ -5790,10 +5787,6 @@ a#lnkGuestCheckout {
 
 .ems-page-product-list.no-result .go-page-top {
   margin-top: 100vh;
-}
-
-.category-top-banner {
-  margin-bottom: 40px;
 }
 
 .ems-prd-list-count {
@@ -8130,7 +8123,7 @@ ul.giftCardList li.selected > a {
       background: #fff;
       color: #000;
     }
-    .d-btn-primary:hover {
+    .d-btn-primary:hover, .banner:hover .d-btn-primary {
       background: #eee;
     }
     .ems-form-horizontal {
@@ -8175,9 +8168,6 @@ ul.giftCardList li.selected > a {
       flex-direction: row;
     }
     .banner .prm-title {
-      font-size: 40px;
-    }
-    .banner .prm-sub-title {
       font-size: 40px;
     }
     .banner-body {
@@ -8609,6 +8599,9 @@ ul.giftCardList li.selected > a {
     }
     .card02 {
       width: 340px;
+    }
+    .primary-image .prm-media img {
+      height: calc(99.1vw / (3840 / 1678));
     }
     .lp-container {
       padding-bottom: 80px;
@@ -9208,6 +9201,9 @@ ul.giftCardList li.selected > a {
     }
     .ems-page-product-list-grid > .ga3 {
       grid-area: ga3;
+    }
+    .category-top-banner {
+      margin-bottom: 40px;
     }
     .ems-prd-list-count {
       margin-top: 40px;
