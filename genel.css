@@ -742,7 +742,7 @@ a.emos_selected:hover {
   color: inherit;
 }
 
-table {
+.sayfaDisDiv table {
   border-collapse: collapse;
   width: 100%;
 }
