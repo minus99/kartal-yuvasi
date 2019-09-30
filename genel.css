@@ -4980,10 +4980,8 @@ ul.menu-mini-lang .sub-header {
   position: relative;
 }
 
-.mini-lang-info .icon-triangle-b {
-  transition: -webkit-transform .32s ease;
-  transition: transform .32s ease;
-  transition: transform .32s ease, -webkit-transform .32s ease;
+.mini-lang-info .sel-currency {
+  min-width: 10px;
 }
 
 .mini-lang-sub {
@@ -5076,6 +5074,8 @@ a.btnKutuLogout {
 
 .mini-cart-info #lblUrunAdet {
   margin-right: 4px;
+  min-width: 16px;
+  text-align: right;
 }
 
 .mini-cart-info [id$="lbfKUTU_URUN"] {
@@ -7450,8 +7450,10 @@ a.btnAdresEkle,
   font-size: 18px;
 }
 
-.pageSiparisSonuc_lbfOdemeAlinamadi {
-  display: none;
+[id$="lblSIP_BELIRLIERROR"]:not(:empty) {
+  display: block;
+  margin-top: 40px;
+  text-align: center;
 }
 
 .kutuDefault.kutuUyelikOneri {

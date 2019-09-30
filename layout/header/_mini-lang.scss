@@ -17,11 +17,11 @@ ul.menu-mini-lang {
 .mini-lang {
     &-info {
         position: relative;
-        .icon-triangle-b {
-            transition: transform .32s ease;
-        }
         > span {
             @extend %header-mods-title;
+        }
+        .sel-currency {
+            min-width: 10px;
         }
     }
 

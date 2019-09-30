@@ -45,8 +45,10 @@
     }
 }
 
-.pageSiparisSonuc_lbfOdemeAlinamadi {
-    display: none;
+[id$="lblSIP_BELIRLIERROR"]:not(:empty) {
+    display: block;
+    margin-top: 40px;
+    text-align: center;
 }
 
 //guest
