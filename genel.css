@@ -1311,7 +1311,8 @@ textarea {
   border-top: 1px solid #c9c9c9;
 }
 
-.ems-form-label, [id$="divCaptcha"] [id$="lbfUYE_KONTROLKODU"], .prmSehir, .tableOdemeBilgiKrediKarti th, .tableTitleOdemeTaksit td, .kutuUyelikOneri_sifre > span, .tableSifremiUnuttum th {
+.ems-form-label, [id$="divCaptcha"] [id$="lbfUYE_KONTROLKODU"], .prmSehir, .tableOdemeBilgiKrediKarti th, .tableTitleOdemeTaksit td, .kutuUyelikOneri_sifre > span, .tableSifremiUnuttum th,
+.tableUyeSifreReset th {
   position: relative;
   font-family: fira, arial, sans-serif;
   font-size: 13px;
@@ -1320,7 +1321,8 @@ textarea {
   margin-bottom: 5px;
 }
 
-.ems-form-label:empty, [id$="divCaptcha"] :empty[id$="lbfUYE_KONTROLKODU"], .prmSehir:empty, .tableOdemeBilgiKrediKarti th:empty, .tableTitleOdemeTaksit td:empty, .kutuUyelikOneri_sifre > span:empty, .tableSifremiUnuttum th:empty {
+.ems-form-label:empty, [id$="divCaptcha"] :empty[id$="lbfUYE_KONTROLKODU"], .prmSehir:empty, .tableOdemeBilgiKrediKarti th:empty, .tableTitleOdemeTaksit td:empty, .kutuUyelikOneri_sifre > span:empty, .tableSifremiUnuttum th:empty,
+.tableUyeSifreReset th:empty {
   display: none;
 }
 
@@ -7723,7 +7725,8 @@ ul.rtnPrdInf {
 }
 
 a.btnUyeBilgi, a.btnGuestCheckoutSave, a.btnIptalEt,
-a.btnIadeEt, a.btnSifreGuncelle, a.btnUyeSifreGonder {
+a.btnIadeEt, a.btnSifreGuncelle, a.btnUyeSifreGonder,
+a.btnSifreResetGuncelle {
   width: auto !important;
   min-width: 180px;
 }
@@ -7732,16 +7735,21 @@ a.btnIadeEt, a.btnSifreGuncelle, a.btnUyeSifreGonder {
   display: flex;
 }
 
-form[action*="sifremiunuttum"] .ems-page-member-grid > .ga1 {
+form[action*="sifremiunuttum"] .ems-page-member-grid > .ga1,
+form[action*="sifreReset"] .ems-page-member-grid > .ga1 {
   display: none;
 }
 
-.pageSifremiUnuttum {
+.pageSifremiUnuttum,
+.pageUyeSifreReset {
   padding: 50px 20px;
 }
 
 .pageHeaderSifremiUnuttum,
-.pageDescSifremiUnuttum {
+.pageDescSifremiUnuttum,
+.pageHeaderUyeSifreReset,
+.pageDescUyeSifreReset,
+[id$="lbfDEC_UYESFIRERESET_VLD"] {
   display: none;
 }
 
@@ -7749,20 +7757,24 @@ form[action*="sifremiunuttum"] .ems-page-member-grid > .ga1 {
   margin-bottom: 30px;
 }
 
-.tableSifremiUnuttum {
+.tableSifremiUnuttum,
+.tableUyeSifreReset {
   max-width: 360px;
 }
 
-.tableSifremiUnuttum tr {
+.tableSifremiUnuttum tr,
+.tableUyeSifreReset tr {
   display: flex;
   flex-direction: column;
 }
 
-.tableSifremiUnuttum tr + tr {
+.tableSifremiUnuttum tr + tr,
+.tableUyeSifreReset tr + tr {
   margin-top: 20px;
 }
 
-.tableSifremiUnuttum th {
+.tableSifremiUnuttum th,
+.tableUyeSifreReset th {
   text-align: left;
 }
 
@@ -9726,7 +9738,8 @@ ul.giftCardList li.selected > a {
     .ems-member-info .ems-form {
       max-width: 660px;
     }
-    form[action*="sifremiunuttum"] .ems-page-member-grid {
+    form[action*="sifremiunuttum"] .ems-page-member-grid,
+    form[action*="sifreReset"] .ems-page-member-grid {
       grid-template-columns: minmax(auto, 600px) 1fr;
       grid-template-areas: "ga2 .";
     }
