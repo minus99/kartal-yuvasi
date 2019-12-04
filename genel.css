@@ -8312,6 +8312,9 @@ ul.giftCardList li.selected > a {
     .align-l .banner {
       text-align: left;
     }
+    .align-r .banner {
+      text-align: right;
+    }
     .design-uniform {
       min-height: 566px;
       padding-left: calc(((100% - 1200px) / 2) - 73px);
