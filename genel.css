@@ -5887,6 +5887,10 @@ ul.product-list-grid:empty {
   display: block;
 }
 
+.ems-prd-badge > div b {
+  font-weight: 500;
+}
+
 .urunListe_adet [id$="txtURN_ADET"],
 .urunListe_adet [id$="lblURN_ADET"] {
   display: none;
@@ -5905,6 +5909,17 @@ ul.product-list-grid:empty {
 .tukendi .urunListe_urunStokUyari {
   display: block !important;
   color: #999;
+}
+
+.urunListe_promosyonListe {
+  position: relative !important;
+  padding: 0 !important;
+  display: flex !important;
+  color: #c5242b;
+}
+
+.urunListe_promosyonListe > div + div::before {
+  content: ", ";
 }
 
 .swiper-product-horizontal .ems-prd {
@@ -6040,7 +6055,7 @@ ul.product-list-grid:empty {
   padding-left: 40px;
   overflow: hidden;
   font-family: fira, arial, sans-serif;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 .ems-prdd-badge > div {
@@ -6057,6 +6072,10 @@ ul.product-list-grid:empty {
 
 .ems-prdd-badge > div > span {
   display: block;
+}
+
+.ems-prdd-badge > div b {
+  font-weight: 500;
 }
 
 .ems-prdd-gallery {
@@ -6112,6 +6131,21 @@ ul.product-list-grid:empty {
 .tukendi #plhStokUyari {
   display: block !important;
   color: #999;
+}
+
+.urunDetay_promosyonListe {
+  position: relative !important;
+  display: flex !important;
+  font-size: 14px;
+  color: #c5242b;
+}
+
+.urunDetay_promosyonListe > div {
+  width: 100%;
+}
+
+.urunDetay_promosyonListe > div + div::before {
+  content: ", ";
 }
 
 .UrunListeGrup_listeUrunDetayGrup {
@@ -9279,6 +9313,9 @@ ul.giftCardList li.selected > a {
     }
     .ems-prdd-price {
       font-size: 26px;
+    }
+    .ems-prdd-badge {
+      font-size: 16px;
     }
     .ems-prdd-gallery {
       margin-top: 0;

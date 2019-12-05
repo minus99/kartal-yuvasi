@@ -104,6 +104,9 @@ $prd-pd-l: 20px;
             > span {
                 display: block;
             }
+            b {
+                font-weight: 500;
+            }
         }
     }
 }
@@ -131,6 +134,17 @@ $prd-pd-l: 20px;
     .urunListe_urunStokUyari {
         display: block !important;
         color: $color7;
+    }
+}
+.urunListe_promosyonListe {
+    position: relative !important;
+    padding: 0 !important;
+    display: flex !important;
+    color: $color4;
+    > div + div {
+        &::before {
+            content: ", ";
+        }
     }
 }
 

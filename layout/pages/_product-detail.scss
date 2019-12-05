@@ -36,7 +36,7 @@
         padding-left: 40px;
         overflow: hidden;
         font-family: $font2;
-        font-size: 16px;
+        font-size: 13px;
         > div {
             display: none;
             position: absolute;
@@ -48,6 +48,9 @@
             text-align: right;
             > span {
                 display: block;
+            }
+            b {
+                font-weight: 500;
             }
         }
     }
@@ -103,6 +106,20 @@
         display: block !important;
         color: $color7;
     }
+}
+.urunDetay_promosyonListe {
+    position: relative !important;
+    display: flex !important;
+    font-size: 14px;
+    color: $color4;
+    > div {
+        width: 100%;
+        + div {
+            &::before {
+                content: ", ";
+            }
+        }
+    } 
 }
 
 //other colors
