@@ -1,7 +1,7 @@
 $subGapL: 300px;
 .site-header-grid {
     position: relative;
-    grid-template-columns: #{$subGapL} minmax(auto, 100%) auto auto 150px 150px;
+    grid-template-columns: #{$subGapL} minmax(auto, 1fr) auto auto 150px 150px;
     grid-template-areas: "ga1 . ga2 ga3 ga4 ga5" "ga6 ga7 ga7 ga7 ga8 ga8";
     @include setGridArea(1,8);
     > .ga1,
